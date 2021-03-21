@@ -1,0 +1,215 @@
+body {  
+    margin: 0;
+    background-image: linear-gradient(black, grey, white);
+    background-repeat: no-repeat;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    overflow:scroll;
+}
+
+
+.container {
+    position:relative;
+    width: 100%;
+    margin: 2px 0;
+    background-image:linear-gradient(blue, rgb(0, 225, 255));
+}
+
+
+
+.logo {
+    width: 125px;
+    height: 50px;
+    justify-content: left;
+    opacity: 0.5;
+    border: 3px solid maroon;
+    
+}
+
+    
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+nav {
+    float: right;
+    padding-right: 16px;
+
+}
+
+nav ul {
+    margin-top: auto;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0;
+    border: 16px hidden rgb(185, 146, 146);
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 23px;
+    font-size: 16px;
+    position:relative;
+    
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(46, 46, 46);
+    text-transform: uppercase;
+    font-size: 0.8125em;
+}
+
+nav a:hover {
+    color: #040d5ac4;
+    background-color:burlywood;
+}
+
+nav a::before{ 
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: #ff8800;
+
+    position: absolute;
+    top:0;
+    width:0%;
+
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    opacity: 1;
+    width: 100%;
+}
+
+.logo:hover {
+    opacity: 1;
+}
+
+.table {
+    margin-right: 14px;
+    margin-left: 24px;
+}
+
+
+tr, th, td {
+    background-color: #460505;
+    font-family: 'Lato', sans-serif;
+    padding: 50px;
+    font-size: 67px;
+    right: 32px;
+    color: greenyellow;
+    border: 3.2px solid maroon;
+    border-radius: 4px;
+    
+}
+
+.Amh_letter {
+    font-size: 23px;
+}
+
+
+td:hover{
+    background-color: rgb(255, 255, 255);
+    color:rgb(255, 0, 0);
+    box-shadow: 20px 20px 50px 10px pink;
+    border: 3.2px solid cornflowerblue;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.link {
+    text-decoration: none;
+    border: 1px solid rgb(185, 146, 146);
+    background-color: rgb(185, 146, 146);
+    border-radius: 10%;
+    opacity: .5;
+}
+.link:hover{
+    opacity: 1;
+    background-color: white;
+    text-decoration: none;
+}
+.construction{
+    text-align: center;
+    top: 30%;
+    font-size: 48px;
+
+}
+ul {
+    list-style-type: none;
+}
+
+::-webkit-scrollbar{
+    width: 11.2px;
+}
+
+.legend ::-webkit-scrollbar{
+    width: 0px;
+}
+
+::-webkit-scrollbar-track{
+    background: rgb(255, 177, 177);
+}
+
+::-webkit-scrollbar-thumb{
+    background:#880;
+    border-radius:30%;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #555;
+}
+
+.legend {
+    background-color:rgb(194, 194, 194);
+    border: 5px solid red;
+    margin-left: 80px;
+    margin-right: 40px;
+    right: 32px;
+    box-sizing: border-box;
+    width:25%;
+    height:300px;
+    padding-right: 3px;
+    overflow: hidden;
+    overflow: scroll;
+    box-sizing: content-box;    
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin-left: 0px;
+    margin-right: -10px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+/*input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }*/
+  
+
+#extraHeading {
+    text-transform: uppercase;
+}
+
+
