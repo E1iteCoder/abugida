@@ -1,0 +1,43 @@
+/* src/components/ThemeToggle.css */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+.theme-toggle input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.theme-toggle .slider {
+  width: 2rem;
+  height: 1rem;
+  background: #ccc;
+  border-radius: 1rem;
+  position: relative;
+  margin-right: 0.5rem;
+  transition: background 0.3s;
+}
+.theme-toggle .slider::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+/* when checked, slide the circle and darken track */
+.theme-toggle input:checked + .slider {
+  background: #4ca1af;
+}
+.theme-toggle input:checked + .slider::before {
+  transform: translateX(1rem);
+}
+.theme-toggle .label {
+  font-size: 0.9rem;
+  user-select: none;
+}

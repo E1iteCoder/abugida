@@ -1,0 +1,102 @@
+.footer {
+  background: var(--card);
+  color: var(--fg);
+  padding: 0;
+  text-align: center;
+  font-size: 0.9rem;
+  position: static;
+  bottom: 0;
+  width: 100%;
+  line-height: 1.6;
+  margin-top: 28rem;
+}
+
+.footer-section {
+  border-bottom: 1px solid #e9ecef;
+  padding: 0.625rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-section div span {
+  margin-right: 0.625rem;
+}
+
+.social-header,
+.social-icons {
+  padding: 0 1rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.625rem; /* Space between social icons */
+}
+
+.social-icons a {
+  color: inherit;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--fg);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.56rem;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.56rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 1.56rem;
+  text-align: left;
+}
+
+.footer-col h6 {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 0.625rem;
+  color: var(--fg);
+}
+
+.footer-col p,
+.footer-col a {
+  margin: 0.313rem 0;
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  color: var(--hover);
+}
+
+.icon-row {
+  display: flex;
+  flex-direction: column; /* Stacks each contact item vertically */
+  align-items: flex-start; /* Aligns items to the start for a left-aligned look */
+  gap: 0.5rem; /* Space between each contact item */
+}
+
+.icon-row p {
+  display: flex;
+  align-items: center; /* Centers icon and text vertically in each row */
+  margin: 0 3rem;
+}
+
+.icon-row .icon {
+  margin-right: 0.8rem; /* Space between icon and text */
+}

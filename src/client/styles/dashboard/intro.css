@@ -1,0 +1,17 @@
+.intro-markdown ul,
+.intro-markdown ol {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.intro-markdown li {
+  margin-bottom: 0.5rem;
+}
+
+.intro-markdown {
+  background: var(--card);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 2em;
+  border-radius: 2em;
+}

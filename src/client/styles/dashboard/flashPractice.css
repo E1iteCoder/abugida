@@ -1,0 +1,41 @@
+/* A container for the flashcard section */
+.flashcard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.flashcard-btn-container {
+  display: flex;
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Centers items vertically */
+  margin-top: 1rem;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.slider-controls button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.slider-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

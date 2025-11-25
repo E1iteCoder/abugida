@@ -1,0 +1,54 @@
+/* flashContainer.css */
+
+/* wrap BOTH the card and the slider-controls */
+.flashcard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px; /* upper bound */
+  margin: 0 auto;
+  gap: 2rem; /* vertical space between card & controls */
+  padding: 3rem 1rem; /* horizontal padding for small screens */
+  perspective: 1000px; /* move perspective here for perfect symmetry */
+  perspective-origin: center center;
+}
+
+/* controls under the card */
+.slider-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 500px; /* match the container/card width */
+  margin: 0 auto;
+  gap: clamp(0.5rem, 5%, 2rem);
+}
+
+.slider-controls button {
+  flex: 1 1 0;
+  margin: 0 0.25rem;
+  padding: clamp(0.4rem, 1.5vw, 0.75rem) clamp(0.75rem, 2vw, 1rem);
+  border-radius: 0.5rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  cursor: pointer;
+}
+
+.slider-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* very small screens: tighten up the container & controls */
+@media (max-width: 400px) {
+  .flashcard-container {
+    padding: 2rem 0.5rem;
+    gap: 1.5rem;
+  }
+  .slider-controls button {
+    font-size: clamp(0.8rem, 3vw, 1rem);
+  }
+}

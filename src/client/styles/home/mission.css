@@ -1,0 +1,61 @@
+.mission {
+  margin: 5% 20%; /* Use percentage for responsive margins */
+  padding: 2rem; /* Maintain padding */
+  background-color: var(--card); /* Light grey background */
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: center; /* Center text */
+}
+
+/* Responsive heading */
+.heading {
+  font-size: 2rem; /* Larger font size for heading */
+  color: #4ca1af; /* Calming blue color */
+  margin-bottom: 1rem; /* Space below heading */
+}
+
+/* Responsive paragraph */
+.para {
+  font-size: 1.125rem; /* Larger than normal text */
+  color: var(--fg)
+  line-height: 1.6; /* Increased line height */
+  max-width: 800px; /* Optional: restrict width for better text flow */
+  margin: 0 auto; /* Center the paragraph */
+}
+
+/* Optional: Adding a hover effect for the mission section */
+.mission:hover {
+  background-color: var(--hover); /* Lighten background on hover */
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .mission {
+    margin: 2.5% 5%; /* Reduce margin on smaller screens */
+    padding: 1.5rem; /* Decrease padding for better fit */
+  }
+
+  .heading {
+    font-size: 1.75rem; /* Reduce heading size on smaller screens */
+  }
+
+  .para {
+    font-size: 1rem; /* Reduce paragraph size */
+  }
+}
+
+@media (max-width: 480px) {
+  .mission {
+    margin: 1% 2%; /* Further reduce margin on very small screens */
+    padding: 1rem; /* Adjust padding for very small screens */
+  }
+
+  .heading {
+    font-size: 1.5rem; /* Further reduce heading size */
+  }
+
+  .para {
+    font-size: 0.9rem; /* Further reduce paragraph size */
+  }
+}
