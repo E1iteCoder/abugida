@@ -1,0 +1,11 @@
+.App {
+  padding-bottom: 3rem;
+}
+
+.flash {
+  color: #6c757d !important;
+}
+
+.flash:hover {
+  color: #4ca1af !important;
+}

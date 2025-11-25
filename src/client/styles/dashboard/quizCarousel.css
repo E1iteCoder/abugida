@@ -1,0 +1,101 @@
+/* 0) Wrap your entire quiz in a centered container */
+.quiz-container {
+  max-width: 700px; /* don’t let it run wildly wide on desktop */
+  width: 100%; /* but be 100% on small screens */
+  margin: 0 auto; /* center it */
+  padding: 1rem; /* give it some breathing room */
+  box-sizing: border-box;
+}
+
+/* 1) Question block itself */
+.question-block {
+  background-color: var(--card);
+  padding: clamp(1rem, 2.5vw, 2rem); /* fluid padding */
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* 2) Timer bar stays full-width */
+.timer-bar {
+  width: 100%;
+  height: clamp(6px, 1vh, 10px); /* fluid height */
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* 3) Header scales down nicely */
+.question-header h2 {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  margin: 0;
+}
+.question-header p {
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  margin: 0;
+}
+
+/* 4) Make the nav row wrap on super-small screens */
+.pag-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: clamp(1rem, 3vw, 2rem);
+}
+
+/* arrows & page-counter all fluid */
+.nav-buttons {
+  font-size: clamp(1.5rem, 6vw, 3rem);
+  padding: 0.25em 0.5em;
+}
+
+/* 5) MCQ grid: switch to CSS Grid for predictable wrapping */
+.options-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+/* option buttons all fluid */
+.option {
+  padding: clamp(0.75rem, 2vw, 1.25rem) !important;
+  font-size: clamp(1rem, 2.5vw, 1.5rem) !important;
+  border-radius: 8px;
+}
+
+/* 6) Typing input full-width but capped */
+.typing-container input {
+  width: 100%;
+  max-width: 100%;
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  padding: clamp(0.5rem, 2vw, 1rem);
+}
+
+/* 7) Submit / Skip row also wraps */
+.navigation-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+.submit-button,
+.skip-button {
+  flex: 1 1 45%;
+  min-width: 120px;
+  padding: clamp(0.75rem, 2vw, 1rem);
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+/* 8) Breakpoints just to tighten up margins */
+/* nothing critical here – your clamps do most of the work */
+@media (max-width: 480px) {
+  .quiz-container {
+    padding: 0.5rem;
+  }
+  .question-block {
+    gap: 1rem;
+  }
+}

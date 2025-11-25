@@ -1,0 +1,76 @@
+/* login.css */
+.auth-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.form {
+  background: var(--card) !important;
+  padding: 2.5rem 1.875rem; /* 40px and 30px */
+  border-radius: 0.5rem; /* 8px */
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1); /* 4px and 12px */
+  max-width: 25rem; /* 400px */
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form h1 {
+  color: var(--fg);
+  margin-bottom: 1.25rem; /* 20px */
+  font-size: 1.8rem;
+}
+
+.form label {
+  display: block;
+  margin: 0.9rem 0;
+  color: #34495e;
+  font-weight: bold;
+}
+
+.form input {
+  width: 100%;
+  padding: 0.625rem; /* 10px */
+  background: var(--bg);
+  color: var(--fg);
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem; /* 4px */
+  margin-bottom: 0.625rem; /* 10px */
+  font-size: 1rem;
+}
+
+.form input:focus {
+  border-color: #4ca1af;
+  outline: none;
+  box-shadow: 0 0 0.3125rem rgba(76, 161, 175, 0.2); /* 5px */
+}
+
+.link-pass {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: none;
+  color: #4ca1af;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: 0.5rem; /* Adjusted margin */
+}
+
+.link-pass:hover {
+  color: #3a7f96 !important;
+  background: none;
+  transform: none;
+  box-shadow: none;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 0.625rem; /* 10px */
+}

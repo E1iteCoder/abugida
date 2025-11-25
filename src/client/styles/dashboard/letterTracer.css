@@ -1,0 +1,94 @@
+/* src/styles/dashboard/letterTracer.css */
+.lettertracer-slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+
+  /* ← add this: */
+  gap: 2rem;
+}
+
+.lettertracer-card {
+  background: var(--card) !important;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.lettertracer-card h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.lettertracer-card button {
+  background-color: transparent !important;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.slider-controls button {
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
+  background: none;
+  color: var(--fg);
+  border: none;
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+
+.slider-controls button:disabled {
+  background-color: var(--disabled);
+  cursor: not-allowed;
+}
+
+.canvas-trace-wrapper {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tracer-canvas {
+  border: 2px solid var(--disabled);
+  border-radius: 10px;
+  background: var(--card);
+  cursor: crosshair;
+  width: 200px;
+  height: 200px;
+}
+
+.canvas-trace-wrapper .clear-button {
+  margin-top: 0.5rem;
+  background-color: #f55 !important;
+  color: var(--fg);
+  padding: 0.4rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.clear-button:hover {
+  background: #ed7a7a !important;
+  color: white;
+}
+
+.sound-button:hover {
+  color: black !important;
+}

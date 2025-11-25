@@ -1,0 +1,80 @@
+/* flashcard.css */
+
+.flashcard {
+  width: 100%;
+  max-width: 500px; /* same as container */
+  aspect-ratio: 5 / 2; /* keeps height in proportion */
+  margin: 0; /* centered by parent */
+}
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  transition: transform 0.6s ease;
+}
+
+.flashcard-inner:hover {
+  cursor: pointer;
+}
+
+.flashcard.flipped .flashcard-inner {
+  transform: rotateY(180deg);
+}
+
+.flashcard-front,
+.flashcard-back {
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  padding: clamp(1rem, 3vw, 2rem);
+  background: var(--card);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(0.5rem, 2vw, 1rem);
+}
+
+.flashcard-front {
+  z-index: 2;
+}
+
+.flashcard-back {
+  transform: rotateY(180deg);
+  padding-top: 1rem;
+}
+
+.flashcard-front p,
+.flashcard-back p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.flashcard-front p {
+  font-size: clamp(1.5rem, 6vw, 3rem);
+}
+
+.flashcard-back p {
+  margin-top: 3rem !important;
+  font-size: clamp(1rem, 4vw, 1.5rem);
+}
+
+.audio-btn {
+  background: white;
+  border: none;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  font-size: clamp(1rem, 4vw, 1.75rem);
+  border-radius: 0.75rem;
+  padding: clamp(0.4rem, 1vw, 0.75rem);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.audio-btn:hover {
+  transform: scale(1.1);
+  background-color: #f0f0f0;
+}

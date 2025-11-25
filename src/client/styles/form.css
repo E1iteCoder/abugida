@@ -1,0 +1,101 @@
+/* form.css */
+.contact-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+}
+
+form {
+  background-color: var(--card);
+  padding: 2.5rem; /* 40px and 30px */
+  border-radius: 0.5rem; /* 8px */
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1); /* 4px and 12px */
+  max-width: 30rem; /* 480px */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto; /* Center the form horizontally */
+  text-align: left; /* Align the content (inputs, labels, etc.) to the left */
+}
+
+form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+form legend {
+  color: #4ca1af;
+  font-size: 2rem;
+  margin-bottom: 1.25rem; /* 20px */
+  text-align: left; /* Keep legend aligned to the left */
+}
+
+form label {
+  display: block;
+  margin: 0.9rem 0;
+  color: #34495e;
+  font-weight: bold;
+  text-align: left; /* Keep labels aligned to the left */
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.625rem; /* 10px */
+  background-color: var(--btn-bg);
+  border: 1px solid var(--fg);
+  border-radius: 0.25rem; /* 4px */
+  margin-bottom: 0.625rem; /* 10px */
+  font-size: 1rem;
+  text-align: left; /* Ensure text in input/textarea is left-aligned */
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: var(--fg);
+  background-color: var(--btn-bg);
+  outline: none;
+  box-shadow: 0 0 0.3125rem rgba(76, 161, 175, 0.2); /* 5px */
+}
+
+form button.submit {
+  background-color: var(--btn-bg);
+  color: var(--fg);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+  align-self: flex-start; /* Align button to the left */
+}
+
+form button.submit:hover {
+  background-color: var(--btn-hover);
+}
+
+form input[type="file"] {
+  border: none;
+  padding: 0.625rem;
+  background-color: transparent;
+  color: var(--fg);
+  margin-bottom: 1rem;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 8rem;
+  max-height: 12rem;
+}
+
+form .error-message {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 0.625rem; /* 10px */
+}
