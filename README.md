@@ -4,4 +4,3 @@ Unlock Ethiopia’s spirit—learn to write, speak, and understand Amharic for f
 # Future Insight:
  - Implement ge'ez numbers and other learning modules that can help enhance mastery of the Ethiopian cultural experience through language learning
  - Aim to expand to other Ethiopian and Eritrean languages, including but not limited to: Tigrinya, Orominya, Guragigna, etc.
- -  
