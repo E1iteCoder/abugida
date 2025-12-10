@@ -23,11 +23,16 @@ module.exports = {
     );
     
     if (CopyWebpackPlugin && CopyWebpackPlugin.patterns) {
-      // Replace patterns - copy favAbugida from root
+      // Replace patterns - copy favAbugida and CNAME from root
       CopyWebpackPlugin.patterns = [
         {
           from: path.resolve(__dirname, 'favAbugida'),
           to: 'favAbugida',
+          noErrorOnMissing: true
+        },
+        {
+          from: path.resolve(__dirname, 'CNAME'),
+          to: 'CNAME',
           noErrorOnMissing: true
         }
       ];

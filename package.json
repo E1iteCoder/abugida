@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "keywords": [],
+  "homepage": "https://theabugida.org",
   "main": "src/index.js",
   "dependencies": {
     "@emailjs/browser": "4.4.1",
