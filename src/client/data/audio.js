@@ -218,7 +218,7 @@ const audioMap = {
   "ppu.mp3":
     "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993863/ppu_ajhmzf.mp3",
   "pu.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993863/pu_g3oaam.mp3P",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993863/pu_g3oaam.mp3",
   "q.mp3":
     "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993863/q_unatt8.mp3",
   "qa.mp3":
