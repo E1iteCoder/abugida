@@ -1,9 +1,18 @@
 const path = require('path');
+const fs = require('fs');
 
 module.exports = {
   paths: function (paths, env) {
-    // Override paths to use root directory instead of public folder
-    paths.appPublic = path.resolve(__dirname);
+    // Use a minimal public directory to avoid circular copy issues
+    // We'll handle copying assets manually in webpack config
+    const minimalPublic = path.resolve(__dirname, '.public-temp');
+    
+    // Create the directory if it doesn't exist
+    if (!fs.existsSync(minimalPublic)) {
+      fs.mkdirSync(minimalPublic, { recursive: true });
+    }
+    
+    paths.appPublic = minimalPublic;
     paths.appHtml = path.resolve(__dirname, 'index.html');
     return paths;
   },
@@ -17,13 +26,14 @@ module.exports = {
       HtmlWebpackPlugin.options.template = path.resolve(__dirname, 'index.html');
     }
     
-    // Update CopyWebpackPlugin to copy from root instead of public
+    // Find and update CopyWebpackPlugin
     const CopyWebpackPlugin = config.plugins.find(
       plugin => plugin.constructor.name === 'CopyWebpackPlugin'
     );
     
-    if (CopyWebpackPlugin && CopyWebpackPlugin.patterns) {
-      // Replace patterns - copy favAbugida and CNAME from root
+    if (CopyWebpackPlugin) {
+      // Completely replace patterns - only copy what we need from root
+      // Exclude build, node_modules, src, etc.
       CopyWebpackPlugin.patterns = [
         {
           from: path.resolve(__dirname, 'favAbugida'),
@@ -41,4 +51,3 @@ module.exports = {
     return config;
   }
 };
-
