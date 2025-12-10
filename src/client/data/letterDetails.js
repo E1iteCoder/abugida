@@ -2787,6 +2787,90 @@ const letterDetails =
     "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
     "numeric": null,
     "usageNotes": []
+  },
+  "ቨ": {
+    "name": "vè",
+    "phonetic": "/vè/",
+    "unicode": "U+1355",
+    "row": "vè-house",
+    "column": "first",
+    "audio": "ve.mp3",
+    "strokeGif": "../pictures/gifs/ve-order.gif",
+    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "numeric": null,
+    "usageNotes": []
+  },
+  "ቩ": {
+    "name": "vu",
+    "phonetic": "/vu/",
+    "unicode": "U+1357",
+    "row": "vè-house",
+    "column": "second",
+    "audio": "vu.mp3",
+    "strokeGif": "../pictures/gifs/vu-order.gif",
+    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "numeric": null,
+    "usageNotes": []
+  },
+  "ቪ": {
+    "name": "vi",
+    "phonetic": "/vi/",
+    "unicode": "U+1358",
+    "row": "vè-house",
+    "column": "third",
+    "audio": "vi.mp3",
+    "strokeGif": "../pictures/gifs/vi-order.gif",
+    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "numeric": null,
+    "usageNotes": []
+  },
+  "ቫ": {
+    "name": "va",
+    "phonetic": "/va/",
+    "unicode": "U+1359",
+    "row": "vè-house",
+    "column": "fourth",
+    "audio": "va.mp3",
+    "strokeGif": "../pictures/gifs/va-order.gif",
+    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "numeric": null,
+    "usageNotes": []
+  },
+  "ቬ": {
+    "name": "vie",
+    "phonetic": "/vie/",
+    "unicode": "U+135A",
+    "row": "vè-house",
+    "column": "fifth",
+    "audio": "vie.mp3",
+    "strokeGif": "../pictures/gifs/vie-order.gif",
+    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "numeric": null,
+    "usageNotes": []
+  },
+  "ቭ": {
+    "name": "vä",
+    "phonetic": "/vä/",
+    "unicode": "U+135B",
+    "row": "vè-house",
+    "column": "sixth",
+    "audio": "v.mp3",
+    "strokeGif": "../pictures/gifs/vä-order.gif",
+    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "numeric": null,
+    "usageNotes": []
+  },
+  "ቮ": {
+    "name": "vo",
+    "phonetic": "/vo/",
+    "unicode": "U+135C",
+    "row": "vè-house",
+    "column": "last",
+    "audio": "vo.mp3",
+    "strokeGif": "../pictures/gifs/vo-order.gif",
+    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "numeric": null,
+    "usageNotes": []
   }
 };
 

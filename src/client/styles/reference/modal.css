@@ -95,7 +95,7 @@
     0 0.375rem 1.25rem 0 rgba(0, 0, 0, 0.19);
   border-radius: 60%; /* Make it circular */
   background-color: var(--card); /* Optional: set background color */
-  color: var(--fg)
+  color: var(--fg);
   z-index: 1000; /* Optional: ensures it stays above other content */
   transition: transform 0.3s ease; /* Scaling animation */
 }

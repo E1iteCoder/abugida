@@ -17,7 +17,7 @@
 /* Responsive paragraph */
 .para {
   font-size: 1.125rem; /* Larger than normal text */
-  color: var(--fg)
+  color: var(--fg);
   line-height: 1.6; /* Increased line height */
   max-width: 800px; /* Optional: restrict width for better text flow */
   margin: 0 auto; /* Center the paragraph */

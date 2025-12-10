@@ -1,7 +1,7 @@
 // src/client/data/overviewData.js
 
 const data = {
-  alphabet: {
+  letters: {
     title: "Welcome to the Amharic Alphabet",
     video:
       "https://res.cloudinary.com/dc6jadrue/video/upload/v1746114989/3967272-uhd_4096_2160_24fps_occa2t.mp4",

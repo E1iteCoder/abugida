@@ -17,7 +17,7 @@
 
 .intro_container p {
   font-size: 1.2rem; /* Font size for paragraphs */
-  color: var(--fg) /* Dark color for text */
+  color: var(--fg); /* Dark color for text */
   line-height: 1.6; /* Improved line height for readability */
   margin-bottom: 1rem; /* Space between paragraphs */
 }

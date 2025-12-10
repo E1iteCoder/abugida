@@ -7,7 +7,6 @@ export default function LetterDetail({ data }) {
     character,
     name,
     phonetic,
-    unicode,
     row,
     column,
     audio,
@@ -23,10 +22,6 @@ export default function LetterDetail({ data }) {
 
       <p className="ld-field">
         <strong>Name:</strong> {name} <em>({phonetic})</em>
-      </p>
-
-      <p className="ld-field">
-        <strong>Unicode:</strong> {unicode}
       </p>
 
       <p className="ld-audio">

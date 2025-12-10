@@ -19,7 +19,7 @@ export default function ModuleChooser() {
             key={mod.key}
             className={mod.key === selectedSet?.key ? "active" : ""}
             onClick={() => setSelectedSet(mod)}
-            disabled={mod.key !== "alphabet"} // 👈 Only enable "letters"
+            disabled={mod.key !== "letters"} // 👈 Only enable "letters"
           >
             {mod.name}
           </button>

@@ -1,7 +1,6 @@
 // src/components/QuizCarousel.jsx
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import "../styles/dashboard/quizCarousel.css";
-import alphabets from "../data/labels/alphabet.js";
 
 // 1) import your prebuilt JSON data
 import letterDetails from "../data/letterDetails.js";

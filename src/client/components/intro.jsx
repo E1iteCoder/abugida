@@ -17,7 +17,9 @@ export default function Introduction({ topicKey, currentPage = 1 }) {
     }
 
     const { labelUrl } = sectionConfig;
-    const mdUrl = `/intro/${topicKey}.md`;
+    // Map topicKey to markdown filename (handle "letters" -> "alphabet")
+    const mdFileName = topicKey === "letters" ? "alphabet" : topicKey;
+    const mdUrl = `/intro/${mdFileName}.md`;
 
     async function loadContent() {
       try {
