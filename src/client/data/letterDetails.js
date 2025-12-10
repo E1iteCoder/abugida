@@ -1152,9 +1152,9 @@ const letterDetails =
     "column": "fourth",
     "audio": "na.mp3",
     "strokeGif": "../pictures/gifs/na-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ናታን", "gloss": "Nathan (Nathaniel)", "breakdown": ["ና", "ታ", "ን"] }],
     "numeric": null,
-    "usageNotes": []
+    "usageNotes": ["The name Nathan is derived from the Hebrew name Natan, which means 'gift.' It is a common male name in many languages and cultures. In the Bible, Nathan is a prophet and is known for his role in the ministry of Jesus Christ."]
   },
   "ኔ": {
     "name": "nê",
@@ -1284,9 +1284,9 @@ const letterDetails =
     "column": "first",
     "audio": "aa.mp3",
     "strokeGif": "../pictures/gifs/aa-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "አቡጊዳ ", "gloss": "Abugida", "breakdown": ["አ", "ቡ", "ጊ", "ዳ"] }],
     "numeric": null,
-    "usageNotes": []
+    "usageNotes": ["Abugida is a system of writing consonants using vowel-like symbols (and also the name of this website). It is used in many languages, including Amharic, Tigrinya, and Ge'ez."]
   },
   "ኡ": {
     "name": "u",
@@ -1308,9 +1308,9 @@ const letterDetails =
     "column": "third",
     "audio": "ii.mp3",
     "strokeGif": "../pictures/gifs/ii-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ኢየሱስ (ክርስቶስ)", "gloss": "Jesus (Yeshua) Christ", "breakdown": ["ኢ", "የ", "ሱ", "ስ"] }],
     "numeric": null,
-    "usageNotes": []
+    "usageNotes": ["The name Jesus is derived from the Hebrew name Yeshua, which means 'salvation.' It is a common male name in many languages and cultures. In the Bible, Jesus is the son of God and is known for his role in the ministry of Jesus Christ."]
   },
   "ኣ": {
     "name": "ä",
@@ -1320,7 +1320,7 @@ const letterDetails =
     "column": "fourth",
     "audio": "aa.mp3",
     "strokeGif": "../pictures/gifs/aa-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ኣሳማ", "gloss": "pig", "breakdown": ["ኣ", "ሳ", "ማ"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -1344,9 +1344,9 @@ const letterDetails =
     "column": "sixth",
     "audio": "i.mp3",
     "strokeGif": "../pictures/gifs/i-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "እግዚአብሔር", "gloss": "God (Elohim)", "breakdown": ["እ", "ግ", "ዚ", "አ", "ብ", "ሔ", "ር"] }],
     "numeric": null,
-    "usageNotes": []
+    "usageNotes": ["The name God is derived from the Hebrew name Elohim, which means 'God.' It is a common male name in many languages and cultures. In the Bible, God is the creator of the universe and is known for his role in the ministry of Jesus Christ."]
   },
   "ኦ": {
     "name": "o",
@@ -1536,7 +1536,7 @@ const letterDetails =
     "column": "first",
     "audio": "we.mp3",
     "strokeGif": "../pictures/gifs/we-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ወንድ", "gloss": "boy", "breakdown": ["ወ", "ን", "ድ"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -1548,9 +1548,9 @@ const letterDetails =
     "column": "second",
     "audio": "wu.mp3",
     "strokeGif": "../pictures/gifs/wu-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ውሻ", "gloss": "dog", "breakdown": ["ው", "ሻ"] }],
     "numeric": null,
-    "usageNotes": []
+    "usageNotes": ["This word can also be used as an insult as well."]
   },
   "ዊ": {
     "name": "wi",
@@ -1572,7 +1572,7 @@ const letterDetails =
     "column": "fourth",
     "audio": "wa.mp3",
     "strokeGif": "../pictures/gifs/wa-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ዋሽንት", "gloss": "Ethiopian wind instrument", "breakdown": ["ዋ", "ሽ", "ን", "ት"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -1704,7 +1704,7 @@ const letterDetails =
     "column": "first",
     "audio": "ze.mp3",
     "strokeGif": "../pictures/gifs/ze-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ዘር", "gloss": "seed/race", "breakdown": ["ዘ", "ር"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -1764,7 +1764,7 @@ const letterDetails =
     "column": "sixth",
     "audio": "z.mp3",
     "strokeGif": "../pictures/gifs/z-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ዝሆን", "gloss": "", "breakdown": [] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -1944,9 +1944,9 @@ const letterDetails =
     "column": "last",
     "audio": "yo.mp3",
     "strokeGif": "../pictures/gifs/yo-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ዮሐንስ", "gloss": "John (Johannes)", "breakdown": ["ዮ", "ሐ", "ን", "ስ"] }],
     "numeric": null,
-    "usageNotes": []
+    "usageNotes": ["The name John is derived from the Hebrew name Yochanan, which means 'God has been gracious.' It is a common male name in many languages and cultures. In the Bible, John is one of the apostles and is known for his role in the ministry of Jesus Christ."]
   },
   "ደ": {
     "name": "dè",
@@ -1956,7 +1956,7 @@ const letterDetails =
     "column": "first",
     "audio": "de.mp3",
     "strokeGif": "../pictures/gifs/de-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ደስታ", "gloss": "happiness", "breakdown": ["ደ", "ስ", "ታ"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -1992,9 +1992,9 @@ const letterDetails =
     "column": "fourth",
     "audio": "da.mp3",
     "strokeGif": "../pictures/gifs/da-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ዳንኤል", "gloss": "Daniel", "breakdown": ["ዳ", "ን", "ኤ", "ል"] }],
     "numeric": null,
-    "usageNotes": []
+    "usageNotes": ["The name Daniel is derived from the Hebrew name Dani'el, which means 'God is my judge.' It is a common male name in many languages and cultures. In the Bible, Daniel is a prophet and is known for his role in the ministry of Jesus Christ."]
   },
   "ዴ": {
     "name": "dê",
@@ -2016,7 +2016,7 @@ const letterDetails =
     "column": "sixth",
     "audio": "d.mp3",
     "strokeGif": "../pictures/gifs/d-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ድብ", "gloss": "bear cub", "breakdown": ["ድ", "ብ"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -2028,7 +2028,7 @@ const letterDetails =
     "column": "last",
     "audio": "do.mp3",
     "strokeGif": "../pictures/gifs/do-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ዶሮ", "gloss": "hen/rooster", "breakdown": ["ዶ", "ሮ"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -2100,9 +2100,9 @@ const letterDetails =
     "column": "sixth",
     "audio": "j.mp3",
     "strokeGif": "../pictures/gifs/j-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ጅል", "gloss": "fool", "breakdown": ["ጅ", "ል"] }],
     "numeric": null,
-    "usageNotes": []
+    "usageNotes": ["This word is often used as an insult, to describe someone who is foolish or stupid."]
   },
   "ጆ": {
     "name": "jo",
@@ -2112,7 +2112,7 @@ const letterDetails =
     "column": "last",
     "audio": "jo.mp3",
     "strokeGif": "../pictures/gifs/jo-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ጆሮ", "gloss": "ear", "breakdown": ["ጆ", "ሮ"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -2124,7 +2124,7 @@ const letterDetails =
     "column": "first",
     "audio": "ge.mp3",
     "strokeGif": "../pictures/gifs/ge-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ገመድ", "gloss": "rope", "breakdown": ["ገ", "መ", "ድ"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -2136,7 +2136,7 @@ const letterDetails =
     "column": "second",
     "audio": "gu.mp3",
     "strokeGif": "../pictures/gifs/gu-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ጉልበት", "gloss": "knee/power", "breakdown": ["ጉ", "ል", "በ", "ት"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -2160,7 +2160,7 @@ const letterDetails =
     "column": "fourth",
     "audio": "ga.mp3",
     "strokeGif": "../pictures/gifs/ga-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ጋሻ", "gloss": "shield", "breakdown": ["ጋ", "ሻ"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -2172,7 +2172,7 @@ const letterDetails =
     "column": "fifth",
     "audio": "gie.mp3",
     "strokeGif": "../pictures/gifs/gie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ጌጥ", "gloss": "jewlery", "breakdown": ["ጌ", "ጥ"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -2184,7 +2184,7 @@ const letterDetails =
     "column": "sixth",
     "audio": "g.mp3",
     "strokeGif": "../pictures/gifs/g-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ግማሽ", "gloss": "half", "breakdown": ["ግ", "ማ", "ሽ"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -2196,7 +2196,7 @@ const letterDetails =
     "column": "last",
     "audio": "go.mp3",
     "strokeGif": "../pictures/gifs/go-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ጎማ", "gloss": "tire", "breakdown": ["ጎ", "ማ"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -2208,7 +2208,7 @@ const letterDetails =
     "column": "first",
     "audio": "tte.mp3",
     "strokeGif": "../pictures/gifs/tte-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ጠረጴዛ", "gloss": "table", "breakdown": ["ጠ", "ረ", "ጴ", "ዛ"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -2268,7 +2268,7 @@ const letterDetails =
     "column": "sixth",
     "audio": "tt.mp3",
     "strokeGif": "../pictures/gifs/tt-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ጥርስ", "gloss": "teeth", "breakdown": ["ጥ", "ር", "ስ"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -2280,7 +2280,7 @@ const letterDetails =
     "column": "last",
     "audio": "tto.mp3",
     "strokeGif": "../pictures/gifs/tto-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ጦር", "gloss": "war", "breakdown": ["ጦ", "ር"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -2304,7 +2304,7 @@ const letterDetails =
     "column": "second",
     "audio": "Cu.mp3",
     "strokeGif": "../pictures/gifs/Cu-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ጩቤ", "gloss": "dagger", "breakdown": ["ጩ", "ቤ"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -2328,7 +2328,7 @@ const letterDetails =
     "column": "fourth",
     "audio": "Ca.mp3",
     "strokeGif": "../pictures/gifs/Ca-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ጫማ", "gloss": "shoe (a pair of shoes)", "breakdown": ["ጫ", "ማ"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -2400,7 +2400,7 @@ const letterDetails =
     "column": "third",
     "audio": "ppi.mp3",
     "strokeGif": "../pictures/gifs/ppi-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ጲላጦስ", "gloss": "Pilate (referring to Pontius Pilate)", "breakdown": ["ጲ", "ላ", "ጦ", "ስ"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -2412,7 +2412,7 @@ const letterDetails =
     "column": "fourth",
     "audio": "ppa.mp3",
     "strokeGif": "../pictures/gifs/ppa-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ጳጳስ", "gloss": "bishop", "breakdown": ["ጳ", "ጳ", "ስ"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -2424,9 +2424,9 @@ const letterDetails =
     "column": "fifth",
     "audio": "ppie.mp3",
     "strokeGif": "../pictures/gifs/ppie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ጴጥሮስ", "gloss": "Peter (Petros)", "breakdown": ["ጴ", "ጥ", "ሮ", "ስ"] }],
     "numeric": null,
-    "usageNotes": []
+    "usageNotes": ["The name Peter is derived from the Greek name Petros, which means 'rock.' It is a common male name in many languages and cultures. In the Bible, Peter is one of the apostles and is known for his role in the ministry of Jesus Christ."]
   },
   "ጵ": {
     "name": "p̣ə",
@@ -2532,7 +2532,7 @@ const letterDetails =
     "column": "last",
     "audio": "tso.mp3",
     "strokeGif": "../pictures/gifs/tso-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ጾም", "gloss": "fasting", "breakdown": ["ጾ", "ም"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -2616,7 +2616,7 @@ const letterDetails =
     "column": "last",
     "audio": "tso.mp3",
     "strokeGif": "../pictures/gifs/tso-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ፆታ", "gloss": "gender", "breakdown": ["ፆ", "ታ"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -2628,7 +2628,7 @@ const letterDetails =
     "column": "first",
     "audio": "fe.mp3",
     "strokeGif": "../pictures/gifs/fe-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ፈረስ", "gloss": "horse", "breakdown": ["ፈ", "ረ", "ስ"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -2760,7 +2760,7 @@ const letterDetails =
     "column": "fifth",
     "audio": "pie.mp3",
     "strokeGif": "../pictures/gifs/pie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ፔርሙዝ", "gloss": "thermos", "breakdown": ["ፔ", "ር", "ሙ", "ዝ" ] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -2784,9 +2784,9 @@ const letterDetails =
     "column": "last",
     "audio": "po.mp3",
     "strokeGif": "../pictures/gifs/po.-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ፖስታ", "gloss": "postal service (mail)", "breakdown": ["ፖ", "ስ", "ታ"] }],
     "numeric": null,
-    "usageNotes": []
+    "usageNotes": ["This word is often used to refer to the postal service."]
   },
   "ቨ": {
     "name": "vè",

@@ -1,6 +1,7 @@
 // src/components/LetterDetail.jsx
-import React from "react";
+import React, { useState } from "react";
 import "../styles/dashboard/learn.css";
+import letterDetails from "../data/letterDetails.js";
 
 export default function LetterDetail({ data }) {
   const {
@@ -15,6 +16,41 @@ export default function LetterDetail({ data }) {
     numeric,
     usageNotes = [],
   } = data;
+
+  // Get audio file for a specific character
+  const getAudioForChar = (char) => {
+    const detail = letterDetails[char];
+    return detail ? detail.audio : null;
+  };
+
+  // Play breakdown audio sequence with intervals
+  const playBreakdownAudio = (example, gapMs = 600) => {
+    const clips = example.breakdown
+      .map(char => getAudioForChar(char))
+      .filter(audio => audio); // Remove nulls
+
+    if (clips.length === 0) return;
+
+    let idx = 0;
+    let currentAudio = null;
+
+    const playNext = () => {
+      if (idx >= clips.length) {
+        currentAudio = null;
+        return;
+      }
+
+      currentAudio = new Audio(clips[idx]);
+      currentAudio.play().catch(e => console.log("Audio play failed:", e));
+      
+      currentAudio.onended = () => {
+        idx++;
+        setTimeout(playNext, gapMs);
+      };
+    };
+
+    playNext();
+  };
 
   return (
     <div className="letter-detail">
@@ -36,7 +72,6 @@ export default function LetterDetail({ data }) {
         )}
       </p>
 
-      {/* ——— REWRITTEN SECTION ——— */}
       <h3 className="ld-subheading">Placement in the Script</h3>
       <p className="ld-sentence">
         This character belongs to the <strong>{row}</strong> and it is the{" "}
@@ -56,14 +91,24 @@ export default function LetterDetail({ data }) {
 
       <h3 className="ld-subheading">Examples</h3>
       {examples.length > 0 ? (
-        examples.map((ex) => (
-          <div key={ex.word} className="ld-example">
+        examples.map((ex, exIdx) => (
+          <div key={`${ex.word}-${exIdx}`} className="ld-example">
             <p>
-              <strong>Word:</strong> {ex.word} — “{ex.gloss}”
+              <strong>Word:</strong> {ex.word} — "{ex.gloss}"
             </p>
             <p>
               <strong>Breakdown:</strong> {ex.breakdown.join(" + ")}
             </p>
+            {ex.breakdown.length > 0 && (
+              <button
+                className="ld-play-btn button"
+                onClick={() => playBreakdownAudio(ex)}
+                disabled= {true}
+                style={{ marginTop: '0.5rem' }}
+              >
+                🔊 Play breakdown audio
+              </button>
+            )}
           </div>
         ))
       ) : (
