@@ -143,7 +143,7 @@ This is **ፀ and ፈ** the first lesson for this module:
 
 By the end of this module, you'll be able to key point 1, 2, and 3.
 
-## ፐ
+## ፐ and ቨ 
 This is **ፐ** the first lesson for this module:
 
 - **Insert key point**
