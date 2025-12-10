@@ -79,7 +79,7 @@ export default function Footer() {
               </p>
               <p>
                 <FontAwesomeIcon icon={faEnvelope} className="me-3 icon" />
-                theabugida@gmail.com
+                support@theabugida.org
               </p>
               <p>
                 <FontAwesomeIcon icon={faPhone} className="me-3 icon" /> + 1 512
