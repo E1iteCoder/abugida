@@ -1,6 +1,5 @@
 import FlashcardPractice from "../../components/practiceFlash";
 import LetterTracer from "../../components/letterTracer";
-import alphabets from "../../data/labels/alphabet.json";
 
 export default function Practice({ currentPage }) {
   return (
