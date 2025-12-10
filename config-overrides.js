@@ -12,6 +12,33 @@ module.exports = {
       fs.mkdirSync(minimalPublic, { recursive: true });
     }
     
+    // Copy necessary files to the temp public directory
+    // This ensures they get copied during the build
+    const filesToCopy = [
+      { from: 'favAbugida', to: 'favAbugida' },
+      { from: 'labels', to: 'labels' },
+      { from: 'intro', to: 'intro' },
+      { from: 'CNAME', to: 'CNAME' }
+    ];
+    
+    filesToCopy.forEach(({ from, to }) => {
+      const sourcePath = path.resolve(__dirname, from);
+      const destPath = path.join(minimalPublic, to);
+      
+      if (fs.existsSync(sourcePath)) {
+        if (fs.statSync(sourcePath).isDirectory()) {
+          // Copy directory recursively
+          if (!fs.existsSync(destPath)) {
+            fs.mkdirSync(destPath, { recursive: true });
+          }
+          copyDirectoryRecursive(sourcePath, destPath);
+        } else {
+          // Copy file
+          fs.copyFileSync(sourcePath, destPath);
+        }
+      }
+    });
+    
     // Create a minimal index.html in the temp directory (react-scripts needs this)
     const tempIndexHtml = path.join(minimalPublic, 'index.html');
     if (!fs.existsSync(tempIndexHtml)) {
@@ -36,47 +63,31 @@ module.exports = {
       HtmlWebpackPlugin.options.template = path.resolve(__dirname, 'index.html');
     }
     
-    // Find and update CopyWebpackPlugin
-    const CopyWebpackPlugin = config.plugins.find(
-      plugin => plugin.constructor.name === 'CopyWebpackPlugin'
-    );
-    
-    if (CopyWebpackPlugin) {
-      // Completely replace patterns - only copy what we need from root
-      // This prevents copying the entire root directory
-      CopyWebpackPlugin.patterns = [
-        {
-          from: path.resolve(__dirname, 'favAbugida'),
-          to: 'favAbugida',
-          noErrorOnMissing: true,
-          globOptions: {
-            ignore: ['**/node_modules/**', '**/.git/**']
-          }
-        },
-        {
-          from: path.resolve(__dirname, 'labels'),
-          to: 'labels',
-          noErrorOnMissing: true,
-          globOptions: {
-            ignore: ['**/node_modules/**', '**/.git/**']
-          }
-        },
-        {
-          from: path.resolve(__dirname, 'intro'),
-          to: 'intro',
-          noErrorOnMissing: true,
-          globOptions: {
-            ignore: ['**/node_modules/**', '**/.git/**']
-          }
-        },
-        {
-          from: path.resolve(__dirname, 'CNAME'),
-          to: 'CNAME',
-          noErrorOnMissing: true
-        }
-      ];
-    }
-    
     return config;
   }
 };
+
+// Helper function to copy directories recursively
+function copyDirectoryRecursive(src, dest) {
+  if (!fs.existsSync(dest)) {
+    fs.mkdirSync(dest, { recursive: true });
+  }
+  
+  const entries = fs.readdirSync(src, { withFileTypes: true });
+  
+  for (const entry of entries) {
+    const srcPath = path.join(src, entry.name);
+    const destPath = path.join(dest, entry.name);
+    
+    // Skip node_modules, .git, and build directories
+    if (entry.name === 'node_modules' || entry.name === '.git' || entry.name === 'build') {
+      continue;
+    }
+    
+    if (entry.isDirectory()) {
+      copyDirectoryRecursive(srcPath, destPath);
+    } else {
+      fs.copyFileSync(srcPath, destPath);
+    }
+  }
+}
