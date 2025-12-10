@@ -302,6 +302,23 @@ function QuizQuestion({
 // Final results screen (unchanged)
 function ResultsScreen({ results, onRetry }) {
   const { score, total, mistakes } = results;
+  const accuracy = Math.round((score / total) * 100);
+
+  let performanceMessage;
+  switch (true) {
+    case accuracy >= 90:
+      performanceMessage = "🎉 Excellent job! You're a natural.";
+      break;
+    case accuracy >= 70:
+      performanceMessage = "👍 Good job! You're on the right track.";
+      break;
+    case accuracy >= 50:
+      performanceMessage = "🤔 You can do better! Keep practicing.";
+      break;
+    default:
+      performanceMessage = "🤨 You need to work on your listening skills.";
+      break;
+  }
   return (
     <div className="results-screen">
       <h2>Quiz Complete!</h2>
@@ -310,6 +327,7 @@ function ResultsScreen({ results, onRetry }) {
           Final Score: {score} / {total}
         </p>
         <p>Accuracy: {Math.round((score / total) * 100)}%</p>
+        <p className="performance-message">{performanceMessage}</p>
       </div>
       <div className="mistakes-list">
         <h3>Mistakes to Review:</h3>
