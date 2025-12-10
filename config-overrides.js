@@ -54,6 +54,22 @@ module.exports = {
           }
         },
         {
+          from: path.resolve(__dirname, 'labels'),
+          to: 'labels',
+          noErrorOnMissing: true,
+          globOptions: {
+            ignore: ['**/node_modules/**', '**/.git/**']
+          }
+        },
+        {
+          from: path.resolve(__dirname, 'intro'),
+          to: 'intro',
+          noErrorOnMissing: true,
+          globOptions: {
+            ignore: ['**/node_modules/**', '**/.git/**']
+          }
+        },
+        {
           from: path.resolve(__dirname, 'CNAME'),
           to: 'CNAME',
           noErrorOnMissing: true
