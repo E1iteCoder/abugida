@@ -58,6 +58,18 @@ db.connect().catch(err => {
   // Server continues to run even if DB connection fails
 });
 
+// Root endpoint for testing
+app.get('/', (req, res) => {
+  res.json({ 
+    status: 'OK', 
+    message: 'API server is running',
+    endpoints: {
+      health: '/api/health',
+      auth: '/api/auth'
+    }
+  });
+});
+
 // Routes
 app.use('/api/auth', authRoutes);
 
@@ -82,12 +94,19 @@ app.use((err, req, res, next) => {
   });
 });
 
-// Start server
-const server = app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server is running on port ${PORT}`);
-  console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
-  console.log(`MongoDB URI: ${process.env.MONGODB_URI ? 'Set' : 'Not set'}`);
-});
+// Start server with error handling
+let server;
+try {
+  server = app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server is running on port ${PORT}`);
+    console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
+    console.log(`MongoDB URI: ${process.env.MONGODB_URI ? 'Set' : 'Not set'}`);
+    console.log(`Server started successfully at http://0.0.0.0:${PORT}`);
+  });
+} catch (error) {
+  console.error('Failed to start server:', error);
+  process.exit(1);
+}
 
 // Handle server errors
 server.on('error', (error) => {
