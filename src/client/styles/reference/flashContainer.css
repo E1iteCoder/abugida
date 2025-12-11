@@ -1,5 +1,13 @@
 /* flashContainer.css */
 
+/* Wrapper for the entire flashcard section */
+.flashcard-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 /* wrap BOTH the card and the slider-controls */
 .flashcard-container {
   display: flex;
@@ -13,6 +21,8 @@
   perspective: 1000px; /* move perspective here for perfect symmetry */
   perspective-origin: center center;
 }
+
+/* Settings button uses modal.css .custom-button.open styles */
 
 /* controls under the card */
 .slider-controls {

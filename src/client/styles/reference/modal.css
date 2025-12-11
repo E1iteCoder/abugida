@@ -18,10 +18,12 @@
 .modal-content {
   background-color: var(--card);
   border-radius: 0.5rem;
-  padding: 1.5rem;
+  padding: 1rem;
 
-  /* responsive width: never exceed 600px, but fill up to 90% of viewport */
-  width: min(600px, 90%);
+  /* Auto width sizes to content, with constraints */
+  width: auto;
+  min-width: 300px;
+  max-width: 90vw; /* Prevent overflow on very small screens */
 
   /* prevent overflow: never taller than 90% of viewport height */
   max-height: 90vh;
@@ -34,7 +36,7 @@
 /* Example media‑query tweak: slightly smaller padding on narrow phones */
 @media (max-width: 400px) {
   .modal-content {
-    padding: 1rem;
+    padding: 0.75rem;
   }
 }
 
@@ -43,6 +45,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0;
+}
+
+.modal-header {
+  margin-bottom: 0.5rem;
+}
+
+.modal-footer {
+  margin-top: 0.5rem;
 }
 
 .modal-header h2 {
@@ -50,7 +61,11 @@
 }
 
 .modal-body {
-  margin: 1.25rem 0;
+  margin: 0.75rem 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .close-button {
@@ -108,5 +123,37 @@ button.custom-button:hover {
   background-color: #6c757d;
   border: 0.01rem solid white;
   color: #fff;
+}
+
+.settings-group {
+  margin-bottom: 0.75rem;
+}
+
+.settings-group label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.settings-group select {
+  padding: 8px 12px;
+  border: 1px solid var(--fg);
+  border-radius: 4px;
+  background: var(--card);
+  color: var(--fg);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.settings-group select:hover {
+  border-color: var(--accent);
+}
+
+.settings-group select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(76, 161, 175, 0.2);
 }
 
