@@ -11,12 +11,13 @@ const initialTimePerQuestion = 60;
 
 export default function QuizCarousel({ currentPage = 1 }) {
   // --- Configuration constants ---
-  const itemsPerPage = 14;
-  const totalQuestions = 21;
+  const itemsPerPage = 14; // 2 houses × 7 letters = 14 letters per page
+  const totalQuestions = 21; // 14 questions (one per letter) + 7 randomized = 21 total
   const questionTypes = ["mcq", "typing"];
 
   // --- State hooks ---
-  const [alphabet, setAlphabet] = useState([]);
+  const [alphabet, setAlphabet] = useState([]); // Section array (14 letters = 2 houses)
+  const [allLetters, setAllLetters] = useState([]); // Full alphabet for wrong answers
   const [questions, setQuestions] = useState([]);
   const [answers, setAnswers] = useState({});
   const [typedInput, setTypedInput] = useState("");
@@ -37,13 +38,14 @@ export default function QuizCarousel({ currentPage = 1 }) {
     return a;
   }, []);
 
-  // 2) Build & slice your “alphabet” from letterDetails + audioMap
+  // 2) Build & slice your "alphabet" from letterDetails + audioMap
   useEffect(() => {
     try {
       const all = Object.entries(letterDetails).map(([letter, info]) => ({
         id: generateId(),
         letter,
         phonetic: info.phonetic,
+        row: info.row, // Store house/row info
         audio: audioMap[info.audio] || "" /* guard missing key */,
       }));
 
@@ -55,9 +57,39 @@ export default function QuizCarousel({ currentPage = 1 }) {
         return true;
       });
 
-      // slice for the current page
-      const start = (currentPage - 1) * itemsPerPage;
-      setAlphabet(unique.slice(start, start + itemsPerPage));
+      // Store full alphabet for getting wrong answers from outside section
+      setAllLetters(unique);
+
+      // Group by house (row) to ensure we get 2 complete houses per page
+      const houses = {};
+      const houseOrder = []; // Preserve original order of houses as they appear
+      unique.forEach((item) => {
+        const house = item.row || "unknown";
+        if (!houses[house]) {
+          houses[house] = [];
+          houseOrder.push(house); // Track order of first appearance
+        }
+        houses[house].push(item);
+      });
+
+      // Get all houses as arrays, preserving original order (not sorted alphabetically)
+      const houseArrays = houseOrder.map(house => houses[house]);
+
+      // Calculate which 2 houses to use for this page
+      // currentPage 1 = first 2 houses (index 0-1)
+      // currentPage 2 = next 2 houses (index 2-3), etc.
+      const housesPerPage = 2;
+      const startHouseIndex = (currentPage - 1) * housesPerPage;
+      const selectedHouses = houseArrays.slice(
+        startHouseIndex,
+        startHouseIndex + housesPerPage
+      );
+
+      // Flatten the selected houses into one array (should be ~14 letters)
+      const pageAlphabet = selectedHouses.flat();
+      
+      // If we have more than 14, take first 14; if less, that's okay too
+      setAlphabet(pageAlphabet.slice(0, itemsPerPage));
     } catch (err) {
       setError("Failed to load alphabet data");
     } finally {
@@ -67,35 +99,70 @@ export default function QuizCarousel({ currentPage = 1 }) {
 
   // 3) Build exactly totalQuestions worth of quiz items
   useEffect(() => {
-    if (!alphabet.length) return;
+    if (!alphabet.length || !allLetters.length) return;
 
-    // repeat your per-letter quiz twice (or more) to exceed totalQuestions, then cut off
-    const rounds = Math.ceil(totalQuestions / alphabet.length);
-    const allQs = Array(rounds)
+    // Get letters from outside the section array (for wrong answers)
+    const sectionLetterSet = new Set(alphabet.map(a => a.letter));
+    const outsideSection = allLetters.filter(a => !sectionLetterSet.has(a.letter));
+
+    // Helper function to create a question
+    const createQuestion = (correct) => {
+      // Get 2 wrong answers from the section array
+      const wrongsFromSection = alphabet.filter(
+        (a) => a.audio !== correct.audio && a.letter !== correct.letter
+      );
+      const twoWrongFromSection = shuffle(wrongsFromSection).slice(0, 2);
+
+      // Get 1 wrong answer from outside the section array (and ensure it's not the correct answer)
+      const wrongsFromOutside = outsideSection.filter(
+        (a) => a.letter !== correct.letter
+      );
+      const oneWrongFromOutside = wrongsFromOutside.length > 0
+        ? [shuffle(wrongsFromOutside)[0]]
+        : []; // Fallback if no outside letters available
+
+      // Combine: correct answer + 2 from section + 1 from outside = 4 total options
+      const opts = [correct, ...twoWrongFromSection, ...oneWrongFromOutside];
+      
+      // If we couldn't get an outside letter, add one more from section
+      if (opts.length < 4) {
+        const extraWrong = wrongsFromSection.find(
+          (a) => !opts.some(o => o.letter === a.letter)
+        );
+        if (extraWrong) opts.push(extraWrong);
+      }
+
+      return {
+        id: generateId(),
+        type: questionTypes[
+          Math.floor(Math.random() * questionTypes.length)
+        ],
+        correctAnswer: correct.letter,
+        options: shuffle(opts).map((o) => ({
+          ...o,
+          stableId: generateId(),
+        })),
+        audio: correct.audio,
+        phonetic: correct.phonetic,
+      };
+    };
+
+    // Generate 14 questions (one per letter in the set)
+    const questionsFromLetters = alphabet.map(createQuestion);
+
+    // Generate 7 additional randomized questions from the same set
+    const extraQuestions = Array(7)
       .fill()
-      .flatMap(() =>
-        alphabet.map((correct) => {
-          const wrongs = alphabet.filter((a) => a.audio !== correct.audio);
-          const opts = [correct, ...shuffle(wrongs).slice(0, 3)];
-          return {
-            id: generateId(),
-            type: questionTypes[
-              Math.floor(Math.random() * questionTypes.length)
-            ],
-            correctAnswer: correct.letter,
-            options: shuffle(opts).map((o) => ({
-              ...o,
-              stableId: generateId(),
-            })),
-            audio: correct.audio,
-            phonetic: correct.phonetic,
-          };
-        })
-      )
-      .slice(0, totalQuestions);
+      .map(() => {
+        const randomLetter = shuffle(alphabet)[0];
+        return createQuestion(randomLetter);
+      });
+
+    // Combine: 14 questions + 7 randomized = 21 total questions
+    const allQs = [...questionsFromLetters, ...extraQuestions];
 
     setQuestions(shuffle(allQs));
-  }, [alphabet, shuffle]);
+  }, [alphabet, allLetters, shuffle]);
 
   // 4) Handler to go to next question or finish
   const handleNextQuestion = useCallback(() => {
