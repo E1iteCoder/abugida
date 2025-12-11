@@ -90,7 +90,7 @@ const letterDetails =
     "column": "last",
     "audio": "ho.mp3",
     "strokeGif": "../pictures/gifs/ho-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ሆድ", "gloss": "Stomach", "breakdown": ["ሆ", "ድ"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -144,7 +144,7 @@ const letterDetails =
     "column": "fourth",
     "audio": "la.mp3",
     "strokeGif": "../pictures/gifs/la-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ላም", "gloss": "Cow", "breakdown": ["ላ", "ም"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -168,7 +168,7 @@ const letterDetails =
     "column": "sixth",
     "audio": "l.mp3",
     "strokeGif": "../pictures/gifs/l-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ልጅ", "gloss": "Kid", "breakdown": ["ል", "ጅ"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -180,7 +180,7 @@ const letterDetails =
     "column": "last",
     "audio": "lo.mp3",
     "strokeGif": "../pictures/gifs/lo-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ሎሚ", "gloss": "Lemon", "breakdown": ["ሎ", "ሚ"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -240,7 +240,7 @@ const letterDetails =
     "column": "fifth",
     "audio": "hie.mp3",
     "strokeGif": "../pictures/gifs/hie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ሔዋን", "gloss": "Eve", "breakdown": ["ሔ", "ዋ", "ን"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -252,7 +252,7 @@ const letterDetails =
     "column": "sixth",
     "audio": "h.mp3",
     "strokeGif": "../pictures/gifs/h-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ሕግ", "gloss": "Law", "breakdown": ["ሕ", "ግ"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -276,7 +276,7 @@ const letterDetails =
     "column": "first",
     "audio": "me.mp3",
     "strokeGif": "../pictures/gifs/me-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "መርዝ", "gloss": "Poison", "breakdown": ["መ", "ር", "ዝ"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -288,7 +288,7 @@ const letterDetails =
     "column": "second",
     "audio": "mu.mp3",
     "strokeGif": "../pictures/gifs/mu-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ሙዝ", "gloss": "Banana", "breakdown": ["ሙ", "ዝ"] }],
     "numeric": null,
     "usageNotes": []
   },
