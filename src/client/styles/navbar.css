@@ -184,7 +184,7 @@
   max-width: 300px;
   width: max-content;
   z-index: 10000;
-  overflow: visible;
+  overflow: hidden; /* Hide overflowing background on hover */
 }
 
 .nav-user-dropdown-menu li {
@@ -213,6 +213,9 @@
   overflow-wrap: break-word;
   white-space: normal;
   hyphens: auto;
+  /* Prevent background from overflowing */
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* On mobile, keep text on one line */
@@ -255,7 +258,7 @@
     width: max-content;
     max-width: calc(100vw - 2rem);
     margin-right: 1rem;
-    overflow: visible;
+    overflow: hidden; /* Hide overflowing background on hover */
   }
 
   .nav-dropdown-item {
