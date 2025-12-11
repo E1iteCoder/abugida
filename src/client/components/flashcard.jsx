@@ -52,7 +52,7 @@ export default function Flashcard({ term, definition, audio, frontSide = "term",
           <p className={frontIsTerm ? "flashcard-term" : "flashcard-definition"}>
             {formatContent(frontContent)}
           </p>
-          {frontIsDefinition && audio && (
+          {frontIsDefinition && audio && audio.trim() !== "" && (
             <button className="audio-btn" onClick={handleAudio}>
               🔊
             </button>
@@ -64,7 +64,7 @@ export default function Flashcard({ term, definition, audio, frontSide = "term",
           <p className={backIsTerm ? "flashcard-term" : "flashcard-definition"}>
             {formatContent(backContent)}
           </p>
-          {backIsDefinition && audio && (
+          {backIsDefinition && audio && audio.trim() !== "" && (
             <button className="audio-btn" onClick={handleAudio}>
               🔊
             </button>
