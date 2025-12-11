@@ -189,6 +189,20 @@
 
 .nav-user-dropdown-menu li {
   margin: 0;
+  overflow: hidden; /* Contain hover backgrounds */
+  border-radius: 0; /* Reset, will be set on first/last */
+}
+
+.nav-user-dropdown-menu li:first-child {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.nav-user-dropdown-menu li:last-child {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.nav-user-dropdown-menu li:only-child {
+  border-radius: 0.5rem;
 }
 
 .nav-dropdown-item {
@@ -215,14 +229,20 @@
   hyphens: auto;
   /* Prevent background from overflowing */
   box-sizing: border-box;
-  overflow: hidden;
+  margin: 0;
+  /* Ensure background stays within bounds */
+  position: relative;
 }
 
 /* On mobile, keep text on one line */
 @media (max-width: 768px) {
+  .nav-user-dropdown-menu li {
+    overflow: hidden; /* Still contain on mobile */
+  }
+  
   .nav-dropdown-item {
     white-space: nowrap;
-    overflow: visible;
+    overflow: visible; /* Allow text to show */
   }
 }
 
