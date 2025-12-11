@@ -18,9 +18,11 @@ export const AuthProvider = ({ children }) => {
           setUser(data.user);
           setToken(storedToken);
         } catch (error) {
-          // Token is invalid, clear it
+          // Token is invalid or network error, clear it
+          console.error('Auth check failed:', error.message);
           localStorage.removeItem('token');
           setToken(null);
+          setUser(null);
         }
       }
       setLoading(false);

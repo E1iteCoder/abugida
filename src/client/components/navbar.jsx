@@ -7,14 +7,32 @@ import "../styles/navbar.css";
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { isAuthenticated, user, logout } = useAuth();
   const navigate = useNavigate();
 
   const handleLogout = () => {
     logout();
     navigate("/");
+    setIsDropdownOpen(false);
     if (isMobile) setIsOpen(false);
   };
+
+  const handleDropdownToggle = (e) => {
+    e.stopPropagation();
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isDropdownOpen && !event.target.closest('.nav-user-dropdown')) {
+        setIsDropdownOpen(false);
+      }
+    };
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, [isDropdownOpen]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -47,46 +65,99 @@ export default function Nav() {
                 Home
               </Link>
             </li>
-            {isAuthenticated ? (
-              <>
-                {user && (
-                  <li>
-                    <span className="link" style={{ cursor: "default", color: "var(--fg)" }}>
-                      {user.email}
-                    </span>
-                  </li>
-                )}
-                <li>
-                  <button
-                    className="link"
-                    onClick={handleLogout}
-                    style={{ background: "none", border: "none", cursor: "pointer" }}
-                  >
-                    Logout
-                  </button>
-                </li>
-                <li>
-                  <Link className="link" to="/dashboard">
-                    Dashboard
-                  </Link>
-                </li>
-              </>
-            ) : (
-              <li>
-                <Link className="link" to="/login">
-                  Login
-                </Link>
-              </li>
-            )}
             <li>
               <Link className="link" to="/reference">
                 Reference
               </Link>
             </li>
-            <li>
-              <Link className="link" to="/settings">
-                Settings
-              </Link>
+            <li className="nav-user-menu-container">
+              {isAuthenticated ? (
+                <div className={`nav-user-dropdown ${isDropdownOpen ? "nav-dropdown-open" : ""}`}>
+                  <Link
+                    className="link"
+                    to="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleDropdownToggle(e);
+                    }}
+                    aria-label="User menu"
+                  >
+                    {user?.email || "User"}
+                    <span className="nav-dropdown-arrow">▼</span>
+                  </Link>
+                  {isDropdownOpen && (
+                    <ul className="nav-user-dropdown-menu" onClick={(e) => e.stopPropagation()}>
+                      <li>
+                        <Link
+                          className="nav-dropdown-item"
+                          to="/dashboard"
+                          onClick={() => setIsDropdownOpen(false)}
+                        >
+                          Dashboard
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          className="nav-dropdown-item"
+                          to="/settings"
+                          onClick={() => setIsDropdownOpen(false)}
+                        >
+                          Settings
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          className="nav-dropdown-item nav-logout-item"
+                          to="#"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            handleLogout();
+                          }}
+                        >
+                          Logout
+                        </Link>
+                      </li>
+                    </ul>
+                  )}
+                </div>
+              ) : (
+                <div className={`nav-user-dropdown ${isDropdownOpen ? "nav-dropdown-open" : ""}`}>
+                  <Link
+                    className="link"
+                    to="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleDropdownToggle(e);
+                    }}
+                    aria-label="Login menu"
+                  >
+                    Login
+                    <span className="nav-dropdown-arrow">▼</span>
+                  </Link>
+                  {isDropdownOpen && (
+                    <ul className="nav-user-dropdown-menu" onClick={(e) => e.stopPropagation()}>
+                      <li>
+                        <Link
+                          className="nav-dropdown-item"
+                          to="/login"
+                          onClick={() => setIsDropdownOpen(false)}
+                        >
+                          Login
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          className="nav-dropdown-item"
+                          to="/settings"
+                          onClick={() => setIsDropdownOpen(false)}
+                        >
+                          Settings
+                        </Link>
+                      </li>
+                    </ul>
+                  )}
+                </div>
+              )}
             </li>
           </ul>
         </div>

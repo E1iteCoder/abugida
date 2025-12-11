@@ -16,16 +16,20 @@ export default function Login({ onFormSwitch }) {
     setError("");
     setLoading(true);
 
-    const result = await login(email, pass);
-    
-    if (result.success) {
-      console.log("User logged in successfully");
-      navigate("/dashboard");
-    } else {
-      setError(result.error || "Login failed. Please try again.");
+    try {
+      const result = await login(email, pass);
+      
+      if (result.success) {
+        console.log("User logged in successfully");
+        navigate("/dashboard");
+      } else {
+        setError(result.error || "Login failed. Please try again.");
+      }
+    } catch (err) {
+      setError(err.message || "An unexpected error occurred. Please try again.");
+    } finally {
+      setLoading(false);
     }
-    
-    setLoading(false);
   };
 
   return (

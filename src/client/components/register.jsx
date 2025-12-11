@@ -16,16 +16,20 @@ export default function Register({ onFormSwitch }) {
     setError("");
     setLoading(true);
 
-    const result = await register(email, pass);
-    
-    if (result.success) {
-      console.log("User registered successfully");
-      navigate("/dashboard");
-    } else {
-      setError(result.error || "Registration failed. Please try again.");
+    try {
+      const result = await register(email, pass);
+      
+      if (result.success) {
+        console.log("User registered successfully");
+        navigate("/dashboard");
+      } else {
+        setError(result.error || "Registration failed. Please try again.");
+      }
+    } catch (err) {
+      setError(err.message || "An unexpected error occurred. Please try again.");
+    } finally {
+      setLoading(false);
     }
-    
-    setLoading(false);
   };
 
   return (

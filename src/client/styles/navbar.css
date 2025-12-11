@@ -13,16 +13,19 @@
   padding: 1rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1001;
 }
 
 .logo {
   width: 3.75rem;
   height: auto;
-  transition: transform 0.3s ease;
+  transition: opacity 0.3s ease, filter 0.3s ease;
 }
 
 .logo:hover {
-  transform: scale(1.3);
+  opacity: 0.8;
+  filter: brightness(1.1);
 }
 
 .nav-links {
@@ -32,6 +35,7 @@
   margin: 0;
   padding: 0;
   align-items: center;
+  position: relative;
 }
 
 .link {
@@ -44,6 +48,10 @@
 
 .link:hover {
   color: var(--text-hover);
+}
+
+.nav-links-container {
+  overflow: visible;
 }
 
 /* Hamburger menu styles */
@@ -103,11 +111,22 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out, visibility 0.3s ease-out;
   }
 
   .nav-links-container.active {
-    max-height: 500px;
+    max-height: 1000px; /* Increased to prevent dropdown cutoff */
+    opacity: 1;
+    visibility: visible;
+    overflow: visible; /* Allow dropdown to show when active */
+  }
+  
+  /* When dropdown is open, ensure container doesn't clip it */
+  .nav-links-container.active .nav-user-dropdown.nav-dropdown-open ~ *,
+  .nav-links-container.active .nav-user-dropdown.nav-dropdown-open {
+    overflow: visible;
   }
 
   .nav-links {
@@ -120,5 +139,142 @@
   .link {
     width: 100%;
     padding: 1rem;
+  }
+}
+
+/* User dropdown menu styles - using nav- prefix to avoid conflicts */
+.nav-user-menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-user-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style the link class when used as dropdown button */
+.nav-user-dropdown .link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav-dropdown-arrow {
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+  margin-left: 0.25rem;
+}
+
+.nav-user-dropdown.nav-dropdown-open .nav-dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.nav-user-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.5rem;
+  background: var(--card);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  list-style: none;
+  padding: 0.5rem 0;
+  min-width: 180px;
+  max-width: 300px;
+  width: max-content;
+  z-index: 10000;
+  overflow: visible;
+}
+
+.nav-user-dropdown-menu li {
+  margin: 0;
+}
+
+.nav-dropdown-item {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  color: var(--fg);
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
+  /* Ensure Link elements behave like buttons */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* Allow text to wrap and prevent cutoff */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  hyphens: auto;
+}
+
+/* On mobile, keep text on one line */
+@media (max-width: 768px) {
+  .nav-dropdown-item {
+    white-space: nowrap;
+    overflow: visible;
+  }
+}
+
+.nav-dropdown-item:hover {
+  background-color: var(--bg);
+  color: var(--text-hover);
+}
+
+.nav-logout-item {
+  color: #e74c3c;
+  border-top: 1px solid var(--bg);
+  margin-top: 0.25rem;
+  padding-top: 0.75rem;
+}
+
+.nav-logout-item:hover {
+  background-color: rgba(231, 76, 60, 0.1);
+  color: #c0392b;
+}
+
+/* Mobile dropdown styles - keep absolute positioning to avoid flow issues */
+@media (max-width: 768px) {
+  .nav-user-dropdown-menu {
+    /* Keep absolute positioning on mobile to avoid container clipping */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: var(--card);
+    border-radius: 0.5rem;
+    min-width: 200px;
+    width: max-content;
+    max-width: calc(100vw - 2rem);
+    margin-right: 1rem;
+    overflow: visible;
+  }
+
+  .nav-dropdown-item {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .nav-user-dropdown .link {
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .nav-user-dropdown {
+    width: 100%;
+  }
+  
+  /* Ensure dropdown doesn't get clipped by container */
+  .nav-links-container.active {
+    overflow: visible;
   }
 }
