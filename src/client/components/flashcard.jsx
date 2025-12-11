@@ -40,12 +40,18 @@ export default function Flashcard({ term, definition, audio, frontSide = "term",
   const frontIsDefinition = frontSide === "definition";
   const backIsDefinition = backSide === "definition";
 
+  // Determine content type for styling
+  const frontIsTerm = frontSide === "term";
+  const backIsTerm = backSide === "term";
+
   return (
     <div className={`flashcard ${flipped ? "flipped" : ""}`}>
       <div className="flashcard-inner">
         {/* FRONT FACE */}
         <div className="flashcard-front" onClick={handleFlip}>
-          <p>{formatContent(frontContent)}</p>
+          <p className={frontIsTerm ? "flashcard-term" : "flashcard-definition"}>
+            {formatContent(frontContent)}
+          </p>
           {frontIsDefinition && audio && (
             <button className="audio-btn" onClick={handleAudio}>
               🔊
@@ -55,7 +61,9 @@ export default function Flashcard({ term, definition, audio, frontSide = "term",
 
         {/* BACK FACE */}
         <div className="flashcard-back" onClick={handleFlip}>
-          <p>{formatContent(backContent)}</p>
+          <p className={backIsTerm ? "flashcard-term" : "flashcard-definition"}>
+            {formatContent(backContent)}
+          </p>
           {backIsDefinition && audio && (
             <button className="audio-btn" onClick={handleAudio}>
               🔊

@@ -56,16 +56,15 @@
   font-weight: bold;
 }
 
-.flashcard-front p {
+/* Style based on content type (term vs definition), not front vs back */
+.flashcard-term {
   font-size: clamp(1.5rem, 6vw, 3rem);
   line-height: 1.4;
   word-spacing: 0.2em;
   letter-spacing: 0.05em;
 }
 
-.flashcard-back p {
-  margin-top: 2rem !important;
-  margin-bottom: 1rem !important;
+.flashcard-definition {
   font-size: clamp(1rem, 4vw, 1.5rem);
   line-height: 1.6;
   word-spacing: 0.3em;
