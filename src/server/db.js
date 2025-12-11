@@ -7,16 +7,19 @@ const connect = async () => {
     if (!mongoURI) {
       console.error('MONGODB_URI environment variable is not set!');
       console.error('Please set MONGODB_URI in Railway environment variables.');
-      process.exit(1);
+      console.error('Server will continue to run, but database operations will fail.');
+      return false;
     }
     
     // Remove deprecated options - they're not needed in Mongoose 6+
     await mongoose.connect(mongoURI);
     
     console.log('MongoDB connected successfully');
+    return true;
   } catch (error) {
     console.error('MongoDB connection error:', error);
-    process.exit(1);
+    console.error('Server will continue to run, but database operations will fail.');
+    return false;
   }
 };
 

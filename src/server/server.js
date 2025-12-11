@@ -42,16 +42,27 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Database connection
+// Database connection (non-blocking - server starts even if DB fails)
 const db = require('./db');
-db.connect();
+db.connect().catch(err => {
+  console.error('Failed to initialize database connection:', err);
+  // Server continues to run even if DB connection fails
+});
 
 // Routes
 app.use('/api/auth', authRoutes);
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'OK', message: 'Server is running' });
+  const dbStatus = mongoose.connection.readyState;
+  // 0 = disconnected, 1 = connected, 2 = connecting, 3 = disconnecting
+  const isConnected = dbStatus === 1;
+  
+  res.json({ 
+    status: 'OK', 
+    message: 'Server is running',
+    database: isConnected ? 'connected' : 'disconnected'
+  });
 });
 
 // Start server
