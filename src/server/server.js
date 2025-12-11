@@ -3,8 +3,11 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const path = require('path');
 
-// Load environment variables from project root
-require('dotenv').config({ path: path.join(__dirname, '../../.env') });
+// Load environment variables from project root (for local development only)
+// In Railway, environment variables are set directly, so this is optional
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config({ path: path.join(__dirname, '../../.env') });
+}
 
 const authRoutes = require('./routes/auth');
 
