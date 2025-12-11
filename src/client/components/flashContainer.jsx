@@ -136,37 +136,45 @@ export default function FlashcardContainer() {
   const currentCard = displayedCards[currentCardIndex];
 
   return (
-    <div className="flashcard-wrapper">
-      <FlashcardSettingsModal
-        show={showSettings}
-        onClose={() => setShowSettings(false)}
-        onSave={handleSaveSettings}
-        currentSettings={settings}
-      />
-
-      <button
-        onClick={() => setShowSettings(true)}
-        className="custom-button open"
-      >
-        <FontAwesomeIcon icon={faCog} />
-      </button>
-
-      <div className="flashcard-container">
-        <Flashcard
-          key={`${currentCard.term}-${currentCardIndex}`}
-          {...currentCard}
-          frontSide={settings.frontSide}
-          backSide={settings.backSide}
+    <div className="flashcard-page">
+      <div className="flashcard-header">
+        <h1>Flashcards</h1>
+        <p>Practice more with the flashcards! <br />
+          If you'd like to change the settings of the flashcards, <br />
+          click the cog icon to change the settings for the flashcards.</p>
+      </div>
+      <div className="flashcard-wrapper">
+        <FlashcardSettingsModal
+          show={showSettings}
+          onClose={() => setShowSettings(false)}
+          onSave={handleSaveSettings}
+          currentSettings={settings}
         />
 
-        <div className="slider-controls">
-          <button onClick={goToPrevious} disabled={history.length === 0}>
-            ←
-          </button>
-          <span>
-            {currentCardIndex + 1} / {displayedCards.length}
-          </span>
-          <button onClick={goToNext}>→</button>
+        <button
+          onClick={() => setShowSettings(true)}
+          className="custom-button open"
+        >
+          <FontAwesomeIcon icon={faCog} />
+        </button>
+
+        <div className="flashcard-container">
+          <Flashcard
+            key={`${currentCard.term}-${currentCardIndex}`}
+            {...currentCard}
+            frontSide={settings.frontSide}
+            backSide={settings.backSide}
+          />
+
+          <div className="slider-controls">
+            <button onClick={goToPrevious} disabled={history.length === 0}>
+              ←
+            </button>
+            <span>
+              {currentCardIndex + 1} / {displayedCards.length}
+            </span>
+            <button onClick={goToNext}>→</button>
+          </div>
         </div>
       </div>
     </div>

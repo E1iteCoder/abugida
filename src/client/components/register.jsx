@@ -1,19 +1,31 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 import "../styles/login/register.css";
 
 export default function Register({ onFormSwitch }) {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const { register } = useAuth();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      await createUserWithEmailAndPassword(auth, email, pass);
+    setError("");
+    setLoading(true);
+
+    const result = await register(email, pass);
+    
+    if (result.success) {
       console.log("User registered successfully");
-    } catch (error) {
-      setError(error.message);
+      navigate("/dashboard");
+    } else {
+      setError(result.error || "Registration failed. Please try again.");
     }
+    
+    setLoading(false);
   };
 
   return (
@@ -37,7 +49,9 @@ export default function Register({ onFormSwitch }) {
           name="password"
           onChange={(e) => setPass(e.target.value)}
         />
-        <button type="submit">Register</button>
+        <button type="submit" disabled={loading}>
+          {loading ? "Registering..." : "Register"}
+        </button>
         <p>Already have an account?</p>
         <button
           type="button"

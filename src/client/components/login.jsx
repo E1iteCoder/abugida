@@ -1,19 +1,31 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 import "../styles/login/login.css";
 
 export default function Login({ onFormSwitch }) {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const { login } = useAuth();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      await signInWithEmailAndPassword(auth, email, pass);
+    setError("");
+    setLoading(true);
+
+    const result = await login(email, pass);
+    
+    if (result.success) {
       console.log("User logged in successfully");
-    } catch (error) {
-      setError(error.message);
+      navigate("/dashboard");
+    } else {
+      setError(result.error || "Login failed. Please try again.");
     }
+    
+    setLoading(false);
   };
 
   return (
@@ -37,7 +49,9 @@ export default function Login({ onFormSwitch }) {
           name="password"
           onChange={(e) => setPass(e.target.value)}
         />
-        <button type="submit">Log In</button>
+        <button type="submit" disabled={loading}>
+          {loading ? "Logging in..." : "Log In"}
+        </button>
         <p>New to Abugida?</p>
         <button
           type="button"

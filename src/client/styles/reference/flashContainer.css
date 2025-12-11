@@ -1,11 +1,39 @@
 /* flashContainer.css */
 
+/* Page wrapper for centering everything */
+.flashcard-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 200px); /* Adjust based on navbar/footer height */
+  padding: 2rem 1rem;
+  width: 100%;
+}
+
+/* Header for the title */
+.flashcard-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.flashcard-header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0;
+  color: var(--text, #333);
+}
+
 /* Wrapper for the entire flashcard section */
 .flashcard-wrapper {
   position: relative;
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* wrap BOTH the card and the slider-controls */

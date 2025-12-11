@@ -1,11 +1,20 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 import logo from "../pictures/Abugida2.svg";
 import "../styles/navbar.css";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const { isAuthenticated, user, logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate("/");
+    if (isMobile) setIsOpen(false);
+  };
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -38,16 +47,37 @@ export default function Nav() {
                 Home
               </Link>
             </li>
-            <li>
-              <Link className="link" to="/login">
-                Login
-              </Link>
-            </li>
-            <li>
-              <Link className="link" to="/dashboard">
-                Dashboard
-              </Link>
-            </li>
+            {isAuthenticated ? (
+              <>
+                {user && (
+                  <li>
+                    <span className="link" style={{ cursor: "default", color: "var(--fg)" }}>
+                      {user.email}
+                    </span>
+                  </li>
+                )}
+                <li>
+                  <button
+                    className="link"
+                    onClick={handleLogout}
+                    style={{ background: "none", border: "none", cursor: "pointer" }}
+                  >
+                    Logout
+                  </button>
+                </li>
+                <li>
+                  <Link className="link" to="/dashboard">
+                    Dashboard
+                  </Link>
+                </li>
+              </>
+            ) : (
+              <li>
+                <Link className="link" to="/login">
+                  Login
+                </Link>
+              </li>
+            )}
             <li>
               <Link className="link" to="/reference">
                 Reference
