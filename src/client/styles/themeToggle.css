@@ -1,43 +1,34 @@
-/* src/components/ThemeToggle.css */
+/* Theme Toggle Dropdown Styles */
 .theme-toggle {
   display: inline-flex;
   align-items: center;
-  cursor: pointer;
 }
-.theme-toggle input {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-.theme-toggle .slider {
-  width: 2rem;
-  height: 1rem;
-  background: #ccc;
-  border-radius: 1rem;
-  position: relative;
-  margin-right: 0.5rem;
-  transition: background 0.3s;
-}
-.theme-toggle .slider::before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 0.8rem;
-  height: 0.8rem;
-  background: white;
-  border-radius: 50%;
-  transition: transform 0.3s;
-}
-/* when checked, slide the circle and darken track */
-.theme-toggle input:checked + .slider {
-  background: #4ca1af;
-}
-.theme-toggle input:checked + .slider::before {
-  transform: translateX(1rem);
-}
-.theme-toggle .label {
+
+.theme-select {
+  padding: 0.5rem 1rem;
   font-size: 0.9rem;
-  user-select: none;
+  border: 1px solid var(--fg);
+  border-radius: 0.5rem;
+  background: var(--card);
+  color: var(--fg);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  min-width: 120px;
+}
+
+.theme-select:hover {
+  border-color: var(--accent);
+  background: var(--card-hover);
+}
+
+.theme-select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(76, 161, 175, 0.2);
+}
+
+.theme-select option {
+  background: var(--card);
+  color: var(--fg);
+  padding: 0.5rem;
 }

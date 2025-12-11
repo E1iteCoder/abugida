@@ -1,13 +1,28 @@
 import React, { useEffect, useState } from "react";
 import "../styles/themeToggle.css";
 
+// Helper function to get theme based on mode
+const getThemeFromMode = (currentMode) => {
+  if (currentMode === "auto") {
+    // Auto mode: dark between 6 PM and 6 AM
+    const hour = new Date().getHours();
+    return hour >= 18 || hour < 6 ? "dark" : "light";
+  } else {
+    // Manual mode: use the selected mode directly
+    return currentMode; // "light" or "dark"
+  }
+};
+
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState(() => {
-    const saved = localStorage.getItem("theme");
-    return saved ? saved : new Date().getHours() >= 18 ? "dark" : "light";
+  // Get theme mode: "auto", "light", or "dark"
+  const [mode, setMode] = useState(() => {
+    const savedMode = localStorage.getItem("themeMode");
+    return savedMode || "auto"; // Default to auto mode
   });
 
-  // 1. Apply theme to DOM and save to localStorage
+  const [theme, setTheme] = useState(() => getThemeFromMode(mode));
+
+  // 1. Apply theme to DOM
   useEffect(() => {
     const root = document.documentElement;
     if (theme === "dark") {
@@ -15,43 +30,63 @@ export default function ThemeToggle() {
     } else {
       root.removeAttribute("data-theme");
     }
-    localStorage.setItem("theme", theme);
   }, [theme]);
 
-  // 2. Live time updates - ONLY if no saved user preference
+  // 2. Update theme when mode changes
   useEffect(() => {
-    const interval = setInterval(() => {
-      const saved = localStorage.getItem("theme");
-      // Skip if user has manually set a preference
-      if (saved && !saved.startsWith("auto-")) return;
-      
+    const newTheme = getThemeFromMode(mode);
+    setTheme(newTheme);
+    
+    // Save mode preference
+    localStorage.setItem("themeMode", mode);
+  }, [mode]);
+
+  // 3. Auto-update theme based on time (only in auto mode)
+  useEffect(() => {
+    if (mode !== "auto") return; // Only run in auto mode
+
+    // Update immediately on mount
+    const updateTheme = () => {
       const hour = new Date().getHours();
       const newTheme = hour >= 18 || hour < 6 ? "dark" : "light";
-      
-      // Only update if different from current
       if (newTheme !== theme) {
         setTheme(newTheme);
       }
-    }, 60000); // Check every minute
+    };
+
+    updateTheme(); // Initial update
+
+    // Check every minute for time-based changes
+    const interval = setInterval(updateTheme, 60000);
 
     return () => clearInterval(interval);
-  }, [theme]); // Re-run if theme changes manually
+  }, [mode, theme]);
 
-  const toggleTheme = () => {
-    // Clear auto mode when user manually toggles
-    localStorage.removeItem("theme");
-    setTheme(theme === "dark" ? "light" : "dark");
+  const handleModeChange = (e) => {
+    const newMode = e.target.value;
+    setMode(newMode);
+  };
+
+  // Get display label for auto option
+  const getAutoLabel = () => {
+    if (mode === "auto") {
+      return `Auto (${theme === "dark" ? "Dark" : "Light"})`;
+    }
+    return "Auto";
   };
 
   return (
-    <label className="theme-toggle">
-      <input
-        type="checkbox"
-        checked={theme === "dark"}
-        onChange={toggleTheme}
-      />
-      <span className="slider" />
-      <span className="label">{theme === "dark" ? "Dark" : "Light"}</span>
-    </label>
+    <div className="theme-toggle">
+      <select
+        className="theme-select"
+        value={mode}
+        onChange={handleModeChange}
+        aria-label="Select theme mode"
+      >
+        <option value="auto">{getAutoLabel()}</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+    </div>
   );
 }
