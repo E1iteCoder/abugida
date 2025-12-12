@@ -4,7 +4,7 @@ import { useAuth } from "../context/AuthContext";
 import "../styles/login/login.css";
 
 export default function Login({ onFormSwitch }) {
-  const [email, setEmail] = useState("");
+  const [usernameOrEmail, setUsernameOrEmail] = useState("");
   const [pass, setPass] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -17,7 +17,7 @@ export default function Login({ onFormSwitch }) {
     setLoading(true);
 
     try {
-      const result = await login(email, pass);
+      const result = await login(usernameOrEmail, pass);
       
       if (result.success) {
         console.log("User logged in successfully");
@@ -37,13 +37,15 @@ export default function Login({ onFormSwitch }) {
       <form className="form" onSubmit={handleSubmit}>
         <h1>Login</h1>
         {error && <p className="error">{error}</p>}
-        <label htmlFor="email">Email</label>
+        <label htmlFor="usernameOrEmail">Username or Email</label>
         <input
-          type="email"
-          placeholder="youremail@gmail.com"
-          id="email"
-          name="email"
-          onChange={(e) => setEmail(e.target.value)}
+          type="text"
+          placeholder="username or youremail@gmail.com"
+          id="usernameOrEmail"
+          name="usernameOrEmail"
+          value={usernameOrEmail}
+          onChange={(e) => setUsernameOrEmail(e.target.value)}
+          required
         />
         <label htmlFor="password">Password</label>
         <input
@@ -51,7 +53,9 @@ export default function Login({ onFormSwitch }) {
           placeholder="*********"
           id="password"
           name="password"
+          value={pass}
           onChange={(e) => setPass(e.target.value)}
+          required
         />
         <button type="submit" disabled={loading}>
           {loading ? "Logging in..." : "Log In"}

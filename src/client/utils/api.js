@@ -83,17 +83,23 @@ const apiRequest = async (endpoint, options = {}) => {
 
 // Auth API calls
 export const authAPI = {
-  register: async (email, password) => {
+  register: async (username, email, password) => {
     return apiRequest('/auth/register', {
       method: 'POST',
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ username, email, password }),
     });
   },
 
-  login: async (email, password) => {
+  login: async (usernameOrEmail, password) => {
+    // Determine if input is email or username
+    const isEmail = usernameOrEmail.includes('@');
+    const body = isEmail 
+      ? { email: usernameOrEmail, password }
+      : { username: usernameOrEmail, password };
+    
     return apiRequest('/auth/login', {
       method: 'POST',
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify(body),
     });
   },
 

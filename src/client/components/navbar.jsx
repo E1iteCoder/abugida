@@ -82,7 +82,7 @@ export default function Nav() {
                     }}
                     aria-label="User menu"
                   >
-                    {user?.email || "User"}
+                    {user?.username || user?.email || "User"}
                     <span className="nav-dropdown-arrow">▼</span>
                   </Link>
                   {isDropdownOpen && (
