@@ -3,8 +3,9 @@ const mongoose = require('mongoose');
 const userSchema = new mongoose.Schema({
   username: {
     type: String,
-    required: true,
+    required: false, // Optional for backward compatibility with existing users
     unique: true,
+    sparse: true, // Allow multiple null values (for existing users without username)
     trim: true,
     minlength: 3,
     maxlength: 30,
