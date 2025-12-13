@@ -17,7 +17,7 @@ const getApiBaseUrl = () => {
     // return '/api';
     
     // Option 2: If backend is on subdomain (Cloudflare Tunnel)
-    return 'https://server.theabugida.org/api';
+    return 'https://api.theabugida.org/api';
     
     // Option 3: If backend is on different service, use full URL
     // return 'https://your-backend-service.com/api';
