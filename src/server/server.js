@@ -54,7 +54,14 @@ app.use(express.urlencoded({ extended: true }));
 
 // Database connection (non-blocking - server starts even if DB fails)
 const db = require('./db');
-db.connect().catch(err => {
+console.log('Attempting MongoDB connection...');
+db.connect().then(success => {
+  if (success) {
+    console.log('MongoDB connection initialized successfully');
+  } else {
+    console.log('MongoDB connection will retry in background');
+  }
+}).catch(err => {
   console.error('Failed to initialize database connection:', err);
   // Server continues to run even if DB connection fails
 });
