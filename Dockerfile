@@ -26,5 +26,6 @@ EXPOSE 8080
 
 # Start both server and cloudflared tunnel
 # The tunnel token should be set as CLOUDFLARE_TUNNEL_TOKEN environment variable in Railway
-CMD sh -c "node src/server/server.js & cloudflared tunnel --url http://localhost:8080"
+# Using 'tunnel run' with token connects to the named tunnel instead of creating a quick tunnel
+CMD sh -c "node src/server/server.js & cloudflared tunnel run --token $CLOUDFLARE_TUNNEL_TOKEN"
 
