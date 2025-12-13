@@ -110,6 +110,7 @@ try {
     console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
     console.log(`MongoDB URI: ${process.env.MONGODB_URI ? 'Set' : 'Not set'}`);
     console.log(`Server started successfully at http://0.0.0.0:${PORT}`);
+    console.log(`Cloudflare Tunnel should route api.theabugida.org to this server`);
   });
 } catch (error) {
   console.error('Failed to start server:', error);
