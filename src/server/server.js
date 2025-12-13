@@ -52,6 +52,12 @@ app.options('*', cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Request logging middleware
+app.use((req, res, next) => {
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.path} - Origin: ${req.get('origin') || 'none'}`);
+  next();
+});
+
 // Database connection (non-blocking - server starts even if DB fails)
 const db = require('./db');
 console.log('Attempting MongoDB connection...');
@@ -83,10 +89,12 @@ app.use('/api/auth', authRoutes);
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
+  console.log('Health check endpoint called');
   const dbStatus = mongoose.connection.readyState;
   // 0 = disconnected, 1 = connected, 2 = connecting, 3 = disconnecting
   const isConnected = dbStatus === 1;
   
+  console.log(`Health check response: status=OK, database=${isConnected ? 'connected' : 'disconnected'}`);
   res.json({ 
     status: 'OK', 
     message: 'Server is running',
