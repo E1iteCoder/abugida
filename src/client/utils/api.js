@@ -16,8 +16,8 @@ const getApiBaseUrl = () => {
     // Option 1: If backend is on same domain with reverse proxy
     // return '/api';
     
-    // Option 2: If backend is on subdomain (recommended)
-    return 'https://api.theabugida.org/api';
+    // Option 2: If backend is on subdomain (Cloudflare Tunnel)
+    return 'https://server.theabugida.org/api';
     
     // Option 3: If backend is on different service, use full URL
     // return 'https://your-backend-service.com/api';

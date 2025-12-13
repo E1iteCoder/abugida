@@ -25,6 +25,7 @@ const corsOptions = {
     const allowedOrigins = [
       'https://theabugida.org',
       'https://www.theabugida.org',
+      'https://server.theabugida.org',
       'http://localhost:3000',
       'http://localhost:3001',
     ];
