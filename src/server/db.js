@@ -6,7 +6,7 @@ const connect = async () => {
     
     if (!mongoURI) {
       console.error('MONGODB_URI environment variable is not set!');
-      console.error('Please set MONGODB_URI in Railway environment variables.');
+      console.error('Please set MONGODB_URI in your .env file or environment variables.');
       console.error('Server will continue to run, but database operations will fail.');
       return false;
     }
