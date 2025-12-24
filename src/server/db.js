@@ -13,7 +13,8 @@ const connectionOptions = {
   tlsAllowInvalidHostnames: false, // Validate hostnames
 };
 
-const connect = async (retries = 5, delay = 5000) => {
+// Internal connection function (without background retry)
+const _connect = async (retries = 5, delay = 5000) => {
   const mongoURI = process.env.MONGODB_URI;
   
   if (!mongoURI) {
@@ -65,12 +66,22 @@ const connect = async (retries = 5, delay = 5000) => {
         console.error('Check MongoDB Atlas Network Access settings');
       }
       
+      // Close any partial connection to reset state
+      if (mongoose.connection.readyState !== 0) {
+        try {
+          await mongoose.connection.close();
+        } catch (closeError) {
+          // Ignore close errors
+        }
+      }
+      
       if (i < retries - 1) {
         console.log(`Retrying in ${delay / 1000} seconds...`);
         await new Promise(resolve => setTimeout(resolve, delay));
       } else {
         console.error('MongoDB connection failed after all retries');
         console.error('Server will continue to run, but database operations will fail.');
+        console.error('Will retry in background every 30 seconds...');
         return false;
       }
     }
@@ -79,9 +90,44 @@ const connect = async (retries = 5, delay = 5000) => {
   return false;
 };
 
+// Background retry mechanism
+let retryInterval = null;
+
+const startBackgroundRetry = () => {
+  if (retryInterval) {
+    return; // Already retrying
+  }
+  
+  console.log('Starting background MongoDB connection retry (every 30 seconds)...');
+  retryInterval = setInterval(async () => {
+    // Only retry if not connected and not currently connecting
+    if (mongoose.connection.readyState === 0 || mongoose.connection.readyState === 3) {
+      console.log('Retrying MongoDB connection in background...');
+      const success = await _connect(1, 0); // Single attempt, no delay
+      if (success && retryInterval) {
+        clearInterval(retryInterval);
+        retryInterval = null;
+        console.log('Background retry successful! MongoDB is now connected.');
+      }
+    } else if (mongoose.connection.readyState === 1) {
+      // Already connected, stop retrying
+      if (retryInterval) {
+        clearInterval(retryInterval);
+        retryInterval = null;
+      }
+    }
+  }, 30000); // Retry every 30 seconds
+};
+
 // Handle connection events
 mongoose.connection.on('connected', () => {
   console.log('MongoDB connection event: connected');
+  // Stop background retry if it's running
+  if (retryInterval) {
+    clearInterval(retryInterval);
+    retryInterval = null;
+    console.log('Background retry stopped - MongoDB is now connected');
+  }
 });
 
 mongoose.connection.on('disconnected', () => {
@@ -111,6 +157,15 @@ const disconnect = async () => {
   } catch (error) {
     console.error('Error closing MongoDB connection:', error);
   }
+};
+
+// Public connect function that also starts background retry on failure
+const connect = async (retries = 5, delay = 5000) => {
+  const success = await _connect(retries, delay);
+  if (!success) {
+    startBackgroundRetry();
+  }
+  return success;
 };
 
 module.exports = { connect, isConnected, disconnect };
