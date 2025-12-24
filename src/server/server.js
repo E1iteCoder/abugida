@@ -87,8 +87,8 @@ app.get('/', (req, res) => {
 // Routes
 app.use('/api/auth', authRoutes);
 
-// Health check endpoint
-app.get('/api/health', (req, res) => {
+// Health check endpoint (both /health and /api/health for convenience)
+const healthCheck = (req, res) => {
   console.log('Health check endpoint called');
   const isConnected = db.isConnected();
   const dbStatus = mongoose.connection.readyState;
@@ -102,7 +102,10 @@ app.get('/api/health', (req, res) => {
     database: statusText,
     databaseReady: isConnected
   });
-});
+};
+
+app.get('/health', healthCheck);
+app.get('/api/health', healthCheck);
 
 // Error handling middleware (should be last)
 app.use((err, req, res, next) => {
