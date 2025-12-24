@@ -90,15 +90,17 @@ app.use('/api/auth', authRoutes);
 // Health check endpoint
 app.get('/api/health', (req, res) => {
   console.log('Health check endpoint called');
+  const isConnected = db.isConnected();
   const dbStatus = mongoose.connection.readyState;
   // 0 = disconnected, 1 = connected, 2 = connecting, 3 = disconnecting
-  const isConnected = dbStatus === 1;
+  const statusText = ['disconnected', 'connected', 'connecting', 'disconnecting'][dbStatus] || 'unknown';
   
-  console.log(`Health check response: status=OK, database=${isConnected ? 'connected' : 'disconnected'}`);
+  console.log(`Health check response: status=OK, database=${statusText}`);
   res.json({ 
     status: 'OK', 
     message: 'Server is running',
-    database: isConnected ? 'connected' : 'disconnected'
+    database: statusText,
+    databaseReady: isConnected
   });
 });
 
@@ -144,6 +146,27 @@ process.on('unhandledRejection', (reason, promise) => {
   console.error('Unhandled Rejection at:', promise, 'reason:', reason);
   // Don't exit, let the server continue running
 });
+
+// Graceful shutdown handlers
+const gracefulShutdown = async (signal) => {
+  console.log(`\n${signal} received. Starting graceful shutdown...`);
+  
+  // Stop accepting new requests
+  if (server) {
+    server.close(() => {
+      console.log('HTTP server closed');
+    });
+  }
+  
+  // Close database connection
+  await db.disconnect();
+  
+  // Exit process
+  process.exit(0);
+};
+
+process.on('SIGTERM', () => gracefulShutdown('SIGTERM'));
+process.on('SIGINT', () => gracefulShutdown('SIGINT'));
 
 module.exports = app;
 

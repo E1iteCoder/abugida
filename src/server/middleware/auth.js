@@ -1,4 +1,17 @@
 const jwt = require('jsonwebtoken');
+const mongoose = require('mongoose');
+const db = require('../db');
+
+// Middleware to check if database is connected
+const checkDatabase = (req, res, next) => {
+  if (!db.isConnected()) {
+    return res.status(503).json({ 
+      error: 'Database unavailable',
+      message: 'The database is not currently connected. Please try again later.'
+    });
+  }
+  next();
+};
 
 // Middleware to verify JWT token
 const authenticateToken = (req, res, next) => {
@@ -22,5 +35,5 @@ const authenticateToken = (req, res, next) => {
   );
 };
 
-module.exports = { authenticateToken };
+module.exports = { authenticateToken, checkDatabase };
 
