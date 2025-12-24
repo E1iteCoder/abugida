@@ -2,11 +2,15 @@ const mongoose = require('mongoose');
 
 // Connection options for better reliability
 const connectionOptions = {
-  serverSelectionTimeoutMS: 5000, // Timeout after 5s instead of 30s
+  serverSelectionTimeoutMS: 30000, // Timeout after 30s (increased for SSL handshake)
   socketTimeoutMS: 45000, // Close sockets after 45s of inactivity
-  connectTimeoutMS: 10000, // Give up initial connection after 10s
+  connectTimeoutMS: 30000, // Give up initial connection after 30s (increased for SSL handshake)
   maxPoolSize: 10, // Maintain up to 10 socket connections
   minPoolSize: 2, // Maintain at least 2 socket connections
+  // TLS/SSL options for MongoDB Atlas
+  tls: true, // Enable TLS (required for Atlas)
+  tlsAllowInvalidCertificates: false, // Validate certificates
+  tlsAllowInvalidHostnames: false, // Validate hostnames
 };
 
 const connect = async (retries = 5, delay = 5000) => {
@@ -45,10 +49,20 @@ const connect = async (retries = 5, delay = 5000) => {
       // Log more details for debugging
       if (error.name === 'MongoServerSelectionError') {
         console.error('Server selection error - check network connectivity and MongoDB Atlas IP whitelist');
+        if (error.cause && error.cause.code === 'ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR') {
+          console.error('SSL/TLS handshake error - this may indicate:');
+          console.error('  1. IP address not whitelisted in MongoDB Atlas');
+          console.error('  2. Network connectivity issues from Railway to MongoDB Atlas');
+          console.error('  3. TLS version compatibility issues');
+        }
       } else if (error.name === 'MongoParseError') {
         console.error('Connection string parse error - check MONGODB_URI format');
       } else if (error.name === 'MongoAuthenticationError') {
         console.error('Authentication error - check username and password in MONGODB_URI');
+      } else if (error.cause && error.cause.code === 'ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR') {
+        console.error('SSL/TLS handshake error detected');
+        console.error('This often indicates IP whitelist issues in MongoDB Atlas');
+        console.error('Check MongoDB Atlas Network Access settings');
       }
       
       if (i < retries - 1) {
