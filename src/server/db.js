@@ -7,8 +7,6 @@ const connectionOptions = {
   connectTimeoutMS: 10000, // Give up initial connection after 10s
   maxPoolSize: 10, // Maintain up to 10 socket connections
   minPoolSize: 2, // Maintain at least 2 socket connections
-  bufferCommands: false, // Disable mongoose buffering
-  bufferMaxEntries: 0, // Disable mongoose buffering
 };
 
 const connect = async (retries = 5, delay = 5000) => {
@@ -32,6 +30,10 @@ const connect = async (retries = 5, delay = 5000) => {
     console.log('MongoDB connection already in progress');
     return false;
   }
+  
+  // Disable mongoose buffering globally
+  mongoose.set('bufferCommands', false);
+  mongoose.set('bufferMaxEntries', 0);
   
   for (let i = 0; i < retries; i++) {
     try {
