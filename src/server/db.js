@@ -31,10 +31,6 @@ const connect = async (retries = 5, delay = 5000) => {
     return false;
   }
   
-  // Disable mongoose buffering globally
-  mongoose.set('bufferCommands', false);
-  mongoose.set('bufferMaxEntries', 0);
-  
   for (let i = 0; i < retries; i++) {
     try {
       await mongoose.connect(mongoURI, connectionOptions);
