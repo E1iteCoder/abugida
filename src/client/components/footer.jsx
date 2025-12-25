@@ -4,9 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faDiscord,
   faInstagram,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
-import {
+  faYoutube,
   faGem,
   faHome,
   faEnvelope,
@@ -28,16 +26,16 @@ export default function Footer() {
             <FontAwesomeIcon icon={faDiscord} />
           </a>
           <a
-            href="https://www.instagram.com/official.dani.mekuria/"
+            href="https://www.instagram.com/the_abugida/"
             target="_blank"
           >
             <FontAwesomeIcon icon={faInstagram} />
           </a>
           <a
-            href="http://www.linkedin.com/in/daniel-mekuria-022715214"
+            href="https://www.youtube.com/@the_abugida"
             target="_blank"
           >
-            <FontAwesomeIcon icon={faLinkedin} />
+            <FontAwesomeIcon icon={faYoutube} />
           </a>
         </div>
       </section>
