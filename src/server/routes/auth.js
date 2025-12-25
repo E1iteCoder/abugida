@@ -63,6 +63,7 @@ router.post('/register', checkDatabase, async (req, res) => {
         id: user._id,
         username: user.username,
         email: user.email,
+        themeMode: user.themeMode || 'auto',
       },
     });
   } catch (error) {
@@ -122,6 +123,7 @@ router.post('/login', checkDatabase, async (req, res) => {
         id: user._id,
         username: user.username,
         email: user.email,
+        themeMode: user.themeMode || 'auto',
       },
     });
   } catch (error) {
@@ -143,12 +145,56 @@ router.get('/me', checkDatabase, authenticateToken, async (req, res) => {
         id: user._id,
         username: user.username,
         email: user.email,
+        themeMode: user.themeMode || 'auto',
         createdAt: user.createdAt,
       }
     });
   } catch (error) {
     console.error('Auth error:', error);
     res.status(500).json({ error: 'Server error' });
+  }
+});
+
+// Update user preferences (protected route)
+router.put('/preferences', checkDatabase, authenticateToken, async (req, res) => {
+  try {
+    const { themeMode } = req.body;
+
+    // Validate themeMode if provided
+    if (themeMode && !['auto', 'light', 'dark'].includes(themeMode)) {
+      return res.status(400).json({ error: 'Invalid themeMode. Must be "auto", "light", or "dark"' });
+    }
+
+    // Build update object
+    const updateData = {};
+    if (themeMode !== undefined) {
+      updateData.themeMode = themeMode;
+    }
+
+    // Update user
+    const user = await User.findByIdAndUpdate(
+      req.userId,
+      { $set: updateData },
+      { new: true, runValidators: true }
+    ).select('-password');
+
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+
+    res.json({
+      message: 'Preferences updated successfully',
+      user: {
+        id: user._id,
+        username: user.username,
+        email: user.email,
+        themeMode: user.themeMode || 'auto',
+        createdAt: user.createdAt,
+      }
+    });
+  } catch (error) {
+    console.error('Update preferences error:', error);
+    res.status(500).json({ error: 'Server error updating preferences' });
   }
 });
 

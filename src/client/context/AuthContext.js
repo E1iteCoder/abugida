@@ -17,6 +17,10 @@ export const AuthProvider = ({ children }) => {
           const data = await authAPI.getCurrentUser();
           setUser(data.user);
           setToken(storedToken);
+          // Sync theme preference to localStorage
+          if (data.user?.themeMode) {
+            localStorage.setItem("themeMode", data.user.themeMode);
+          }
         } catch (error) {
           // Token is invalid or network error, clear it
           console.error('Auth check failed:', error.message);
@@ -37,6 +41,10 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem('token', data.token);
       setToken(data.token);
       setUser(data.user);
+      // Sync theme preference to localStorage
+      if (data.user?.themeMode) {
+        localStorage.setItem("themeMode", data.user.themeMode);
+      }
       return { success: true };
     } catch (error) {
       return { success: false, error: error.message };
@@ -49,6 +57,10 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem('token', data.token);
       setToken(data.token);
       setUser(data.user);
+      // Sync theme preference to localStorage
+      if (data.user?.themeMode) {
+        localStorage.setItem("themeMode", data.user.themeMode);
+      }
       return { success: true };
     } catch (error) {
       return { success: false, error: error.message };

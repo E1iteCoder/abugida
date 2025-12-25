@@ -27,6 +27,12 @@ const userSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+  // User preferences
+  themeMode: {
+    type: String,
+    enum: ['auto', 'light', 'dark'],
+    default: 'auto',
+  },
   // Add more fields as needed
   // profile: {
   //   name: String,

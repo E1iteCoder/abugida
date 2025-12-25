@@ -1,4 +1,5 @@
 // Initialize theme on app load - runs before any components mount
+// Note: User theme preference from database will be loaded after authentication
 export function initializeTheme() {
   // Check for old theme format and migrate if needed
   const oldTheme = localStorage.getItem("theme");
@@ -10,6 +11,7 @@ export function initializeTheme() {
     }
   }
   
+  // Use localStorage (will be synced with user data after login if available)
   const savedMode = localStorage.getItem("themeMode") || "auto";
   
   let theme;

@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useAuth } from "../context/AuthContext";
+import { authAPI } from "../utils/api";
 import "../styles/themeToggle.css";
 
 // Helper function to get theme based on mode
@@ -14,13 +16,32 @@ const getThemeFromMode = (currentMode) => {
 };
 
 export default function ThemeToggle() {
+  const { user, isAuthenticated } = useAuth();
+  
   // Get theme mode: "auto", "light", or "dark"
+  // Priority: user.themeMode (if logged in) > localStorage > "auto"
   const [mode, setMode] = useState(() => {
+    if (user?.themeMode) {
+      return user.themeMode;
+    }
     const savedMode = localStorage.getItem("themeMode");
     return savedMode || "auto"; // Default to auto mode
   });
 
   const [theme, setTheme] = useState(() => getThemeFromMode(mode));
+  
+  // Sync mode when user data changes (e.g., after login)
+  useEffect(() => {
+    if (isAuthenticated && user?.themeMode) {
+      setMode(user.themeMode);
+    } else if (!isAuthenticated) {
+      // If logged out, use localStorage
+      const savedMode = localStorage.getItem("themeMode");
+      if (savedMode) {
+        setMode(savedMode);
+      }
+    }
+  }, [user, isAuthenticated]);
 
   // 1. Apply theme to DOM
   useEffect(() => {
@@ -38,8 +59,24 @@ export default function ThemeToggle() {
     setTheme(newTheme);
     
     // Save mode preference
-    localStorage.setItem("themeMode", mode);
-  }, [mode]);
+    const saveThemePreference = async () => {
+      // Always save to localStorage as backup
+      localStorage.setItem("themeMode", mode);
+      
+      // If user is logged in, also save to database
+      if (isAuthenticated && user) {
+        try {
+          await authAPI.updatePreferences({ themeMode: mode });
+          console.log('Theme preference saved to database');
+        } catch (error) {
+          console.error('Failed to save theme preference to database:', error);
+          // Continue anyway - localStorage is saved
+        }
+      }
+    };
+    
+    saveThemePreference();
+  }, [mode, isAuthenticated, user]);
 
   // 3. Auto-update theme based on time (only in auto mode)
   useEffect(() => {

@@ -106,6 +106,13 @@ export const authAPI = {
   getCurrentUser: async () => {
     return apiRequest('/auth/me');
   },
+
+  updatePreferences: async (preferences) => {
+    return apiRequest('/auth/preferences', {
+      method: 'PUT',
+      body: JSON.stringify(preferences),
+    });
+  },
 };
 
 // Health check
