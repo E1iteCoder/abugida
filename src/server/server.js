@@ -107,6 +107,37 @@ const healthCheck = (req, res) => {
 app.get('/health', healthCheck);
 app.get('/api/health', healthCheck);
 
+// Temporary endpoint to test MongoDB connection and log connection details
+app.get('/api/test-db-connection', async (req, res) => {
+  console.log('Testing MongoDB connection...');
+  
+  try {
+    const success = await db.connect(1, 0); // Single attempt, no delay
+    if (success) {
+      res.json({ 
+        status: 'success', 
+        message: 'MongoDB connection successful',
+        connectionState: mongoose.connection.readyState,
+        host: mongoose.connection.host,
+        port: mongoose.connection.port
+      });
+    } else {
+      res.json({ 
+        status: 'failed', 
+        message: 'MongoDB connection failed - check MongoDB Atlas Access History for the IP address that attempted to connect',
+        connectionState: mongoose.connection.readyState
+      });
+    }
+  } catch (error) {
+    res.json({ 
+      status: 'error', 
+      message: error.message,
+      error: error.name,
+      connectionState: mongoose.connection.readyState
+    });
+  }
+});
+
 // Error handling middleware (should be last)
 app.use((err, req, res, next) => {
   console.error('Error:', err);
