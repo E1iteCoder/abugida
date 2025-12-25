@@ -1,16 +1,37 @@
 const mongoose = require('mongoose');
 
-// Connection options for better reliability
-const connectionOptions = {
-  serverSelectionTimeoutMS: 30000, // Timeout after 30s (increased for SSL handshake)
-  socketTimeoutMS: 45000, // Close sockets after 45s of inactivity
-  connectTimeoutMS: 30000, // Give up initial connection after 30s (increased for SSL handshake)
-  maxPoolSize: 10, // Maintain up to 10 socket connections
-  minPoolSize: 2, // Maintain at least 2 socket connections
-  // TLS/SSL options for MongoDB Atlas
-  tls: true, // Enable TLS (required for Atlas)
-  tlsAllowInvalidCertificates: false, // Validate certificates
-  tlsAllowInvalidHostnames: false, // Validate hostnames
+// Get connection options based on the connection string
+const getConnectionOptions = (mongoURI) => {
+  const baseOptions = {
+    serverSelectionTimeoutMS: 30000, // Timeout after 30s (increased for SSL handshake)
+    socketTimeoutMS: 45000, // Close sockets after 45s of inactivity
+    connectTimeoutMS: 30000, // Give up initial connection after 30s (increased for SSL handshake)
+    maxPoolSize: 10, // Maintain up to 10 socket connections
+    minPoolSize: 2, // Maintain at least 2 socket connections
+  };
+
+  // Railway's internal MongoDB doesn't use TLS
+  // MongoDB Atlas requires TLS
+  const isRailwayInternal = mongoURI && (
+    mongoURI.includes('mongodb.railway.internal') ||
+    mongoURI.includes('railway.internal')
+  );
+
+  if (isRailwayInternal) {
+    // Railway internal MongoDB - no TLS
+    return {
+      ...baseOptions,
+      tls: false,
+    };
+  } else {
+    // MongoDB Atlas - requires TLS
+    return {
+      ...baseOptions,
+      tls: true,
+      tlsAllowInvalidCertificates: false,
+      tlsAllowInvalidHostnames: false,
+    };
+  }
 };
 
 // Internal connection function (without background retry)
@@ -36,6 +57,9 @@ const _connect = async (retries = 5, delay = 5000) => {
     console.log('MongoDB connection already in progress');
     return false;
   }
+  
+  // Get connection options based on the URI
+  const connectionOptions = getConnectionOptions(mongoURI);
   
   for (let i = 0; i < retries; i++) {
     try {
