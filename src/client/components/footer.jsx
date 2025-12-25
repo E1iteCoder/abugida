@@ -5,6 +5,8 @@ import {
   faDiscord,
   faInstagram,
   faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
+import {
   faGem,
   faHome,
   faEnvelope,
