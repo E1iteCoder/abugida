@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // Get connection options based on the connection string
-const getConnectionOptions = (mongoURI) => {
+const getConnectionOptions = (mongoURI, useTLS = null) => {
   const baseOptions = {
     serverSelectionTimeoutMS: 30000, // Timeout after 30s (increased for SSL handshake)
     socketTimeoutMS: 45000, // Close sockets after 45s of inactivity
@@ -10,26 +10,40 @@ const getConnectionOptions = (mongoURI) => {
     minPoolSize: 2, // Maintain at least 2 socket connections
   };
 
-  // Railway's internal MongoDB doesn't use TLS
-  // MongoDB Atlas requires TLS
+  // Check if this is Railway's internal MongoDB
   const isRailwayInternal = mongoURI && (
     mongoURI.includes('mongodb.railway.internal') ||
     mongoURI.includes('railway.internal')
   );
 
-  if (isRailwayInternal) {
-    // Railway internal MongoDB - no TLS
-    return {
-      ...baseOptions,
-      tls: false,
-    };
+  // Determine TLS setting
+  // Priority: explicit useTLS parameter > environment variable > default behavior
+  let shouldUseTLS;
+  if (useTLS !== null) {
+    shouldUseTLS = useTLS; // Explicit parameter
+  } else if (process.env.MONGODB_FORCE_TLS === 'true') {
+    shouldUseTLS = true; // Force TLS via environment variable
+  } else if (process.env.MONGODB_DISABLE_TLS === 'true') {
+    shouldUseTLS = false; // Disable TLS via environment variable
+  } else if (isRailwayInternal) {
+    shouldUseTLS = false; // Default: Railway internal MongoDB doesn't use TLS
   } else {
-    // MongoDB Atlas - requires TLS
+    shouldUseTLS = true; // Default: MongoDB Atlas requires TLS
+  }
+
+  if (shouldUseTLS) {
+    // TLS enabled
     return {
       ...baseOptions,
       tls: true,
       tlsAllowInvalidCertificates: false,
       tlsAllowInvalidHostnames: false,
+    };
+  } else {
+    // TLS disabled
+    return {
+      ...baseOptions,
+      tls: false,
     };
   }
 };
@@ -58,8 +72,15 @@ const _connect = async (retries = 5, delay = 5000) => {
     return false;
   }
   
-  // Get connection options based on the URI
-  const connectionOptions = getConnectionOptions(mongoURI);
+  // Check if this is Railway's internal MongoDB
+  const isRailwayInternal = mongoURI && (
+    mongoURI.includes('mongodb.railway.internal') ||
+    mongoURI.includes('railway.internal')
+  );
+
+  // For Railway internal MongoDB, try TLS first if forced, then fallback to no TLS
+  let triedTLS = false;
+  let connectionOptions = getConnectionOptions(mongoURI);
   
   for (let i = 0; i < retries; i++) {
     try {
@@ -68,9 +89,26 @@ const _connect = async (retries = 5, delay = 5000) => {
       console.log('MongoDB connected successfully');
       console.log(`Database: ${mongoose.connection.name}`);
       console.log(`Host: ${mongoose.connection.host}:${mongoose.connection.port}`);
+      console.log(`TLS: ${connectionOptions.tls ? 'enabled' : 'disabled'}`);
       return true;
     } catch (error) {
       console.error(`MongoDB connection attempt ${i + 1}/${retries} failed:`, error.message);
+      
+      // Check if this is a TLS error for Railway internal MongoDB
+      const isTLSError = error.message && (
+        error.message.includes('SSL') ||
+        error.message.includes('TLS') ||
+        error.message.includes('not accepting SSL connections')
+      );
+      
+      // If TLS failed for Railway internal MongoDB and we haven't tried without TLS yet, retry without TLS
+      if (isRailwayInternal && isTLSError && !triedTLS && connectionOptions.tls) {
+        console.log('TLS connection failed for Railway internal MongoDB, retrying without TLS...');
+        triedTLS = true;
+        connectionOptions = getConnectionOptions(mongoURI, false); // Force no TLS
+        // Don't count this as a retry attempt, continue to next iteration
+        continue;
+      }
       
       // Log more details for debugging
       if (error.name === 'MongoServerSelectionError') {
