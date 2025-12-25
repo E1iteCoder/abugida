@@ -15,11 +15,12 @@ const connectionOptions = {
 
 // Internal connection function (without background retry)
 const _connect = async (retries = 5, delay = 5000) => {
-  const mongoURI = process.env.MONGODB_URI;
+  // Support both Railway's MONGO_URL and manual MONGODB_URI
+  const mongoURI = process.env.MONGO_URL || process.env.MONGODB_URI;
   
   if (!mongoURI) {
-    console.error('MONGODB_URI environment variable is not set!');
-    console.error('Please set MONGODB_URI in your .env file or environment variables.');
+    console.error('MONGO_URL or MONGODB_URI environment variable is not set!');
+    console.error('Please set MONGO_URL (Railway MongoDB integration) or MONGODB_URI in your environment variables.');
     console.error('Server will continue to run, but database operations will fail.');
     return false;
   }

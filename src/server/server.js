@@ -152,7 +152,8 @@ try {
   server = app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server is running on port ${PORT}`);
     console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
-    console.log(`MongoDB URI: ${process.env.MONGODB_URI ? 'Set' : 'Not set'}`);
+    const mongoUri = process.env.MONGO_URL || process.env.MONGODB_URI;
+    console.log(`MongoDB URI: ${mongoUri ? 'Set' : 'Not set'} (${process.env.MONGO_URL ? 'Railway integration' : 'manual'})`);
     console.log(`Server started successfully at http://0.0.0.0:${PORT}`);
     console.log(`Cloudflare Tunnel should route api.theabugida.org to this server`);
   });
