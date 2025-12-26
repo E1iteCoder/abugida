@@ -3,6 +3,11 @@
 // The "default" version uses the current audio links
 
 import audioMap from './audio.js';
+import audioMapVersion2 from './audio1.js';
+import audioMapVersion3 from './audio2.js';
+import audioMapVersion4 from './audio3.js';
+import audioMapVersion5 from './audio4.js';
+import audioMapVersion6 from './audio5.js';
 
 // Define available audio versions (6 total versions)
 export const AUDIO_VERSIONS = {
@@ -32,21 +37,30 @@ export const AUDIO_VERSIONS = {
   },
 };
 
-// Create audio version map
-// For now, all versions use the same URLs (current audio)
-// You can add different URLs for each version later
+// Create audio version map by combining all version maps
+// Each version has its own file for easy management
 const createAudioVersions = () => {
   const versions = {};
   
-  // For each audio file, create version entries (6 versions total)
-  Object.keys(audioMap).forEach((filename) => {
+  // Get all unique filenames from all version maps
+  const allFilenames = new Set([
+    ...Object.keys(audioMap),
+    ...Object.keys(audioMapVersion2),
+    ...Object.keys(audioMapVersion3),
+    ...Object.keys(audioMapVersion4),
+    ...Object.keys(audioMapVersion5),
+    ...Object.keys(audioMapVersion6),
+  ]);
+  
+  // For each audio file, create version entries from separate files
+  allFilenames.forEach((filename) => {
     versions[filename] = {
-      default: audioMap[filename], // Current audio as default
-      version2: audioMap[filename], // Placeholder - replace with actual URL
-      version3: audioMap[filename], // Placeholder - replace with actual URL
-      version4: audioMap[filename], // Placeholder - replace with actual URL
-      version5: audioMap[filename], // Placeholder - replace with actual URL
-      version6: audioMap[filename], // Placeholder - replace with actual URL
+      default: audioMap[filename] || null,
+      version2: audioMapVersion2[filename] || audioMap[filename] || null, // Fallback to default if missing
+      version3: audioMapVersion3[filename] || audioMap[filename] || null,
+      version4: audioMapVersion4[filename] || audioMap[filename] || null,
+      version5: audioMapVersion5[filename] || audioMap[filename] || null,
+      version6: audioMapVersion6[filename] || audioMap[filename] || null,
     };
   });
   
