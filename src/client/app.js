@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
+import { AudioVersionProvider } from "./context/AudioVersionContext";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import Home from "./home";
@@ -18,7 +19,8 @@ import FlashcardApp from "./components/flashContainer";
 export default function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
+      <AudioVersionProvider>
+        <BrowserRouter>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -36,6 +38,7 @@ export default function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
+      </AudioVersionProvider>
     </AuthProvider>
   );
 }

@@ -4,7 +4,6 @@ import "../styles/dashboard/quizCarousel.css";
 
 // 1) import your prebuilt JSON data
 import letterDetails from "../data/letterDetails.js";
-import audioMap from "../data/audio.js";
 import { useAudio } from "../hooks/useAudio";
 
 // Time allocated per question (in seconds)
@@ -48,10 +47,10 @@ export default function QuizCarousel({ currentPage = 1 }) {
         letter,
         phonetic: info.phonetic,
         row: info.row, // Store house/row info
-        audio: audioMap[info.audio] || "" /* guard missing key */,
+        audio: info.audio || "", // Store filename, not URL - useAudio will resolve
       }));
 
-      // dedupe by audio URL
+      // dedupe by audio filename (since different letters might have same audio)
       const seen = new Set();
       const unique = all.filter((item) => {
         if (!item.audio || seen.has(item.audio)) return false;

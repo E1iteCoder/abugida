@@ -4,6 +4,7 @@ import "../styles/dashboard/learn.css";
 import letterDetails from "../data/letterDetails.js";
 import { useAudio } from "../hooks/useAudio";
 import { playAudioSequence } from "../utils/audioSequence";
+import { useGetAudio } from "../utils/getAudio";
 
 export default function LetterDetail({ data }) {
   const {
@@ -20,11 +21,13 @@ export default function LetterDetail({ data }) {
   } = data;
 
   const { playAudio } = useAudio();
+  const getAudio = useGetAudio();
 
-  // Get audio file for a specific character
+  // Get audio file for a specific character (returns URL based on selected version)
   const getAudioForChar = (char) => {
     const detail = letterDetails[char];
-    return detail ? detail.audio : null;
+    if (!detail || !detail.audio) return null;
+    return getAudio(detail.audio); // Get URL based on selected version
   };
 
   // Play breakdown audio sequence with intervals
@@ -49,7 +52,7 @@ export default function LetterDetail({ data }) {
         {audio && (
           <button
             className="ld-play-btn button"
-            onClick={() => playAudio(audio)}
+            onClick={() => playAudio(audio)} // audio is filename, useAudio will resolve to URL
           >
             🔊 Play Pronunciation
           </button>

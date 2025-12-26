@@ -1,17 +1,30 @@
 import { useRef, useCallback, useState } from 'react';
+import { useGetAudio } from '../utils/getAudio';
 
 /**
  * Custom hook for audio playback
  * Handles audio loading, playing, and error management
+ * Now supports audio version selection
  */
 export const useAudio = () => {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const getAudio = useGetAudio();
 
-  const playAudio = useCallback((audioUrl, options = {}) => {
+  const playAudio = useCallback((audioFilenameOrUrl, options = {}) => {
+    // Determine if input is a filename or URL
+    let audioUrl;
+    if (audioFilenameOrUrl && audioFilenameOrUrl.startsWith('http')) {
+      // It's already a URL, use it directly
+      audioUrl = audioFilenameOrUrl;
+    } else {
+      // It's a filename, get the URL based on selected version
+      audioUrl = getAudio(audioFilenameOrUrl);
+    }
+
     // Validate input
     if (!audioUrl) {
-      console.warn("No audio URL provided");
+      console.warn("No audio URL provided for:", audioFilenameOrUrl);
       return;
     }
 

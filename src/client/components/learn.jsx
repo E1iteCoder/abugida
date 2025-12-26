@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import "../styles/dashboard/learn.css";
 import LetterDetail from "./letterDetail";
 import letterDetails from "../data/letterDetails.js";
-import audioMap from "../data/audio.js";
 import sections from "../data/section";
 import { useAudio } from "../hooks/useAudio";
 
@@ -42,25 +41,14 @@ export default function LearnAlphabet({ currentPage, topicKey }) {
           }
         }
 
-        // 2) merge your metadata + audioMap
+        // 2) Use letterDetails directly (audio is filename, will be resolved by useAudio)
         const merged = Object.fromEntries(
           Object.entries(letterDetails).map(([ltr, info]) => {
-            const audioUrl = audioMap[info.audio];
-            if (!audioUrl && info.audio) {
-              console.warn(`No audio found for ${ltr} (${info.audio})`);
-            }
-            return [ltr, { ...info, audio: audioUrl || null }];
+            // Keep audio as filename - useAudio will resolve to URL based on selected version
+            return [ltr, { ...info, audio: info.audio || null }];
           })
         );
         setMeta(merged);
-
-        // Debug: Check first few mappings
-        console.log("First few letters with audio URLs:");
-        Object.entries(merged)
-          .slice(0, 5)
-          .forEach(([letter, data]) => {
-            console.log(`${letter}: ${data.audio || "NO AUDIO"}`);
-          });
 
         // 3) slice out the letters for this page
         const pageIndex = Math.max(0, currentPage);
@@ -70,12 +58,11 @@ export default function LearnAlphabet({ currentPage, topicKey }) {
         const allLetters = Object.keys(merged);
         const slice = allLetters.slice(start, end);
 
-        console.log({ currentPage, start, end, slice });
         setAlphabet(
           slice.map((l) => ({
             letter: l,
             phonetic: merged[l].phonetic,
-            audio: merged[l].audio,
+            audio: merged[l].audio, // Filename, not URL
           }))
         );
       } catch (err) {

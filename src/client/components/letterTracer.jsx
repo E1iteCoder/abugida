@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../styles/dashboard/letterTracer.css";
 import letterDetails from "../data/letterDetails.js";
-import audioMap from "../data/audio.js";
 import { useAudio } from "../hooks/useAudio";
 
 export default function LetterTracer({ currentPage = 1 }) {
@@ -13,11 +12,12 @@ export default function LetterTracer({ currentPage = 1 }) {
   const { playAudio } = useAudio();
 
   useEffect(() => {
-    // 1) turn your JSON into an array of {letter, phonetic, audio}
+    // 1) turn your JSON into an array of {letter, phonetic, audioFilename}
+    // Store filename, playAudio will resolve to URL based on selected version
     const all = Object.entries(letterDetails).map(([letter, info]) => ({
       letter,
       phonetic: info.phonetic,
-      audio: audioMap[info.audio] || "",
+      audioFilename: info.audio || "", // Store filename, not URL
     }));
 
     // 2) slice out this page
@@ -50,7 +50,7 @@ export default function LetterTracer({ currentPage = 1 }) {
         </h3>
         <button
           className="sound-button"
-          onClick={() => playAudio(current.audio)}
+          onClick={() => playAudio(current.audioFilename)} // Pass filename, useAudio resolves to URL
         >
           🔊 Play Sound
         </button>

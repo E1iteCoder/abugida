@@ -10,7 +10,6 @@ import "../styles/reference/modal.css";
 
 // instead of fetching at runtime, import the JSON directly:
 import letterDetails from "../data/letterDetails.js";
-import audioMap from "../data/audio.js";
 
 // Helper function to shuffle array
 const shuffleArray = (array) => {
@@ -51,14 +50,15 @@ export default function FlashcardContainer() {
   // Load flashcards data
   useEffect(() => {
     try {
-      // 1) Build your flashcard array from letterDetails + audioMap
+      // 1) Build your flashcard array from letterDetails
+      // Store audio filename - will be resolved to URL by useAudio based on selected version
       const parsed = Object.entries(letterDetails).map(([term, info]) => ({
         term,
         // use phonetic (or whichever field you want as "definition")
         // Add proper spacing between phonetic, row, and column
         definition: `${info.phonetic || ""} ${info.row || ""} ${info.column || ""}`.trim(),
-        // look up the real URL; default to empty string if missing
-        audio: audioMap[info.audio] || "",
+        // Store filename, not URL - useAudio will resolve based on selected version
+        audio: info.audio || "",
       }));
 
       setFlashcards(parsed);

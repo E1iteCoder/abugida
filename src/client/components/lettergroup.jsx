@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/reference/group.css";
 import letterDetails from "../data/letterDetails.js";
-import audioMap from "../data/audio.js";
 import { useAudio } from "../hooks/useAudio";
 
 export default function AlphabetTable() {
@@ -13,11 +12,12 @@ export default function AlphabetTable() {
 
   useEffect(() => {
     try {
-      // Build an array of { letter, phonetic, audioLink }
+      // Build an array of { letter, phonetic, audioFilename }
+      // Pass filename to playAudio, which will resolve to URL based on selected version
       const parsed = Object.entries(letterDetails).map(([letter, info]) => ({
         letter,
         phonetic: info.phonetic,
-        audioLink: audioMap[info.audio] || "",
+        audioFilename: info.audio || "", // Store filename, not URL
       }));
       setAlphabet(parsed);
     } catch (err) {
@@ -38,7 +38,7 @@ export default function AlphabetTable() {
           <button
             key={idx}
             className="alphabet-item"
-            onClick={() => playAudio(item.audioLink)}
+            onClick={() => playAudio(item.audioFilename)} // Pass filename, useAudio resolves to URL
           >
             {item.letter} {item.phonetic}
           </button>
