@@ -17,8 +17,15 @@ if ! command -v npm &> /dev/null; then
 fi
 
 # Run npm install to update package-lock.json
-echo "Running: npm install"
-npm install
+# Using --package-lock-only to ensure lock file is fully synced
+echo "Running: npm install --package-lock-only"
+npm install --package-lock-only
+
+# If that doesn't work, try full install
+if [ $? -ne 0 ]; then
+    echo "Retrying with full npm install..."
+    npm install
+fi
 
 # Check if package-lock.json was updated
 if git diff --quiet package-lock.json; then
