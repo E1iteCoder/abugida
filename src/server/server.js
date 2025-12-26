@@ -14,6 +14,10 @@ const authRoutes = require('./routes/auth');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// Trust proxy (important for rate limiting behind Railway/Cloudflare)
+// This ensures rate limiting works correctly with the real client IP
+app.set('trust proxy', 1);
+
 // Middleware
 // CORS configuration - allow requests from your domain
 const corsOptions = {

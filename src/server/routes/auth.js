@@ -4,9 +4,11 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const { authenticateToken, checkDatabase } = require('../middleware/auth');
+const { authLimiter, preferencesLimiter } = require('../middleware/rateLimiter');
+const { sanitizeUsername, sanitizeEmail } = require('../utils/sanitize');
 
 // Register new user
-router.post('/register', checkDatabase, async (req, res) => {
+router.post('/register', checkDatabase, authLimiter, async (req, res) => {
   try {
     const { username, email, password } = req.body;
 
@@ -15,23 +17,31 @@ router.post('/register', checkDatabase, async (req, res) => {
       return res.status(400).json({ error: 'Username, email, and password are required' });
     }
 
-    // Validate username format
-    if (!/^[a-zA-Z0-9_]+$/.test(username)) {
-      return res.status(400).json({ error: 'Username can only contain letters, numbers, and underscores' });
+    // Sanitize and validate username
+    const sanitizedUsername = sanitizeUsername(username);
+    if (!sanitizedUsername) {
+      return res.status(400).json({ error: 'Username can only contain letters, numbers, and underscores, and must be between 3 and 30 characters' });
     }
 
-    if (username.length < 3 || username.length > 30) {
-      return res.status(400).json({ error: 'Username must be between 3 and 30 characters' });
+    // Sanitize and validate email
+    const sanitizedEmail = sanitizeEmail(email);
+    if (!sanitizedEmail) {
+      return res.status(400).json({ error: 'Invalid email format' });
     }
 
-    // Check if username already exists
-    const existingUsername = await User.findOne({ username });
+    // Validate password
+    if (typeof password !== 'string' || password.length < 6) {
+      return res.status(400).json({ error: 'Password must be at least 6 characters long' });
+    }
+
+    // Check if username already exists (using sanitized value)
+    const existingUsername = await User.findOne({ username: sanitizedUsername });
     if (existingUsername) {
       return res.status(400).json({ error: 'Username already taken' });
     }
 
-    // Check if email already exists
-    const existingEmail = await User.findOne({ email });
+    // Check if email already exists (using sanitized value)
+    const existingEmail = await User.findOne({ email: sanitizedEmail });
     if (existingEmail) {
       return res.status(400).json({ error: 'Email already registered' });
     }
@@ -40,10 +50,10 @@ router.post('/register', checkDatabase, async (req, res) => {
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
-    // Create new user
+    // Create new user (using sanitized values)
     const user = new User({
-      username,
-      email,
+      username: sanitizedUsername,
+      email: sanitizedEmail,
       password: hashedPassword,
     });
 
@@ -78,12 +88,12 @@ router.post('/register', checkDatabase, async (req, res) => {
 });
 
 // Login user (can use either username or email)
-router.post('/login', checkDatabase, async (req, res) => {
+router.post('/login', checkDatabase, authLimiter, async (req, res) => {
   try {
     const { username, email, password } = req.body;
 
     // Validate input
-    if (!password) {
+    if (!password || typeof password !== 'string') {
       return res.status(400).json({ error: 'Password is required' });
     }
 
@@ -91,12 +101,22 @@ router.post('/login', checkDatabase, async (req, res) => {
       return res.status(400).json({ error: 'Username or email is required' });
     }
 
-    // Find user by username or email
+    // Sanitize and find user by username or email
     let user;
     if (username) {
-      user = await User.findOne({ username });
+      // Sanitize username before query
+      const sanitizedUsername = sanitizeUsername(username);
+      if (!sanitizedUsername) {
+        return res.status(400).json({ error: 'Invalid username format' });
+      }
+      user = await User.findOne({ username: sanitizedUsername });
     } else {
-      user = await User.findOne({ email });
+      // Sanitize email before query
+      const sanitizedEmail = sanitizeEmail(email);
+      if (!sanitizedEmail) {
+        return res.status(400).json({ error: 'Invalid email format' });
+      }
+      user = await User.findOne({ email: sanitizedEmail });
     }
 
     if (!user) {
@@ -133,7 +153,7 @@ router.post('/login', checkDatabase, async (req, res) => {
 });
 
 // Get current user (protected route)
-router.get('/me', checkDatabase, authenticateToken, async (req, res) => {
+router.get('/me', checkDatabase, authenticateToken, authLimiter, async (req, res) => {
   try {
     const user = await User.findById(req.userId).select('-password');
     if (!user) {
@@ -156,7 +176,7 @@ router.get('/me', checkDatabase, authenticateToken, async (req, res) => {
 });
 
 // Update user preferences (protected route)
-router.put('/preferences', checkDatabase, authenticateToken, async (req, res) => {
+router.put('/preferences', checkDatabase, authenticateToken, preferencesLimiter, async (req, res) => {
   try {
     const { themeMode } = req.body;
 
