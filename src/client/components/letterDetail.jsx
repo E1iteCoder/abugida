@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import "../styles/dashboard/learn.css";
 import letterDetails from "../data/letterDetails.js";
+import { useAudio } from "../hooks/useAudio";
+import { playAudioSequence } from "../utils/audioSequence";
 
 export default function LetterDetail({ data }) {
   const {
@@ -17,6 +19,8 @@ export default function LetterDetail({ data }) {
     usageNotes = [],
   } = data;
 
+  const { playAudio } = useAudio();
+
   // Get audio file for a specific character
   const getAudioForChar = (char) => {
     const detail = letterDetails[char];
@@ -29,27 +33,7 @@ export default function LetterDetail({ data }) {
       .map(char => getAudioForChar(char))
       .filter(audio => audio); // Remove nulls
 
-    if (clips.length === 0) return;
-
-    let idx = 0;
-    let currentAudio = null;
-
-    const playNext = () => {
-      if (idx >= clips.length) {
-        currentAudio = null;
-        return;
-      }
-
-      currentAudio = new Audio(clips[idx]);
-      currentAudio.play().catch(e => console.log("Audio play failed:", e));
-      
-      currentAudio.onended = () => {
-        idx++;
-        setTimeout(playNext, gapMs);
-      };
-    };
-
-    playNext();
+    return playAudioSequence(clips, { gapMs });
   };
 
   return (
@@ -65,7 +49,7 @@ export default function LetterDetail({ data }) {
         {audio && (
           <button
             className="ld-play-btn button"
-            onClick={() => new Audio(audio).play()}
+            onClick={() => playAudio(audio)}
           >
             🔊 Play Pronunciation
           </button>
@@ -103,7 +87,7 @@ export default function LetterDetail({ data }) {
               <button
                 className="ld-play-btn button"
                 onClick={() => playBreakdownAudio(ex)}
-                disabled= {true}
+                disabled={true}
                 style={{ marginTop: '0.5rem' }}
               >
                 🔊 Play breakdown audio

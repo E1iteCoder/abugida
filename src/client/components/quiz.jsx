@@ -5,6 +5,7 @@ import "../styles/dashboard/quizCarousel.css";
 // 1) import your prebuilt JSON data
 import letterDetails from "../data/letterDetails.js";
 import audioMap from "../data/audio.js";
+import { useAudio } from "../hooks/useAudio";
 
 // Time allocated per question (in seconds)
 const initialTimePerQuestion = 60;
@@ -26,6 +27,7 @@ export default function QuizCarousel({ currentPage = 1 }) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [timeLeft, setTimeLeft] = useState(initialTimePerQuestion);
   const [showResults, setShowResults] = useState(false);
+  const { playAudio } = useAudio();
 
   const intervalRef = useRef(null);
   const generateId = () => Math.random().toString(36).substr(2, 9);
@@ -314,7 +316,7 @@ function QuizQuestion({
         <button
           type="button"
           className="audio-button"
-          onClick={() => new Audio(question.audio).play().catch(() => {})}
+          onClick={() => playAudio(question.audio)}
           aria-label="Play Sound"
         >
           🔊 Play Sound
@@ -405,7 +407,7 @@ function ResultsScreen({ results, onRetry }) {
             <p>Correct: {q.correctAnswer}</p>
             {q.audio && (
               <button
-                onClick={() => new Audio(q.audio).play()}
+                onClick={() => playAudio(q.audio)}
                 aria-label="Replay"
               >
                 🔊 Replay Sound

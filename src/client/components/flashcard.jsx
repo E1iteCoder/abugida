@@ -1,9 +1,11 @@
 // src/components/Flashcard.jsx
 import React, { useState, useEffect } from "react";
 import "../styles/flashcard.css";
+import { useAudio } from "../hooks/useAudio";
 
 export default function Flashcard({ term, definition, audio, frontSide = "term", backSide = "definition" }) {
   const [flipped, setFlipped] = useState(false);
+  const { playAudio } = useAudio();
 
   // Reset flipped state when card changes (term or definition changes)
   useEffect(() => {
@@ -33,7 +35,7 @@ export default function Flashcard({ term, definition, audio, frontSide = "term",
   // plays audio without flipping
   const handleAudio = (e) => {
     e.stopPropagation();
-    if (audio) new Audio(audio).play();
+    playAudio(audio);
   };
 
   // Determine which side shows the definition (for audio button placement)

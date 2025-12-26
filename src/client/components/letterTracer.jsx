@@ -3,12 +3,14 @@ import React, { useEffect, useRef, useState } from "react";
 import "../styles/dashboard/letterTracer.css";
 import letterDetails from "../data/letterDetails.js";
 import audioMap from "../data/audio.js";
+import { useAudio } from "../hooks/useAudio";
 
 export default function LetterTracer({ currentPage = 1 }) {
   const itemsPerPage = 14;
   const [alphabet, setAlphabet] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(true);
+  const { playAudio } = useAudio();
 
   useEffect(() => {
     // 1) turn your JSON into an array of {letter, phonetic, audio}
@@ -48,7 +50,7 @@ export default function LetterTracer({ currentPage = 1 }) {
         </h3>
         <button
           className="sound-button"
-          onClick={() => current.audio && new Audio(current.audio).play()}
+          onClick={() => playAudio(current.audio)}
         >
           🔊 Play Sound
         </button>

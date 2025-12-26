@@ -5,6 +5,7 @@ import LetterDetail from "./letterDetail";
 import letterDetails from "../data/letterDetails.js";
 import audioMap from "../data/audio.js";
 import sections from "../data/section";
+import { useAudio } from "../hooks/useAudio";
 
 export default function LearnAlphabet({ currentPage, topicKey }) {
   const itemsPerPage = 14;
@@ -14,19 +15,7 @@ export default function LearnAlphabet({ currentPage, topicKey }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [labels, setLabels] = useState({});
-
-  // Audio playback function
-  const playAudio = (audioUrl) => {
-    if (!audioUrl) {
-      console.warn("No audio URL provided");
-      return;
-    }
-
-    const audio = new Audio(audioUrl);
-    audio.play().catch((error) => {
-      console.error("Audio playback failed:", error);
-    });
-  };
+  const { playAudio } = useAudio();
 
   // Get the page label from labels.json
   const getPageLabel = (pageIndex) => {
