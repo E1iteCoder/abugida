@@ -16,24 +16,24 @@ export const AUDIO_VERSIONS = {
     description: 'Standard pronunciation (current)',
   },
   version2: {
-    name: 'Alternative Voice',
-    description: 'Alternative pronunciation',
+    name: 'Yohannes',
+    description: 'Male voice version 1',
   },
   version3: {
-    name: 'Regional Accent',
-    description: 'Regional variation',
+    name: 'Yam',
+    description: 'Female voice version 1',
   },
   version4: {
-    name: 'Version 4',
-    description: 'Fourth audio option',
+    name: 'X',
+    description: 'Male voice version 2',
   },
   version5: {
-    name: 'Version 5',
-    description: 'Fifth audio option',
+    name: 'Ruth',
+    description: 'Female voice version 2',
   },
   version6: {
-    name: 'Version 6',
-    description: 'Sixth audio option',
+    name: 'Brothers',
+    description: 'Male voice version 3',
   },
 };
 

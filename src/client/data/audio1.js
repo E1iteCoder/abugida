@@ -1,81 +1,82 @@
-// Audio map for Version 2 - Alternative Voice
-// Replace URLs with your actual Version 2 audio URLs
+// Audio map for Yohannes - Male voice version 1
+// Replace URLs with your actual Yohannes audio URLs
 
 const audioMap = {
-  "aa.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993525/aa_ycg543.mp3", // TODO: Replace with Version 2 URL
-  "b.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993524/b_mlwioz.mp3", // TODO: Replace with Version 2 URL
-  "ba.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000741/ba_lkazp3.mp3", // TODO: Replace with Version 2 URL
-  "be.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000742/be_vgv5hb.mp3", // TODO: Replace with Version 2 URL
-  "bee.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000743/bee_fpkwoe.mp3", // TODO: Replace with Version 2 URL
-  "bie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000744/bie_z6v6lx.mp3", // TODO: Replace with Version 2 URL
-  "bo.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000745/bo_kcjodq.mp3", // TODO: Replace with Version 2 URL
-  "bu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000746/bu_daljh3.mp3", // TODO: Replace with Version 2 URL
-  "C.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000747/C_hnonwv.mp3", // TODO: Replace with Version 2 URL
-  "Ca.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000749/Ca_w98tmc.mp3", // TODO: Replace with Version 2 URL
-  "Ce.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000749/Ce_ymwmjb.mp3", // TODO: Replace with Version 2 URL
-  "ch.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000751/ch_larvvt.mp3", // TODO: Replace with Version 2 URL
-  "cha.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000752/cha_zgutst.mp3", // TODO: Replace with Version 2 URL
-  "che.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000754/che_efd445.mp3", // TODO: Replace with Version 2 URL
-  "chi.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000754/chi_zirael.mp3", // TODO: Replace with Version 2 URL
-  "chie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000756/chie_dl3jvx.mp3", // TODO: Replace with Version 2 URL
-  "cho.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000758/cho_gbebct.mp3", // TODO: Replace with Version 2 URL
-  "chu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000759/chu_c9vhfe.mp3", // TODO: Replace with Version 2 URL
-  "Ci.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000761/Ci_shq3hg.mp3", // TODO: Replace with Version 2 URL
-  "Cie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000762/Cie_ncxmeh.mp3", // TODO: Replace with Version 2 URL
-  "Co.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000763/Co_ozdmpr.mp3", // TODO: Replace with Version 2 URL
-  "Cu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000765/Cu_uusoat.mp3", // TODO: Replace with Version 2 URL
-  "d.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000766/d_jb6wzk.mp3", // TODO: Replace with Version 2 URL
-  "da.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000767/da_rwberi.mp3", // TODO: Replace with Version 2 URL
-  "de.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000769/de_t8vlxa.mp3", // TODO: Replace with Version 2 URL
-  "di.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000769/di_rj36af.mp3", // TODO: Replace with Version 2 URL
-  "die.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000770/die_jqrndg.mp3", // TODO: Replace with Version 2 URL
-  "do.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000771/do_iedzcu.mp3", // TODO: Replace with Version 2 URL
-  "du.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000773/du_lh8pnz.mp3", // TODO: Replace with Version 2 URL
-  "f.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000774/f_q5le6o.mp3", // TODO: Replace with Version 2 URL
-  "fa.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000775/fa_hzur8s.mp3", // TODO: Replace with Version 2 URL
-  "fe.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000777/fe_wy2fg1.mp3", // TODO: Replace with Version 2 URL
-  "fi.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000778/fi_dnifve.mp3", // TODO: Replace with Version 2 URL
-  "fie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000780/fie_n0jrlc.mp3", // TODO: Replace with Version 2 URL
-  "fo.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000781/fo_jwkhny.mp3", // TODO: Replace with Version 2 URL
-  "fu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000782/fu_g4jfzy.mp3", // TODO: Replace with Version 2 URL
-  "g.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000784/g_i4egtj.mp3", // TODO: Replace with Version 2 URL
-  "ga.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000785/ga_degrij.mp3", // TODO: Replace with Version 2 URL
-  "ge.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000787/ge_fl6wx8.mp3", // TODO: Replace with Version 2 URL
-  "gi.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000787/gi_um0fby.mp3", // TODO: Replace with Version 2 URL
-  "gie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000789/gie_vxjfkt.mp3", // TODO: Replace with Version 2 URL
-  "gn.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000790/gn_ewax7u.mp3", // TODO: Replace with Version 2 URL
-  "gna.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000791/gna_l8a85c.mp3", // TODO: Replace with Version 2 URL
-  "gne.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000794/gne_jvnyuh.mp3", // TODO: Replace with Version 2 URL
-  "gni.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000795/gni_t1jxos.mp3", // TODO: Replace with Version 2 URL
-  "gnie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000797/gnie_ds6oz4.mp3", // TODO: Replace with Version 2 URL
-  "gno.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000798/gno_skqzpd.mp3", // TODO: Replace with Version 2 URL
-  "gnu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000799/gnu_nv1csx.mp3", // TODO: Replace with Version 2 URL
-  "go.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000800/go_svcp0e.mp3", // TODO: Replace with Version 2 URL
-  "gu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000801/gu_pupg0w.mp3", // TODO: Replace with Version 2 URL
+  "aa.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726964/a_olemdb.mp3", // TODO: Replace with Version 2 URL
+  "b.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726964/b_nrxo1o.mp3", // TODO: Replace with Version 2 URL
+  "ba.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766808770/ba_gzadap.mp3", // TODO: Replace with Version 2 URL
+  "be.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766808534/be_pzrhtl.mp3", // TODO: Replace with Version 2 URL
+  "bee.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766809272/bee_zrze6f.mp3", // TODO: Replace with Version 2 URL
+  "bie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766808803/bie_fzijlh.mp3", // TODO: Replace with Version 2 URL
+  "bo.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766808810/bo_ray2tz.mp3", // TODO: Replace with Version 2 URL
+  "bu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766808599/bu_jny8wj.mp3", // TODO: Replace with Version 2 URL
+  "C.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766810380/Ch_kqmazh.mp3", // TODO: Replace with Version 2 URL
+  "Ca.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766810396/Cha_nseh2i.mp3", // TODO: Replace with Version 2 URL
+  "Ce.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766810387/Che_smhbo2.mp3" , // TODO: Replace with Version 2 URL
+  "ch.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766808537/ch_klyxqx.mp3",
+  "cha.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726965/cha_g1uqpu.mp3,
+  "che.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726968/che_ac9t3d.mp3",
+  "chi.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726968/chi_moy9os.mp3", 
+  "chie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726969/chie_whinis.mp3",
+  "cho.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726970/cho_zk13iv.mp3",
+  "chu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726971/chu_i75wtj.mp3",
+  "Ci.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766810390/Chi_om8sky.mp3",
+  "Cie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766810384/Chie_agsf9p.mp3,
+  "Co.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766810378/Cho_l8vpbc.mp3",
+  "Cu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766810401/Chu_qc5lgt.mp3",
+  "d.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726972/d_jdq58a.mp3"
+  "da.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726973/da_nngosg.mp3", // TODO: Replace with Version 2 URL
+  "de.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726973/de_gomnth.mp3", // TODO: Replace with Version 2 URL
+  "di.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726975/di_ibk8fq.mp3", // TODO: Replace with Version 2 URL
+  "die.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726976/die_x6qroy.mp3", // TODO: Replace with Version 2 URL
+  "do.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726977/do_nutmik.mp3", // TODO: Replace with Version 2 URL
+  "du.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726979/du_tqx6nw.mp3",
+  "f.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726980/f_tihydw.mp3", // TODO: Replace with Version 2 URL
+  "fa.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726982/fa_ni3pzv.mp3", // TODO: Replace with Version 2 URL
+  "fe.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726982/fe_ltk48g.mp3", // TODO: Replace with Version 2 URL
+  "fi.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726984/fi_mjgngp.mp3", // TODO: Replace with Version 2 URL
+  "fie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726984/fie_owzxfo.mp3", // TODO: Replace with Version 2 URL
+  "fo.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726986/fo_alwi35.mp3", // TODO: Replace with Version 2 URL
+  "fu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726987/fu_zqrsk9.mp3", // TODO: Replace with Version 2 URL
+  "g.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726988/g_ewrqb8.mp3", // TODO: Replace with Version 2 URL
+  "ga.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726989/ga_puex1j.mp3", // TODO: Replace with Version 2 URL
+  "ge.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726990/ge_op88lz.mp3", // TODO: Replace with Version 2 URL
+  "gi.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726992/gi_pit05j.mp3", // TODO: Replace with Version 2 URL
+  "gie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726993/gie_f7krii.mp3", // TODO: Replace with Version 2 URL
+  "gn.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726994/gn_exb6ay.mp3", // TODO: Replace with Version 2 URL
+  "gna.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726996/gna_t6cwxi.mp3", // TODO: Replace with Version 2 URL
+  "gne.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726996/gne_y9j9jo.mp3", // TODO: Replace with Version 2 URL
+  "gni.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726998/gni_kwmrcd.mp3", // TODO: Replace with Version 2 URL
+  "gnie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726999/gnie_w1gmva.mp3", // TODO: Replace with Version 2 URL
+  "gno.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727001/gno_l1w0l3.mp3", // TODO: Replace with Version 2 URL
+  "gnu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727001/gnu_vhg8ii.mp3", // TODO: Replace with Version 2 URL
+  "go.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727003/go_tbejkn.mp3", // TODO: Replace with Version 2 URL
+  "gu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727004/gu_oey4ze.mp3", // TODO: Replace with Version 2 URL
   "h.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000803/h_fctqmx.mp3", // TODO: Replace with Version 2 URL
-  "ha.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000804/ha_ydfwnt.mp3", // TODO: Replace with Version 2 URL
+  "ha.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000804/ha_ydfwnt.mp3",
+  "he.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727005/he_sqh2rd.mp3", // TODO: Replace with Version 2 URL
   "hi.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000805/hi_rto4qy.mp3", // TODO: Replace with Version 2 URL
   "hie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000806/hie_mx9ibm.mp3", // TODO: Replace with Version 2 URL
   "ho.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000807/ho_uxlupw.mp3", // TODO: Replace with Version 2 URL
   "hu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000809/hu_sahwbq.mp3", // TODO: Replace with Version 2 URL
   "huh.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000809/huh_yzchxe.mp3", // TODO: Replace with Version 2 URL
-  "i.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000824/i_tyhzol.mp3", // TODO: Replace with Version 2 URL
-  "ie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000825/ie_wqf4oc.mp3", // TODO: Replace with Version 2 URL
-  "ii.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000827/ii_ntbcq0.mp3", // TODO: Replace with Version 2 URL
-  "j.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000827/j_sgub17.mp3", // TODO: Replace with Version 2 URL
-  "ja.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000829/ja_c4isnh.mp3", // TODO: Replace with Version 2 URL
-  "je.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000842/je_ustiba.mp3", // TODO: Replace with Version 2 URL
-  "ji.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000842/ji_wj1tdx.mp3", // TODO: Replace with Version 2 URL
-  "jie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000843/jie_fgin6c.mp3", // TODO: Replace with Version 2 URL
-  "jo.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000844/jo_p9fwcj.mp3", // TODO: Replace with Version 2 URL
-  "ju.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000845/ju_vv0rjk.mp3", // TODO: Replace with Version 2 URL
-  "k.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000846/k_wwdumt.mp3", // TODO: Replace with Version 2 URL
-  "ka.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000851/ka_jfhffq.mp3", // TODO: Replace with Version 2 URL
-  "ke.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000853/ke_vwzxbp.mp3", // TODO: Replace with Version 2 URL
-  "ki.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000853/ki_mfwcyl.mp3", // TODO: Replace with Version 2 URL
-  "kie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000854/kie_dcfydf.mp3", // TODO: Replace with Version 2 URL
-  "ko.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000866/ko_e4nffi.mp3", // TODO: Replace with Version 2 URL
-  "ku.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000867/ku_ehyfke.mp3", // TODO: Replace with Version 2 URL
+  "i.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727005/i_jyzzrm.mp3", // TODO: Replace with Version 2 URL
+  "ie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727006/ie_wdrwyq.mp3", // TODO: Replace with Version 2 URL
+  "ii.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726979/ee_im5wju.mp3", // TODO: Replace with Version 2 URL
+  "j.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727009/j_jaaxp9.mp3", // TODO: Replace with Version 2 URL
+  "ja.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727009/ja_jrgvs1.mp3", // TODO: Replace with Version 2 URL
+  "je.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727011/je_c1mcvh.mp3", // TODO: Replace with Version 2 URL
+  "ji.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727012/ji_fyb4o8.mp3", // TODO: Replace with Version 2 URL
+  "jie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727013/jie_iu02ds.mp3", // TODO: Replace with Version 2 URL
+  "jo.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727014/jo_ixusnb.mp3", // TODO: Replace with Version 2 URL
+  "ju.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727015/ju_zzud1g.mp3", // TODO: Replace with Version 2 URL
+  "k.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727017/k_r3sse3.mp3", // TODO: Replace with Version 2 URL
+  "ka.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727018/ka_jzfqwd.mp3", // TODO: Replace with Version 2 URL
+  "ke.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727020/ke_afwaro.mp3", // TODO: Replace with Version 2 URL
+  "ki.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727021/ki_qbijj9.mp3", // TODO: Replace with Version 2 URL
+  "kie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727022/kie_gbafgc.mp3", // TODO: Replace with Version 2 URL
+  "ko.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727025/ko_wunlvz.mp3", // TODO: Replace with Version 2 URL
+  "ku.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727025/ku_s1hvyk.mp3", // TODO: Replace with Version 2 URL
   "l.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000868/l_sfguk8.mp3", // TODO: Replace with Version 2 URL
   "la.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000869/la_wtio6p.mp3", // TODO: Replace with Version 2 URL
   "le.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000870/le_evvwrm.mp3", // TODO: Replace with Version 2 URL
@@ -90,28 +91,28 @@ const audioMap = {
   "mie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000909/mie_k7ur83.mp3", // TODO: Replace with Version 2 URL
   "mo.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000910/mo_oaisly.mp3", // TODO: Replace with Version 2 URL
   "mu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000911/mu_jrakso.mp3", // TODO: Replace with Version 2 URL
-  "n.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000913/n_qv2bso.mp3", // TODO: Replace with Version 2 URL
-  "na.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000914/na_dail9n.mp3", // TODO: Replace with Version 2 URL
-  "ne.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000915/ne_u99phj.mp3", // TODO: Replace with Version 2 URL
-  "ni.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993938/ni_ndtuwl.mp3", // TODO: Replace with Version 2 URL
-  "nie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993938/nie_xj7jic.mp3", // TODO: Replace with Version 2 URL
-  "no.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993938/no_imfjav.mp3", // TODO: Replace with Version 2 URL
-  "nu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993903/nu_cifhnv.mp3", // TODO: Replace with Version 2 URL
-  "o.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993872/o_jnpepy.mp3", // TODO: Replace with Version 2 URL
-  "p.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993870/p_yrkrmu.mp3", // TODO: Replace with Version 2 URL
-  "pa.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993869/pa_pwtaq4.mp3", // TODO: Replace with Version 2 URL
-  "pe.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993870/pe_jkfo2v.mp3", // TODO: Replace with Version 2 URL
-  "pi.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993868/pi_vzpydn.mp3", // TODO: Replace with Version 2 URL
-  "pie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993868/pie_jhlnu5.mp3", // TODO: Replace with Version 2 URL
-  "po.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993867/po_fqvzer.mp3", // TODO: Replace with Version 2 URL
-  "pp.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993867/pp_mbvnwh.mp3", // TODO: Replace with Version 2 URL
-  "ppa.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993867/ppa_jghssh.mp3", // TODO: Replace with Version 2 URL
-  "ppe.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993866/ppe_x11vl7.mp3", // TODO: Replace with Version 2 URL
-  "ppi.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993865/ppi_vohosb.mp3", // TODO: Replace with Version 2 URL
-  "ppie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993864/ppie_uu8qep.mp3", // TODO: Replace with Version 2 URL
-  "ppo.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993864/ppo_a8grxo.mp3", // TODO: Replace with Version 2 URL
-  "ppu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993863/ppu_ajhmzf.mp3", // TODO: Replace with Version 2 URL
-  "pu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993863/pu_g3oaam.mp3", // TODO: Replace with Version 2 URL
+  "n.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727027/n_phuec1.mp3", // TODO: Replace with Version 2 URL
+  "na.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727029/na_cecn6t.mp3", // TODO: Replace with Version 2 URL
+  "ne.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727030/ne_co1mr9.mp3", // TODO: Replace with Version 2 URL
+  "ni.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727032/ni_q6azud.mp3", // TODO: Replace with Version 2 URL
+  "nie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727033/nie_qsojvb.mp3", // TODO: Replace with Version 2 URL
+  "no.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727034/no_ujwszx.mp3", // TODO: Replace with Version 2 URL
+  "nu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727036/nu_c5ii0x.mp3", // TODO: Replace with Version 2 URL
+  "o.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727037/o_karkqf.mp3", // TODO: Replace with Version 2 URL
+  "p.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727038/p_qbr3rh.mp3", // TODO: Replace with Version 2 URL
+  "pa.mp3": "hhttps://res.cloudinary.com/dc6jadrue/video/upload/v1766727040/pa_wuqtxx.mp3", // TODO: Replace with Version 2 URL
+  "pe.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727043/pe_zcs61u.mp3", // TODO: Replace with Version 2 URL
+  "pi.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727043/pi_c3b4si.mp3", // TODO: Replace with Version 2 URL
+  "pie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727047/pie_m8onyb.mp3", // TODO: Replace with Version 2 URL
+  "po.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727047/po_s4ciip.mp3", // TODO: Replace with Version 2 URL
+  "pp.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727049/pp_tkf4jf.mp3", // TODO: Replace with Version 2 URL
+  "ppa.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766880142/ppa_srrlej.mp3", // TODO: Replace with Version 2 URL
+  "ppe.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766880147/ppe_sdcswm.mp3", // TODO: Replace with Version 2 URL
+  "ppi.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766880153/ppi_cfref4.mp3", // TODO: Replace with Version 2 URL
+  "ppie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766880158/ppie_pslywn.mp3", // TODO: Replace with Version 2 URL
+  "ppo.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766880163/ppo_g2syg8.mp3", // TODO: Replace with Version 2 URL
+  "ppu.mp3": "hhttps://res.cloudinary.com/dc6jadrue/video/upload/v1766880180/ppu_v0vksx.mp3", // TODO: Replace with Version 2 URL
+  "pu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766880175/pu_l8buhr.mp3", // TODO: Replace with Version 2 URL
   "q.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993863/q_unatt8.mp3", // TODO: Replace with Version 2 URL
   "qa.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993863/qa_j016wo.mp3", // TODO: Replace with Version 2 URL
   "qe.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993861/qe_w7sto9.mp3", // TODO: Replace with Version 2 URL
@@ -140,64 +141,64 @@ const audioMap = {
   "sie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993855/sie_rjhf8d.mp3", // TODO: Replace with Version 2 URL
   "so.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993853/so_w3t7ai.mp3", // TODO: Replace with Version 2 URL
   "su.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993852/su_vouyrm.mp3", // TODO: Replace with Version 2 URL
-  "t.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993852/t_vxkcqo.mp3", // TODO: Replace with Version 2 URL
-  "ta.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993852/ta_c9lpbm.mp3", // TODO: Replace with Version 2 URL
-  "te.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993851/te_ymlu49.mp3", // TODO: Replace with Version 2 URL
-  "ti.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993851/ti_d5ei7z.mp3", // TODO: Replace with Version 2 URL
-  "tie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993851/tie_hqvjkv.mp3", // TODO: Replace with Version 2 URL
-  "to.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993850/to_uyxdxz.mp3", // TODO: Replace with Version 2 URL
-  "ts.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993850/ts_vcl2hi.mp3", // TODO: Replace with Version 2 URL
-  "tsa.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993850/tsa_y3lvbk.mp3", // TODO: Replace with Version 2 URL
-  "tse.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993582/tse_a9mzeb.mp3", // TODO: Replace with Version 2 URL
-  "tsi.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993550/tsi_l0o2i2.mp3", // TODO: Replace with Version 2 URL
-  "tsie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993542/tsie_nmhark.mp3", // TODO: Replace with Version 2 URL
-  "tso.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993541/tso_i6njrv.mp3", // TODO: Replace with Version 2 URL
-  "tsu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993541/tsu_pitjwa.mp3", // TODO: Replace with Version 2 URL
-  "tt.mp3": "hhttps://res.cloudinary.com/dc6jadrue/video/upload/v1739993540/tt_u0x4gt.mp3", // TODO: Replace with Version 2 URL
-  "tta.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993540/tta_cbusjd.mp3", // TODO: Replace with Version 2 URL
-  "tte.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993539/tte_yxr5yc.mp3", // TODO: Replace with Version 2 URL
-  "tti.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993540/tti_xumyqk.mp3", // TODO: Replace with Version 2 URL
-  "ttie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993539/ttie_tzv6fm.mp3", // TODO: Replace with Version 2 URL
-  "tto.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993538/tto_cyy1xh.mp3", // TODO: Replace with Version 2 URL
-  "ttu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993538/ttu_zw6hhp.mp3", // TODO: Replace with Version 2 URL
-  "tu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993538/tu_ojojso.mp3", // TODO: Replace with Version 2 URL
-  "u.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993537/u_vsxsy3.mp3", // TODO: Replace with Version 2 URL
+  "t.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727432/t_cxxbpb.mp3", // TODO: Replace with Version 2 URL
+  "ta.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727433/ta_ve4xgt.mp3", // TODO: Replace with Version 2 URL
+  "te.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727436/te_yn4m0p.mp3", // TODO: Replace with Version 2 URL
+  "ti.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727438/ti_pzaekc.mp3", // TODO: Replace with Version 2 URL
+  "tie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727439/tie_qgnxj1.mp3", // TODO: Replace with Version 2 URL
+  "to.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766880803/to_ho1n94.mp3", // TODO: Replace with Version 2 URL
+  "ts.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727443/ts_rfrad2.mp3", // TODO: Replace with Version 2 URL
+  "tsa.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727445/tsa_er4ppy.mp3", // TODO: Replace with Version 2 URL
+  "tse.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727447/tse_gyv45u.mp3", // TODO: Replace with Version 2 URL
+  "tsi.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727448/tsi_t2l6rg.mp3", // TODO: Replace with Version 2 URL
+  "tsie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727451/tsie_vcj0am.mp3", // TODO: Replace with Version 2 URL
+  "tso.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727453/tso_lypwm5.mp3", // TODO: Replace with Version 2 URL
+  "tsu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727455/tsu_sunh5d.mp3", // TODO: Replace with Version 2 URL
+  "tt.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727458/tt_pdysxw.mp3", // TODO: Replace with Version 2 URL
+  "tta.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727460/tta_rgkbij.mp3", // TODO: Replace with Version 2 URL
+  "tte.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727461/tte_c9bdfc.mp3", // TODO: Replace with Version 2 URL
+  "tti.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727464/tti_wf6zoh.mp3", // TODO: Replace with Version 2 URL
+  "ttie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727466/ttie_a3cjpg.mp3", // TODO: Replace with Version 2 URL
+  "tto.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727468/tto_dcwozx.mp3", // TODO: Replace with Version 2 URL
+  "ttu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727470/ttu_aj7b3k.mp3", // TODO: Replace with Version 2 URL
+  "tu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727472/tu_xjwzxr.mp3", // TODO: Replace with Version 2 URL
+  "u.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727474/u_mlplng.mp3", // TODO: Replace with Version 2 URL
   "uh.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993537/uh_mhar1v.mp3", // TODO: Replace with Version 2 URL
-  "ve.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1765333581/ve_xjqiqv.mp3", // TODO: Replace with Version 2 URL
-  "vu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1765333624/vu_cl4a2g.mp3", // TODO: Replace with Version 2 URL
-  "vi.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1765333661/vi_jxwbsb.mp3", // TODO: Replace with Version 2 URL
-  "va.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1765333713/va_uymzp3.mp3", // TODO: Replace with Version 2 URL
-  "vie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1765333970/vie_q8jz2k.mp3", // TODO: Replace with Version 2 URL
-  "v.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1765334019/v_yc6bj1.mp3", // TODO: Replace with Version 2 URL
-  "vo.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1765334050/vo_ihi5ij.mp3", // TODO: Replace with Version 2 URL
-  "w.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993537/w_nudmma.mp3", // TODO: Replace with Version 2 URL
-  "wa.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993536/wa_xumkw1.mp3", // TODO: Replace with Version 2 URL
-  "we.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993536/we_uc9qew.mp3", // TODO: Replace with Version 2 URL
-  "wi.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993536/wi_oe5kj6.mp3", // TODO: Replace with Version 2 URL
-  "wie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993536/wie_jyvtrw.mp3", // TODO: Replace with Version 2 URL
-  "wo.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993535/wo_mtn0ji.mp3", // TODO: Replace with Version 2 URL
-  "wu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993534/wu_is24t2.mp3", // TODO: Replace with Version 2 URL
-  "y.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993534/y_dlfszj.mp3", // TODO: Replace with Version 2 URL
-  "ya.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993534/ya_fglpin.mp3", // TODO: Replace with Version 2 URL
-  "ye.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993534/ye_ulxgof.mp3", // TODO: Replace with Version 2 URL
-  "yi.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993533/yi_dhpk3g.mp3", // TODO: Replace with Version 2 URL
-  "yie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993532/yie_jzlwof.mp3", // TODO: Replace with Version 2 URL
-  "yo.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993532/yo_unglzi.mp3", // TODO: Replace with Version 2 URL
-  "yu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993531/yu_stowu3.mp3", // TODO: Replace with Version 2 URL
-  "z.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993531/z_ihjasj.mp3", // TODO: Replace with Version 2 URL
-  "za.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993530/za_vwmqrq.mp3", // TODO: Replace with Version 2 URL
-  "ze.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993530/ze_qdng41.mp3", // TODO: Replace with Version 2 URL
-  "zh.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993529/zh_fbwlc3.mp3", // TODO: Replace with Version 2 URL
-  "zha.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993529/zha_oisa1r.mp3", // TODO: Replace with Version 2 URL
-  "zhe.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993529/zhe_ygalby.mp3", // TODO: Replace with Version 2 URL
-  "zhi.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993528/zhi_rfilpv.mp3", // TODO: Replace with Version 2 URL
-  "zhie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993528/zhie_pkom1h.mp3", // TODO: Replace with Version 2 URL
-  "zho.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993527/zho_wfuzr9.mp3", // TODO: Replace with Version 2 URL
-  "zhu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993527/zhu_iaogph.mp3", // TODO: Replace with Version 2 URL
-  "zi.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993526/zi_ri7gdr.mp3", // TODO: Replace with Version 2 URL
-  "zie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993526/zie_oet7fz.mp3", // TODO: Replace with Version 2 URL
-  "zo.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993525/zo_z1awsm.mp3", // TODO: Replace with Version 2 URL
-  "zu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993525/zu_zlk9mw.mp3", // TODO: Replace with Version 2 URL
+  "ve.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727481/ve_owkz56.mp3", // TODO: Replace with Version 2 URL
+  "vu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727490/vu_objyx4.mp3", // TODO: Replace with Version 2 URL
+  "vi.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727483/vi_qdvwmc.mp3", // TODO: Replace with Version 2 URL
+  "va.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727478/va_wc8qnh.mp3", // TODO: Replace with Version 2 URL
+  "vie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727485/vie_zdjiy5.mp3", // TODO: Replace with Version 2 URL
+  "v.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727477/v_znqo9c.mp3", // TODO: Replace with Version 2 URL
+  "vo.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727486/vo_f0xfml.mp3", // TODO: Replace with Version 2 URL
+  "w.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727492/w_ak6hwu.mp3", // TODO: Replace with Version 2 URL
+  "wa.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727494/wa_tg61rm.mp3", // TODO: Replace with Version 2 URL
+  "we.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727496/we_k5kane.mp3", // TODO: Replace with Version 2 URL
+  "wi.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727498/wi_t7xxwt.mp3", // TODO: Replace with Version 2 URL
+  "wie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727500/wie_ntmats.mp3", // TODO: Replace with Version 2 URL
+  "wo.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727503/wo_r0ayz1.mp3", // TODO: Replace with Version 2 URL
+  "wu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727505/wu_lvfamr.mp3", // TODO: Replace with Version 2 URL
+  "y.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727507/y_acxayr.mp3", // TODO: Replace with Version 2 URL
+  "ya.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727509/ya_lq3pvn.mp3", // TODO: Replace with Version 2 URL
+  "ye.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727513/ye_okjcdv.mp3", // TODO: Replace with Version 2 URL
+  "yi.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727513/yi_glwztj.mp3", // TODO: Replace with Version 2 URL
+  "yie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727517/yie_pyyobw.mp3", // TODO: Replace with Version 2 URL
+  "yo.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727519/yo_nqvp79.mp3", // TODO: Replace with Version 2 URL
+  "yu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727520/yu_m4slec.mp3", // TODO: Replace with Version 2 URL
+  "z.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727524/z_ex1h1u.mp3", // TODO: Replace with Version 2 URL
+  "za.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727526/za_ypelc7.mp3", // TODO: Replace with Version 2 URL
+  "ze.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727529/ze_fbdp4w.mp3", // TODO: Replace with Version 2 URL
+  "zh.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727529/zh_gsapm6.mp3", // TODO: Replace with Version 2 URL
+  "zha.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727533/zha_zembbo.mp3", // TODO: Replace with Version 2 URL
+  "zhe.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727538/zhe_r2zo1b.mp3", // TODO: Replace with Version 2 URL
+  "zhi.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727540/zhi_ynwaj8.mp3", // TODO: Replace with Version 2 URL
+  "zhie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727541/zhie_nwuwv3.mp3", // TODO: Replace with Version 2 URL
+  "zho.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727545/zho_hxa9lw.mp3", // TODO: Replace with Version 2 URL
+  "zhu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727546/zhu_teezyd.mp3", // TODO: Replace with Version 2 URL
+  "zi.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727550/zi_obhf09.mp3", // TODO: Replace with Version 2 URL
+  "zie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727551/zie_xpscdc.mp3", // TODO: Replace with Version 2 URL
+  "zo.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727554/zo_ffkcfb.mp3", // TODO: Replace with Version 2 URL
+  "zu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766727555/zu_dqg3c8.mp3", // TODO: Replace with Version 2 URL
 };
 
 export default audioMap;
