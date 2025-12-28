@@ -12,7 +12,7 @@ const audioMap = {
   "bu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766808599/bu_jny8wj.mp3", // TODO: Replace with Version 2 URL
   "C.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766810380/Ch_kqmazh.mp3", // TODO: Replace with Version 2 URL
   "Ca.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766810396/Cha_nseh2i.mp3", // TODO: Replace with Version 2 URL
-  "Ce.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766810387/Che_smhbo2.mp3" , // TODO: Replace with Version 2 URL
+  "Ce.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766810387/Che_smhbo2.mp3", // TODO: Replace with Version 2 URL
   "ch.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766808537/ch_klyxqx.mp3",
   "cha.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726965/cha_g1uqpu.mp3",
   "che.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726968/che_ac9t3d.mp3",
@@ -21,7 +21,7 @@ const audioMap = {
   "cho.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726970/cho_zk13iv.mp3",
   "chu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726971/chu_i75wtj.mp3",
   "Ci.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766810390/Chi_om8sky.mp3",
-  "Cie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766810384/Chie_agsf9p.mp3,
+  "Cie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766810384/Chie_agsf9p.mp3",
   "Co.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766810378/Cho_l8vpbc.mp3",
   "Cu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766810401/Chu_qc5lgt.mp3",
   "d.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726972/d_jdq58a.mp3",
