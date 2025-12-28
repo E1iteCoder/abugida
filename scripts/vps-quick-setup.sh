@@ -48,5 +48,5 @@ echo "5. Install dependencies: npm ci --only=production"
 echo "6. Start with PM2: pm2 start src/server/server.js --name abugida-backend"
 echo "7. Setup PM2 startup: pm2 startup && pm2 save"
 echo ""
-echo "📖 See VPS_DEPLOYMENT_GUIDE.md for detailed instructions"
+echo "📖 See documentation/VPS_DEPLOYMENT_GUIDE.md for detailed instructions"
 
