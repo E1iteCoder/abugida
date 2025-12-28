@@ -12,14 +12,11 @@ export default function AudioVersionSelector() {
 
   return (
     <div className="audio-version-selector">
-      <label htmlFor="audio-version-select">
-        <strong>Audio Version:</strong>
-      </label>
       <select
-        id="audio-version-select"
+        className="theme-select"
         value={selectedVersion}
         onChange={handleVersionChange}
-        className="audio-version-select"
+        aria-label="Select audio version"
       >
         {Object.entries(AUDIO_VERSIONS).map(([key, version]) => (
           <option key={key} value={key}>
