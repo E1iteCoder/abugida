@@ -24,7 +24,7 @@ const audioMap = {
   "Cie.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766810384/Chie_agsf9p.mp3,
   "Co.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766810378/Cho_l8vpbc.mp3",
   "Cu.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766810401/Chu_qc5lgt.mp3",
-  "d.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726972/d_jdq58a.mp3"
+  "d.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726972/d_jdq58a.mp3",
   "da.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726973/da_nngosg.mp3", // TODO: Replace with Version 2 URL
   "de.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726973/de_gomnth.mp3", // TODO: Replace with Version 2 URL
   "di.mp3": "https://res.cloudinary.com/dc6jadrue/video/upload/v1766726975/di_ibk8fq.mp3", // TODO: Replace with Version 2 URL
