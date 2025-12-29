@@ -5,6 +5,7 @@ import LetterDetail from "./letterDetail";
 import letterDetails from "../data/letterDetails.js";
 import sections from "../data/section";
 import { useAudio } from "../hooks/useAudio";
+import { useProgressTracking } from "../hooks/useProgressTracking";
 
 export default function LearnAlphabet({ currentPage, topicKey }) {
   const itemsPerPage = 14;
@@ -14,7 +15,9 @@ export default function LearnAlphabet({ currentPage, topicKey }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [labels, setLabels] = useState({});
+  const [clickedLetters, setClickedLetters] = useState(new Set());
   const { playAudio } = useAudio();
+  const { trackProgress } = useProgressTracking();
 
   // Get the page label from labels.json
   const getPageLabel = (pageIndex) => {
@@ -78,8 +81,26 @@ export default function LearnAlphabet({ currentPage, topicKey }) {
 
   const handleClick = (item) => {
     setSelected((sel) => (sel?.letter === item.letter ? null : item));
-    // Audio will only play when "Play Pronunciation" button is clicked
+    
+    // Track clicked letters
+    setClickedLetters((prev) => {
+      const newSet = new Set(prev);
+      newSet.add(item.letter);
+      
+      // Check if all letters on this page have been clicked
+      if (newSet.size === alphabet.length && alphabet.length > 0) {
+        // All letters clicked - mark section as completed
+        trackProgress(topicKey, "Learn", currentPage + 1, true);
+      }
+      
+      return newSet;
+    });
   };
+
+  // Reset clicked letters when page changes
+  useEffect(() => {
+    setClickedLetters(new Set());
+  }, [currentPage, topicKey]);
 
   if (loading) return <div className="loading">Loading…</div>;
   if (error) return <div className="error">Error: {error}</div>;

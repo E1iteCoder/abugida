@@ -3,13 +3,16 @@ import React, { useEffect, useRef, useState } from "react";
 import "../styles/dashboard/letterTracer.css";
 import letterDetails from "../data/letterDetails.js";
 import { useAudio } from "../hooks/useAudio";
+import { useProgressTracking } from "../hooks/useProgressTracking";
 
-export default function LetterTracer({ currentPage = 1 }) {
+export default function LetterTracer({ currentPage = 1, topicKey }) {
   const itemsPerPage = 14;
   const [alphabet, setAlphabet] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [hasDrawn, setHasDrawn] = useState(false);
   const { playAudio } = useAudio();
+  const { trackProgress } = useProgressTracking();
 
   useEffect(() => {
     // 1) turn your JSON into an array of {letter, phonetic, audioFilename}
@@ -54,7 +57,15 @@ export default function LetterTracer({ currentPage = 1 }) {
         >
           🔊 Play Sound
         </button>
-        <CanvasTracer letter={current.letter} />
+        <CanvasTracer 
+          letter={current.letter} 
+          onDraw={() => {
+            if (!hasDrawn) {
+              setHasDrawn(true);
+              trackProgress(topicKey, "Practice", currentPage, true);
+            }
+          }}
+        />
       </div>
 
       <div className="slider-controls">
@@ -75,10 +86,11 @@ export default function LetterTracer({ currentPage = 1 }) {
   );
 }
 
-function CanvasTracer({ letter }) {
+function CanvasTracer({ letter, onDraw }) {
   const canvasRef = useRef(null);
   const isDrawing = useRef(false);
   const [ctx, setCtx] = useState(null);
+  const hasDrawnOnThisLetter = useRef(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -112,11 +124,25 @@ function CanvasTracer({ letter }) {
     if (!isDrawing.current) return;
     ctx.lineTo(e.nativeEvent.offsetX, e.nativeEvent.offsetY);
     ctx.stroke();
+    
+    // Track that user has drawn something
+    if (!hasDrawnOnThisLetter.current && onDraw) {
+      hasDrawnOnThisLetter.current = true;
+      onDraw();
+    }
   };
   const stopDrawing = () => {
     isDrawing.current = false;
   };
-  const clearCanvas = () => drawGuide(ctx, letter);
+  const clearCanvas = () => {
+    drawGuide(ctx, letter);
+    hasDrawnOnThisLetter.current = false; // Reset drawing flag when cleared
+  };
+  
+  // Reset drawing flag when letter changes
+  useEffect(() => {
+    hasDrawnOnThisLetter.current = false;
+  }, [letter]);
 
   return (
     <div className="canvas-trace-wrapper">

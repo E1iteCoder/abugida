@@ -2,7 +2,7 @@ import FlashcardPractice from "../../components/practiceFlash";
 import LetterTracer from "../../components/letterTracer";
 import { useState, useEffect } from 'react';
 
-export default function Practice({ currentPage }) {
+export default function Practice({ currentPage, topicKey }) {
   const [alphabets, setAlphabets] = useState({});
 
   useEffect(() => {
@@ -15,9 +15,9 @@ export default function Practice({ currentPage }) {
   return (
     <div className="Main">
       <h3>Flashcard</h3>
-      <FlashcardPractice currentPage={currentPage} alphabets={alphabets} />
+      <FlashcardPractice currentPage={currentPage} alphabets={alphabets} topicKey={topicKey} />
       <h3>Trace The Letter</h3>
-      <LetterTracer currentPage={currentPage} alphabets={alphabets} />
+      <LetterTracer currentPage={currentPage} alphabets={alphabets} topicKey={topicKey} />
     </div>
   );
 }

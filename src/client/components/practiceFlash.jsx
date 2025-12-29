@@ -5,13 +5,16 @@ import "../styles/flashcard.css";
 import "../styles/dashboard/flashPractice.css";
 import letterDetails from "../data/letterDetails.js";
 import audioMap from "../data/audio.js";
+import { useProgressTracking } from "../hooks/useProgressTracking";
 
-export default function Practice({ currentPage = 1 }) {
+export default function Practice({ currentPage = 1, topicKey }) {
   const itemsPerPage = 14;
   const [flashcards, setFlashcards] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [history, setHistory] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [visitedCards, setVisitedCards] = useState(new Set());
+  const { trackProgress } = useProgressTracking();
 
   useEffect(() => {
     try {
@@ -33,6 +36,7 @@ export default function Practice({ currentPage = 1 }) {
 
       setFlashcards(pageData);
       setCurrentIndex(0);
+      setVisitedCards(new Set([0])); // Start with first card visited
     } catch (err) {
       console.error("Failed to load practice flashcards:", err);
     } finally {
@@ -45,6 +49,20 @@ export default function Practice({ currentPage = 1 }) {
     const nextIndex = (currentIndex + 1) % flashcards.length;
     setHistory((prev) => [...prev, currentIndex]);
     setCurrentIndex(nextIndex);
+    
+    // Track visited cards
+    setVisitedCards((prev) => {
+      const newSet = new Set(prev);
+      newSet.add(currentIndex);
+      newSet.add(nextIndex);
+      
+      // If we've visited all cards (complete cycle), mark as completed
+      if (newSet.size === flashcards.length && flashcards.length > 0) {
+        trackProgress(topicKey, "Practice", currentPage, true);
+      }
+      
+      return newSet;
+    });
   };
 
   const goToPrevious = () => {

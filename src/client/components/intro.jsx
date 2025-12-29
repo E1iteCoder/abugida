@@ -1,10 +1,14 @@
 // src/client/pages/dashboard/intro.jsx
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import ReactMarkdown from "react-markdown";
 import sections from "../data/section";
 import "../styles/dashboard/intro.css";
+import { useProgressTracking } from "../hooks/useProgressTracking";
 
 export default function Introduction({ topicKey, currentPage = 1 }) {
+  const { trackProgress } = useProgressTracking();
+  const videoRef = useRef(null);
+  const [videoWatched, setVideoWatched] = useState(false);
   const sectionConfig = sections.find((s) => s.key === topicKey);
   const [entryMap, setEntryMap] = useState({}); // will hold page entries
   const [bodyText, setBodyText] = useState(""); // markdown body
@@ -78,9 +82,20 @@ export default function Introduction({ topicKey, currentPage = 1 }) {
 
       {/* Only render the video element */}
       {pageVideo && (
-        <video controls width="100%" style={{ margin: "1rem 0" }}>
+        <video
+          ref={videoRef}
+          controls
+          width="100%"
+          style={{ margin: "1rem 0" }}
+          onEnded={() => {
+            if (!videoWatched) {
+              setVideoWatched(true);
+              trackProgress(topicKey, "Introduction", currentPage, true);
+            }
+          }}
+        >
           <source src={pageVideo} type="video/mp4" />
-          Your browser doesn’t support HTML5 video.
+          Your browser doesn't support HTML5 video.
         </video>
       )}
 

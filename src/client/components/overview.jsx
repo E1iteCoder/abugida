@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import ReactMarkdown from "react-markdown";
 import data from "../data/overviewData";
 import "../styles/dashboard/overview.css";
+import { useProgressTracking } from "../hooks/useProgressTracking";
 
 export default function Overview({ topicKey }) {
+  const { trackProgress } = useProgressTracking();
+  const videoRef = useRef(null);
+  const [videoWatched, setVideoWatched] = useState(false);
   // Handle case where topicKey doesn't exist in data
   if (!topicKey || !data[topicKey]) {
     return (
@@ -57,9 +61,19 @@ export default function Overview({ topicKey }) {
   return (
     <div className="overview">
       <h1>{title}</h1>
-      <video controls width="100%">
+      <video
+        ref={videoRef}
+        controls
+        width="100%"
+        onEnded={() => {
+          if (!videoWatched) {
+            setVideoWatched(true);
+            trackProgress(topicKey, "Introduction", 0, true);
+          }
+        }}
+      >
         <source src={video} type="video/mp4" />
-        Your browser doesn’t support HTML5 video.
+        Your browser doesn't support HTML5 video.
       </video>
       <ReactMarkdown className="overview-markdown">{sectionText}</ReactMarkdown>
     </div>
