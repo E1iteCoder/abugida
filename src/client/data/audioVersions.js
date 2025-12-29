@@ -13,18 +13,18 @@ import audioMapVersion6 from './audio5.js';
 export const AUDIO_VERSIONS = {
   default: {
     name: 'Default',
-    description: 'Standard pronunciation (current)',
+    description: 'Combined version of all audio versions (current)',
   },
   version2: {
-    name: 'Yohannes',
-    description: 'Male voice version 1',
+    name: 'Agent 47 at home',
+    description: 'Male voice version 1 (no it\'s not the actual Agent 47, but it\'s the best voice we have)',
   },
   version3: {
     name: 'Yam',
     description: 'Female voice version 1',
   },
   version4: {
-    name: 'X',
+    name: 'Nati',
     description: 'Male voice version 2',
   },
   version5: {
