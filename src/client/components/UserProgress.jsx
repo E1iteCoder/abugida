@@ -8,6 +8,7 @@ export default function UserProgress() {
   const { isAuthenticated } = useAuth();
   const [progress, setProgress] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(true);
 
   useEffect(() => {
     if (!isAuthenticated) {
@@ -32,8 +33,29 @@ export default function UserProgress() {
   if (!isAuthenticated) {
     return (
       <div className="user-progress">
-        <h3>Progress Tracking</h3>
-        <p className="progress-message">Please log in to track your learning progress.</p>
+        <div 
+          className="progress-header"
+          onClick={() => setIsExpanded(!isExpanded)}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              setIsExpanded(!isExpanded);
+            }
+          }}
+          aria-expanded={isExpanded}
+        >
+          <h3>Progress Tracking</h3>
+          <span className={`collapse-icon ${isExpanded ? 'expanded' : ''}`}>
+            ▼
+          </span>
+        </div>
+        {isExpanded && (
+          <div className="progress-content">
+            <p className="progress-message">Please log in to track your learning progress.</p>
+          </div>
+        )}
       </div>
     );
   }
@@ -41,8 +63,29 @@ export default function UserProgress() {
   if (loading) {
     return (
       <div className="user-progress">
-        <h3>Progress Tracking</h3>
-        <p className="progress-message">Loading progress...</p>
+        <div 
+          className="progress-header"
+          onClick={() => setIsExpanded(!isExpanded)}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              setIsExpanded(!isExpanded);
+            }
+          }}
+          aria-expanded={isExpanded}
+        >
+          <h3>Progress Tracking</h3>
+          <span className={`collapse-icon ${isExpanded ? 'expanded' : ''}`}>
+            ▼
+          </span>
+        </div>
+        {isExpanded && (
+          <div className="progress-content">
+            <p className="progress-message">Loading progress...</p>
+          </div>
+        )}
       </div>
     );
   }
@@ -116,10 +159,29 @@ export default function UserProgress() {
 
   return (
     <div className="user-progress">
-      <h3>Your Progress</h3>
+      <div 
+        className="progress-header"
+        onClick={() => setIsExpanded(!isExpanded)}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            setIsExpanded(!isExpanded);
+          }
+        }}
+        aria-expanded={isExpanded}
+      >
+        <h3>Your Progress</h3>
+        <span className={`collapse-icon ${isExpanded ? 'expanded' : ''}`}>
+          ▼
+        </span>
+      </div>
       
-      {/* Overall Statistics */}
-      <div className="progress-stats">
+      {isExpanded && (
+        <div className="progress-content">
+          {/* Overall Statistics */}
+          <div className="progress-stats">
         <div className="stat-card">
           <div className="stat-value">{stats.totalLessonsCompleted}</div>
           <div className="stat-label">Lessons Completed</div>
@@ -163,7 +225,9 @@ export default function UserProgress() {
             </div>
           </div>
         ))}
-      </div>
+        </div>
+        </div>
+      )}
     </div>
   );
 }

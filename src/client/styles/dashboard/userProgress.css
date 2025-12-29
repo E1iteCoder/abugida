@@ -6,11 +6,60 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  padding: 0.5rem 0;
+  margin: -0.5rem 0 0 -0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease;
+}
+
+.progress-header:hover {
+  background-color: var(--bg-secondary, #f5f5f5);
+}
+
+.progress-header:focus {
+  outline: 2px solid var(--accent, #4ca1af);
+  outline-offset: 2px;
+}
+
 .user-progress h3 {
-  margin-top: 0;
-  margin-bottom: 1.5rem;
+  margin: 0;
   color: var(--fg, #333);
   font-size: 1.5rem;
+}
+
+.collapse-icon {
+  font-size: 0.875rem;
+  color: var(--fg-secondary, #666);
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.collapse-icon.expanded {
+  transform: rotate(180deg);
+}
+
+.progress-content {
+  margin-top: 1.5rem;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+  to {
+    opacity: 1;
+    max-height: 2000px;
+  }
 }
 
 .progress-message {
@@ -120,6 +169,10 @@
 [data-theme="dark"] .user-progress {
   background: var(--card, #2a2a2a);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .progress-header:hover {
+  background-color: var(--bg-secondary, #1a1a1a);
 }
 
 [data-theme="dark"] .stat-card {
