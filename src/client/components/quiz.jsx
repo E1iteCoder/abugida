@@ -298,6 +298,7 @@ export default function QuizCarousel({ currentPage = 1, topicKey, section = "Qui
           handleNextQuestion={handleNextQuestion}
           questionNumber={currentQuestionIndex + 1}
           totalQuestions={questions.length}
+          playAudio={playAudio}
         />
       ) : (
         <ResultsScreen
@@ -324,6 +325,7 @@ function QuizQuestion({
   handleNextQuestion,
   questionNumber,
   totalQuestions,
+  playAudio,
 }) {
   const [selectedOption, setSelectedOption] = useState(null);
   if (!question) return null;
