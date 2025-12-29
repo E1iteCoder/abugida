@@ -307,6 +307,7 @@ export default function QuizCarousel({ currentPage = 1, topicKey, section = "Qui
             setCurrentQuestionIndex(0);
             setShowResults(false);
           }}
+          playAudio={playAudio}
         />
       )}
     </div>
@@ -432,8 +433,8 @@ function QuizQuestion({
   );
 }
 
-// Final results screen (unchanged)
-function ResultsScreen({ results, onRetry }) {
+// Final results screen
+function ResultsScreen({ results, onRetry, playAudio }) {
   const { score, total, mistakes } = results;
   const accuracy = Math.round((score / total) * 100);
 
