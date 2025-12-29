@@ -113,6 +113,17 @@ export const authAPI = {
       body: JSON.stringify(preferences),
     });
   },
+
+  getProgress: async () => {
+    return apiRequest('/auth/progress');
+  },
+
+  updateProgress: async (topicKey, section, page, completed, score) => {
+    return apiRequest('/auth/progress', {
+      method: 'PUT',
+      body: JSON.stringify({ topicKey, section, page, completed, score }),
+    });
+  },
 };
 
 // Health check

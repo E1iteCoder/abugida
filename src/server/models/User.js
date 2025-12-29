@@ -33,15 +33,27 @@ const userSchema = new mongoose.Schema({
     enum: ['auto', 'light', 'dark'],
     default: 'auto',
   },
-  // Add more fields as needed
-  // profile: {
-  //   name: String,
-  //   avatar: String,
-  // },
-  // progress: {
-  //   completedLessons: [String],
-  //   quizScores: [Number],
-  // },
+  // User progress tracking
+  progress: {
+    // Track completed sections: { topicKey: { section: { page: completionStatus } } }
+    // Example: { "letters": { "Learn": { "1": true, "2": true }, "Quiz": { "1": { score: 85, completed: true } } } }
+    completedSections: {
+      type: mongoose.Schema.Types.Mixed,
+      default: {},
+    },
+    // Track quiz scores: { topicKey: { section: { page: score } } }
+    quizScores: {
+      type: mongoose.Schema.Types.Mixed,
+      default: {},
+    },
+    // Overall statistics
+    stats: {
+      totalLessonsCompleted: { type: Number, default: 0 },
+      totalQuizzesCompleted: { type: Number, default: 0 },
+      averageQuizScore: { type: Number, default: 0 },
+      lastActivity: { type: Date, default: Date.now },
+    },
+  },
 });
 
 module.exports = mongoose.model('User', userSchema);

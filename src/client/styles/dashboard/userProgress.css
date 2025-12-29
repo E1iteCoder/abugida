@@ -1,0 +1,153 @@
+.user-progress {
+  background: var(--card, #fff);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-progress h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: var(--fg, #333);
+  font-size: 1.5rem;
+}
+
+.progress-message {
+  color: var(--fg-secondary, #666);
+  text-align: center;
+  padding: 1rem;
+}
+
+.progress-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: var(--bg-secondary, #f5f5f5);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--accent, #4ca1af);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: var(--fg-secondary, #666);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.topic-progress {
+  margin-top: 2rem;
+}
+
+.topic-progress h4 {
+  margin-bottom: 1rem;
+  color: var(--fg, #333);
+  font-size: 1.2rem;
+}
+
+.topic-progress-item {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--bg-secondary, #f5f5f5);
+  border-radius: 0.5rem;
+}
+
+.topic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.topic-name {
+  font-weight: 600;
+  color: var(--fg, #333);
+}
+
+.topic-percentage {
+  font-weight: bold;
+  color: var(--accent, #4ca1af);
+  font-size: 1.1rem;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 8px;
+  background: var(--border, #ddd);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent, #4ca1af), #5cb3c1);
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+
+.topic-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: var(--fg-secondary, #666);
+}
+
+.quiz-score {
+  font-weight: 600;
+  color: var(--accent, #4ca1af);
+}
+
+/* Dark theme */
+[data-theme="dark"] .user-progress {
+  background: var(--card, #2a2a2a);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .stat-card {
+  background: var(--bg-secondary, #1a1a1a);
+}
+
+[data-theme="dark"] .topic-progress-item {
+  background: var(--bg-secondary, #1a1a1a);
+}
+
+[data-theme="dark"] .progress-bar-container {
+  background: var(--border, #444);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .progress-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+
+  .topic-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}
+

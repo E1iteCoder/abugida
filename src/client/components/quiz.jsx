@@ -5,11 +5,14 @@ import "../styles/dashboard/quizCarousel.css";
 // 1) import your prebuilt JSON data
 import letterDetails from "../data/letterDetails.js";
 import { useAudio } from "../hooks/useAudio";
+import { useAuth } from "../context/AuthContext";
+import { authAPI } from "../utils/api";
 
 // Time allocated per question (in seconds)
 const initialTimePerQuestion = 60;
 
-export default function QuizCarousel({ currentPage = 1 }) {
+export default function QuizCarousel({ currentPage = 1, topicKey, section = "Quiz" }) {
+  const { isAuthenticated } = useAuth();
   // --- Configuration constants ---
   const itemsPerPage = 14; // 2 houses × 7 letters = 14 letters per page
   const totalQuestions = 21; // 14 questions (one per letter) + 7 randomized = 21 total
@@ -47,6 +50,7 @@ export default function QuizCarousel({ currentPage = 1 }) {
         letter,
         phonetic: info.phonetic,
         row: info.row, // Store house/row info
+        column: info.column, // Store column info for hints
         audio: info.audio || "", // Store filename, not URL - useAudio will resolve
       }));
 
@@ -108,29 +112,51 @@ export default function QuizCarousel({ currentPage = 1 }) {
 
     // Helper function to create a question
     const createQuestion = (correct) => {
-      // Get 2 wrong answers from the section array
+      // Track used audio IDs to prevent duplicates in the same question
+      const usedAudioIds = new Set([correct.audio]);
+      
+      // Get wrong answers from the section array, excluding those with duplicate audio
       const wrongsFromSection = alphabet.filter(
-        (a) => a.audio !== correct.audio && a.letter !== correct.letter
+        (a) => a.audio !== correct.audio && 
+               a.letter !== correct.letter &&
+               !usedAudioIds.has(a.audio)
       );
-      const twoWrongFromSection = shuffle(wrongsFromSection).slice(0, 2);
+      
+      // Select 2 wrong answers from section, ensuring no duplicate audio
+      const twoWrongFromSection = [];
+      for (const item of shuffle(wrongsFromSection)) {
+        if (twoWrongFromSection.length >= 2) break;
+        if (!usedAudioIds.has(item.audio)) {
+          twoWrongFromSection.push(item);
+          usedAudioIds.add(item.audio);
+        }
+      }
 
-      // Get 1 wrong answer from outside the section array (and ensure it's not the correct answer)
+      // Get 1 wrong answer from outside the section array
+      // Ensure it's not the correct answer and doesn't have duplicate audio
       const wrongsFromOutside = outsideSection.filter(
-        (a) => a.letter !== correct.letter
+        (a) => a.letter !== correct.letter && !usedAudioIds.has(a.audio)
       );
       const oneWrongFromOutside = wrongsFromOutside.length > 0
         ? [shuffle(wrongsFromOutside)[0]]
         : []; // Fallback if no outside letters available
 
       // Combine: correct answer + 2 from section + 1 from outside = 4 total options
-      const opts = [correct, ...twoWrongFromSection, ...oneWrongFromOutside];
+      let opts = [correct, ...twoWrongFromSection, ...oneWrongFromOutside];
       
-      // If we couldn't get an outside letter, add one more from section
+      // If we couldn't get enough options, add more from section (still checking for duplicate audio)
       if (opts.length < 4) {
-        const extraWrong = wrongsFromSection.find(
-          (a) => !opts.some(o => o.letter === a.letter)
+        const remainingWrongs = wrongsFromSection.filter(
+          (a) => !opts.some(o => o.letter === a.letter) && !usedAudioIds.has(a.audio)
         );
-        if (extraWrong) opts.push(extraWrong);
+        while (opts.length < 4 && remainingWrongs.length > 0) {
+          const extraWrong = shuffle(remainingWrongs)[0];
+          opts.push(extraWrong);
+          usedAudioIds.add(extraWrong.audio);
+          // Remove from remainingWrongs to avoid selecting again
+          const index = remainingWrongs.findIndex(a => a.letter === extraWrong.letter);
+          if (index > -1) remainingWrongs.splice(index, 1);
+        }
       }
 
       return {
@@ -145,6 +171,8 @@ export default function QuizCarousel({ currentPage = 1 }) {
         })),
         audio: correct.audio,
         phonetic: correct.phonetic,
+        row: correct.row, // Store row for hints
+        column: correct.column, // Store column for hints
       };
     };
 
@@ -230,6 +258,29 @@ export default function QuizCarousel({ currentPage = 1 }) {
     ),
   };
 
+  // Save progress when quiz is completed
+  useEffect(() => {
+    if (showResults && isAuthenticated && topicKey && results.total > 0) {
+      const accuracy = Math.round((results.score / results.total) * 100);
+      
+      const saveProgress = async () => {
+        try {
+          await authAPI.updateProgress(
+            topicKey,
+            section,
+            currentPage,
+            true, // completed
+            accuracy // score as percentage
+          );
+        } catch (error) {
+          console.error('Error saving progress:', error);
+        }
+      };
+
+      saveProgress();
+    }
+  }, [showResults, isAuthenticated, topicKey, section, currentPage, results.score, results.total]);
+
   // 9) Guards
   if (loading) return <div className="loading">Loading…</div>;
   if (error) return <div className="error">Error: {error}</div>;
@@ -262,7 +313,7 @@ export default function QuizCarousel({ currentPage = 1 }) {
   );
 }
 
-// MCQ & typing question renderer (unchanged)
+// MCQ & typing question renderer
 function QuizQuestion({
   question,
   timeLeft,
@@ -275,6 +326,14 @@ function QuizQuestion({
 }) {
   const [selectedOption, setSelectedOption] = useState(null);
   if (!question) return null;
+
+  // Format row and column for hint display
+  const formatHint = () => {
+    if (!question.row || !question.column) return null;
+    const rowName = question.row.replace('-house', '').replace('house', '').trim();
+    const columnName = question.column.charAt(0).toUpperCase() + question.column.slice(1);
+    return `${rowName} house, ${columnName} column`;
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -343,6 +402,12 @@ function QuizQuestion({
             onChange={(e) => setTypedInput(e.target.value)}
             placeholder="Type the letter..."
           />
+          {formatHint() && (
+            <div className="typing-hint">
+              <span className="hint-label">Hint:</span>
+              <span className="hint-text">{formatHint()}</span>
+            </div>
+          )}
         </div>
       )}
       {question.type === "typing" && (

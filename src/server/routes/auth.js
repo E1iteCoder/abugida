@@ -218,5 +218,134 @@ router.put('/preferences', checkDatabase, authenticateToken, preferencesLimiter,
   }
 });
 
+// Get user progress (protected route)
+router.get('/progress', checkDatabase, authenticateToken, async (req, res) => {
+  try {
+    const user = await User.findById(req.userId).select('progress');
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+
+    res.json({
+      progress: user.progress || {
+        completedSections: {},
+        quizScores: {},
+        stats: {
+          totalLessonsCompleted: 0,
+          totalQuizzesCompleted: 0,
+          averageQuizScore: 0,
+          lastActivity: new Date(),
+        },
+      },
+    });
+  } catch (error) {
+    console.error('Get progress error:', error);
+    res.status(500).json({ error: 'Server error fetching progress' });
+  }
+});
+
+// Update user progress (protected route)
+router.put('/progress', checkDatabase, authenticateToken, preferencesLimiter, async (req, res) => {
+  try {
+    const { topicKey, section, page, completed, score } = req.body;
+
+    // Validate required fields
+    if (!topicKey || !section || page === undefined) {
+      return res.status(400).json({ error: 'topicKey, section, and page are required' });
+    }
+
+    const user = await User.findById(req.userId);
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+
+    // Initialize progress if it doesn't exist
+    if (!user.progress) {
+      user.progress = {
+        completedSections: {},
+        quizScores: {},
+        stats: {
+          totalLessonsCompleted: 0,
+          totalQuizzesCompleted: 0,
+          averageQuizScore: 0,
+          lastActivity: new Date(),
+        },
+      };
+    }
+
+    // Initialize nested objects if they don't exist
+    if (!user.progress.completedSections[topicKey]) {
+      user.progress.completedSections[topicKey] = {};
+    }
+    if (!user.progress.completedSections[topicKey][section]) {
+      user.progress.completedSections[topicKey][section] = {};
+    }
+    if (!user.progress.quizScores[topicKey]) {
+      user.progress.quizScores[topicKey] = {};
+    }
+    if (!user.progress.quizScores[topicKey][section]) {
+      user.progress.quizScores[topicKey][section] = {};
+    }
+
+    // Update completion status
+    if (completed !== undefined) {
+      const pageKey = page.toString();
+      const wasCompleted = user.progress.completedSections[topicKey][section][pageKey];
+      
+      user.progress.completedSections[topicKey][section][pageKey] = completed;
+      
+      // Update stats
+      if (completed && !wasCompleted) {
+        if (section === 'Quiz') {
+          user.progress.stats.totalQuizzesCompleted = (user.progress.stats.totalQuizzesCompleted || 0) + 1;
+        } else {
+          user.progress.stats.totalLessonsCompleted = (user.progress.stats.totalLessonsCompleted || 0) + 1;
+        }
+      } else if (!completed && wasCompleted) {
+        if (section === 'Quiz') {
+          user.progress.stats.totalQuizzesCompleted = Math.max(0, (user.progress.stats.totalQuizzesCompleted || 0) - 1);
+        } else {
+          user.progress.stats.totalLessonsCompleted = Math.max(0, (user.progress.stats.totalLessonsCompleted || 0) - 1);
+        }
+      }
+    }
+
+    // Update quiz score
+    if (score !== undefined && section === 'Quiz') {
+      const pageKey = page.toString();
+      user.progress.quizScores[topicKey][section][pageKey] = score;
+      
+      // Recalculate average quiz score
+      const allScores = [];
+      Object.values(user.progress.quizScores).forEach(topic => {
+        Object.values(topic).forEach(sec => {
+          Object.values(sec).forEach(s => {
+            if (typeof s === 'number') allScores.push(s);
+          });
+        });
+      });
+      
+      if (allScores.length > 0) {
+        user.progress.stats.averageQuizScore = Math.round(
+          allScores.reduce((sum, s) => sum + s, 0) / allScores.length
+        );
+      }
+    }
+
+    // Update last activity
+    user.progress.stats.lastActivity = new Date();
+
+    await user.save();
+
+    res.json({
+      message: 'Progress updated successfully',
+      progress: user.progress,
+    });
+  } catch (error) {
+    console.error('Update progress error:', error);
+    res.status(500).json({ error: 'Server error updating progress' });
+  }
+});
+
 module.exports = router;
 

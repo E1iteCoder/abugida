@@ -112,6 +112,9 @@
   width: 100%;
   max-width: 25rem;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .typing-container input {
@@ -123,6 +126,32 @@
   border: 0.0625rem solid var(--fg);
   text-align: center;
   box-sizing: border-box;
+}
+
+.typing-hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: clamp(0.5rem, 1.5vw, 0.75rem);
+  background-color: var(--bg);
+  border-radius: 0.5rem;
+  border: 0.0625rem dashed var(--fg);
+  font-size: clamp(0.85rem, 2vw, 1rem);
+}
+
+.hint-label {
+  font-weight: 600;
+  color: var(--accent, #4ca1af);
+}
+
+.hint-text {
+  color: var(--fg-secondary, #666);
+  font-style: italic;
+}
+
+[data-theme="dark"] .hint-text {
+  color: var(--fg-secondary, #999);
 }
 
 /* 8) Submit / Skip row also wraps */
