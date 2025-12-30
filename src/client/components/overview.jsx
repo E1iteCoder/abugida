@@ -3,9 +3,12 @@ import ReactMarkdown from "react-markdown";
 import data from "../data/overviewData";
 import "../styles/dashboard/overview.css";
 import { useProgressTracking } from "../hooks/useProgressTracking";
+import { useAuth } from "../context/AuthContext";
+import { authAPI } from "../utils/api";
 
 export default function Overview({ topicKey }) {
   const { trackProgress } = useProgressTracking();
+  const { isAuthenticated } = useAuth();
   const videoRef = useRef(null);
   const [showCheckbox, setShowCheckbox] = useState(false);
   const [videoWatched, setVideoWatched] = useState(false);
@@ -35,10 +38,28 @@ export default function Overview({ topicKey }) {
     return () => clearTimeout(timer);
   }, [video]);
 
-  // Reset checkbox state when topic changes
+  // Check if Introduction 0 is already completed
+  useEffect(() => {
+    if (!isAuthenticated) return;
+    
+    const checkProgress = async () => {
+      try {
+        const response = await authAPI.getProgress();
+        const progress = response.progress;
+        if (progress?.completedSections?.[topicKey]?.["Introduction"]?.["0"]) {
+          setVideoWatched(true);
+        }
+      } catch (error) {
+        // Silently handle errors
+      }
+    };
+    
+    checkProgress();
+  }, [topicKey, isAuthenticated]);
+
+  // Reset checkbox state when topic changes (but keep videoWatched if already completed)
   useEffect(() => {
     setShowCheckbox(false);
-    setVideoWatched(false);
   }, [topicKey]);
 
   useEffect(() => {
@@ -98,12 +119,10 @@ export default function Overview({ topicKey }) {
             <input
               type="checkbox"
               checked={videoWatched}
-              onChange={(e) => {
+              onChange={async (e) => {
                 const checked = e.target.checked;
                 setVideoWatched(checked);
-                if (checked) {
-                  trackProgress(topicKey, "Introduction", 0, true);
-                }
+                await trackProgress(topicKey, "Introduction", 0, checked);
               }}
             />
             <span>I watched the video</span>

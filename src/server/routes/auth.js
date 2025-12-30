@@ -290,24 +290,28 @@ router.put('/progress', checkDatabase, authenticateToken, preferencesLimiter, as
     // Update completion status
     if (completed !== undefined) {
       const pageKey = page.toString();
-      const wasCompleted = user.progress.completedSections[topicKey][section][pageKey];
-      
       user.progress.completedSections[topicKey][section][pageKey] = completed;
       
-      // Update stats
-      if (completed && !wasCompleted) {
-        if (section === 'Quiz') {
-          user.progress.stats.totalQuizzesCompleted = (user.progress.stats.totalQuizzesCompleted || 0) + 1;
-        } else {
-          user.progress.stats.totalLessonsCompleted = (user.progress.stats.totalLessonsCompleted || 0) + 1;
-        }
-      } else if (!completed && wasCompleted) {
-        if (section === 'Quiz') {
-          user.progress.stats.totalQuizzesCompleted = Math.max(0, (user.progress.stats.totalQuizzesCompleted || 0) - 1);
-        } else {
-          user.progress.stats.totalLessonsCompleted = Math.max(0, (user.progress.stats.totalLessonsCompleted || 0) - 1);
-        }
-      }
+      // Recalculate stats from actual data (more accurate than incrementing/decrementing)
+      let lessonsCount = 0;
+      let quizzesCount = 0;
+      
+      Object.values(user.progress.completedSections).forEach(topic => {
+        Object.entries(topic).forEach(([sec, pages]) => {
+          Object.values(pages).forEach(pageValue => {
+            if (pageValue === true || (typeof pageValue === 'object' && pageValue !== null && pageValue.completed === true)) {
+              if (sec === 'Quiz') {
+                quizzesCount++;
+              } else {
+                lessonsCount++;
+              }
+            }
+          });
+        });
+      });
+      
+      user.progress.stats.totalLessonsCompleted = lessonsCount;
+      user.progress.stats.totalQuizzesCompleted = quizzesCount;
     }
 
     // Update quiz score

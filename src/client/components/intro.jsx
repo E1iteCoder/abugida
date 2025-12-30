@@ -4,9 +4,12 @@ import ReactMarkdown from "react-markdown";
 import sections from "../data/section";
 import "../styles/dashboard/intro.css";
 import { useProgressTracking } from "../hooks/useProgressTracking";
+import { useAuth } from "../context/AuthContext";
+import { authAPI } from "../utils/api";
 
 export default function Introduction({ topicKey, currentPage = 1 }) {
   const { trackProgress } = useProgressTracking();
+  const { isAuthenticated } = useAuth();
   const videoRef = useRef(null);
   const [showCheckbox, setShowCheckbox] = useState(false);
   const [videoWatched, setVideoWatched] = useState(false);
@@ -15,10 +18,28 @@ export default function Introduction({ topicKey, currentPage = 1 }) {
   const [bodyText, setBodyText] = useState(""); // markdown body
   const [error, setError] = useState(""); // error message
 
-  // Reset checkbox state when page changes
+  // Check if this page is already completed
+  useEffect(() => {
+    if (!isAuthenticated || currentPage === 0) return; // Skip for page 0 (handled by Overview)
+    
+    const checkProgress = async () => {
+      try {
+        const response = await authAPI.getProgress();
+        const progress = response.progress;
+        if (progress?.completedSections?.[topicKey]?.["Introduction"]?.[currentPage.toString()]) {
+          setVideoWatched(true);
+        }
+      } catch (error) {
+        // Silently handle errors
+      }
+    };
+    
+    checkProgress();
+  }, [currentPage, topicKey, isAuthenticated]);
+
+  // Reset checkbox visibility when page changes (but keep videoWatched if already completed)
   useEffect(() => {
     setShowCheckbox(false);
-    setVideoWatched(false);
   }, [currentPage, topicKey]);
 
   useEffect(() => {
@@ -94,12 +115,10 @@ export default function Introduction({ topicKey, currentPage = 1 }) {
     );
   }
 
-  const handleCheckboxChange = (e) => {
+  const handleCheckboxChange = async (e) => {
     const checked = e.target.checked;
     setVideoWatched(checked);
-    if (checked) {
-      trackProgress(topicKey, "Introduction", currentPage, true);
-    }
+    await trackProgress(topicKey, "Introduction", currentPage, checked);
   };
 
   return (
