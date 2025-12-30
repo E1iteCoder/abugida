@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/dashboard/cardgroup.css";
+import { useAuth } from "../context/AuthContext";
+import { authAPI } from "../utils/api";
 
 export default function CardGroup({
   topicKey, // e.g. "alphabet"
@@ -10,11 +12,14 @@ export default function CardGroup({
 }) {
   const defaultSize = 0;
   const allSections = ["Introduction", "Learn", "Practice", "Quiz"];
+  const { isAuthenticated } = useAuth();
 
   const [labels, setLabels] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [progress, setProgress] = useState(null);
 
+  // Fetch labels
   useEffect(() => {
     let cancelled = false;
     (async () => {
@@ -33,6 +38,39 @@ export default function CardGroup({
       cancelled = true;
     };
   }, [labelUrl]);
+
+  // Fetch user progress
+  useEffect(() => {
+    if (!isAuthenticated) {
+      setProgress(null);
+      return;
+    }
+
+    const fetchProgress = async () => {
+      try {
+        const response = await authAPI.getProgress();
+        setProgress(response.progress);
+      } catch (error) {
+        console.error('Error fetching progress:', error);
+      }
+    };
+
+    fetchProgress();
+  }, [isAuthenticated, topicKey]);
+
+  // Helper function to check if a card is completed
+  const isCardCompleted = (section, page) => {
+    if (!progress || !progress.completedSections) return false;
+    
+    const topicProgress = progress.completedSections[topicKey];
+    if (!topicProgress) return false;
+    
+    const sectionProgress = topicProgress[section];
+    if (!sectionProgress) return false;
+    
+    const pageKey = page.toString();
+    return sectionProgress[pageKey] === true;
+  };
 
   if (loading) return <div>Loading cards…</div>;
   if (error) return <div>Error: {error}</div>;
@@ -76,10 +114,16 @@ export default function CardGroup({
       {cards.map((card) => {
         // Grab the entry for this page (may be undefined)
         const entry = labels[card.page];
+        const isCompleted = isCardCompleted(card.section, card.page);
 
         return (
           <Link key={card.id} to={card.link}>
-            <div className="card">
+            <div className={`card ${isCompleted ? 'completed' : ''}`}>
+              {isCompleted && (
+                <div className="completion-badge">
+                  <span className="checkmark">✓</span>
+                </div>
+              )}
               <h2>{card.title}</h2>
 
               {card.page === 0 ? (

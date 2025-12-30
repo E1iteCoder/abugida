@@ -18,6 +18,24 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   text-decoration: none;
+  position: relative;
+}
+
+.card.completed {
+  border: 2px solid var(--accent, #4ca1af);
+  background: linear-gradient(135deg, var(--card) 0%, rgba(76, 161, 175, 0.1) 100%);
+}
+
+.card.completed::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, rgba(76, 161, 175, 0.05) 0%, transparent 100%);
+  pointer-events: none;
 }
 
 .card h2 {
@@ -41,4 +59,41 @@ a:link,
 a:visited {
   text-decoration: none;
   color: inherit;
+}
+
+.completion-badge {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 2rem;
+  height: 2rem;
+  background: var(--accent, #4ca1af);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(76, 161, 175, 0.4);
+  z-index: 1;
+}
+
+.completion-badge .checkmark {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.card.completed:hover {
+  border-color: var(--accent, #4ca1af);
+  box-shadow: 0 0.5rem 1rem rgba(76, 161, 175, 0.3);
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .card.completed {
+  border-color: var(--accent, #4ca1af);
+  background: linear-gradient(135deg, var(--card) 0%, rgba(76, 161, 175, 0.15) 100%);
+}
+
+[data-theme="dark"] .completion-badge {
+  box-shadow: 0 2px 8px rgba(76, 161, 175, 0.6);
 }
