@@ -56,6 +56,16 @@ export default function CardGroup({
     };
 
     fetchProgress();
+
+    // Refresh progress when window gains focus (user returns to tab)
+    const handleFocus = () => {
+      fetchProgress();
+    };
+    window.addEventListener('focus', handleFocus);
+
+    return () => {
+      window.removeEventListener('focus', handleFocus);
+    };
   }, [isAuthenticated, topicKey]);
 
   // Helper function to check if a card is completed
@@ -69,7 +79,10 @@ export default function CardGroup({
     if (!sectionProgress) return false;
     
     const pageKey = page.toString();
-    return sectionProgress[pageKey] === true;
+    // Check if the page is marked as completed (truthy check like UserProgress component)
+    const pageValue = sectionProgress[pageKey];
+    // Return true if the value is truthy (matches UserProgress logic)
+    return !!pageValue;
   };
 
   if (loading) return <div>Loading cards…</div>;
