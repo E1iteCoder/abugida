@@ -13,6 +13,7 @@ export default function CardGroup({
   const defaultSize = 0;
   const allSections = ["Introduction", "Learn", "Practice", "Quiz"];
   const { isAuthenticated } = useAuth();
+  const location = useLocation();
 
   const [labels, setLabels] = useState({});
   const [loading, setLoading] = useState(true);
@@ -98,10 +99,10 @@ export default function CardGroup({
     };
     document.addEventListener('visibilitychange', handleVisibilityChange);
 
-    // Refresh progress periodically (every 5 seconds) when on dashboard
+    // Refresh progress periodically (every 10 seconds) when on dashboard
     const interval = setInterval(() => {
       fetchProgress();
-    }, 5000);
+    }, 10000);
 
     return () => {
       window.removeEventListener('focus', handleFocus);
@@ -109,6 +110,25 @@ export default function CardGroup({
       clearInterval(interval);
     };
   }, [isAuthenticated, topicKey]);
+
+  // Refresh progress when navigating back to dashboard (location changes to dashboard without section)
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const hasSection = params.has("section");
+    
+    // If we're on the dashboard (no section), refresh progress
+    if (!hasSection && isAuthenticated) {
+      const fetchProgress = async () => {
+        try {
+          const response = await authAPI.getProgress();
+          setProgress(response.progress);
+        } catch (error) {
+          // Silently handle errors
+        }
+      };
+      fetchProgress();
+    }
+  }, [location.search, isAuthenticated]);
 
   // Helper function to check if a card is completed
   const isCardCompleted = (section, page) => {
