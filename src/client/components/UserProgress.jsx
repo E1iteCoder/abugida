@@ -21,7 +21,21 @@ export default function UserProgress() {
         const response = await authAPI.getProgress();
         setProgress(response.progress);
       } catch (error) {
-        console.error('Error fetching progress:', error);
+        // Silently handle 404 or other errors - user might not have progress yet
+        if (error.message && !error.message.includes('404')) {
+          console.error('Error fetching progress:', error);
+        }
+        // Set default empty progress
+        setProgress({
+          completedSections: {},
+          quizScores: {},
+          stats: {
+            totalLessonsCompleted: 0,
+            totalQuizzesCompleted: 0,
+            averageQuizScore: 0,
+            lastActivity: new Date(),
+          },
+        });
       } finally {
         setLoading(false);
       }
