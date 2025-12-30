@@ -90,8 +90,23 @@ export default function CardGroup({
     };
     window.addEventListener('focus', handleFocus);
 
+    // Refresh progress when component becomes visible (user navigates back to dashboard)
+    const handleVisibilityChange = () => {
+      if (!document.hidden) {
+        fetchProgress();
+      }
+    };
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    // Refresh progress periodically (every 5 seconds) when on dashboard
+    const interval = setInterval(() => {
+      fetchProgress();
+    }, 5000);
+
     return () => {
       window.removeEventListener('focus', handleFocus);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      clearInterval(interval);
     };
   }, [isAuthenticated, topicKey]);
 
