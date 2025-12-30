@@ -74,19 +74,46 @@
   height: 200px;
 }
 
-.canvas-trace-wrapper .clear-button {
+.canvas-controls {
+  display: flex;
+  gap: 0.5rem;
   margin-top: 0.5rem;
-  background-color: #f55 !important;
-  color: var(--fg);
-  padding: 0.4rem 1rem;
+  justify-content: center;
+}
+
+.canvas-trace-wrapper .clear-button,
+.canvas-trace-wrapper .save-button {
+  padding: 0.5rem 1rem;
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.canvas-trace-wrapper .clear-button {
+  background-color: #f55 !important;
+  color: white;
 }
 
 .clear-button:hover {
   background: #ed7a7a !important;
+}
+
+.canvas-trace-wrapper .save-button {
+  background-color: var(--accent, #4ca1af) !important;
   color: white;
+}
+
+.save-button:hover:not(:disabled) {
+  background-color: #5cb3c1 !important;
+}
+
+.save-button:disabled {
+  background-color: var(--disabled, #ccc) !important;
+  cursor: not-allowed;
+  opacity: 0.6;
 }
 
 .sound-button:hover {

@@ -91,6 +91,7 @@ function CanvasTracer({ letter, onDraw }) {
   const isDrawing = useRef(false);
   const [ctx, setCtx] = useState(null);
   const hasDrawnOnThisLetter = useRef(false);
+  const [saved, setSaved] = useState(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -137,11 +138,31 @@ function CanvasTracer({ letter, onDraw }) {
   const clearCanvas = () => {
     drawGuide(ctx, letter);
     hasDrawnOnThisLetter.current = false; // Reset drawing flag when cleared
+    setSaved(false);
+  };
+
+  const saveDrawing = () => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    // Convert canvas to data URL
+    const dataURL = canvas.toDataURL('image/png');
+    
+    // Create a download link
+    const link = document.createElement('a');
+    link.download = `letter-${letter}-drawing.png`;
+    link.href = dataURL;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
+    setSaved(true);
   };
   
   // Reset drawing flag when letter changes
   useEffect(() => {
     hasDrawnOnThisLetter.current = false;
+    setSaved(false);
   }, [letter]);
 
   return (
@@ -155,9 +176,18 @@ function CanvasTracer({ letter, onDraw }) {
         onPointerLeave={stopDrawing}
         style={{ touchAction: "none" }}
       />
-      <button onClick={clearCanvas} className="clear-button">
-        Clear
-      </button>
+      <div className="canvas-controls">
+        <button onClick={clearCanvas} className="clear-button">
+          Clear
+        </button>
+        <button 
+          onClick={saveDrawing} 
+          className="save-button"
+          disabled={!hasDrawnOnThisLetter.current}
+        >
+          {saved ? '✓ Saved' : 'Save Drawing'}
+        </button>
+      </div>
     </div>
   );
 }

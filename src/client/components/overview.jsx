@@ -7,6 +7,7 @@ import { useProgressTracking } from "../hooks/useProgressTracking";
 export default function Overview({ topicKey }) {
   const { trackProgress } = useProgressTracking();
   const videoRef = useRef(null);
+  const [showCheckbox, setShowCheckbox] = useState(false);
   const [videoWatched, setVideoWatched] = useState(false);
   // Handle case where topicKey doesn't exist in data
   if (!topicKey || !data[topicKey]) {
@@ -19,6 +20,26 @@ export default function Overview({ topicKey }) {
 
   const { title, video, markdown } = data[topicKey];
   const [sectionText, setSectionText] = useState("");
+
+  // Show checkbox after 7 minutes
+  useEffect(() => {
+    if (!video) {
+      setShowCheckbox(false);
+      return;
+    }
+    
+    const timer = setTimeout(() => {
+      setShowCheckbox(true);
+    }, 7 * 60 * 1000); // 7 minutes
+
+    return () => clearTimeout(timer);
+  }, [video]);
+
+  // Reset checkbox state when topic changes
+  useEffect(() => {
+    setShowCheckbox(false);
+    setVideoWatched(false);
+  }, [topicKey]);
 
   useEffect(() => {
     fetch(markdown)
@@ -65,16 +86,30 @@ export default function Overview({ topicKey }) {
         ref={videoRef}
         controls
         width="100%"
-        onEnded={() => {
-          if (!videoWatched) {
-            setVideoWatched(true);
-            trackProgress(topicKey, "Introduction", 0, true);
-          }
-        }}
       >
         <source src={video} type="video/mp4" />
         Your browser doesn't support HTML5 video.
       </video>
+      
+      {/* Show checkbox after 7 minutes */}
+      {showCheckbox && (
+        <div className="video-watched-checkbox">
+          <label>
+            <input
+              type="checkbox"
+              checked={videoWatched}
+              onChange={(e) => {
+                const checked = e.target.checked;
+                setVideoWatched(checked);
+                if (checked) {
+                  trackProgress(topicKey, "Introduction", 0, true);
+                }
+              }}
+            />
+            <span>I watched the video</span>
+          </label>
+        </div>
+      )}
       <ReactMarkdown className="overview-markdown">{sectionText}</ReactMarkdown>
     </div>
   );

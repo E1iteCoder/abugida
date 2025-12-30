@@ -8,11 +8,18 @@ import { useProgressTracking } from "../hooks/useProgressTracking";
 export default function Introduction({ topicKey, currentPage = 1 }) {
   const { trackProgress } = useProgressTracking();
   const videoRef = useRef(null);
+  const [showCheckbox, setShowCheckbox] = useState(false);
   const [videoWatched, setVideoWatched] = useState(false);
   const sectionConfig = sections.find((s) => s.key === topicKey);
   const [entryMap, setEntryMap] = useState({}); // will hold page entries
   const [bodyText, setBodyText] = useState(""); // markdown body
   const [error, setError] = useState(""); // error message
+
+  // Reset checkbox state when page changes
+  useEffect(() => {
+    setShowCheckbox(false);
+    setVideoWatched(false);
+  }, [currentPage, topicKey]);
 
   useEffect(() => {
     if (!sectionConfig) {
@@ -59,6 +66,25 @@ export default function Introduction({ topicKey, currentPage = 1 }) {
     loadContent();
   }, [topicKey, currentPage, sectionConfig]);
 
+  // Safely extract just the strings we need
+  const entry = entryMap[String(currentPage)] || {};
+  const pageLabel = entry.label || "";
+  const pageVideo = entry.video || "";
+
+  // Show checkbox after 7 minutes (420000 ms)
+  useEffect(() => {
+    if (!pageVideo) {
+      setShowCheckbox(false);
+      return;
+    }
+    
+    const timer = setTimeout(() => {
+      setShowCheckbox(true);
+    }, 7 * 60 * 1000); // 7 minutes
+
+    return () => clearTimeout(timer);
+  }, [pageVideo, currentPage]);
+
   // If we ran into an error, show it and bail
   if (error) {
     return (
@@ -68,10 +94,13 @@ export default function Introduction({ topicKey, currentPage = 1 }) {
     );
   }
 
-  // Safely extract just the strings we need
-  const entry = entryMap[String(currentPage)] || {};
-  const pageLabel = entry.label || "";
-  const pageVideo = entry.video || "";
+  const handleCheckboxChange = (e) => {
+    const checked = e.target.checked;
+    setVideoWatched(checked);
+    if (checked) {
+      trackProgress(topicKey, "Introduction", currentPage, true);
+    }
+  };
 
   return (
     <div className="module-overview">
@@ -82,21 +111,31 @@ export default function Introduction({ topicKey, currentPage = 1 }) {
 
       {/* Only render the video element */}
       {pageVideo && (
-        <video
-          ref={videoRef}
-          controls
-          width="100%"
-          style={{ margin: "1rem 0" }}
-          onEnded={() => {
-            if (!videoWatched) {
-              setVideoWatched(true);
-              trackProgress(topicKey, "Introduction", currentPage, true);
-            }
-          }}
-        >
-          <source src={pageVideo} type="video/mp4" />
-          Your browser doesn't support HTML5 video.
-        </video>
+        <>
+          <video
+            ref={videoRef}
+            controls
+            width="100%"
+            style={{ margin: "1rem 0" }}
+          >
+            <source src={pageVideo} type="video/mp4" />
+            Your browser doesn't support HTML5 video.
+          </video>
+          
+          {/* Show checkbox after 7 minutes */}
+          {showCheckbox && (
+            <div className="video-watched-checkbox">
+              <label>
+                <input
+                  type="checkbox"
+                  checked={videoWatched}
+                  onChange={handleCheckboxChange}
+                />
+                <span>I watched the video</span>
+              </label>
+            </div>
+          )}
+        </>
       )}
 
       {/* Render the bodyText string as markdown */}
