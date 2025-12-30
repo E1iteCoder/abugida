@@ -25,11 +25,24 @@ export default function CardGroup({
     (async () => {
       try {
         const resp = await fetch(labelUrl);
-        if (!resp.ok) throw new Error(`Failed to fetch ${labelUrl}`);
-        const data = await resp.json();
-        if (!cancelled) setLabels(data);
+        if (!resp.ok) {
+          // Handle 404 gracefully - labels might not exist for all topics
+          if (resp.status === 404) {
+            if (!cancelled) setLabels({});
+          } else {
+            throw new Error(`Failed to fetch ${labelUrl}`);
+          }
+        } else {
+          const data = await resp.json();
+          if (!cancelled) setLabels(data);
+        }
       } catch (err) {
-        if (!cancelled) setError(err.message);
+        // Only show error if it's not a 404
+        if (!cancelled && !err.message.includes('404')) {
+          setError(err.message);
+        } else if (!cancelled) {
+          setLabels({});
+        }
       } finally {
         if (!cancelled) setLoading(false);
       }
