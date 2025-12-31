@@ -1,5 +1,6 @@
 import FlashcardPractice from "../../components/practiceFlash";
 import LetterTracer from "../../components/letterTracer";
+import MatchingGame from "../../components/matchingGame";
 import { useState, useEffect } from 'react';
 
 export default function Practice({ currentPage, topicKey }) {
@@ -16,6 +17,8 @@ export default function Practice({ currentPage, topicKey }) {
     <div className="Main">
       <h3>Flashcard</h3>
       <FlashcardPractice currentPage={currentPage} alphabets={alphabets} topicKey={topicKey} />
+      <h3>Matching Game</h3>
+      <MatchingGame currentPage={currentPage} topicKey={topicKey} />
       <h3>Trace The Letter</h3>
       <LetterTracer currentPage={currentPage} alphabets={alphabets} topicKey={topicKey} />
     </div>

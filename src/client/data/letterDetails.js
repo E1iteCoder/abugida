@@ -300,7 +300,7 @@ const letterDetails =
     "column": "third",
     "audio": "mi.mp3",
     "strokeGif": "../pictures/gifs/mi-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ሚጥሚጣ", "gloss": "Cayene (with spices)", "breakdown": ["ሚ", "ጥ", "ሚ", "ጣ"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -432,7 +432,7 @@ const letterDetails =
     "column": "last",
     "audio": "so.mp3",
     "strokeGif": "../pictures/gifs/so-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ሦስት", "gloss": "three", "breakdown": ["ሦ", "ስ", "ት"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -552,7 +552,7 @@ const letterDetails =
     "column": "third",
     "audio": "si.mp3",
     "strokeGif": "../pictures/gifs/si-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ሲኒ", "gloss": "cup", "breakdown": ["ሲ", "ኒ"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -948,7 +948,7 @@ const letterDetails =
     "column": "first",
     "audio": "che.mp3",
     "strokeGif": "../pictures/gifs/che-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ቸኮሌት", "gloss": "chocolate", "breakdown": ["ቸ", "ኮ", "ሌ", "ት"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -1068,7 +1068,7 @@ const letterDetails =
     "column": "fourth",
     "audio": "ha.mp3",
     "strokeGif": "../pictures/gifs/ha-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ኃይል", "gloss": "power", "breakdown": ["ኃ", "ይ", "ል"] }],
     "numeric": null,
     "usageNotes": []
   },
@@ -1116,7 +1116,7 @@ const letterDetails =
     "column": "first",
     "audio": "ne.mp3",
     "strokeGif": "../pictures/gifs/ne-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ነብር", "gloss": "tiger", "breakdown": ["ነ", "ብ", "ር"] }],
     "numeric": null,
     "usageNotes": []
   },
