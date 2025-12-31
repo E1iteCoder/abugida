@@ -3,15 +3,97 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 0.5rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Ensure the select matches theme-select styling and is responsive */
+.audio-version-selector .theme-select {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0; /* Allow shrinking on small screens */
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border: 1px solid var(--fg);
+  border-radius: 0.5rem;
+  background: var(--card);
+  color: var(--fg);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.audio-version-selector .theme-select:hover {
+  border-color: var(--accent);
+  background: var(--card-hover);
+}
+
+.audio-version-selector .theme-select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(76, 161, 175, 0.2);
+}
+
+/* Handle long option text with ellipsis */
+.audio-version-selector .theme-select option {
+  background: var(--card);
+  color: var(--fg);
+  padding: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
 }
 
 .audio-version-info {
   color: var(--fg-secondary, #666);
   font-size: 0.875rem;
   margin-top: 0.25rem;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.audio-version-info strong {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 [data-theme="dark"] .audio-version-info {
   color: var(--fg-secondary, #999);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .audio-version-selector {
+    width: 100%;
+  }
+
+  .audio-version-selector .theme-select {
+    font-size: 0.85rem;
+    padding: 0.45rem 0.9rem;
+  }
+
+  .audio-version-info {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .audio-version-selector .theme-select {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .audio-version-info {
+    font-size: 0.75rem;
+  }
 }
 
