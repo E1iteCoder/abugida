@@ -2,6 +2,8 @@
 .theme-toggle {
   display: inline-flex;
   align-items: center;
+  width: 100%;
+  max-width: 100%;
 }
 
 .theme-select {
@@ -15,6 +17,9 @@
   transition: all 0.3s ease;
   outline: none;
   min-width: 60px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .theme-select:hover {
@@ -31,4 +36,28 @@
   background: var(--card);
   color: var(--fg);
   padding: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .theme-select {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .theme-select {
+    font-size: 0.7rem;
+    padding: 0.35rem 0.7rem;
+    min-width: 50px;
+  }
+}
+
+@media (max-width: 320px) {
+  .theme-select {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.6rem;
+    min-width: 40px;
+  }
 }
