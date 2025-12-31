@@ -201,9 +201,9 @@ export default function MatchingGame({ currentPage = 1, topicKey }) {
       )}
 
       <div className="matching-game-board">
-        <div className="left-column">
+        <div className="top-row">
           <h3>Letters</h3>
-          <div className="cards-grid">
+          <div className="cards-row">
             {gameCards.leftCards.map((card) => (
               <button
                 key={card.id}
@@ -223,13 +223,13 @@ export default function MatchingGame({ currentPage = 1, topicKey }) {
           </div>
         </div>
 
-        <div className="right-column">
+        <div className="bottom-row">
           <h3>
             {gameMode === "letter-phonetic" && "Phonetics"}
             {gameMode === "letter-name" && "Names"}
             {gameMode === "letter-description" && "Descriptions"}
           </h3>
-          <div className="cards-grid">
+          <div className="cards-row">
             {gameCards.rightCards.map((card) => (
               <button
                 key={card.id}
