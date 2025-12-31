@@ -176,18 +176,21 @@ export default function QuizCarousel({ currentPage = 1, topicKey, section = "Qui
       };
     };
 
-    // Generate 14 questions (one per letter in the set)
+    // Generate questions (one per letter in the set)
     const questionsFromLetters = alphabet.map(createQuestion);
 
-    // Generate 7 additional randomized questions from the same set
-    const extraQuestions = Array(7)
+    // Calculate how many extra questions we need to reach totalQuestions (21)
+    const extraCount = Math.max(0, totalQuestions - questionsFromLetters.length);
+    
+    // Generate additional randomized questions from the same set to reach totalQuestions
+    const extraQuestions = Array(extraCount)
       .fill()
       .map(() => {
         const randomLetter = shuffle(alphabet)[0];
         return createQuestion(randomLetter);
       });
 
-    // Combine: 14 questions + 7 randomized = 21 total questions
+    // Combine: questions from letters + extra randomized = totalQuestions
     const allQs = [...questionsFromLetters, ...extraQuestions];
 
     setQuestions(shuffle(allQs));
@@ -260,7 +263,7 @@ export default function QuizCarousel({ currentPage = 1, topicKey, section = "Qui
     score: Object.values(answers).filter((a) => a.isCorrect).length,
     total: questions.length,
     mistakes: questions.filter(
-      (q) => answers[q.id] && !answers[q.id].isCorrect
+      (q) => !answers[q.id] || !answers[q.id].isCorrect
     ),
     answers: answers, // Include answers in results for display
   };
@@ -359,6 +362,12 @@ function QuizQuestion({
     handleNextQuestion();
   };
 
+  const handleSkip = () => {
+    // Record skipped question as unanswered
+    onAnswer(question.id, null);
+    handleNextQuestion();
+  };
+
   return (
     <form
       className="question-block"
@@ -432,7 +441,7 @@ function QuizQuestion({
           <button
             type="button"
             className="skip-button"
-            onClick={handleNextQuestion}
+            onClick={handleSkip}
           >
             Skip Question
           </button>
