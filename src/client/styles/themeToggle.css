@@ -5,8 +5,8 @@
 }
 
 .theme-select {
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.45rem;
   border: 1px solid var(--fg);
   border-radius: 0.5rem;
   background: var(--card);
@@ -14,7 +14,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   outline: none;
-  min-width: 120px;
+  min-width: 60px;
 }
 
 .theme-select:hover {
