@@ -13,7 +13,7 @@
   max-width: 100%;
   min-width: 0; /* Allow shrinking on small screens */
   padding: 0.25rem 0.5rem;
-  font-size: 0.45rem;
+  font-size: 0.8rem;
   border: 1px solid var(--fg);
   border-radius: 0.5rem;
   background: var(--card);
