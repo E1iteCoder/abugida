@@ -234,7 +234,7 @@ export default function UserProgress() {
             <div className="topic-details">
               <span>{topic.completedCount} / {topic.totalCount} completed</span>
               {topic.averageScore !== null && (
-                <span className="quiz-score">Avg Quiz: {topic.averageScore}%</span>
+                <span className="quiz-score">Avg Quiz: {topic.averageScore > 0 ? `${topic.averageScore}%` : 'N/A'}</span>
               )}
             </div>
           </div>
