@@ -215,12 +215,19 @@ export default function QuizCarousel({ currentPage = 1, topicKey, section = "Qui
       setTimeLeft((t) => {
         if (t <= 1) {
           const q = questions[currentQuestionIndex];
-          if (q && !answers[q.id]) {
-            setAnswers((a) => ({
+          // Only mark as wrong if no answer was recorded AND timer expired
+          // Use a function to get the latest answers state to avoid stale closure
+          setAnswers((a) => {
+            // If answer already exists, don't overwrite it
+            if (a[q.id]) {
+              return a;
+            }
+            // Only mark as wrong if truly unanswered
+            return {
               ...a,
               [q.id]: { answer: null, isCorrect: false, timestamp: Date.now() },
-            }));
-          }
+            };
+          });
           handleNextQuestion();
           return initialTimePerQuestion;
         }
@@ -231,7 +238,6 @@ export default function QuizCarousel({ currentPage = 1, topicKey, section = "Qui
   }, [
     questions,
     currentQuestionIndex,
-    answers,
     showResults,
     handleNextQuestion,
   ]);
@@ -256,6 +262,7 @@ export default function QuizCarousel({ currentPage = 1, topicKey, section = "Qui
     mistakes: questions.filter(
       (q) => answers[q.id] && !answers[q.id].isCorrect
     ),
+    answers: answers, // Include answers in results for display
   };
 
   // Save progress when quiz is completed
