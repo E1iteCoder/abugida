@@ -1,6 +1,6 @@
 // src/components/cardgroup.jsx
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "../styles/dashboard/cardgroup.css";
 import { useAuth } from "../context/AuthContext";
 import { authAPI } from "../utils/api";
