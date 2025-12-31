@@ -60,14 +60,6 @@ export default function MatchingGame({ currentPage = 1, topicKey }) {
 
     let rightCards;
     switch (gameMode) {
-      case "letter-phonetic":
-        rightCards = letters.map((item, index) => ({
-          id: `right-${index}`,
-          type: "phonetic",
-          content: item.phonetic,
-          data: item,
-        }));
-        break;
       case "letter-name":
         rightCards = letters.map((item, index) => ({
           id: `right-${index}`,
@@ -224,7 +216,6 @@ export default function MatchingGame({ currentPage = 1, topicKey }) {
 
         <div className="bottom-row">
           <h3>
-            {gameMode === "letter-phonetic" && "Phonetics"}
             {gameMode === "letter-name" && "Names"}
             {gameMode === "letter-description" && "Descriptions"}
           </h3>
