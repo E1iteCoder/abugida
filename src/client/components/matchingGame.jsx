@@ -123,7 +123,8 @@ export default function MatchingGame({ currentPage = 1, topicKey }) {
       // Check if they match (same letter data)
       if (first.data.letter === second.data.letter) {
         // Match found!
-        setMatchedPairs((prev) => new Set([...prev, first.id, second.id]));
+        const newMatchedPairs = new Set([...matchedPairs, first.id, second.id]);
+        setMatchedPairs(newMatchedPairs);
         setScore((prev) => prev + 10);
         setSelectedCards([]);
 
@@ -134,7 +135,7 @@ export default function MatchingGame({ currentPage = 1, topicKey }) {
 
         // Check if game is complete
         setTimeout(() => {
-          const allMatched = gameCards.leftCards.length * 2 === matchedPairs.size + 2;
+          const allMatched = gameCards.leftCards.length * 2 === newMatchedPairs.size;
           if (allMatched) {
             setGameComplete(true);
           }
