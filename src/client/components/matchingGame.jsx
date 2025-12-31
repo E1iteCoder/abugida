@@ -10,7 +10,7 @@ export default function MatchingGame({ currentPage = 1, topicKey }) {
   const [letters, setLetters] = useState([]);
   const [selectedCards, setSelectedCards] = useState([]);
   const [matchedPairs, setMatchedPairs] = useState(new Set());
-  const [gameMode, setGameMode] = useState("letter-phonetic"); // letter-phonetic, letter-name, letter-description
+  const [gameMode, setGameMode] = useState("letter-name"); // letter-name, letter-description
   const [score, setScore] = useState(0);
   const [moves, setMoves] = useState(0);
   const [gameComplete, setGameComplete] = useState(false);
@@ -176,7 +176,6 @@ export default function MatchingGame({ currentPage = 1, topicKey }) {
               onChange={(e) => setGameMode(e.target.value)}
               className="game-mode-select"
             >
-              <option value="letter-phonetic">Letter ↔ Phonetic</option>
               <option value="letter-name">Letter ↔ Name</option>
               <option value="letter-description">Letter ↔ Description</option>
             </select>
