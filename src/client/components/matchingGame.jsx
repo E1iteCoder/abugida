@@ -26,7 +26,7 @@ export default function MatchingGame({ currentPage = 1, topicKey }) {
         row: info.row,
         column: info.column,
         audio: info.audio,
-        description: `${info.phonetic}: it is the ${info.column} variation of the ${info.row}`,
+        description: `it is the ${info.column} variation of the ${info.row}`,
       }));
 
       // Get letters for current page
