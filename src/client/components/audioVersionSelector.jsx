@@ -14,10 +14,8 @@ export default function AudioVersionSelector() {
     return `${version.name} - ${version.description}`;
   };
 
-  const getTruncatedText = (text, maxLength = 50) => {
-    if (text.length <= maxLength) return text;
-    return text.substring(0, maxLength - 3) + '...';
-  };
+  const currentVersion = AUDIO_VERSIONS[selectedVersion];
+  const selectedText = currentVersion ? getOptionText(currentVersion) : '';
 
   return (
     <div className="audio-version-selector">
@@ -26,20 +24,17 @@ export default function AudioVersionSelector() {
         value={selectedVersion}
         onChange={handleVersionChange}
         aria-label="Select audio version"
-        title={AUDIO_VERSIONS[selectedVersion] ? getOptionText(AUDIO_VERSIONS[selectedVersion]) : ''}
+        title={selectedText}
       >
-        {Object.entries(AUDIO_VERSIONS).map(([key, version]) => {
-          const fullText = getOptionText(version);
-          return (
-            <option key={key} value={key} title={fullText}>
-              {getTruncatedText(fullText, 60)}
-            </option>
-          );
-        })}
+        {Object.entries(AUDIO_VERSIONS).map(([key, version]) => (
+          <option key={key} value={key}>
+            {getOptionText(version)}
+          </option>
+        ))}
       </select>
-      <div className="audio-version-info" title={AUDIO_VERSIONS[selectedVersion]?.name || ''}>
+      <div className="audio-version-info" title={currentVersion?.name || ''}>
         <small>
-          Currently using: <strong>{AUDIO_VERSIONS[selectedVersion]?.name || 'Unknown'}</strong>
+          Currently using: <strong>{currentVersion?.name || 'Unknown'}</strong>
         </small>
       </div>
     </div>
