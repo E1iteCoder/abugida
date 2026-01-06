@@ -54,21 +54,17 @@ export default function QuizCarousel({ currentPage = 1, topicKey, section = "Qui
         audio: info.audio || "", // Store filename, not URL - useAudio will resolve
       }));
 
-      // dedupe by audio filename (since different letters might have same audio)
-      const seen = new Set();
-      const unique = all.filter((item) => {
-        if (!item.audio || seen.has(item.audio)) return false;
-        seen.add(item.audio);
-        return true;
-      });
+      // DO NOT dedupe by audio - all letter variations should be included in the quiz
+      // Even if letters share the same audio file, they are different letters and should be tested
+      // Deduplication for wrong answers in multiple choice is handled in createQuestion function
 
       // Store full alphabet for getting wrong answers from outside section
-      setAllLetters(unique);
+      setAllLetters(all);
 
       // Group by house (row) to ensure we get 2 complete houses per page
       const houses = {};
       const houseOrder = []; // Preserve original order of houses as they appear
-      unique.forEach((item) => {
+      all.forEach((item) => {
         const house = item.row || "unknown";
         if (!houses[house]) {
           houses[house] = [];

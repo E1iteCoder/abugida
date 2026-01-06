@@ -18,7 +18,8 @@ module.exports = {
       { from: 'favAbugida', to: 'favAbugida' },
       { from: 'labels', to: 'labels' },
       { from: 'intro', to: 'intro' },
-      { from: 'CNAME', to: 'CNAME' }
+      { from: 'CNAME', to: 'CNAME' },
+      { from: '404.html', to: '404.html' }
     ];
     
     filesToCopy.forEach(({ from, to }) => {

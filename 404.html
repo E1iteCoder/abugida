@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favAbugida/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favAbugida/favicon.svg" />
+    <link rel="shortcut icon" href="/favAbugida/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favAbugida/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="Abugida" />
+    <link rel="manifest" href="/favAbugida/site.webmanifest" />
+    <title>Abugida</title>
+    <script>
+      // GitHub Pages 404.html redirect for Single Page Apps
+      // When a route is not found, GitHub Pages serves this 404.html file
+      // This script preserves the path and redirects to index.html
+      (function() {
+        var path = window.location.pathname;
+        var search = window.location.search;
+        var hash = window.location.hash;
+        
+        // Store the original path in sessionStorage so React Router can use it
+        if (path && path !== '/' && path !== '/index.html') {
+          sessionStorage.setItem('redirectPath', path + search + hash);
+        }
+        
+        // Redirect to index.html (or root, which will serve index.html)
+        // The React app will check sessionStorage and navigate to the correct route
+        window.location.replace('/');
+      })();
+    </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This file is served when GitHub Pages can't find the requested file.
+      It redirects to index.html with the path preserved, allowing React Router
+      to handle the client-side routing.
+    -->
+  </body>
+</html>
