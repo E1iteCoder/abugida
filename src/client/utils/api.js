@@ -50,7 +50,18 @@ const apiRequest = async (endpoint, options = {}) => {
   };
 
   try {
-    const response = await fetch(`${API_BASE_URL}${endpoint}`, config);
+    const url = `${API_BASE_URL}${endpoint}`;
+    const response = await fetch(url, config);
+    
+    // Handle 502 Bad Gateway - backend server is down
+    if (response.status === 502) {
+      throw new Error(`Backend server is unavailable (502). The server at ${API_BASE_URL} is not responding. Please check if the backend server is running.`);
+    }
+    
+    // Handle 503 Service Unavailable
+    if (response.status === 503) {
+      throw new Error(`Backend service is temporarily unavailable (503). Please try again in a few moments.`);
+    }
     
     // Check if response is JSON before parsing
     const contentType = response.headers.get('content-type');
@@ -72,7 +83,15 @@ const apiRequest = async (endpoint, options = {}) => {
   } catch (error) {
     // Provide more detailed error messages
     if (error.name === 'TypeError' && error.message.includes('fetch')) {
-      throw new Error('Network error: Unable to connect to server. Please check your connection and ensure the backend server is running.');
+      const isProduction = process.env.NODE_ENV === 'production';
+      const isDeployedDomain = window.location.hostname === 'theabugida.org' || 
+                              window.location.hostname === 'www.theabugida.org';
+      
+      if (isProduction && isDeployedDomain) {
+        throw new Error(`Network error: Unable to connect to backend at ${API_BASE_URL}. The backend server may be down. Please check the server status.`);
+      } else {
+        throw new Error(`Network error: Unable to connect to backend at ${API_BASE_URL}. Please ensure the backend server is running on localhost:5000 (run: npm run server:dev)`);
+      }
     }
     if (error.message) {
       throw error;
