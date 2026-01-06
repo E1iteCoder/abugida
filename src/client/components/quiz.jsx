@@ -73,18 +73,56 @@ export default function QuizCarousel({ currentPage = 1, topicKey, section = "Qui
         houses[house].push(item);
       });
 
-      // Get all houses as arrays, preserving original order (not sorted alphabetically)
-      const houseArrays = houseOrder.map(house => houses[house]);
+      // Split houses that have more than 7 letters into chunks of 7
+      // This handles cases like "hä-house" which has 21 letters (ሀ-ሆ, ሐ-ሖ, ኀ-ኆ)
+      const houseChunks = [];
+      const chunkToHouse = []; // Track which house each chunk belongs to
+      const lettersPerHouseChunk = 7;
+      houseOrder.forEach((house) => {
+        const houseLetters = houses[house];
+        // If a house has more than 7 letters, split it into multiple groups
+        for (let i = 0; i < houseLetters.length; i += lettersPerHouseChunk) {
+          houseChunks.push(houseLetters.slice(i, i + lettersPerHouseChunk));
+          chunkToHouse.push(house);
+        }
+      });
 
-      // Calculate which 2 houses to use for this page
-      // currentPage 1 = first 2 houses (index 0-1)
-      // currentPage 2 = next 2 houses (index 2-3), etc.
+      // Interleave chunks: distribute chunks from large houses across quizzes
+      // This ensures Quiz 2 gets ሐ-ሖ (second chunk of hä-house)
+      // Strategy: take chunks in a round-robin fashion, but group chunks from the same house
+      // Quiz 1: first chunk of first house + first complete house
+      // Quiz 2: second chunk of first house (if exists) + second complete house
       const housesPerPage = 2;
+      const selectedHouses = [];
+      
+      // Group chunks by their house
+      const chunksByHouse = {};
+      houseChunks.forEach((chunk, idx) => {
+        const house = chunkToHouse[idx];
+        if (!chunksByHouse[house]) {
+          chunksByHouse[house] = [];
+        }
+        chunksByHouse[house].push({ chunk, originalIndex: idx });
+      });
+      
+      // Build a flat list interleaving: first chunk of each house, then second chunk, etc.
+      const interleavedChunks = [];
+      let maxChunks = Math.max(...Object.values(chunksByHouse).map(arr => arr.length));
+      
+      for (let chunkIndex = 0; chunkIndex < maxChunks; chunkIndex++) {
+        houseOrder.forEach((house) => {
+          if (chunksByHouse[house] && chunksByHouse[house][chunkIndex]) {
+            interleavedChunks.push(chunksByHouse[house][chunkIndex].chunk);
+          }
+        });
+      }
+      
+      // Select 2 chunks for this page
       const startHouseIndex = (currentPage - 1) * housesPerPage;
-      const selectedHouses = houseArrays.slice(
+      selectedHouses.push(...interleavedChunks.slice(
         startHouseIndex,
         startHouseIndex + housesPerPage
-      );
+      ));
 
       // Flatten the selected houses into one array (should be ~14 letters)
       const pageAlphabet = selectedHouses.flat();
