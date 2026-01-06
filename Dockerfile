@@ -27,6 +27,7 @@ EXPOSE 8080
 # Start both server and cloudflared tunnel
 # The tunnel token should be set as CLOUDFLARE_TUNNEL_TOKEN environment variable in Railway
 # Using 'tunnel run' with token connects to the named tunnel instead of creating a quick tunnel
-# Start server first, wait a moment, then start tunnel
-CMD sh -c "node src/server/server.js & sleep 2 && cloudflared tunnel run --token $CLOUDFLARE_TUNNEL_TOKEN"
+# Start server first, wait for it to be ready, then start tunnel
+# The origin certificate warning can be ignored when using token-based authentication
+CMD sh -c "node src/server/server.js & sleep 3 && cloudflared tunnel run --token $CLOUDFLARE_TUNNEL_TOKEN"
 
