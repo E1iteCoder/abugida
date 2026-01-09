@@ -9,13 +9,18 @@ const slides = [
   },
   {
     id: 2,
-    src: "https://images.freeimages.com/images/large-previews/e4c/rock-hewn-church-ethiopia-1206416.jpg",
+    src: "https://res.cloudinary.com/dc6jadrue/image/upload/v1767987175/lalibela_n2oxtt.jpg",
     alt: "Second slide",
   },
   {
     id: 3,
-    src: "https://images.freeimages.com/images/large-previews/f8b/obelisk-at-axum-1549881.jpg",
+    src: "https://res.cloudinary.com/dc6jadrue/image/upload/v1767987375/fasiledes_amkspo.jpg",
     alt: "Third slide",
+  },
+  {
+    id: 4,
+    src: "https://res.cloudinary.com/dc6jadrue/image/upload/v1767987430/anbesa_bqrgze.jpg",
+    alt: "Fourth slide",
   },
 ];
 
@@ -43,6 +48,11 @@ export default function CarouselPart() {
         className={`carousel-image ${isSliding ? "sliding" : ""}`}
         src={slides[currentIndex].src}
         alt={slides[currentIndex].alt}
+        crossOrigin="anonymous"
+        onError={(e) => {
+          // Fallback if image fails to load due to CORS
+          console.warn('Image failed to load:', slides[currentIndex].src);
+        }}
       />
       <div className="carousel-indicators">
         {slides.map((slide, index) => (

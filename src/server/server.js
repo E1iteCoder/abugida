@@ -20,20 +20,20 @@ app.set('trust proxy', 1);
 
 // Middleware
 // CORS configuration - allow requests from your domain
+const allowedOrigins = [
+  'https://theabugida.org',
+  'https://www.theabugida.org',
+  'https://api.theabugida.org',
+  'http://localhost:3000',
+  'http://localhost:3001',
+];
+
 const corsOptions = {
   origin: function (origin, callback) {
     // Allow requests with no origin (mobile apps, Postman, etc.)
     if (!origin) return callback(null, true);
     
-    // List of allowed origins
-    const allowedOrigins = [
-      'https://theabugida.org',
-      'https://www.theabugida.org',
-      'https://api.theabugida.org',
-      'http://localhost:3000',
-      'http://localhost:3001',
-    ];
-    
+    // Check if origin is in allowed list or if in development mode
     if (allowedOrigins.indexOf(origin) !== -1 || process.env.NODE_ENV === 'development') {
       callback(null, true);
     } else {
@@ -43,16 +43,31 @@ const corsOptions = {
     }
   },
   credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+  exposedHeaders: ['Content-Range', 'X-Content-Range'],
   preflightContinue: false,
-  optionsSuccessStatus: 204
+  optionsSuccessStatus: 204,
+  maxAge: 86400 // 24 hours
 };
 
+// Apply CORS middleware
 app.use(cors(corsOptions));
 
-// Handle preflight requests explicitly
-app.options('*', cors(corsOptions));
+// Explicitly handle preflight requests for all routes
+app.options('*', (req, res) => {
+  const origin = req.headers.origin;
+  if (!origin || allowedOrigins.indexOf(origin) !== -1 || process.env.NODE_ENV === 'development') {
+    res.header('Access-Control-Allow-Origin', origin || '*');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, PATCH');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
+    res.header('Access-Control-Allow-Credentials', 'true');
+    res.header('Access-Control-Max-Age', '86400');
+    res.sendStatus(204);
+  } else {
+    res.sendStatus(403);
+  }
+});
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
