@@ -48,9 +48,8 @@ export default function CarouselPart() {
         className={`carousel-image ${isSliding ? "sliding" : ""}`}
         src={slides[currentIndex].src}
         alt={slides[currentIndex].alt}
-        crossOrigin="anonymous"
         onError={(e) => {
-          // Fallback if image fails to load due to CORS
+          // Fallback if image fails to load
           console.warn('Image failed to load:', slides[currentIndex].src);
         }}
       />
