@@ -51,23 +51,8 @@ const corsOptions = {
   maxAge: 86400 // 24 hours
 };
 
-// Apply CORS middleware
+// Apply CORS middleware - this handles preflight requests automatically
 app.use(cors(corsOptions));
-
-// Explicitly handle preflight requests for all routes
-app.options('*', (req, res) => {
-  const origin = req.headers.origin;
-  if (!origin || allowedOrigins.indexOf(origin) !== -1 || process.env.NODE_ENV === 'development') {
-    res.header('Access-Control-Allow-Origin', origin || '*');
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, PATCH');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
-    res.header('Access-Control-Allow-Credentials', 'true');
-    res.header('Access-Control-Max-Age', '86400');
-    res.sendStatus(204);
-  } else {
-    res.sendStatus(403);
-  }
-});
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
