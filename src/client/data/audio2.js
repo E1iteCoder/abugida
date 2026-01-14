@@ -217,7 +217,7 @@ const audioMap = {
   "ppie.mp3":
     "https://res.cloudinary.com/dc6jadrue/video/upload/v1767890561/ppie_rj4luo.mp3",
   "ppo.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1767890561/ppo_lxjndl.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768342834/ppo_a5nppz.mp3",
   "ppu.mp3":
     "https://res.cloudinary.com/dc6jadrue/video/upload/v1767890561/ppu_dogonh.mp3",
   "pu.mp3":
@@ -315,7 +315,7 @@ const audioMap = {
   "ttie.mp3":
     "https://res.cloudinary.com/dc6jadrue/video/upload/v1767890612/ttie_a3kkle.mp3",
   "tto.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1767890612/tto_npdm0w.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768342826/tto_nezyjv.mp3",
   "ttu.mp3":
     "https://res.cloudinary.com/dc6jadrue/video/upload/v1767890612/ttu_ri2hmu.mp3",
   "tu.mp3":

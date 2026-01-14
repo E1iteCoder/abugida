@@ -456,9 +456,9 @@ const letterDetails =
     "column": "second",
     "audio": "ru.mp3",
     "strokeGif": "../pictures/gifs/ru-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [{ "word": "ሩት", "gloss": "Ruth", "breakdown": ["ሩ", "ት"] }],
     "numeric": null,
-    "usageNotes": []
+    "usageNotes": ["Ruth is a female name in the Bible. It is the name of a woman who was married to a man named Boaz."]
   },
   "ሪ": {
     "name": "ri",
