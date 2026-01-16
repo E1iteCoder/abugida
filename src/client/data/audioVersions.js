@@ -16,8 +16,8 @@ export const AUDIO_VERSIONS = {
     description: 'Combined version of all audio versions (current)',
   },
   version2: {
-    name: 'Agent 47 at home',
-    description: 'Male voice version 1 (no it\'s not the actual Agent 47, but it\'s the best voice we have)',
+    name: 'Yoni',
+    description: 'Male voice version 1',
   },
   version3: {
     name: 'Yam',
@@ -32,8 +32,8 @@ export const AUDIO_VERSIONS = {
     description: 'Female voice version 2',
   },
   version6: {
-    name: 'Brothers',
-    description: 'Male voice version 3',
+    name: 'Talake',
+    description: 'Female voice version 3',
   },
 };
 
