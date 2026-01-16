@@ -1,399 +1,399 @@
-// Audio map for Version 4
+// Audio map for Nati
 // Replace URLs with your actual Version 4 audio URLs
 
 const audioMap = {
   "aa.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993525/aa_ycg543.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515679/a_jtp7cq.mp3",
   "b.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993524/b_mlwioz.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515679/b_rl3w7f.mp3",
   "ba.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000741/ba_lkazp3.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515680/ba_k7wzcx.mp3",
   "be.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000742/be_vgv5hb.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515680/be_qphwf0.mp3",
   "bee.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000743/bee_fpkwoe.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515681/bi_a8f7xb.mp3",
   "bie.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000744/bie_z6v6lx.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515681/bie_xcrs86.mp3",
   "bo.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000745/bo_kcjodq.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515681/bo_qbu8wl.mp3",
   "bu.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000746/bu_daljh3.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515682/bu_jcfjcf.mp3",
   "C.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000747/C_hnonwv.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515683/c_h_geakfm.mp3",
   "Ca.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000749/Ca_w98tmc.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515683/c_ha_v2mllg.mp3",
   "Ce.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000749/Ce_ymwmjb.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515683/c_he_qsumxl.mp3",
   "ch.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000751/ch_larvvt.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515687/ch_egjcul.mp3",
   "cha.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000752/cha_zgutst.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515687/cha_zqll9f.mp3",
   "che.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000754/che_efd445.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515688/che_l1fxhy.mp3",
   "chi.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000754/chi_zirael.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515688/chi_wy8jlt.mp3",
   "chie.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000756/chie_dl3jvx.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515690/chie_me370m.mp3",
   "cho.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000758/cho_gbebct.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515690/cho_m5wnbk.mp3",
   "chu.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000759/chu_c9vhfe.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515690/chu_usl2hu.mp3",
   "Ci.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000761/Ci_shq3hg.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515684/c_hi_em2wmq.mp3",
   "Cie.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000762/Cie_ncxmeh.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515684/c_hie_ltmina.mp3",
   "Co.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000763/Co_ozdmpr.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515685/c_ho_bq70jq.mp3",
   "Cu.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000765/Cu_uusoat.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515685/c_hu_umyemk.mp3",
   "d.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000766/d_jb6wzk.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515691/d_pozs7h.mp3",
   "da.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000767/da_rwberi.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515695/da_a8wi1b.mp3",
   "de.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000769/de_t8vlxa.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515692/de_wtbgwm.mp3",
   "di.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000769/di_rj36af.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515693/di_p4w4le.mp3",
   "die.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000770/die_jqrndg.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515693/die_wrrg5y.mp3",
   "do.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000771/do_iedzcu.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515695/do_h6a9qw.mp3",
   "du.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000773/du_lh8pnz.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515696/du_cup59v.mp3",
   "f.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000774/f_q5le6o.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515697/f_vptzcy.mp3",
   "fa.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000775/fa_hzur8s.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515698/fa_iu8vmg.mp3",
   "fe.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000777/fe_wy2fg1.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515698/fe_c35sb2.mp3",
   "fi.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000778/fi_dnifve.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515699/fi_xkpqg5.mp3",
   "fie.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000780/fie_n0jrlc.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515700/fie_ntsfdo.mp3",
   "fo.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000781/fo_jwkhny.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515701/fo_who1nc.mp3",
   "fu.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000782/fu_g4jfzy.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515702/fu_zpwqen.mp3",
   "g.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000784/g_i4egtj.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515703/g_p9bjzw.mp3",
   "ga.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000785/ga_degrij.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515703/ga_p6hmai.mp3",
   "ge.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000787/ge_fl6wx8.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515704/ge_uidgt9.mp3",
   "gi.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000787/gi_um0fby.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515705/gi_rcxwrd.mp3",
   "gie.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000789/gie_vxjfkt.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515706/gie_sts3di.mp3",
   "gn.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000790/gn_ewax7u.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515708/gn_lfpw0v.mp3",
   "gna.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000791/gna_l8a85c.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515708/gna_qeoagb.mp3",
   "gne.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000794/gne_jvnyuh.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515708/gne_gg3b1g.mp3",
   "gni.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000795/gni_t1jxos.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515709/gni_ittevb.mp3",
   "gnie.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000797/gnie_ds6oz4.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515711/gnie_j85poi.mp3",
   "gno.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000798/gno_skqzpd.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515711/gno_dhy3zb.mp3",
   "gnu.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000799/gnu_nv1csx.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515712/gnu_fnnjtw.mp3",
   "go.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000800/go_svcp0e.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515713/go_djb2x5.mp3",
   "gu.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000801/gu_pupg0w.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515713/gu_yamkne.mp3",
   "h.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000803/h_fctqmx.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515715/h_lyjke0.mp3",
   "ha.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000804/ha_ydfwnt.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515715/ha_agishm.mp3",
   "hi.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000805/hi_rto4qy.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515716/hi_i5ymzd.mp3",
   "hie.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000806/hie_mx9ibm.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515718/hie_rkc1yl.mp3",
   "ho.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000807/ho_uxlupw.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515718/ho_cooiht.mp3",
   "hu.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000809/hu_sahwbq.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515718/hu_tnijgm.mp3",
   "huh.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000809/huh_yzchxe.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515719/huh_leknou.mp3",
   "i.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000824/i_tyhzol.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515721/i_az1t2s.mp3",
   "ie.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000825/ie_wqf4oc.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515721/ie_eaq27v.mp3",
   "ii.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000827/ii_ntbcq0.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515722/ii_vh8exi.mp3",
   "j.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000827/j_sgub17.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515724/j_krq2qy.mp3",
   "ja.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000829/ja_c4isnh.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515724/ja_j7wbzp.mp3",
   "je.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000842/je_ustiba.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515725/je_l4rtbt.mp3",
   "ji.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000842/ji_wj1tdx.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515726/ji_i3kon0.mp3",
   "jie.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000843/jie_fgin6c.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515727/jie_lwy8d5.mp3",
   "jo.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000844/jo_p9fwcj.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515728/jo_yh0i58.mp3",
   "ju.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000845/ju_vv0rjk.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515729/ju_buphj6.mp3",
   "k.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000846/k_wwdumt.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515730/k_k3yf0z.mp3",
   "ka.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000851/ka_jfhffq.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515730/ka_vzws7a.mp3",
   "ke.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000853/ke_vwzxbp.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515733/ke_mm6wl2.mp3",
   "ki.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000853/ki_mfwcyl.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515733/ki_ebxsfj.mp3",
   "kie.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000854/kie_dcfydf.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515733/kie_haumfu.mp3",
   "ko.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000866/ko_e4nffi.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515735/ko_wyxl8g.mp3",
   "ku.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000867/ku_ehyfke.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515736/ku_jygwdz.mp3",
   "l.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000868/l_sfguk8.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515736/l_wadkpk.mp3",
   "la.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000869/la_wtio6p.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515737/la_znhhev.mp3",
   "le.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000870/le_evvwrm.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515739/le_oqndth.mp3",
   "li.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000889/li_rlpa4i.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515739/li_akacur.mp3",
   "lie.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000891/lie_ooeblu.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515740/lie_xjahi3.mp3",
   "lo.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000892/lo_e6sqgr.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515741/lo_t9wybr.mp3",
   "lu.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000893/lu_uwisae.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515742/lu_dd5lxh.mp3",
   "m.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000894/m_e1azfx.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515743/m_zwx0u4.mp3",
   "ma.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000896/ma_yas5tm.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515744/ma_ciadw3.mp3",
   "me.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000907/me_uevc4u.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515745/me_yzbhhl.mp3",
   "mi.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000908/mi_moeynj.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515746/mi_cuaiky.mp3",
   "mie.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000909/mie_k7ur83.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515747/mie_er0y8o.mp3",
   "mo.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000910/mo_oaisly.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515749/mo_epkz2l.mp3",
   "mu.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000911/mu_jrakso.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515749/mu_l9io9l.mp3",
   "n.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000913/n_qv2bso.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515750/n_cx9wic.mp3",
   "na.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000914/na_dail9n.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515751/na_qofaw7.mp3",
   "ne.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1740000915/ne_u99phj.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515753/ne_xvm9gx.mp3",
   "ni.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993938/ni_ndtuwl.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515753/ni_qtsntk.mp3",
   "nie.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993938/nie_xj7jic.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515753/nie_jgtyvi.mp3",
   "no.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993938/no_imfjav.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515754/no_gvhtkh.mp3",
   "nu.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993903/nu_cifhnv.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515755/nu_p54sq3.mp3",
   "o.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993872/o_jnpepy.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515757/o_ot5bke.mp3",
   "p.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993870/p_yrkrmu.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515758/p_tmorw9.mp3",
   "pa.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993869/pa_pwtaq4.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515758/pa_ffyd4a.mp3",
   "pe.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993870/pe_jkfo2v.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515759/pe_claf9d.mp3",
   "pi.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993868/pi_vzpydn.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515761/pi_dn2gbn.mp3",
   "pie.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993868/pie_jhlnu5.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515761/pie_iwyqm4.mp3",
   "po.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993867/po_fqvzer.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515762/po_xldiz4.mp3",
   "pp.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993867/pp_mbvnwh.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515763/pp_la8qqy.mp3",
   "ppa.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993867/ppa_jghssh.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515765/ppa_sifizq.mp3",
   "ppe.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993866/ppe_x11vl7.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515765/ppe_gsed5a.mp3",
   "ppi.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993865/ppi_vohosb.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515766/ppi_yuxvwt.mp3",
   "ppie.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993864/ppie_uu8qep.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515766/ppie_vxi6pi.mp3",
   "ppo.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993864/ppo_a8grxo.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768523021/ppo_t3ydz0.mp3",
   "ppu.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993863/ppu_ajhmzf.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515768/ppu_dlwzxq.mp3",
   "pu.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993863/pu_g3oaam.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515769/pu_jledwc.mp3",
   "q.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993863/q_unatt8.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515769/q_e5eteq.mp3",
   "qa.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993863/qa_j016wo.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515771/qa_z0ew6u.mp3",
   "qe.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993861/qe_w7sto9.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515772/qe_pussoj.mp3",
   "qi.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993861/qi_mczl10.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515772/qi_oll7b6.mp3",
   "qie.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993861/qie_qg4jfe.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515773/qie_gfqgh1.mp3",
   "qo.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993860/qo_qa8ivw.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515776/qo_eyha0y.mp3",
   "qu.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993860/qu_g8fqzx.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515776/qu_oyti91.mp3",
   "r.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993860/r_afkz5o.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515776/r_mcdrci.mp3",
   "ra.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993859/ra_gfugrm.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515777/ra_hrnlp0.mp3",
   "re.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993859/re_tmajwh.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515779/re_itj83w.mp3",
   "ri.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993859/ri_mtrza4.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515780/ri_bfl1kx.mp3",
   "rie.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993859/rie_lgqhnv.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515780/rie_zmse5e.mp3",
   "ro.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993858/ro_fuu9xa.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515782/ro_c2khoo.mp3",
   "ru.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993858/ru_rl25tv.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515783/ru_eeoayv.mp3",
   "s.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993858/s_n65fp7.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515784/s_rpr3vb.mp3",
   "sa.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993857/sa_gigina.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515785/sa_axxbff.mp3",
   "se.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993856/se_lk4skq.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515786/se_qccdda.mp3",
   "sh.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993858/sh_apxum6.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515787/sh_ngf7b0.mp3",
   "sha.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993856/sha_k2kj95.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515787/sha_fs0hok.mp3",
   "she.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993855/she_bzct0p.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515788/she_mn6xqx.mp3",
   "shi.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993855/shi_bkggqw.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515790/shi_hgspie.mp3",
   "shie.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993855/shie_wlswy6.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515791/shie_lbrjnp.mp3",
   "sho.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993855/sho_ae4m94.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515792/sho_z59dsm.mp3",
   "shu.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993854/shu_tolvpu.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515793/shu_mszvyk.mp3",
   "si.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993854/si_alycxm.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515794/si_ukkdju.mp3",
   "sie.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993855/sie_rjhf8d.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515795/sie_ueecov.mp3",
   "so.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993853/so_w3t7ai.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515796/so_ec6jp1.mp3",
   "su.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993852/su_vouyrm.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515798/su_klhvf6.mp3",
   "t.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993852/t_vxkcqo.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515798/t_i0evod.mp3",
   "ta.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993852/ta_c9lpbm.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515799/ta_edatxj.mp3",
   "te.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993851/te_ymlu49.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515800/te_fxy2gw.mp3",
   "ti.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993851/ti_d5ei7z.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515801/ti_krwire.mp3",
   "tie.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993851/tie_hqvjkv.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515802/tie_xxormv.mp3",
   "to.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993850/to_uyxdxz.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515802/to_wkb6cm.mp3",
   "ts.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993850/ts_vcl2hi.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515804/ts_digheu.mp3",
   "tsa.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993850/tsa_y3lvbk.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515806/tsa_sbdhjg.mp3",
   "tse.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993582/tse_a9mzeb.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515806/tse_huplmx.mp3",
   "tsi.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993550/tsi_l0o2i2.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515807/tsi_h7z1oq.mp3",
   "tsie.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993542/tsie_nmhark.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515809/tsie_vz4iy6.mp3",
   "tso.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993541/tso_i6njrv.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515809/tso_vwbr93.mp3",
   "tsu.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993541/tsu_pitjwa.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515810/tsu_hgbzal.mp3",
   "tt.mp3":
-    "hhttps://res.cloudinary.com/dc6jadrue/video/upload/v1739993540/tt_u0x4gt.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515810/tt_tfimie.mp3",
   "tta.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993540/tta_cbusjd.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515813/tta_hbyw8c.mp3",
   "tte.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993539/tte_yxr5yc.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515813/tte_wl3ya0.mp3",
   "tti.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993540/tti_xumyqk.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515814/tti_hzlk16.mp3",
   "ttie.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993539/ttie_tzv6fm.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515814/ttie_gtvoow.mp3",
   "tto.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993538/tto_cyy1xh.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515818/tto_khmpfh.mp3",
   "ttu.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993538/ttu_zw6hhp.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515817/ttu_eyoqnl.mp3",
   "tu.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993538/tu_ojojso.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515818/tu_ercl0i.mp3",
   "u.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993537/u_vsxsy3.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515820/u_whqqam.mp3",
   "uh.mp3":
     "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993537/uh_mhar1v.mp3",
   "ve.mp3":
-  "https://res.cloudinary.com/dc6jadrue/video/upload/v1765333581/ve_xjqiqv.mp3",
+  "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515822/ve_hozdnr.mp3",
   "vu.mp3":
-  "https://res.cloudinary.com/dc6jadrue/video/upload/v1765333624/vu_cl4a2g.mp3",
+  "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515826/vu_m4p6z0.mp3",
   "vi.mp3":
-  "https://res.cloudinary.com/dc6jadrue/video/upload/v1765333661/vi_jxwbsb.mp3",
+  "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515825/vi_afk8wd.mp3",
   "va.mp3":
-  "https://res.cloudinary.com/dc6jadrue/video/upload/v1765333713/va_uymzp3.mp3",
+  "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515821/va_xglm35.mp3",
   "vie.mp3":
-  "https://res.cloudinary.com/dc6jadrue/video/upload/v1765333970/vie_q8jz2k.mp3",
+  "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515825/vie_wbch96.mp3",
   "v.mp3":
-  "https://res.cloudinary.com/dc6jadrue/video/upload/v1765334019/v_yc6bj1.mp3",
+  "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515821/v_sazh22.mp3",
   "vo.mp3":
-  "https://res.cloudinary.com/dc6jadrue/video/upload/v1765334050/vo_ihi5ij.mp3",
+  "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515825/vo_mf4ulk.mp3",
   "w.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993537/w_nudmma.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515829/w_ujtrvz.mp3",
   "wa.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993536/wa_xumkw1.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515829/wa_yaavtj.mp3",
   "we.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993536/we_uc9qew.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515830/we_g3zgfa.mp3",
   "wi.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993536/wi_oe5kj6.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515832/wi_effme8.mp3",
   "wie.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993536/wie_jyvtrw.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515833/wie_syehyc.mp3",
   "wo.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993535/wo_mtn0ji.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515833/wo_vaqk6z.mp3",
   "wu.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993534/wu_is24t2.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515835/wu_sfoomh.mp3",
   "y.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993534/y_dlfszj.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515836/y_taalih.mp3",
   "ya.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993534/ya_fglpin.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515837/ya_otkq2e.mp3",
   "ye.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993534/ye_ulxgof.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515839/ye_vymhj9.mp3",
   "yi.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993533/yi_dhpk3g.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515839/yi_k5v1kp.mp3",
   "yie.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993532/yie_jzlwof.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515841/yie_uznu45.mp3",
   "yo.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993532/yo_unglzi.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515842/yo_jkg3zk.mp3",
   "yu.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993531/yu_stowu3.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515843/yu_p0rhga.mp3",
   "z.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993531/z_ihjasj.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515845/z_aje1wh.mp3",
   "za.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993530/za_vwmqrq.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515845/za_fx6hqx.mp3",
   "ze.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993530/ze_qdng41.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515845/ze_szq6g5.mp3",
   "zh.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993529/zh_fbwlc3.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515848/zh_mks4mf.mp3",
   "zha.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993529/zha_oisa1r.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515849/zha_apv2zi.mp3",
   "zhe.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993529/zhe_ygalby.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515849/zhe_z5hrbh.mp3",
   "zhi.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993528/zhi_rfilpv.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515852/zhi_nlsfhw.mp3",
   "zhie.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993528/zhie_pkom1h.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515853/zhie_m9vznu.mp3",
   "zho.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993527/zho_wfuzr9.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515853/zho_sq8gpd.mp3",
   "zhu.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993527/zhu_iaogph.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515854/zhu_pz3itz.mp3",
   "zi.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993526/zi_ri7gdr.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515857/zi_jmjipy.mp3",
   "zie.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993526/zie_oet7fz.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515858/zie_vu3ikc.mp3",
   "zo.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993525/zo_z1awsm.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515858/zo_ak0rar.mp3",
   "zu.mp3":
-    "https://res.cloudinary.com/dc6jadrue/video/upload/v1739993525/zu_zlk9mw.mp3",
+    "https://res.cloudinary.com/dc6jadrue/video/upload/v1768515858/zu_hhrqci.mp3",
 };
 
 export default audioMap;
