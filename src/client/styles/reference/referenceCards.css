@@ -74,8 +74,10 @@
 /* Reference View Container (when a card is clicked) */
 .reference-view-container {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem 1rem;
+  box-sizing: border-box;
 }
 
 .reference-back-btn {
@@ -102,6 +104,8 @@
 
 .reference-view-content {
   width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 /* Responsive Design */
@@ -142,11 +146,20 @@
   }
 
   .reference-view-container {
-    padding: 1rem;
+    padding: 1rem 0.75rem;
+    width: 100%;
+  }
+
+  .reference-view-content {
+    width: 100%;
+    overflow-x: hidden;
   }
 }
 
 @media (max-width: 480px) {
+  .reference-view-container {
+    padding: 0.75rem 0.5rem;
+  }
   .reference-header h1 {
     font-size: 1.75rem;
   }
