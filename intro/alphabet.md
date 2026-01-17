@@ -2,9 +2,14 @@
 ## ሀ and ለ
 This is **ሀ and ለ** the first lesson for this module:
 
-- **Insert key point**
-- **Instert key point**
-- **Insert key point**
+- **Meet your first two characters, ሀ and ለ, and practice recognizing and pronouncing their basic sounds (hä and lä).**
+​
+
+- **Explore how ሀ and ለ changes across its seven main forms so you start seeing the built‑in vowel pattern.**
+​
+
+- **Practice writing ሀ (and it's house) and ለ (and it's house) with correct stroke order, plus short call‑and‑response pronunciation drills to build confidence.**
+​
 
 By the end of this module, you'll be able to key point 1, 2, and 3.
 
