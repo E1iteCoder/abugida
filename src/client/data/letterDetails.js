@@ -9,9 +9,17 @@ const letterDetails =
     "audio": "ha.mp3",
     "strokeGif": "../pictures/gifs/ha-order.gif",
     "examples": [
-      { "word": "ሀገር", "gloss": "Country", "breakdown": ["ሀ", "ገ", "ር"] }
+      {
+        "word": "ሀገር",
+        "gloss": "Country",
+        "breakdown": [
+          "ሀ",
+          "ገ",
+          "ር"
+        ]
+      }
     ],
-    "numeric": null,
+    "numeric": 1,
     "usageNotes": []
   },
   "ሁ": {
@@ -26,10 +34,14 @@ const letterDetails =
       {
         "word": "ሁለት",
         "gloss": "Two",
-        "breakdown": ["ሁ", "ለ", "ት"]
+        "breakdown": [
+          "ሁ",
+          "ለ",
+          "ት"
+        ]
       }
     ],
-    "numeric": null,
+    "numeric": 1,
     "usageNotes": []
   },
   "ሂ": {
@@ -41,9 +53,17 @@ const letterDetails =
     "audio": "hi.mp3",
     "strokeGif": "../pictures/gifs/hi-order.gif",
     "examples": [
-      { "word": "ሂሳብ", "gloss": "Math", "breakdown": ["ሂ", "ሳ", "ብ"] }
+      {
+        "word": "ሂሳብ",
+        "gloss": "Math",
+        "breakdown": [
+          "ሂ",
+          "ሳ",
+          "ብ"
+        ]
+      }
     ],
-    "numeric": null,
+    "numeric": 1,
     "usageNotes": []
   },
   "ሃ": {
@@ -54,8 +74,14 @@ const letterDetails =
     "column": "fourth",
     "audio": "ha.mp3",
     "strokeGif": "../pictures/gifs/ha-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 1,
     "usageNotes": []
   },
   "ሄ": {
@@ -66,8 +92,14 @@ const letterDetails =
     "column": "fifth",
     "audio": "hie.mp3",
     "strokeGif": "../pictures/gifs/hie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 1,
     "usageNotes": []
   },
   "ህ": {
@@ -78,8 +110,14 @@ const letterDetails =
     "column": "sixth",
     "audio": "h.mp3",
     "strokeGif": "../pictures/gifs/h-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 1,
     "usageNotes": []
   },
   "ሆ": {
@@ -90,8 +128,17 @@ const letterDetails =
     "column": "last",
     "audio": "ho.mp3",
     "strokeGif": "../pictures/gifs/ho-order.gif",
-    "examples": [{ "word": "ሆድ", "gloss": "Stomach", "breakdown": ["ሆ", "ድ"] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "ሆድ",
+        "gloss": "Stomach",
+        "breakdown": [
+          "ሆ",
+          "ድ"
+        ]
+      }
+    ],
+    "numeric": 1,
     "usageNotes": []
   },
   "ለ": {
@@ -106,7 +153,12 @@ const letterDetails =
       {
         "word": "ለምለም",
         "gloss": "fertile land",
-        "breakdown": ["ለ", "ም", "ለ", "ም"]
+        "breakdown": [
+          "ለ",
+          "ም",
+          "ለ",
+          "ም"
+        ]
       }
     ],
     "numeric": null,
@@ -120,7 +172,13 @@ const letterDetails =
     "column": "second",
     "audio": "lu.mp3",
     "strokeGif": "../pictures/gifs/lu-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -132,7 +190,13 @@ const letterDetails =
     "column": "third",
     "audio": "li.mp3",
     "strokeGif": "../pictures/gifs/li-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -144,7 +208,16 @@ const letterDetails =
     "column": "fourth",
     "audio": "la.mp3",
     "strokeGif": "../pictures/gifs/la-order.gif",
-    "examples": [{ "word": "ላም", "gloss": "Cow", "breakdown": ["ላ", "ም"] }],
+    "examples": [
+      {
+        "word": "ላም",
+        "gloss": "Cow",
+        "breakdown": [
+          "ላ",
+          "ም"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -156,7 +229,13 @@ const letterDetails =
     "column": "fifth",
     "audio": "lie.mp3",
     "strokeGif": "../pictures/gifs/lie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -168,7 +247,16 @@ const letterDetails =
     "column": "sixth",
     "audio": "l.mp3",
     "strokeGif": "../pictures/gifs/l-order.gif",
-    "examples": [{ "word": "ልጅ", "gloss": "Kid", "breakdown": ["ል", "ጅ"] }],
+    "examples": [
+      {
+        "word": "ልጅ",
+        "gloss": "Kid",
+        "breakdown": [
+          "ል",
+          "ጅ"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -180,7 +268,16 @@ const letterDetails =
     "column": "last",
     "audio": "lo.mp3",
     "strokeGif": "../pictures/gifs/lo-order.gif",
-    "examples": [{ "word": "ሎሚ", "gloss": "Lemon", "breakdown": ["ሎ", "ሚ"] }],
+    "examples": [
+      {
+        "word": "ሎሚ",
+        "gloss": "Lemon",
+        "breakdown": [
+          "ሎ",
+          "ሚ"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -192,8 +289,14 @@ const letterDetails =
     "column": "first",
     "audio": "ha.mp3",
     "strokeGif": "../pictures/gifs/ha-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 1,
     "usageNotes": []
   },
   "ሑ": {
@@ -204,8 +307,14 @@ const letterDetails =
     "column": "second",
     "audio": "hu.mp3",
     "strokeGif": "../pictures/gifs/hu-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 1,
     "usageNotes": []
   },
   "ሒ": {
@@ -216,8 +325,14 @@ const letterDetails =
     "column": "third",
     "audio": "hi.mp3",
     "strokeGif": "../pictures/gifs/hi-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 1,
     "usageNotes": []
   },
   "ሓ": {
@@ -228,8 +343,14 @@ const letterDetails =
     "column": "fourth",
     "audio": "ha.mp3",
     "strokeGif": "../pictures/gifs/ha-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 1,
     "usageNotes": []
   },
   "ሔ": {
@@ -240,8 +361,18 @@ const letterDetails =
     "column": "fifth",
     "audio": "hie.mp3",
     "strokeGif": "../pictures/gifs/hie-order.gif",
-    "examples": [{ "word": "ሔዋን", "gloss": "Eve", "breakdown": ["ሔ", "ዋ", "ን"] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "ሔዋን",
+        "gloss": "Eve",
+        "breakdown": [
+          "ሔ",
+          "ዋ",
+          "ን"
+        ]
+      }
+    ],
+    "numeric": 1,
     "usageNotes": []
   },
   "ሕ": {
@@ -252,8 +383,17 @@ const letterDetails =
     "column": "sixth",
     "audio": "h.mp3",
     "strokeGif": "../pictures/gifs/h-order.gif",
-    "examples": [{ "word": "ሕግ", "gloss": "Law", "breakdown": ["ሕ", "ግ"] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "ሕግ",
+        "gloss": "Law",
+        "breakdown": [
+          "ሕ",
+          "ግ"
+        ]
+      }
+    ],
+    "numeric": 1,
     "usageNotes": []
   },
   "ሖ": {
@@ -264,8 +404,14 @@ const letterDetails =
     "column": "last",
     "audio": "ho.mp3",
     "strokeGif": "../pictures/gifs/ho-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 1,
     "usageNotes": []
   },
   "መ": {
@@ -276,7 +422,17 @@ const letterDetails =
     "column": "first",
     "audio": "me.mp3",
     "strokeGif": "../pictures/gifs/me-order.gif",
-    "examples": [{ "word": "መርዝ", "gloss": "Poison", "breakdown": ["መ", "ር", "ዝ"] }],
+    "examples": [
+      {
+        "word": "መርዝ",
+        "gloss": "Poison",
+        "breakdown": [
+          "መ",
+          "ር",
+          "ዝ"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -288,7 +444,16 @@ const letterDetails =
     "column": "second",
     "audio": "mu.mp3",
     "strokeGif": "../pictures/gifs/mu-order.gif",
-    "examples": [{ "word": "ሙዝ", "gloss": "Banana", "breakdown": ["ሙ", "ዝ"] }],
+    "examples": [
+      {
+        "word": "ሙዝ",
+        "gloss": "Banana",
+        "breakdown": [
+          "ሙ",
+          "ዝ"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -300,7 +465,18 @@ const letterDetails =
     "column": "third",
     "audio": "mi.mp3",
     "strokeGif": "../pictures/gifs/mi-order.gif",
-    "examples": [{ "word": "ሚጥሚጣ", "gloss": "Cayene (with spices)", "breakdown": ["ሚ", "ጥ", "ሚ", "ጣ"] }],
+    "examples": [
+      {
+        "word": "ሚጥሚጣ",
+        "gloss": "Cayene (with spices)",
+        "breakdown": [
+          "ሚ",
+          "ጥ",
+          "ሚ",
+          "ጣ"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -312,7 +488,13 @@ const letterDetails =
     "column": "fourth",
     "audio": "ma.mp3",
     "strokeGif": "../pictures/gifs/ma-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -324,7 +506,13 @@ const letterDetails =
     "column": "fifth",
     "audio": "mie.mp3",
     "strokeGif": "../pictures/gifs/mie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -336,7 +524,13 @@ const letterDetails =
     "column": "sixth",
     "audio": "m.mp3",
     "strokeGif": "../pictures/gifs/m-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -348,7 +542,13 @@ const letterDetails =
     "column": "last",
     "audio": "mo.mp3",
     "strokeGif": "../pictures/gifs/mo-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -360,8 +560,14 @@ const letterDetails =
     "column": "first",
     "audio": "se.mp3",
     "strokeGif": "../pictures/gifs/se-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 3,
     "usageNotes": []
   },
   "ሡ": {
@@ -372,8 +578,14 @@ const letterDetails =
     "column": "second",
     "audio": "su.mp3",
     "strokeGif": "../pictures/gifs/su-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 3,
     "usageNotes": []
   },
   "ሢ": {
@@ -384,8 +596,14 @@ const letterDetails =
     "column": "third",
     "audio": "si.mp3",
     "strokeGif": "../pictures/gifs/si-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 3,
     "usageNotes": []
   },
   "ሣ": {
@@ -396,8 +614,14 @@ const letterDetails =
     "column": "fourth",
     "audio": "sa.mp3",
     "strokeGif": "../pictures/gifs/sa-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 3,
     "usageNotes": []
   },
   "ሤ": {
@@ -408,8 +632,14 @@ const letterDetails =
     "column": "fifth",
     "audio": "sie.mp3",
     "strokeGif": "../pictures/gifs/sie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 3,
     "usageNotes": []
   },
   "ሥ": {
@@ -420,8 +650,14 @@ const letterDetails =
     "column": "sixth",
     "audio": "s.mp3",
     "strokeGif": "../pictures/gifs/s-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 3,
     "usageNotes": []
   },
   "ሦ": {
@@ -432,8 +668,18 @@ const letterDetails =
     "column": "last",
     "audio": "so.mp3",
     "strokeGif": "../pictures/gifs/so-order.gif",
-    "examples": [{ "word": "ሦስት", "gloss": "three", "breakdown": ["ሦ", "ስ", "ት"] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "ሦስት",
+        "gloss": "three",
+        "breakdown": [
+          "ሦ",
+          "ስ",
+          "ት"
+        ]
+      }
+    ],
+    "numeric": 3,
     "usageNotes": []
   },
   "ረ": {
@@ -444,7 +690,13 @@ const letterDetails =
     "column": "first",
     "audio": "re.mp3",
     "strokeGif": "../pictures/gifs/re-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -456,9 +708,20 @@ const letterDetails =
     "column": "second",
     "audio": "ru.mp3",
     "strokeGif": "../pictures/gifs/ru-order.gif",
-    "examples": [{ "word": "ሩት", "gloss": "Ruth", "breakdown": ["ሩ", "ት"] }],
+    "examples": [
+      {
+        "word": "ሩት",
+        "gloss": "Ruth",
+        "breakdown": [
+          "ሩ",
+          "ት"
+        ]
+      }
+    ],
     "numeric": null,
-    "usageNotes": ["Ruth is a female name in the Bible. It is the name of a woman who was married to a man named Boaz."]
+    "usageNotes": [
+      "Ruth is a female name in the Bible. It is the name of a woman who was married to a man named Boaz."
+    ]
   },
   "ሪ": {
     "name": "ri",
@@ -468,7 +731,13 @@ const letterDetails =
     "column": "third",
     "audio": "ri.mp3",
     "strokeGif": "../pictures/gifs/ri-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -480,7 +749,13 @@ const letterDetails =
     "column": "fourth",
     "audio": "ra.mp3",
     "strokeGif": "../pictures/gifs/ra-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -492,7 +767,13 @@ const letterDetails =
     "column": "fifth",
     "audio": "rie.mp3",
     "strokeGif": "../pictures/gifs/rie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -504,7 +785,13 @@ const letterDetails =
     "column": "sixth",
     "audio": "r.mp3",
     "strokeGif": "../pictures/gifs/r-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -516,7 +803,13 @@ const letterDetails =
     "column": "last",
     "audio": "ro.mp3",
     "strokeGif": "../pictures/gifs/ro-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -528,8 +821,14 @@ const letterDetails =
     "column": "first",
     "audio": "se.mp3",
     "strokeGif": "../pictures/gifs/se-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 3,
     "usageNotes": []
   },
   "ሱ": {
@@ -540,8 +839,14 @@ const letterDetails =
     "column": "second",
     "audio": "su.mp3",
     "strokeGif": "../pictures/gifs/su-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 3,
     "usageNotes": []
   },
   "ሲ": {
@@ -552,8 +857,17 @@ const letterDetails =
     "column": "third",
     "audio": "si.mp3",
     "strokeGif": "../pictures/gifs/si-order.gif",
-    "examples": [{ "word": "ሲኒ", "gloss": "cup", "breakdown": ["ሲ", "ኒ"] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "ሲኒ",
+        "gloss": "cup",
+        "breakdown": [
+          "ሲ",
+          "ኒ"
+        ]
+      }
+    ],
+    "numeric": 3,
     "usageNotes": []
   },
   "ሳ": {
@@ -564,8 +878,14 @@ const letterDetails =
     "column": "fourth",
     "audio": "sa.mp3",
     "strokeGif": "../pictures/gifs/sa-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 3,
     "usageNotes": []
   },
   "ሴ": {
@@ -576,8 +896,14 @@ const letterDetails =
     "column": "fifth",
     "audio": "sie.mp3",
     "strokeGif": "../pictures/gifs/sie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 3,
     "usageNotes": []
   },
   "ስ": {
@@ -588,8 +914,14 @@ const letterDetails =
     "column": "sixth",
     "audio": "s.mp3",
     "strokeGif": "../pictures/gifs/s-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 3,
     "usageNotes": []
   },
   "ሶ": {
@@ -600,8 +932,14 @@ const letterDetails =
     "column": "last",
     "audio": "so.mp3",
     "strokeGif": "../pictures/gifs/so-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 3,
     "usageNotes": []
   },
   "ሸ": {
@@ -612,7 +950,13 @@ const letterDetails =
     "column": "first",
     "audio": "she.mp3",
     "strokeGif": "../pictures/gifs/she-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -624,7 +968,13 @@ const letterDetails =
     "column": "second",
     "audio": "shu.mp3",
     "strokeGif": "../pictures/gifs/shu-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -636,7 +986,13 @@ const letterDetails =
     "column": "third",
     "audio": "shi.mp3",
     "strokeGif": "../pictures/gifs/shi-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -648,7 +1004,13 @@ const letterDetails =
     "column": "fourth",
     "audio": "sha.mp3",
     "strokeGif": "../pictures/gifs/sha-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -660,7 +1022,13 @@ const letterDetails =
     "column": "fifth",
     "audio": "shie.mp3",
     "strokeGif": "../pictures/gifs/shie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -672,7 +1040,13 @@ const letterDetails =
     "column": "sixth",
     "audio": "sh.mp3",
     "strokeGif": "../pictures/gifs/sh-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -684,7 +1058,13 @@ const letterDetails =
     "column": "last",
     "audio": "sho.mp3",
     "strokeGif": "../pictures/gifs/sho-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -696,7 +1076,13 @@ const letterDetails =
     "column": "first",
     "audio": "qe.mp3",
     "strokeGif": "../pictures/gifs/qe-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -708,7 +1094,13 @@ const letterDetails =
     "column": "second",
     "audio": "qu.mp3",
     "strokeGif": "../pictures/gifs/qu-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -720,7 +1112,13 @@ const letterDetails =
     "column": "third",
     "audio": "qi.mp3",
     "strokeGif": "../pictures/gifs/qi-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -732,7 +1130,13 @@ const letterDetails =
     "column": "fourth",
     "audio": "qa.mp3",
     "strokeGif": "../pictures/gifs/qa-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -744,7 +1148,13 @@ const letterDetails =
     "column": "fifth",
     "audio": "qie.mp3",
     "strokeGif": "../pictures/gifs/qie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -756,7 +1166,13 @@ const letterDetails =
     "column": "sixth",
     "audio": "q.mp3",
     "strokeGif": "../pictures/gifs/q-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -768,7 +1184,13 @@ const letterDetails =
     "column": "last",
     "audio": "qo.mp3",
     "strokeGif": "../pictures/gifs/qo-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -780,7 +1202,13 @@ const letterDetails =
     "column": "first",
     "audio": "be.mp3",
     "strokeGif": "../pictures/gifs/be-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -792,7 +1220,13 @@ const letterDetails =
     "column": "second",
     "audio": "bu.mp3",
     "strokeGif": "../pictures/gifs/bu-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -804,7 +1238,13 @@ const letterDetails =
     "column": "third",
     "audio": "bee.mp3",
     "strokeGif": "../pictures/gifs/bee-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -816,7 +1256,13 @@ const letterDetails =
     "column": "fourth",
     "audio": "ba.mp3",
     "strokeGif": "../pictures/gifs/ba-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -828,7 +1274,13 @@ const letterDetails =
     "column": "fifth",
     "audio": "bie.mp3",
     "strokeGif": "../pictures/gifs/bie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -840,7 +1292,13 @@ const letterDetails =
     "column": "sixth",
     "audio": "b.mp3",
     "strokeGif": "../pictures/gifs/b-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -852,7 +1310,13 @@ const letterDetails =
     "column": "last",
     "audio": "bo.mp3",
     "strokeGif": "../pictures/gifs/bo-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -864,7 +1328,13 @@ const letterDetails =
     "column": "first",
     "audio": "te.mp3",
     "strokeGif": "../pictures/gifs/te-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -876,7 +1346,13 @@ const letterDetails =
     "column": "second",
     "audio": "tu.mp3",
     "strokeGif": "../pictures/gifs/tu-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -888,7 +1364,13 @@ const letterDetails =
     "column": "third",
     "audio": "ti.mp3",
     "strokeGif": "../pictures/gifs/ti-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -900,7 +1382,13 @@ const letterDetails =
     "column": "fourth",
     "audio": "ta.mp3",
     "strokeGif": "../pictures/gifs/ta-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -912,7 +1400,13 @@ const letterDetails =
     "column": "fifth",
     "audio": "tie.mp3",
     "strokeGif": "../pictures/gifs/tie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -924,7 +1418,13 @@ const letterDetails =
     "column": "sixth",
     "audio": "t.mp3",
     "strokeGif": "../pictures/gifs/t-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -936,7 +1436,13 @@ const letterDetails =
     "column": "last",
     "audio": "to.mp3",
     "strokeGif": "../pictures/gifs/to-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -948,7 +1454,18 @@ const letterDetails =
     "column": "first",
     "audio": "che.mp3",
     "strokeGif": "../pictures/gifs/che-order.gif",
-    "examples": [{ "word": "ቸኮሌት", "gloss": "chocolate", "breakdown": ["ቸ", "ኮ", "ሌ", "ት"] }],
+    "examples": [
+      {
+        "word": "ቸኮሌት",
+        "gloss": "chocolate",
+        "breakdown": [
+          "ቸ",
+          "ኮ",
+          "ሌ",
+          "ት"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -960,7 +1477,13 @@ const letterDetails =
     "column": "second",
     "audio": "chu.mp3",
     "strokeGif": "../pictures/gifs/chu-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -972,7 +1495,13 @@ const letterDetails =
     "column": "third",
     "audio": "chi.mp3",
     "strokeGif": "../pictures/gifs/chi-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -984,7 +1513,13 @@ const letterDetails =
     "column": "fourth",
     "audio": "cha.mp3",
     "strokeGif": "../pictures/gifs/cha-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -996,7 +1531,13 @@ const letterDetails =
     "column": "fifth",
     "audio": "chie.mp3",
     "strokeGif": "../pictures/gifs/chie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1008,7 +1549,13 @@ const letterDetails =
     "column": "sixth",
     "audio": "ch.mp3",
     "strokeGif": "../pictures/gifs/ch-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1020,7 +1567,13 @@ const letterDetails =
     "column": "last",
     "audio": "cho.mp3",
     "strokeGif": "../pictures/gifs/cho-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1032,8 +1585,14 @@ const letterDetails =
     "column": "first",
     "audio": "ha.mp3",
     "strokeGif": "../pictures/gifs/ha-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 1,
     "usageNotes": []
   },
   "ኁ": {
@@ -1044,8 +1603,14 @@ const letterDetails =
     "column": "second",
     "audio": "hu.mp3",
     "strokeGif": "../pictures/gifs/hu-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 1,
     "usageNotes": []
   },
   "ኂ": {
@@ -1056,8 +1621,14 @@ const letterDetails =
     "column": "third",
     "audio": "hi.mp3",
     "strokeGif": "../pictures/gifs/hi-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 1,
     "usageNotes": []
   },
   "ኃ": {
@@ -1068,8 +1639,18 @@ const letterDetails =
     "column": "fourth",
     "audio": "ha.mp3",
     "strokeGif": "../pictures/gifs/ha-order.gif",
-    "examples": [{ "word": "ኃይል", "gloss": "power", "breakdown": ["ኃ", "ይ", "ል"] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "ኃይል",
+        "gloss": "power",
+        "breakdown": [
+          "ኃ",
+          "ይ",
+          "ል"
+        ]
+      }
+    ],
+    "numeric": 1,
     "usageNotes": []
   },
   "ኄ": {
@@ -1080,8 +1661,14 @@ const letterDetails =
     "column": "fifth",
     "audio": "hie.mp3",
     "strokeGif": "../pictures/gifs/hie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 1,
     "usageNotes": []
   },
   "ኅ": {
@@ -1092,8 +1679,14 @@ const letterDetails =
     "column": "sixth",
     "audio": "h.mp3",
     "strokeGif": "../pictures/gifs/h-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 1,
     "usageNotes": []
   },
   "ኆ": {
@@ -1104,8 +1697,14 @@ const letterDetails =
     "column": "last",
     "audio": "ho.mp3",
     "strokeGif": "../pictures/gifs/ho-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 1,
     "usageNotes": []
   },
   "ነ": {
@@ -1116,7 +1715,17 @@ const letterDetails =
     "column": "first",
     "audio": "ne.mp3",
     "strokeGif": "../pictures/gifs/ne-order.gif",
-    "examples": [{ "word": "ነብር", "gloss": "tiger", "breakdown": ["ነ", "ብ", "ር"] }],
+    "examples": [
+      {
+        "word": "ነብር",
+        "gloss": "tiger",
+        "breakdown": [
+          "ነ",
+          "ብ",
+          "ር"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1128,7 +1737,13 @@ const letterDetails =
     "column": "second",
     "audio": "nu.mp3",
     "strokeGif": "../pictures/gifs/nu-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1140,7 +1755,13 @@ const letterDetails =
     "column": "third",
     "audio": "ni.mp3",
     "strokeGif": "../pictures/gifs/ni-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1152,9 +1773,21 @@ const letterDetails =
     "column": "fourth",
     "audio": "na.mp3",
     "strokeGif": "../pictures/gifs/na-order.gif",
-    "examples": [{ "word": "ናታን", "gloss": "Nathan (Nathaniel)", "breakdown": ["ና", "ታ", "ን"] }],
+    "examples": [
+      {
+        "word": "ናታን",
+        "gloss": "Nathan (Nathaniel)",
+        "breakdown": [
+          "ና",
+          "ታ",
+          "ን"
+        ]
+      }
+    ],
     "numeric": null,
-    "usageNotes": ["The name Nathan is derived from the Hebrew name Natan, which means 'gift.' It is a common male name in many languages and cultures. In the Bible, Nathan is a prophet and is known for his role in the ministry of Jesus Christ."]
+    "usageNotes": [
+      "The name Nathan is derived from the Hebrew name Natan, which means 'gift.' It is a common male name in many languages and cultures. In the Bible, Nathan is a prophet and is known for his role in the ministry of Jesus Christ."
+    ]
   },
   "ኔ": {
     "name": "nê",
@@ -1164,7 +1797,13 @@ const letterDetails =
     "column": "fifth",
     "audio": "nie.mp3",
     "strokeGif": "../pictures/gifs/nie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1176,7 +1815,13 @@ const letterDetails =
     "column": "sixth",
     "audio": "n.mp3",
     "strokeGif": "../pictures/gifs/n-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1188,7 +1833,13 @@ const letterDetails =
     "column": "last",
     "audio": "no.mp3",
     "strokeGif": "../pictures/gifs/no-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1200,7 +1851,13 @@ const letterDetails =
     "column": "first",
     "audio": "gne.mp3",
     "strokeGif": "../pictures/gifs/gne-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1212,7 +1869,13 @@ const letterDetails =
     "column": "second",
     "audio": "gnu.mp3",
     "strokeGif": "../pictures/gifs/gnu-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1224,7 +1887,13 @@ const letterDetails =
     "column": "third",
     "audio": "gni.mp3",
     "strokeGif": "../pictures/gifs/gni-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1236,7 +1905,13 @@ const letterDetails =
     "column": "fourth",
     "audio": "gna.mp3",
     "strokeGif": "../pictures/gifs/gna-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1248,7 +1923,13 @@ const letterDetails =
     "column": "fifth",
     "audio": "gnie.mp3",
     "strokeGif": "../pictures/gifs/gnie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1260,7 +1941,13 @@ const letterDetails =
     "column": "sixth",
     "audio": "gn.mp3",
     "strokeGif": "../pictures/gifs/gn-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1272,7 +1959,13 @@ const letterDetails =
     "column": "last",
     "audio": "gno.mp3",
     "strokeGif": "../pictures/gifs/gno-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1284,9 +1977,22 @@ const letterDetails =
     "column": "first",
     "audio": "aa.mp3",
     "strokeGif": "../pictures/gifs/aa-order.gif",
-    "examples": [{ "word": "አቡጊዳ ", "gloss": "Abugida", "breakdown": ["አ", "ቡ", "ጊ", "ዳ"] }],
-    "numeric": null,
-    "usageNotes": ["Abugida is a system of writing consonants using vowel-like symbols (and also the name of this website). It is used in many languages, including Amharic, Tigrinya, and Ge'ez."]
+    "examples": [
+      {
+        "word": "አቡጊዳ ",
+        "gloss": "Abugida",
+        "breakdown": [
+          "አ",
+          "ቡ",
+          "ጊ",
+          "ዳ"
+        ]
+      }
+    ],
+    "numeric": 4,
+    "usageNotes": [
+      "Abugida is a system of writing consonants using vowel-like symbols (and also the name of this website). It is used in many languages, including Amharic, Tigrinya, and Ge'ez."
+    ]
   },
   "ኡ": {
     "name": "u",
@@ -1296,8 +2002,14 @@ const letterDetails =
     "column": "second",
     "audio": "u.mp3",
     "strokeGif": "../pictures/gifs/u-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 4,
     "usageNotes": []
   },
   "ኢ": {
@@ -1308,9 +2020,22 @@ const letterDetails =
     "column": "third",
     "audio": "ii.mp3",
     "strokeGif": "../pictures/gifs/ii-order.gif",
-    "examples": [{ "word": "ኢየሱስ (ክርስቶስ)", "gloss": "Jesus (Yeshua) Christ", "breakdown": ["ኢ", "የ", "ሱ", "ስ"] }],
-    "numeric": null,
-    "usageNotes": ["The name Jesus is derived from the Hebrew name Yeshua, which means 'salvation.' It is a common male name in many languages and cultures. In the Bible, Jesus is the son of God and is known for his role in the ministry of Jesus Christ."]
+    "examples": [
+      {
+        "word": "ኢየሱስ (ክርስቶስ)",
+        "gloss": "Jesus (Yeshua) Christ",
+        "breakdown": [
+          "ኢ",
+          "የ",
+          "ሱ",
+          "ስ"
+        ]
+      }
+    ],
+    "numeric": 4,
+    "usageNotes": [
+      "The name Jesus is derived from the Hebrew name Yeshua, which means 'salvation.' It is a common male name in many languages and cultures. In the Bible, Jesus is the son of God and is known for his role in the ministry of Jesus Christ."
+    ]
   },
   "ኣ": {
     "name": "ä",
@@ -1320,8 +2045,18 @@ const letterDetails =
     "column": "fourth",
     "audio": "aa.mp3",
     "strokeGif": "../pictures/gifs/aa-order.gif",
-    "examples": [{ "word": "ኣሳማ", "gloss": "pig", "breakdown": ["ኣ", "ሳ", "ማ"] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "ኣሳማ",
+        "gloss": "pig",
+        "breakdown": [
+          "ኣ",
+          "ሳ",
+          "ማ"
+        ]
+      }
+    ],
+    "numeric": 4,
     "usageNotes": []
   },
   "ኤ": {
@@ -1332,8 +2067,14 @@ const letterDetails =
     "column": "fifth",
     "audio": "ie.mp3",
     "strokeGif": "../pictures/gifs/ie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 4,
     "usageNotes": []
   },
   "እ": {
@@ -1344,9 +2085,25 @@ const letterDetails =
     "column": "sixth",
     "audio": "i.mp3",
     "strokeGif": "../pictures/gifs/i-order.gif",
-    "examples": [{ "word": "እግዚአብሔር", "gloss": "God (Elohim)", "breakdown": ["እ", "ግ", "ዚ", "አ", "ብ", "ሔ", "ር"] }],
-    "numeric": null,
-    "usageNotes": ["The name God is derived from the Hebrew name Elohim, which means 'God.' It is a common male name in many languages and cultures. In the Bible, God is the creator of the universe and is known for his role in the ministry of Jesus Christ."]
+    "examples": [
+      {
+        "word": "እግዚአብሔር",
+        "gloss": "God (Elohim)",
+        "breakdown": [
+          "እ",
+          "ግ",
+          "ዚ",
+          "አ",
+          "ብ",
+          "ሔ",
+          "ር"
+        ]
+      }
+    ],
+    "numeric": 4,
+    "usageNotes": [
+      "The name God is derived from the Hebrew name Elohim, which means 'God.' It is a common male name in many languages and cultures. In the Bible, God is the creator of the universe and is known for his role in the ministry of Jesus Christ."
+    ]
   },
   "ኦ": {
     "name": "o",
@@ -1356,8 +2113,14 @@ const letterDetails =
     "column": "last",
     "audio": "o.mp3",
     "strokeGif": "../pictures/gifs/o-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 4,
     "usageNotes": []
   },
   "ከ": {
@@ -1368,7 +2131,13 @@ const letterDetails =
     "column": "first",
     "audio": "ke.mp3",
     "strokeGif": "../pictures/gifs/ke-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1380,7 +2149,13 @@ const letterDetails =
     "column": "second",
     "audio": "ku.mp3",
     "strokeGif": "../pictures/gifs/ku-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1392,7 +2167,13 @@ const letterDetails =
     "column": "third",
     "audio": "ki.mp3",
     "strokeGif": "../pictures/gifs/ki-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1404,7 +2185,13 @@ const letterDetails =
     "column": "fourth",
     "audio": "ka.mp3",
     "strokeGif": "../pictures/gifs/ka-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1416,7 +2203,13 @@ const letterDetails =
     "column": "fifth",
     "audio": "kie.mp3",
     "strokeGif": "../pictures/gifs/kie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1428,7 +2221,13 @@ const letterDetails =
     "column": "sixth",
     "audio": "k.mp3",
     "strokeGif": "../pictures/gifs/k-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1440,7 +2239,13 @@ const letterDetails =
     "column": "last",
     "audio": "ko.mp3",
     "strokeGif": "../pictures/gifs/ko-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1452,8 +2257,14 @@ const letterDetails =
     "column": "first",
     "audio": "huh.mp3",
     "strokeGif": "../pictures/gifs/huh-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 2,
     "usageNotes": []
   },
   "ኹ": {
@@ -1464,8 +2275,14 @@ const letterDetails =
     "column": "second",
     "audio": "hu.mp3",
     "strokeGif": "../pictures/gifs/hu-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 2,
     "usageNotes": []
   },
   "ኺ": {
@@ -1476,8 +2293,14 @@ const letterDetails =
     "column": "third",
     "audio": "hi.mp3",
     "strokeGif": "../pictures/gifs/hi-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 2,
     "usageNotes": []
   },
   "ኻ": {
@@ -1488,8 +2311,14 @@ const letterDetails =
     "column": "fourth",
     "audio": "ha.mp3",
     "strokeGif": "../pictures/gifs/ha-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 2,
     "usageNotes": []
   },
   "ኼ": {
@@ -1500,8 +2329,14 @@ const letterDetails =
     "column": "fifth",
     "audio": "hie.mp3",
     "strokeGif": "../pictures/gifs/hie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 2,
     "usageNotes": []
   },
   "ኽ": {
@@ -1512,8 +2347,14 @@ const letterDetails =
     "column": "sixth",
     "audio": "h.mp3",
     "strokeGif": "../pictures/gifs/h-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 2,
     "usageNotes": []
   },
   "ኾ": {
@@ -1524,8 +2365,14 @@ const letterDetails =
     "column": "last",
     "audio": "ho.mp3",
     "strokeGif": "../pictures/gifs/ho-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 2,
     "usageNotes": []
   },
   "ወ": {
@@ -1536,7 +2383,17 @@ const letterDetails =
     "column": "first",
     "audio": "we.mp3",
     "strokeGif": "../pictures/gifs/we-order.gif",
-    "examples": [{ "word": "ወንድ", "gloss": "boy", "breakdown": ["ወ", "ን", "ድ"] }],
+    "examples": [
+      {
+        "word": "ወንድ",
+        "gloss": "boy",
+        "breakdown": [
+          "ወ",
+          "ን",
+          "ድ"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1548,9 +2405,20 @@ const letterDetails =
     "column": "second",
     "audio": "wu.mp3",
     "strokeGif": "../pictures/gifs/wu-order.gif",
-    "examples": [{ "word": "ውሻ", "gloss": "dog", "breakdown": ["ው", "ሻ"] }],
+    "examples": [
+      {
+        "word": "ውሻ",
+        "gloss": "dog",
+        "breakdown": [
+          "ው",
+          "ሻ"
+        ]
+      }
+    ],
     "numeric": null,
-    "usageNotes": ["This word can also be used as an insult as well."]
+    "usageNotes": [
+      "This word can also be used as an insult as well."
+    ]
   },
   "ዊ": {
     "name": "wi",
@@ -1560,7 +2428,13 @@ const letterDetails =
     "column": "third",
     "audio": "wi.mp3",
     "strokeGif": "../pictures/gifs/wi-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1572,7 +2446,18 @@ const letterDetails =
     "column": "fourth",
     "audio": "wa.mp3",
     "strokeGif": "../pictures/gifs/wa-order.gif",
-    "examples": [{ "word": "ዋሽንት", "gloss": "Ethiopian wind instrument", "breakdown": ["ዋ", "ሽ", "ን", "ት"] }],
+    "examples": [
+      {
+        "word": "ዋሽንት",
+        "gloss": "Ethiopian wind instrument",
+        "breakdown": [
+          "ዋ",
+          "ሽ",
+          "ን",
+          "ት"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1584,7 +2469,13 @@ const letterDetails =
     "column": "fifth",
     "audio": "wie.mp3",
     "strokeGif": "../pictures/gifs/wie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1596,7 +2487,13 @@ const letterDetails =
     "column": "sixth",
     "audio": "w.mp3",
     "strokeGif": "../pictures/gifs/w-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1608,7 +2505,13 @@ const letterDetails =
     "column": "last",
     "audio": "wo.mp3",
     "strokeGif": "../pictures/gifs/wo-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1620,8 +2523,14 @@ const letterDetails =
     "column": "first",
     "audio": "aa.mp3",
     "strokeGif": "../pictures/gifs/aa-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 4,
     "usageNotes": []
   },
   "ዑ": {
@@ -1632,8 +2541,14 @@ const letterDetails =
     "column": "second",
     "audio": "u.mp3",
     "strokeGif": "../pictures/gifs/u-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 4,
     "usageNotes": []
   },
   "ዒ": {
@@ -1644,8 +2559,14 @@ const letterDetails =
     "column": "third",
     "audio": "ii.mp3",
     "strokeGif": "../pictures/gifs/ii-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 4,
     "usageNotes": []
   },
   "ዓ": {
@@ -1656,8 +2577,14 @@ const letterDetails =
     "column": "fourth",
     "audio": "aa.mp3",
     "strokeGif": "../pictures/gifs/aa-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 4,
     "usageNotes": []
   },
   "ዔ": {
@@ -1668,8 +2595,14 @@ const letterDetails =
     "column": "fifth",
     "audio": "ie.mp3",
     "strokeGif": "../pictures/gifs/ie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 4,
     "usageNotes": []
   },
   "ዕ": {
@@ -1680,8 +2613,14 @@ const letterDetails =
     "column": "sixth",
     "audio": "i.mp3",
     "strokeGif": "../pictures/gifs/i-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 4,
     "usageNotes": []
   },
   "ዖ": {
@@ -1692,8 +2631,14 @@ const letterDetails =
     "column": "last",
     "audio": "o.mp3",
     "strokeGif": "../pictures/gifs/o-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 4,
     "usageNotes": []
   },
   "ዘ": {
@@ -1704,7 +2649,16 @@ const letterDetails =
     "column": "first",
     "audio": "ze.mp3",
     "strokeGif": "../pictures/gifs/ze-order.gif",
-    "examples": [{ "word": "ዘር", "gloss": "seed/race", "breakdown": ["ዘ", "ር"] }],
+    "examples": [
+      {
+        "word": "ዘር",
+        "gloss": "seed/race",
+        "breakdown": [
+          "ዘ",
+          "ር"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1716,7 +2670,13 @@ const letterDetails =
     "column": "second",
     "audio": "zu.mp3",
     "strokeGif": "../pictures/gifs/zu-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1728,7 +2688,13 @@ const letterDetails =
     "column": "third",
     "audio": "zi.mp3",
     "strokeGif": "../pictures/gifs/zi-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1740,7 +2706,13 @@ const letterDetails =
     "column": "fourth",
     "audio": "za.mp3",
     "strokeGif": "../pictures/gifs/za-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1752,7 +2724,13 @@ const letterDetails =
     "column": "fifth",
     "audio": "zie.mp3",
     "strokeGif": "../pictures/gifs/zie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1764,7 +2742,13 @@ const letterDetails =
     "column": "sixth",
     "audio": "z.mp3",
     "strokeGif": "../pictures/gifs/z-order.gif",
-    "examples": [{ "word": "ዝሆን", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "ዝሆን",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1776,7 +2760,13 @@ const letterDetails =
     "column": "last",
     "audio": "zo.mp3",
     "strokeGif": "../pictures/gifs/zo-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1788,7 +2778,13 @@ const letterDetails =
     "column": "first",
     "audio": "zhe.mp3",
     "strokeGif": "../pictures/gifs/zhe-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1800,7 +2796,13 @@ const letterDetails =
     "column": "second",
     "audio": "zhu.mp3",
     "strokeGif": "../pictures/gifs/zhu-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1812,7 +2814,13 @@ const letterDetails =
     "column": "third",
     "audio": "zhi.mp3",
     "strokeGif": "../pictures/gifs/zhi-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1824,7 +2832,13 @@ const letterDetails =
     "column": "fourth",
     "audio": "zha.mp3",
     "strokeGif": "../pictures/gifs/zha-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1836,7 +2850,13 @@ const letterDetails =
     "column": "fifth",
     "audio": "zhie.mp3",
     "strokeGif": "../pictures/gifs/zhie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1848,7 +2868,13 @@ const letterDetails =
     "column": "sixth",
     "audio": "zh.mp3",
     "strokeGif": "../pictures/gifs/zh-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1860,7 +2886,13 @@ const letterDetails =
     "column": "last",
     "audio": "zho.mp3",
     "strokeGif": "../pictures/gifs/zho-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1872,7 +2904,13 @@ const letterDetails =
     "column": "first",
     "audio": "ye.mp3",
     "strokeGif": "../pictures/gifs/ye-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1884,7 +2922,13 @@ const letterDetails =
     "column": "second",
     "audio": "yu.mp3",
     "strokeGif": "../pictures/gifs/yu-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1896,7 +2940,13 @@ const letterDetails =
     "column": "third",
     "audio": "yi.mp3",
     "strokeGif": "../pictures/gifs/yi-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1908,7 +2958,13 @@ const letterDetails =
     "column": "fourth",
     "audio": "ya.mp3",
     "strokeGif": "../pictures/gifs/ya-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1920,7 +2976,13 @@ const letterDetails =
     "column": "fifth",
     "audio": "yie.mp3",
     "strokeGif": "../pictures/gifs/yie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1932,7 +2994,13 @@ const letterDetails =
     "column": "sixth",
     "audio": "y.mp3",
     "strokeGif": "../pictures/gifs/y-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1944,9 +3012,22 @@ const letterDetails =
     "column": "last",
     "audio": "yo.mp3",
     "strokeGif": "../pictures/gifs/yo-order.gif",
-    "examples": [{ "word": "ዮሐንስ", "gloss": "John (Johannes)", "breakdown": ["ዮ", "ሐ", "ን", "ስ"] }],
+    "examples": [
+      {
+        "word": "ዮሐንስ",
+        "gloss": "John (Johannes)",
+        "breakdown": [
+          "ዮ",
+          "ሐ",
+          "ን",
+          "ስ"
+        ]
+      }
+    ],
     "numeric": null,
-    "usageNotes": ["The name John is derived from the Hebrew name Yochanan, which means 'God has been gracious.' It is a common male name in many languages and cultures. In the Bible, John is one of the apostles and is known for his role in the ministry of Jesus Christ."]
+    "usageNotes": [
+      "The name John is derived from the Hebrew name Yochanan, which means 'God has been gracious.' It is a common male name in many languages and cultures. In the Bible, John is one of the apostles and is known for his role in the ministry of Jesus Christ."
+    ]
   },
   "ደ": {
     "name": "dè",
@@ -1956,7 +3037,17 @@ const letterDetails =
     "column": "first",
     "audio": "de.mp3",
     "strokeGif": "../pictures/gifs/de-order.gif",
-    "examples": [{ "word": "ደስታ", "gloss": "happiness", "breakdown": ["ደ", "ስ", "ታ"] }],
+    "examples": [
+      {
+        "word": "ደስታ",
+        "gloss": "happiness",
+        "breakdown": [
+          "ደ",
+          "ስ",
+          "ታ"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1968,7 +3059,13 @@ const letterDetails =
     "column": "second",
     "audio": "du.mp3",
     "strokeGif": "../pictures/gifs/du-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1980,7 +3077,13 @@ const letterDetails =
     "column": "third",
     "audio": "di.mp3",
     "strokeGif": "../pictures/gifs/di-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -1992,9 +3095,22 @@ const letterDetails =
     "column": "fourth",
     "audio": "da.mp3",
     "strokeGif": "../pictures/gifs/da-order.gif",
-    "examples": [{ "word": "ዳንኤል", "gloss": "Daniel", "breakdown": ["ዳ", "ን", "ኤ", "ል"] }],
+    "examples": [
+      {
+        "word": "ዳንኤል",
+        "gloss": "Daniel",
+        "breakdown": [
+          "ዳ",
+          "ን",
+          "ኤ",
+          "ል"
+        ]
+      }
+    ],
     "numeric": null,
-    "usageNotes": ["The name Daniel is derived from the Hebrew name Dani'el, which means 'God is my judge.' It is a common male name in many languages and cultures. In the Bible, Daniel is a prophet and is known for his role in the ministry of Jesus Christ."]
+    "usageNotes": [
+      "The name Daniel is derived from the Hebrew name Dani'el, which means 'God is my judge.' It is a common male name in many languages and cultures. In the Bible, Daniel is a prophet and is known for his role in the ministry of Jesus Christ."
+    ]
   },
   "ዴ": {
     "name": "dê",
@@ -2004,7 +3120,13 @@ const letterDetails =
     "column": "fifth",
     "audio": "die.mp3",
     "strokeGif": "../pictures/gifs/die-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2016,7 +3138,16 @@ const letterDetails =
     "column": "sixth",
     "audio": "d.mp3",
     "strokeGif": "../pictures/gifs/d-order.gif",
-    "examples": [{ "word": "ድብ", "gloss": "bear cub", "breakdown": ["ድ", "ብ"] }],
+    "examples": [
+      {
+        "word": "ድብ",
+        "gloss": "bear cub",
+        "breakdown": [
+          "ድ",
+          "ብ"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2028,7 +3159,16 @@ const letterDetails =
     "column": "last",
     "audio": "do.mp3",
     "strokeGif": "../pictures/gifs/do-order.gif",
-    "examples": [{ "word": "ዶሮ", "gloss": "hen/rooster", "breakdown": ["ዶ", "ሮ"] }],
+    "examples": [
+      {
+        "word": "ዶሮ",
+        "gloss": "hen/rooster",
+        "breakdown": [
+          "ዶ",
+          "ሮ"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2040,7 +3180,13 @@ const letterDetails =
     "column": "first",
     "audio": "je.mp3",
     "strokeGif": "../pictures/gifs/je-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2052,7 +3198,13 @@ const letterDetails =
     "column": "second",
     "audio": "ju.mp3",
     "strokeGif": "../pictures/gifs/ju-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2064,7 +3216,13 @@ const letterDetails =
     "column": "third",
     "audio": "ji.mp3",
     "strokeGif": "../pictures/gifs/ji-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2076,7 +3234,13 @@ const letterDetails =
     "column": "fourth",
     "audio": "ja.mp3",
     "strokeGif": "../pictures/gifs/ja-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2088,7 +3252,13 @@ const letterDetails =
     "column": "fifth",
     "audio": "jie.mp3",
     "strokeGif": "../pictures/gifs/jie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2100,9 +3270,20 @@ const letterDetails =
     "column": "sixth",
     "audio": "j.mp3",
     "strokeGif": "../pictures/gifs/j-order.gif",
-    "examples": [{ "word": "ጅል", "gloss": "fool", "breakdown": ["ጅ", "ል"] }],
+    "examples": [
+      {
+        "word": "ጅል",
+        "gloss": "fool",
+        "breakdown": [
+          "ጅ",
+          "ል"
+        ]
+      }
+    ],
     "numeric": null,
-    "usageNotes": ["This word is often used as an insult, to describe someone who is foolish or stupid."]
+    "usageNotes": [
+      "This word is often used as an insult, to describe someone who is foolish or stupid."
+    ]
   },
   "ጆ": {
     "name": "jo",
@@ -2112,7 +3293,16 @@ const letterDetails =
     "column": "last",
     "audio": "jo.mp3",
     "strokeGif": "../pictures/gifs/jo-order.gif",
-    "examples": [{ "word": "ጆሮ", "gloss": "ear", "breakdown": ["ጆ", "ሮ"] }],
+    "examples": [
+      {
+        "word": "ጆሮ",
+        "gloss": "ear",
+        "breakdown": [
+          "ጆ",
+          "ሮ"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2124,7 +3314,17 @@ const letterDetails =
     "column": "first",
     "audio": "ge.mp3",
     "strokeGif": "../pictures/gifs/ge-order.gif",
-    "examples": [{ "word": "ገመድ", "gloss": "rope", "breakdown": ["ገ", "መ", "ድ"] }],
+    "examples": [
+      {
+        "word": "ገመድ",
+        "gloss": "rope",
+        "breakdown": [
+          "ገ",
+          "መ",
+          "ድ"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2136,7 +3336,18 @@ const letterDetails =
     "column": "second",
     "audio": "gu.mp3",
     "strokeGif": "../pictures/gifs/gu-order.gif",
-    "examples": [{ "word": "ጉልበት", "gloss": "knee/power", "breakdown": ["ጉ", "ል", "በ", "ት"] }],
+    "examples": [
+      {
+        "word": "ጉልበት",
+        "gloss": "knee/power",
+        "breakdown": [
+          "ጉ",
+          "ል",
+          "በ",
+          "ት"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2148,7 +3359,13 @@ const letterDetails =
     "column": "third",
     "audio": "gi.mp3",
     "strokeGif": "../pictures/gifs/gi-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2160,7 +3377,16 @@ const letterDetails =
     "column": "fourth",
     "audio": "ga.mp3",
     "strokeGif": "../pictures/gifs/ga-order.gif",
-    "examples": [{ "word": "ጋሻ", "gloss": "shield", "breakdown": ["ጋ", "ሻ"] }],
+    "examples": [
+      {
+        "word": "ጋሻ",
+        "gloss": "shield",
+        "breakdown": [
+          "ጋ",
+          "ሻ"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2172,7 +3398,16 @@ const letterDetails =
     "column": "fifth",
     "audio": "gie.mp3",
     "strokeGif": "../pictures/gifs/gie-order.gif",
-    "examples": [{ "word": "ጌጥ", "gloss": "jewlery", "breakdown": ["ጌ", "ጥ"] }],
+    "examples": [
+      {
+        "word": "ጌጥ",
+        "gloss": "jewlery",
+        "breakdown": [
+          "ጌ",
+          "ጥ"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2184,7 +3419,17 @@ const letterDetails =
     "column": "sixth",
     "audio": "g.mp3",
     "strokeGif": "../pictures/gifs/g-order.gif",
-    "examples": [{ "word": "ግማሽ", "gloss": "half", "breakdown": ["ግ", "ማ", "ሽ"] }],
+    "examples": [
+      {
+        "word": "ግማሽ",
+        "gloss": "half",
+        "breakdown": [
+          "ግ",
+          "ማ",
+          "ሽ"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2196,7 +3441,16 @@ const letterDetails =
     "column": "last",
     "audio": "go.mp3",
     "strokeGif": "../pictures/gifs/go-order.gif",
-    "examples": [{ "word": "ጎማ", "gloss": "tire", "breakdown": ["ጎ", "ማ"] }],
+    "examples": [
+      {
+        "word": "ጎማ",
+        "gloss": "tire",
+        "breakdown": [
+          "ጎ",
+          "ማ"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2208,7 +3462,18 @@ const letterDetails =
     "column": "first",
     "audio": "tte.mp3",
     "strokeGif": "../pictures/gifs/tte-order.gif",
-    "examples": [{ "word": "ጠረጴዛ", "gloss": "table", "breakdown": ["ጠ", "ረ", "ጴ", "ዛ"] }],
+    "examples": [
+      {
+        "word": "ጠረጴዛ",
+        "gloss": "table",
+        "breakdown": [
+          "ጠ",
+          "ረ",
+          "ጴ",
+          "ዛ"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2220,7 +3485,13 @@ const letterDetails =
     "column": "second",
     "audio": "ttu.mp3",
     "strokeGif": "../pictures/gifs/ttu-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2232,7 +3503,13 @@ const letterDetails =
     "column": "third",
     "audio": "tti.mp3",
     "strokeGif": "../pictures/gifs/tti-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2244,7 +3521,13 @@ const letterDetails =
     "column": "fourth",
     "audio": "tta.mp3",
     "strokeGif": "../pictures/gifs/tta-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2256,7 +3539,13 @@ const letterDetails =
     "column": "fifth",
     "audio": "ttie.mp3",
     "strokeGif": "../pictures/gifs/ttie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2268,7 +3557,17 @@ const letterDetails =
     "column": "sixth",
     "audio": "tt.mp3",
     "strokeGif": "../pictures/gifs/tt-order.gif",
-    "examples": [{ "word": "ጥርስ", "gloss": "teeth", "breakdown": ["ጥ", "ር", "ስ"] }],
+    "examples": [
+      {
+        "word": "ጥርስ",
+        "gloss": "teeth",
+        "breakdown": [
+          "ጥ",
+          "ር",
+          "ስ"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2280,7 +3579,16 @@ const letterDetails =
     "column": "last",
     "audio": "tto.mp3",
     "strokeGif": "../pictures/gifs/tto-order.gif",
-    "examples": [{ "word": "ጦር", "gloss": "war", "breakdown": ["ጦ", "ር"] }],
+    "examples": [
+      {
+        "word": "ጦር",
+        "gloss": "war",
+        "breakdown": [
+          "ጦ",
+          "ር"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2292,7 +3600,13 @@ const letterDetails =
     "column": "first",
     "audio": "Ce.mp3",
     "strokeGif": "../pictures/gifs/Ce-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2304,7 +3618,16 @@ const letterDetails =
     "column": "second",
     "audio": "Cu.mp3",
     "strokeGif": "../pictures/gifs/Cu-order.gif",
-    "examples": [{ "word": "ጩቤ", "gloss": "dagger", "breakdown": ["ጩ", "ቤ"] }],
+    "examples": [
+      {
+        "word": "ጩቤ",
+        "gloss": "dagger",
+        "breakdown": [
+          "ጩ",
+          "ቤ"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2316,7 +3639,13 @@ const letterDetails =
     "column": "third",
     "audio": "Ci.mp3",
     "strokeGif": "../pictures/gifs/Ci-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2328,7 +3657,16 @@ const letterDetails =
     "column": "fourth",
     "audio": "Ca.mp3",
     "strokeGif": "../pictures/gifs/Ca-order.gif",
-    "examples": [{ "word": "ጫማ", "gloss": "shoe (a pair of shoes)", "breakdown": ["ጫ", "ማ"] }],
+    "examples": [
+      {
+        "word": "ጫማ",
+        "gloss": "shoe (a pair of shoes)",
+        "breakdown": [
+          "ጫ",
+          "ማ"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2340,7 +3678,13 @@ const letterDetails =
     "column": "fifth",
     "audio": "Cie.mp3",
     "strokeGif": "../pictures/gifs/Cie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2352,7 +3696,13 @@ const letterDetails =
     "column": "sixth",
     "audio": "C.mp3",
     "strokeGif": "../pictures/gifs/C-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2364,7 +3714,13 @@ const letterDetails =
     "column": "last",
     "audio": "Co.mp3",
     "strokeGif": "../pictures/gifs/Co-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2376,7 +3732,13 @@ const letterDetails =
     "column": "first",
     "audio": "ppe.mp3",
     "strokeGif": "../pictures/gifs/ppe-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2388,7 +3750,13 @@ const letterDetails =
     "column": "second",
     "audio": "ppu.mp3",
     "strokeGif": "../pictures/gifs/ppu-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2400,7 +3768,18 @@ const letterDetails =
     "column": "third",
     "audio": "ppi.mp3",
     "strokeGif": "../pictures/gifs/ppi-order.gif",
-    "examples": [{ "word": "ጲላጦስ", "gloss": "Pilate (referring to Pontius Pilate)", "breakdown": ["ጲ", "ላ", "ጦ", "ስ"] }],
+    "examples": [
+      {
+        "word": "ጲላጦስ",
+        "gloss": "Pilate (referring to Pontius Pilate)",
+        "breakdown": [
+          "ጲ",
+          "ላ",
+          "ጦ",
+          "ስ"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2412,7 +3791,17 @@ const letterDetails =
     "column": "fourth",
     "audio": "ppa.mp3",
     "strokeGif": "../pictures/gifs/ppa-order.gif",
-    "examples": [{ "word": "ጳጳስ", "gloss": "bishop", "breakdown": ["ጳ", "ጳ", "ስ"] }],
+    "examples": [
+      {
+        "word": "ጳጳስ",
+        "gloss": "bishop",
+        "breakdown": [
+          "ጳ",
+          "ጳ",
+          "ስ"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2424,9 +3813,22 @@ const letterDetails =
     "column": "fifth",
     "audio": "ppie.mp3",
     "strokeGif": "../pictures/gifs/ppie-order.gif",
-    "examples": [{ "word": "ጴጥሮስ", "gloss": "Peter (Petros)", "breakdown": ["ጴ", "ጥ", "ሮ", "ስ"] }],
+    "examples": [
+      {
+        "word": "ጴጥሮስ",
+        "gloss": "Peter (Petros)",
+        "breakdown": [
+          "ጴ",
+          "ጥ",
+          "ሮ",
+          "ስ"
+        ]
+      }
+    ],
     "numeric": null,
-    "usageNotes": ["The name Peter is derived from the Greek name Petros, which means 'rock.' It is a common male name in many languages and cultures. In the Bible, Peter is one of the apostles and is known for his role in the ministry of Jesus Christ."]
+    "usageNotes": [
+      "The name Peter is derived from the Greek name Petros, which means 'rock.' It is a common male name in many languages and cultures. In the Bible, Peter is one of the apostles and is known for his role in the ministry of Jesus Christ."
+    ]
   },
   "ጵ": {
     "name": "p̣ə",
@@ -2436,7 +3838,13 @@ const letterDetails =
     "column": "sixth",
     "audio": "pp.mp3",
     "strokeGif": "../pictures/gifs/pp-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2448,7 +3856,13 @@ const letterDetails =
     "column": "last",
     "audio": "ppo.mp3",
     "strokeGif": "../pictures/gifs/ppo-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2460,8 +3874,14 @@ const letterDetails =
     "column": "first",
     "audio": "tse.mp3",
     "strokeGif": "../pictures/gifs/tse-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 5,
     "usageNotes": []
   },
   "ጹ": {
@@ -2472,8 +3892,14 @@ const letterDetails =
     "column": "second",
     "audio": "tsu.mp3",
     "strokeGif": "../pictures/gifs/tsu-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 5,
     "usageNotes": []
   },
   "ጺ": {
@@ -2484,8 +3910,14 @@ const letterDetails =
     "column": "third",
     "audio": "tsi.mp3",
     "strokeGif": "../pictures/gifs/tsi-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 5,
     "usageNotes": []
   },
   "ጻ": {
@@ -2496,8 +3928,14 @@ const letterDetails =
     "column": "fourth",
     "audio": "tsa.mp3",
     "strokeGif": "../pictures/gifs/tsa-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 5,
     "usageNotes": []
   },
   "ጼ": {
@@ -2508,8 +3946,14 @@ const letterDetails =
     "column": "fifth",
     "audio": "tsie.mp3",
     "strokeGif": "../pictures/gifs/tsie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 5,
     "usageNotes": []
   },
   "ጽ": {
@@ -2520,8 +3964,14 @@ const letterDetails =
     "column": "sixth",
     "audio": "ts.mp3",
     "strokeGif": "../pictures/gifs/ts-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 5,
     "usageNotes": []
   },
   "ጾ": {
@@ -2532,8 +3982,17 @@ const letterDetails =
     "column": "last",
     "audio": "tso.mp3",
     "strokeGif": "../pictures/gifs/tso-order.gif",
-    "examples": [{ "word": "ጾም", "gloss": "fasting", "breakdown": ["ጾ", "ም"] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "ጾም",
+        "gloss": "fasting",
+        "breakdown": [
+          "ጾ",
+          "ም"
+        ]
+      }
+    ],
+    "numeric": 5,
     "usageNotes": []
   },
   "ፀ": {
@@ -2544,8 +4003,14 @@ const letterDetails =
     "column": "first",
     "audio": "tse.mp3",
     "strokeGif": "../pictures/gifs/tse-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 5,
     "usageNotes": []
   },
   "ፁ": {
@@ -2556,8 +4021,14 @@ const letterDetails =
     "column": "second",
     "audio": "tsu.mp3",
     "strokeGif": "../pictures/gifs/tsu-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 5,
     "usageNotes": []
   },
   "ፂ": {
@@ -2568,8 +4039,14 @@ const letterDetails =
     "column": "third",
     "audio": "tsi.mp3",
     "strokeGif": "../pictures/gifs/tsi-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 5,
     "usageNotes": []
   },
   "ፃ": {
@@ -2580,8 +4057,14 @@ const letterDetails =
     "column": "fourth",
     "audio": "tsa.mp3",
     "strokeGif": "../pictures/gifs/tsa-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 5,
     "usageNotes": []
   },
   "ፄ": {
@@ -2592,8 +4075,14 @@ const letterDetails =
     "column": "fifth",
     "audio": "tsie.mp3",
     "strokeGif": "../pictures/gifs/tsie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 5,
     "usageNotes": []
   },
   "ፅ": {
@@ -2604,8 +4093,14 @@ const letterDetails =
     "column": "sixth",
     "audio": "ts.mp3",
     "strokeGif": "../pictures/gifs/ts-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
+    "numeric": 5,
     "usageNotes": []
   },
   "ፆ": {
@@ -2616,8 +4111,17 @@ const letterDetails =
     "column": "last",
     "audio": "tso.mp3",
     "strokeGif": "../pictures/gifs/tso-order.gif",
-    "examples": [{ "word": "ፆታ", "gloss": "gender", "breakdown": ["ፆ", "ታ"] }],
-    "numeric": null,
+    "examples": [
+      {
+        "word": "ፆታ",
+        "gloss": "gender",
+        "breakdown": [
+          "ፆ",
+          "ታ"
+        ]
+      }
+    ],
+    "numeric": 5,
     "usageNotes": []
   },
   "ፈ": {
@@ -2628,7 +4132,17 @@ const letterDetails =
     "column": "first",
     "audio": "fe.mp3",
     "strokeGif": "../pictures/gifs/fe-order.gif",
-    "examples": [{ "word": "ፈረስ", "gloss": "horse", "breakdown": ["ፈ", "ረ", "ስ"] }],
+    "examples": [
+      {
+        "word": "ፈረስ",
+        "gloss": "horse",
+        "breakdown": [
+          "ፈ",
+          "ረ",
+          "ስ"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2640,7 +4154,13 @@ const letterDetails =
     "column": "second",
     "audio": "fu.mp3",
     "strokeGif": "../pictures/gifs/fu-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2652,7 +4172,13 @@ const letterDetails =
     "column": "third",
     "audio": "fi.mp3",
     "strokeGif": "../pictures/gifs/fi-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2664,7 +4190,13 @@ const letterDetails =
     "column": "fourth",
     "audio": "fa.mp3",
     "strokeGif": "../pictures/gifs/fa-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2676,7 +4208,13 @@ const letterDetails =
     "column": "fifth",
     "audio": "fie.mp3",
     "strokeGif": "../pictures/gifs/fie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2688,7 +4226,13 @@ const letterDetails =
     "column": "sixth",
     "audio": "f.mp3",
     "strokeGif": "../pictures/gifs/f-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2700,7 +4244,13 @@ const letterDetails =
     "column": "last",
     "audio": "fo.mp3",
     "strokeGif": "../pictures/gifs/fo-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2712,7 +4262,13 @@ const letterDetails =
     "column": "first",
     "audio": "pe.mp3",
     "strokeGif": "../pictures/gifs/pe-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2724,7 +4280,13 @@ const letterDetails =
     "column": "second",
     "audio": "pu.mp3",
     "strokeGif": "../pictures/gifs/pu-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2736,7 +4298,13 @@ const letterDetails =
     "column": "third",
     "audio": "pi.mp3",
     "strokeGif": "../pictures/gifs/pi-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2748,7 +4316,13 @@ const letterDetails =
     "column": "fourth",
     "audio": "pa.mp3",
     "strokeGif": "../pictures/gifs/pa-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2760,7 +4334,18 @@ const letterDetails =
     "column": "fifth",
     "audio": "pie.mp3",
     "strokeGif": "../pictures/gifs/pie-order.gif",
-    "examples": [{ "word": "ፔርሙዝ", "gloss": "thermos", "breakdown": ["ፔ", "ር", "ሙ", "ዝ" ] }],
+    "examples": [
+      {
+        "word": "ፔርሙዝ",
+        "gloss": "thermos",
+        "breakdown": [
+          "ፔ",
+          "ር",
+          "ሙ",
+          "ዝ"
+        ]
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2772,7 +4357,13 @@ const letterDetails =
     "column": "sixth",
     "audio": "p.mp3",
     "strokeGif": "../pictures/gifs/p-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2784,9 +4375,21 @@ const letterDetails =
     "column": "last",
     "audio": "po.mp3",
     "strokeGif": "../pictures/gifs/po.-order.gif",
-    "examples": [{ "word": "ፖስታ", "gloss": "postal service (mail)", "breakdown": ["ፖ", "ስ", "ታ"] }],
+    "examples": [
+      {
+        "word": "ፖስታ",
+        "gloss": "postal service (mail)",
+        "breakdown": [
+          "ፖ",
+          "ስ",
+          "ታ"
+        ]
+      }
+    ],
     "numeric": null,
-    "usageNotes": ["This word is often used to refer to the postal service."]
+    "usageNotes": [
+      "This word is often used to refer to the postal service."
+    ]
   },
   "ቨ": {
     "name": "vè",
@@ -2796,7 +4399,13 @@ const letterDetails =
     "column": "first",
     "audio": "ve.mp3",
     "strokeGif": "../pictures/gifs/ve-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2808,7 +4417,13 @@ const letterDetails =
     "column": "second",
     "audio": "vu.mp3",
     "strokeGif": "../pictures/gifs/vu-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2820,7 +4435,13 @@ const letterDetails =
     "column": "third",
     "audio": "vi.mp3",
     "strokeGif": "../pictures/gifs/vi-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2832,7 +4453,13 @@ const letterDetails =
     "column": "fourth",
     "audio": "va.mp3",
     "strokeGif": "../pictures/gifs/va-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2844,7 +4471,13 @@ const letterDetails =
     "column": "fifth",
     "audio": "vie.mp3",
     "strokeGif": "../pictures/gifs/vie-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2856,7 +4489,13 @@ const letterDetails =
     "column": "sixth",
     "audio": "v.mp3",
     "strokeGif": "../pictures/gifs/vä-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   },
@@ -2868,7 +4507,13 @@ const letterDetails =
     "column": "last",
     "audio": "vo.mp3",
     "strokeGif": "../pictures/gifs/vo-order.gif",
-    "examples": [{ "word": "", "gloss": "", "breakdown": [] }],
+    "examples": [
+      {
+        "word": "",
+        "gloss": "",
+        "breakdown": []
+      }
+    ],
     "numeric": null,
     "usageNotes": []
   }

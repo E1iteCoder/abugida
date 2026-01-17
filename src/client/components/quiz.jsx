@@ -52,6 +52,7 @@ export default function QuizCarousel({ currentPage = 1, topicKey, section = "Qui
         row: info.row, // Store house/row info
         column: info.column, // Store column info for hints
         audio: info.audio || "", // Store filename, not URL - useAudio will resolve
+        numeric: info.numeric || null, // Store numeric value for hints
       }));
 
       // DO NOT dedupe by audio - all letter variations should be included in the quiz
@@ -207,6 +208,7 @@ export default function QuizCarousel({ currentPage = 1, topicKey, section = "Qui
         phonetic: correct.phonetic,
         row: correct.row, // Store row for hints
         column: correct.column, // Store column for hints
+        numeric: correct.numeric, // Store numeric value for hints
       };
     };
 
@@ -379,7 +381,11 @@ function QuizQuestion({
     if (!question.row || !question.column) return null;
     const rowName = question.row.replace('-house', '').replace('house', '').trim();
     const columnName = question.column.charAt(0).toUpperCase() + question.column.slice(1);
-    return `${rowName} house, ${columnName} column`;
+    let hint = `${rowName} house, ${columnName} column`;
+    if (question.numeric != null) {
+      hint = `Variant #${question.numeric}, ${hint}`;
+    }
+    return hint;
   };
 
   const handleSubmit = (e) => {
@@ -424,14 +430,28 @@ function QuizQuestion({
       </div>
       {/* only show audio button if we have a URL */}
       {question.audio && (
-        <button
-          type="button"
-          className="audio-button"
-          onClick={() => playAudio(question.audio)}
-          aria-label="Play Sound"
-        >
-          🔊 Play Sound
-        </button>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1rem' }}>
+          <button
+            type="button"
+            className="audio-button"
+            onClick={() => playAudio(question.audio)}
+            aria-label="Play Sound"
+          >
+            🔊 Play Sound
+          </button>
+          {question.numeric != null && (
+            <span className="numeric-hint" style={{ 
+              fontSize: '1rem', 
+              fontWeight: 'bold', 
+              color: '#666',
+              padding: '0.25rem 0.5rem',
+              backgroundColor: '#f0f0f0',
+              borderRadius: '4px'
+            }}>
+              Variant #{question.numeric}
+            </span>
+          )}
+        </div>
       )}
       {question.type === "mcq" ? (
         <div className="options-container">
