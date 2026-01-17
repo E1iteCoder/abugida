@@ -296,7 +296,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 1,
+    "numeric": 2,
     "usageNotes": []
   },
   "ሑ": {
@@ -314,7 +314,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 1,
+    "numeric": 2,
     "usageNotes": []
   },
   "ሒ": {
@@ -332,7 +332,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 1,
+    "numeric": 2,
     "usageNotes": []
   },
   "ሓ": {
@@ -350,7 +350,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 1,
+    "numeric": 2,
     "usageNotes": []
   },
   "ሔ": {
@@ -372,7 +372,7 @@ const letterDetails =
         ]
       }
     ],
-    "numeric": 1,
+    "numeric": 2,
     "usageNotes": []
   },
   "ሕ": {
@@ -393,7 +393,7 @@ const letterDetails =
         ]
       }
     ],
-    "numeric": 1,
+    "numeric": 2,
     "usageNotes": []
   },
   "ሖ": {
@@ -411,7 +411,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 1,
+    "numeric": 2,
     "usageNotes": []
   },
   "መ": {
@@ -490,9 +490,12 @@ const letterDetails =
     "strokeGif": "../pictures/gifs/ma-order.gif",
     "examples": [
       {
-        "word": "",
-        "gloss": "",
-        "breakdown": []
+        "word": "ማር",
+        "gloss": "honey",
+        "breakdown": [
+          "ማ",
+          "ር"
+        ]
       }
     ],
     "numeric": null,
@@ -526,9 +529,13 @@ const letterDetails =
     "strokeGif": "../pictures/gifs/m-order.gif",
     "examples": [
       {
-        "word": "",
-        "gloss": "",
-        "breakdown": []
+        "word": "ምግብ",
+        "gloss": "food",
+        "breakdown": [
+          "ም",
+          "ግ",
+          "ብ"
+        ]
       }
     ],
     "numeric": null,
@@ -567,7 +574,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 3,
+    "numeric": 1,
     "usageNotes": []
   },
   "ሡ": {
@@ -585,7 +592,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 3,
+    "numeric": 1,
     "usageNotes": []
   },
   "ሢ": {
@@ -603,7 +610,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 3,
+    "numeric": 1,
     "usageNotes": []
   },
   "ሣ": {
@@ -616,12 +623,15 @@ const letterDetails =
     "strokeGif": "../pictures/gifs/sa-order.gif",
     "examples": [
       {
-        "word": "",
-        "gloss": "",
-        "breakdown": []
+        "word": "ሣር",
+        "gloss": "grass",
+        "breakdown": [
+          "ሣ",
+          "ር"
+        ]
       }
     ],
-    "numeric": 3,
+    "numeric": 1,
     "usageNotes": []
   },
   "ሤ": {
@@ -639,7 +649,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 3,
+    "numeric": 1,
     "usageNotes": []
   },
   "ሥ": {
@@ -652,12 +662,15 @@ const letterDetails =
     "strokeGif": "../pictures/gifs/s-order.gif",
     "examples": [
       {
-        "word": "",
-        "gloss": "",
-        "breakdown": []
+        "word": "ሥር",
+        "gloss": "root",
+        "breakdown": [
+          "ሥ",
+          "ር"
+        ]
       }
     ],
-    "numeric": 3,
+    "numeric": 1,
     "usageNotes": []
   },
   "ሦ": {
@@ -679,7 +692,7 @@ const letterDetails =
         ]
       }
     ],
-    "numeric": 3,
+    "numeric": 1,
     "usageNotes": []
   },
   "ረ": {
@@ -823,12 +836,16 @@ const letterDetails =
     "strokeGif": "../pictures/gifs/se-order.gif",
     "examples": [
       {
-        "word": "",
-        "gloss": "",
-        "breakdown": []
-      }
+        "word": "ሰማይ",
+        "gloss": "sky",
+        "breakdown": [
+          "ሰ",
+          "ማ",
+          "ይ"
+        ]
+      },
     ],
-    "numeric": 3,
+    "numeric": 2,
     "usageNotes": []
   },
   "ሱ": {
@@ -846,7 +863,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 3,
+    "numeric": 2,
     "usageNotes": []
   },
   "ሲ": {
@@ -867,7 +884,7 @@ const letterDetails =
         ]
       }
     ],
-    "numeric": 3,
+    "numeric": 2,
     "usageNotes": []
   },
   "ሳ": {
@@ -885,7 +902,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 3,
+    "numeric": 2,
     "usageNotes": []
   },
   "ሴ": {
@@ -903,7 +920,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 3,
+    "numeric": 2,
     "usageNotes": []
   },
   "ስ": {
@@ -916,12 +933,15 @@ const letterDetails =
     "strokeGif": "../pictures/gifs/s-order.gif",
     "examples": [
       {
-        "word": "",
-        "gloss": "",
-        "breakdown": []
+        "word": "ስም",
+        "gloss": "name",
+        "breakdown": [
+          "ስ",
+          "ም"
+        ]
       }
     ],
-    "numeric": 3,
+    "numeric": 2,
     "usageNotes": []
   },
   "ሶ": {
@@ -939,7 +959,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 3,
+    "numeric": 2,
     "usageNotes": []
   },
   "ሸ": {
@@ -1592,7 +1612,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 1,
+    "numeric": 3,
     "usageNotes": []
   },
   "ኁ": {
@@ -1610,7 +1630,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 1,
+    "numeric": 3,
     "usageNotes": []
   },
   "ኂ": {
@@ -1628,7 +1648,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 1,
+    "numeric": 3,
     "usageNotes": []
   },
   "ኃ": {
@@ -1650,7 +1670,7 @@ const letterDetails =
         ]
       }
     ],
-    "numeric": 1,
+    "numeric": 3,
     "usageNotes": []
   },
   "ኄ": {
@@ -1668,7 +1688,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 1,
+    "numeric": 3,
     "usageNotes": []
   },
   "ኅ": {
@@ -1686,7 +1706,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 1,
+    "numeric": 3,
     "usageNotes": []
   },
   "ኆ": {
@@ -1704,7 +1724,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 1,
+    "numeric": 3,
     "usageNotes": []
   },
   "ነ": {
@@ -1989,7 +2009,7 @@ const letterDetails =
         ]
       }
     ],
-    "numeric": 4,
+    "numeric": 1,
     "usageNotes": [
       "Abugida is a system of writing consonants using vowel-like symbols (and also the name of this website). It is used in many languages, including Amharic, Tigrinya, and Ge'ez."
     ]
@@ -2009,7 +2029,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 4,
+    "numeric": 1,
     "usageNotes": []
   },
   "ኢ": {
@@ -2032,7 +2052,7 @@ const letterDetails =
         ]
       }
     ],
-    "numeric": 4,
+    "numeric": 1,
     "usageNotes": [
       "The name Jesus is derived from the Hebrew name Yeshua, which means 'salvation.' It is a common male name in many languages and cultures. In the Bible, Jesus is the son of God and is known for his role in the ministry of Jesus Christ."
     ]
@@ -2056,7 +2076,7 @@ const letterDetails =
         ]
       }
     ],
-    "numeric": 4,
+    "numeric": 1,
     "usageNotes": []
   },
   "ኤ": {
@@ -2074,7 +2094,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 4,
+    "numeric": 1,
     "usageNotes": []
   },
   "እ": {
@@ -2100,7 +2120,7 @@ const letterDetails =
         ]
       }
     ],
-    "numeric": 4,
+    "numeric": 1,
     "usageNotes": [
       "The name God is derived from the Hebrew name Elohim, which means 'God.' It is a common male name in many languages and cultures. In the Bible, God is the creator of the universe and is known for his role in the ministry of Jesus Christ."
     ]
@@ -2120,7 +2140,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 4,
+    "numeric": 1,
     "usageNotes": []
   },
   "ከ": {
@@ -2264,7 +2284,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 2,
+    "numeric": 1,
     "usageNotes": []
   },
   "ኹ": {
@@ -2282,7 +2302,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 2,
+    "numeric": 4,
     "usageNotes": []
   },
   "ኺ": {
@@ -2300,7 +2320,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 2,
+    "numeric": 4,
     "usageNotes": []
   },
   "ኻ": {
@@ -2318,7 +2338,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 2,
+    "numeric": 4,
     "usageNotes": []
   },
   "ኼ": {
@@ -2336,7 +2356,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 2,
+    "numeric": 4,
     "usageNotes": []
   },
   "ኽ": {
@@ -2354,7 +2374,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 2,
+    "numeric": 4,
     "usageNotes": []
   },
   "ኾ": {
@@ -2372,7 +2392,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 2,
+    "numeric": 4,
     "usageNotes": []
   },
   "ወ": {
@@ -2530,7 +2550,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 4,
+    "numeric": 2,
     "usageNotes": []
   },
   "ዑ": {
@@ -2548,7 +2568,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 4,
+    "numeric": 2,
     "usageNotes": []
   },
   "ዒ": {
@@ -2566,7 +2586,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 4,
+    "numeric": 2,
     "usageNotes": []
   },
   "ዓ": {
@@ -2584,7 +2604,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 4,
+    "numeric": 2,
     "usageNotes": []
   },
   "ዔ": {
@@ -2602,7 +2622,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 4,
+    "numeric": 2,
     "usageNotes": []
   },
   "ዕ": {
@@ -2620,7 +2640,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 4,
+    "numeric": 2,
     "usageNotes": []
   },
   "ዖ": {
@@ -2638,7 +2658,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 4,
+    "numeric": 2,
     "usageNotes": []
   },
   "ዘ": {
@@ -3881,7 +3901,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 5,
+    "numeric": 1,
     "usageNotes": []
   },
   "ጹ": {
@@ -3899,7 +3919,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 5,
+    "numeric": 1,
     "usageNotes": []
   },
   "ጺ": {
@@ -3917,7 +3937,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 5,
+    "numeric": 1,
     "usageNotes": []
   },
   "ጻ": {
@@ -3935,7 +3955,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 5,
+    "numeric": 1,
     "usageNotes": []
   },
   "ጼ": {
@@ -3953,7 +3973,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 5,
+    "numeric": 1,
     "usageNotes": []
   },
   "ጽ": {
@@ -3971,7 +3991,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 5,
+    "numeric": 1,
     "usageNotes": []
   },
   "ጾ": {
@@ -3992,7 +4012,7 @@ const letterDetails =
         ]
       }
     ],
-    "numeric": 5,
+    "numeric": 1,
     "usageNotes": []
   },
   "ፀ": {
@@ -4010,7 +4030,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 5,
+    "numeric": 2,
     "usageNotes": []
   },
   "ፁ": {
@@ -4028,7 +4048,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 5,
+    "numeric": 2,
     "usageNotes": []
   },
   "ፂ": {
@@ -4046,7 +4066,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 5,
+    "numeric": 2,
     "usageNotes": []
   },
   "ፃ": {
@@ -4064,7 +4084,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 5,
+    "numeric": 2,
     "usageNotes": []
   },
   "ፄ": {
@@ -4082,7 +4102,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 5,
+    "numeric": 2,
     "usageNotes": []
   },
   "ፅ": {
@@ -4100,7 +4120,7 @@ const letterDetails =
         "breakdown": []
       }
     ],
-    "numeric": 5,
+    "numeric": 2,
     "usageNotes": []
   },
   "ፆ": {
@@ -4121,7 +4141,7 @@ const letterDetails =
         ]
       }
     ],
-    "numeric": 5,
+    "numeric": 2,
     "usageNotes": []
   },
   "ፈ": {
