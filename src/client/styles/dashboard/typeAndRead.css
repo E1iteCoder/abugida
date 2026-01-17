@@ -1,0 +1,199 @@
+/* typeAndRead.css */
+.type-and-read-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--card);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.type-and-read-input-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.type-and-read-label {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--fg);
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.type-and-read-input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--btn-bg);
+  border: 1px solid var(--fg);
+  border-radius: 0.5rem;
+  color: var(--fg);
+  resize: vertical;
+  min-height: 120px;
+  text-align: left;
+  direction: ltr; /* Amharic text direction */
+  unicode-bidi: bidi-override;
+}
+
+.type-and-read-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0.3125rem rgba(76, 161, 175, 0.2);
+}
+
+.type-and-read-input:disabled {
+  background-color: var(--disabled);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.type-and-read-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.type-and-read-play-btn,
+.type-and-read-stop-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 150px;
+}
+
+.type-and-read-play-btn:disabled {
+  background-color: var(--disabled);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.type-and-read-play-btn:not(:disabled):hover,
+.type-and-read-stop-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.type-and-read-warning {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.type-and-read-display {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--bg);
+  border-radius: 0.5rem;
+  border: 1px solid var(--text-secondary);
+}
+
+.type-and-read-display h4 {
+  margin: 0 0 1rem 0;
+  color: var(--fg);
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.type-and-read-letters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  line-height: 2;
+  font-size: 1.5rem;
+  text-align: left;
+  direction: ltr;
+  unicode-bidi: bidi-override;
+}
+
+.type-and-read-letter {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+  color: var(--fg);
+  background: transparent;
+}
+
+.type-and-read-letter-current {
+  background-color: var(--accent);
+  color: var(--bg);
+  transform: scale(1.2);
+  font-weight: bold;
+  box-shadow: 0 0.25rem 0.5rem rgba(76, 161, 175, 0.4);
+  z-index: 10;
+  position: relative;
+}
+
+.type-and-read-letter-no-audio {
+  opacity: 0.4;
+  color: var(--text-secondary);
+}
+
+.type-and-read-letter-space {
+  width: 0.5rem;
+  min-width: 0.5rem;
+  padding: 0;
+  margin: 0 0.25rem;
+  background: transparent;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .type-and-read-container {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .type-and-read-input {
+    font-size: 1.25rem;
+    min-height: 100px;
+  }
+
+  .type-and-read-letters {
+    font-size: 1.25rem;
+  }
+
+  .type-and-read-controls {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .type-and-read-play-btn,
+  .type-and-read-stop-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .type-and-read-container {
+    padding: 0.75rem;
+  }
+
+  .type-and-read-input {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .type-and-read-letters {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .type-and-read-label {
+    font-size: 1rem;
+  }
+}

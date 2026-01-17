@@ -14,7 +14,6 @@ import Learn from "./pages/dashboard/learn";
 import Practice from "./pages/dashboard/practice";
 import Quiz from "./pages/dashboard/quiz";
 import Settings from "./pages/settings";
-import FlashcardApp from "./components/flashContainer";
 
 // Component to handle GitHub Pages 404 redirects
 function RedirectHandler() {
@@ -47,13 +46,13 @@ export default function App() {
           <Route path="/login" element={<Log />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/reference" element={<Reference />} />
+          <Route path="/reference/flashcard" element={<Reference />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/form" element={<Form />} />
           <Route path="/dashboard/introduction" element={<Introduction />} />
           <Route path="/dashboard/learn" element={<Learn />} />
           <Route path="/dashboard/practice" element={<Practice />} />
           <Route path="/dashboard/quiz" element={<Quiz />} />
-          <Route path="/reference/flashcard" element={<FlashcardApp />} />
           <Route path="*" element={<Home />} />
         </Routes>
         <Footer />
