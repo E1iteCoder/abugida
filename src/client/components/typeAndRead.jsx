@@ -150,7 +150,7 @@ export default function TypeAndRead() {
             currentIdx++;
             playNext();
           }
-        }, 1000);
+        }, 500);
         return;
       }
 
