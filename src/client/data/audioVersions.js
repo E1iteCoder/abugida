@@ -3,12 +3,13 @@
 // The "default" version uses the current audio links
 
 
-import audioMapVersion2 from './audio1.js';
-import audioMapVersion3 from './audio2.js';
-import audioMapVersion4 from './audio3.js';
-import audioMapVersion5 from './audio4.js';
-import audioMapVersion6 from './audio5.js';
+// Map version slot -> actual audio file (shifted so version6/Abba = audio.js, version1/Yoni = audio1.js, etc.)
 import audioMap from './audio.js';
+import audioMapVersion1 from './audio1.js';
+import audioMapVersion2 from './audio2.js';
+import audioMapVersion3 from './audio3.js';
+import audioMapVersion4 from './audio4.js';
+import audioMapVersion5 from './audio5.js';
 
 // Define available audio versions (6 total versions)
 export const AUDIO_VERSIONS = {
@@ -47,22 +48,22 @@ const createAudioVersions = () => {
   // Get all unique filenames from all version maps
   const allFilenames = new Set([
     ...Object.keys(audioMap),
+    ...Object.keys(audioMapVersion1),
     ...Object.keys(audioMapVersion2),
     ...Object.keys(audioMapVersion3),
     ...Object.keys(audioMapVersion4),
     ...Object.keys(audioMapVersion5),
-    ...Object.keys(audioMapVersion6),
   ]);
-  
-  // For each audio file, create version entries from separate files
+
+  // Version slot -> audio file (shifted: version6 = audio.js, version1 = audio1.js, ...)
   allFilenames.forEach((filename) => {
     versions[filename] = {
-      version1: audioMap[filename] || null,
-      version2: audioMapVersion2[filename] || audioMap[filename] || null, // Fallback to default if missing
+      version1: audioMapVersion1[filename] || audioMap[filename] || null,
+      version2: audioMapVersion2[filename] || audioMap[filename] || null,
       version3: audioMapVersion3[filename] || audioMap[filename] || null,
       version4: audioMapVersion4[filename] || audioMap[filename] || null,
       version5: audioMapVersion5[filename] || audioMap[filename] || null,
-      version6: audioMapVersion6[filename] || audioMap[filename] || null,
+      version6: audioMap[filename] || null, // Abba = audio.js
     };
   });
   
