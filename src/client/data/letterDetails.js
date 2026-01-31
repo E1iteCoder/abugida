@@ -1,7 +1,7 @@
 const letterDetails =
 {
   "ሀ": {
-    "name": "hä",
+    "name": "ha",
     "phonetic": "/hä/",
     "unicode": "U+1200",
     "row": "hä-house",
@@ -67,7 +67,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ሃ": {
-    "name": "hä",
+    "name": "ha",
     "phonetic": "/hä/",
     "unicode": "U+1203",
     "row": "hä-house",
@@ -85,7 +85,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ሄ": {
-    "name": "hê",
+    "name": "hie",
     "phonetic": "/hê/",
     "unicode": "U+1204",
     "row": "hä-house",
@@ -103,7 +103,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ህ": {
-    "name": "hə",
+    "name": "h",
     "phonetic": "/hə/",
     "unicode": "U+1205",
     "row": "hä-house",
@@ -142,7 +142,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ለ": {
-    "name": "lè",
+    "name": "le",
     "phonetic": "/lè/",
     "unicode": "U+1208",
     "row": "lè-house",
@@ -201,7 +201,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ላ": {
-    "name": "lä",
+    "name": "la",
     "phonetic": "/lä/",
     "unicode": "U+120B",
     "row": "lè-house",
@@ -222,7 +222,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ሌ": {
-    "name": "lê",
+    "name": "lie",
     "phonetic": "/lê/",
     "unicode": "U+120C",
     "row": "lè-house",
@@ -240,7 +240,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ል": {
-    "name": "lə",
+    "name": "l",
     "phonetic": "/lə/",
     "unicode": "U+120D",
     "row": "lè-house",
@@ -282,7 +282,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ሐ": {
-    "name": "hä",
+    "name": "ha",
     "phonetic": "/hä/",
     "unicode": "U+1210",
     "row": "hä-house",
@@ -336,7 +336,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ሓ": {
-    "name": "hä",
+    "name": "ha",
     "phonetic": "/hä/",
     "unicode": "U+1213",
     "row": "hä-house",
@@ -354,7 +354,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ሔ": {
-    "name": "hê",
+    "name": "hie",
     "phonetic": "/hê/",
     "unicode": "U+1214",
     "row": "hä-house",
@@ -376,7 +376,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ሕ": {
-    "name": "hə",
+    "name": "h",
     "phonetic": "/hə/",
     "unicode": "U+1215",
     "row": "hä-house",
@@ -415,7 +415,7 @@ const letterDetails =
     "usageNotes": []
   },
   "መ": {
-    "name": "mè",
+    "name": "me",
     "phonetic": "/mè/",
     "unicode": "U+1218",
     "row": "mè-house",
@@ -481,7 +481,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ማ": {
-    "name": "mä",
+    "name": "ma",
     "phonetic": "/mä/",
     "unicode": "U+121B",
     "row": "mè-house",
@@ -502,7 +502,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ሜ": {
-    "name": "mê",
+    "name": "mie",
     "phonetic": "/mê/",
     "unicode": "U+121C",
     "row": "mè-house",
@@ -520,7 +520,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ም": {
-    "name": "mə",
+    "name": "m",
     "phonetic": "/mə/",
     "unicode": "U+121D",
     "row": "mè-house",
@@ -560,7 +560,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ሠ": {
-    "name": "sè",
+    "name": "se",
     "phonetic": "/sè/",
     "unicode": "U+1220",
     "row": "sè-house",
@@ -614,7 +614,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ሣ": {
-    "name": "sä",
+    "name": "sa",
     "phonetic": "/sä/",
     "unicode": "U+1223",
     "row": "sè-house",
@@ -635,7 +635,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ሤ": {
-    "name": "sê",
+    "name": "sie",
     "phonetic": "/sê/",
     "unicode": "U+1224",
     "row": "sè-house",
@@ -653,7 +653,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ሥ": {
-    "name": "sə",
+    "name": "s",
     "phonetic": "/sə/",
     "unicode": "U+1225",
     "row": "sè-house",
@@ -696,7 +696,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ረ": {
-    "name": "rè",
+    "name": "re",
     "phonetic": "/rè/",
     "unicode": "U+1228",
     "row": "rè-house",
@@ -755,7 +755,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ራ": {
-    "name": "rä",
+    "name": "ra",
     "phonetic": "/rä/",
     "unicode": "U+122B",
     "row": "rè-house",
@@ -773,7 +773,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ሬ": {
-    "name": "rê",
+    "name": "rie",
     "phonetic": "/rê/",
     "unicode": "U+122C",
     "row": "rè-house",
@@ -791,7 +791,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ር": {
-    "name": "rə",
+    "name": "r",
     "phonetic": "/rə/",
     "unicode": "U+122D",
     "row": "rè-house",
@@ -827,7 +827,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ሰ": {
-    "name": "sè",
+    "name": "se",
     "phonetic": "/sè/",
     "unicode": "U+1230",
     "row": "sè-house",
@@ -888,7 +888,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ሳ": {
-    "name": "sä",
+    "name": "sa",
     "phonetic": "/sä/",
     "unicode": "U+1233",
     "row": "sè-house",
@@ -906,7 +906,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ሴ": {
-    "name": "sê",
+    "name": "sie",
     "phonetic": "/sê/",
     "unicode": "U+1234",
     "row": "sè-house",
@@ -924,7 +924,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ስ": {
-    "name": "sə",
+    "name": "s",
     "phonetic": "/sə/",
     "unicode": "U+1235",
     "row": "sè-house",
@@ -963,7 +963,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ሸ": {
-    "name": "shè",
+    "name": "she",
     "phonetic": "/shè/",
     "unicode": "U+1238",
     "row": "shè-house",
@@ -1017,7 +1017,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ሻ": {
-    "name": "shä",
+    "name": "sha",
     "phonetic": "/shä/",
     "unicode": "U+123B",
     "row": "shè-house",
@@ -1035,7 +1035,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ሼ": {
-    "name": "shê",
+    "name": "shie",
     "phonetic": "/shê/",
     "unicode": "U+123C",
     "row": "shè-house",
@@ -1053,7 +1053,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ሽ": {
-    "name": "shə",
+    "name": "sh",
     "phonetic": "/shə/",
     "unicode": "U+123D",
     "row": "shè-house",
@@ -1089,7 +1089,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ቀ": {
-    "name": "q'è",
+    "name": "qe",
     "phonetic": "/q'è/",
     "unicode": "U+1240",
     "row": "q'è-house",
@@ -1107,7 +1107,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ቁ": {
-    "name": "q'u",
+    "name": "qu",
     "phonetic": "/q'u/",
     "unicode": "U+1241",
     "row": "q'è-house",
@@ -1125,7 +1125,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ቂ": {
-    "name": "q'i",
+    "name": "qi",
     "phonetic": "/q'i/",
     "unicode": "U+1242",
     "row": "q'è-house",
@@ -1143,7 +1143,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ቃ": {
-    "name": "q'ä",
+    "name": "qa",
     "phonetic": "/q'ä/",
     "unicode": "U+1243",
     "row": "q'è-house",
@@ -1161,7 +1161,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ቄ": {
-    "name": "q'ê",
+    "name": "qie",
     "phonetic": "/q'ê/",
     "unicode": "U+1244",
     "row": "q'è-house",
@@ -1179,7 +1179,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ቅ": {
-    "name": "q'ə",
+    "name": "q",
     "phonetic": "/q'ə/",
     "unicode": "U+1245",
     "row": "q'è-house",
@@ -1197,7 +1197,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ቆ": {
-    "name": "q'o",
+    "name": "qo",
     "phonetic": "/q'o/",
     "unicode": "U+1246",
     "row": "q'è-house",
@@ -1215,7 +1215,7 @@ const letterDetails =
     "usageNotes": []
   },
   "በ": {
-    "name": "bè",
+    "name": "be",
     "phonetic": "/bè/",
     "unicode": "U+1260",
     "row": "bè-house",
@@ -1256,7 +1256,7 @@ const letterDetails =
     "unicode": "U+1262",
     "row": "bè-house",
     "column": "third",
-    "audio": "bee.mp3",
+    "audio": "bi.mp3",
     "strokeGif": "../pictures/gifs/bee-order.gif",
     "examples": [
       {
@@ -1269,7 +1269,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ባ": {
-    "name": "bä",
+    "name": "ba",
     "phonetic": "/bä/",
     "unicode": "U+1263",
     "row": "bè-house",
@@ -1287,7 +1287,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ቤ": {
-    "name": "bê",
+    "name": "bie",
     "phonetic": "/bê/",
     "unicode": "U+1264",
     "row": "bè-house",
@@ -1305,7 +1305,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ብ": {
-    "name": "bə",
+    "name": "b",
     "phonetic": "/bə/",
     "unicode": "U+1265",
     "row": "bè-house",
@@ -1341,7 +1341,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ተ": {
-    "name": "tè",
+    "name": "te",
     "phonetic": "/tè/",
     "unicode": "U+1270",
     "row": "tè-house",
@@ -1395,7 +1395,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ታ": {
-    "name": "tä",
+    "name": "ta",
     "phonetic": "/tä/",
     "unicode": "U+1273",
     "row": "tè-house",
@@ -1413,7 +1413,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ቴ": {
-    "name": "tê",
+    "name": "tie",
     "phonetic": "/tê/",
     "unicode": "U+1274",
     "row": "tè-house",
@@ -1431,7 +1431,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ት": {
-    "name": "tə",
+    "name": "t",
     "phonetic": "/tə/",
     "unicode": "U+1275",
     "row": "tè-house",
@@ -1467,7 +1467,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ቸ": {
-    "name": "chè",
+    "name": "che",
     "phonetic": "/chè/",
     "unicode": "U+1278",
     "row": "chè-house",
@@ -1526,7 +1526,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ቻ": {
-    "name": "chä",
+    "name": "cha",
     "phonetic": "/chä/",
     "unicode": "U+127B",
     "row": "chè-house",
@@ -1544,7 +1544,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ቼ": {
-    "name": "chê",
+    "name": "chie",
     "phonetic": "/chê/",
     "unicode": "U+127C",
     "row": "chè-house",
@@ -1562,7 +1562,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ች": {
-    "name": "chə",
+    "name": "ch",
     "phonetic": "/chə/",
     "unicode": "U+127D",
     "row": "chè-house",
@@ -1598,7 +1598,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ኀ": {
-    "name": "hä",
+    "name": "ha",
     "phonetic": "/hä/",
     "unicode": "U+1280",
     "row": "hä-house",
@@ -1652,7 +1652,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ኃ": {
-    "name": "hä",
+    "name": "ha",
     "phonetic": "/hä/",
     "unicode": "U+1283",
     "row": "hä-house",
@@ -1674,7 +1674,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ኄ": {
-    "name": "hê",
+    "name": "hie",
     "phonetic": "/hê/",
     "unicode": "U+1284",
     "row": "hä-house",
@@ -1692,7 +1692,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ኅ": {
-    "name": "hə",
+    "name": "h",
     "phonetic": "/hə/",
     "unicode": "U+1285",
     "row": "hä-house",
@@ -1728,7 +1728,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ነ": {
-    "name": "nè",
+    "name": "ne",
     "phonetic": "/nè/",
     "unicode": "U+1290",
     "row": "nè-house",
@@ -1786,7 +1786,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ና": {
-    "name": "nä",
+    "name": "na",
     "phonetic": "/nä/",
     "unicode": "U+1293",
     "row": "nè-house",
@@ -1810,7 +1810,7 @@ const letterDetails =
     ]
   },
   "ኔ": {
-    "name": "nê",
+    "name": "nie",
     "phonetic": "/nê/",
     "unicode": "U+1294",
     "row": "nè-house",
@@ -1828,7 +1828,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ን": {
-    "name": "nə",
+    "name": "n",
     "phonetic": "/nə/",
     "unicode": "U+1295",
     "row": "nè-house",
@@ -1864,7 +1864,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ኘ": {
-    "name": "ñè",
+    "name": "gne",
     "phonetic": "/ñè/",
     "unicode": "U+1298",
     "row": "ñè-house",
@@ -1882,7 +1882,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ኙ": {
-    "name": "ñu",
+    "name": "gnu",
     "phonetic": "/ñu/",
     "unicode": "U+1299",
     "row": "ñè-house",
@@ -1900,7 +1900,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ኚ": {
-    "name": "ñi",
+    "name": "gni",
     "phonetic": "/ñi/",
     "unicode": "U+129A",
     "row": "ñè-house",
@@ -1918,7 +1918,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ኛ": {
-    "name": "ñä",
+    "name": "gna",
     "phonetic": "/ñä/",
     "unicode": "U+129B",
     "row": "ñè-house",
@@ -1936,7 +1936,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ኜ": {
-    "name": "ñê",
+    "name": "gnie",
     "phonetic": "/ñê/",
     "unicode": "U+129C",
     "row": "ñè-house",
@@ -1954,7 +1954,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ኝ": {
-    "name": "ñə",
+    "name": "gn",
     "phonetic": "/ñə/",
     "unicode": "U+129D",
     "row": "ñè-house",
@@ -1972,7 +1972,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ኞ": {
-    "name": "ño",
+    "name": "gno",
     "phonetic": "/ño/",
     "unicode": "U+129E",
     "row": "ñè-house",
@@ -1990,7 +1990,7 @@ const letterDetails =
     "usageNotes": []
   },
   "አ": {
-    "name": "ä",
+    "name": "aa",
     "phonetic": "/ä/",
     "unicode": "U+12A0",
     "row": "ä-house",
@@ -2033,7 +2033,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ኢ": {
-    "name": "i",
+    "name": "ii",
     "phonetic": "/i/",
     "unicode": "U+12A2",
     "row": "ä-house",
@@ -2058,7 +2058,7 @@ const letterDetails =
     ]
   },
   "ኣ": {
-    "name": "ä",
+    "name": "aa",
     "phonetic": "/ä/",
     "unicode": "U+12A3",
     "row": "ä-house",
@@ -2080,7 +2080,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ኤ": {
-    "name": "ê",
+    "name": "ie",
     "phonetic": "/ê/",
     "unicode": "U+12A4",
     "row": "ä-house",
@@ -2098,7 +2098,7 @@ const letterDetails =
     "usageNotes": []
   },
   "እ": {
-    "name": "ə",
+    "name": "i",
     "phonetic": "/ə/",
     "unicode": "U+12A5",
     "row": "ä-house",
@@ -2144,7 +2144,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ከ": {
-    "name": "kè",
+    "name": "ke",
     "phonetic": "/kè/",
     "unicode": "U+12A8",
     "row": "kè-house",
@@ -2198,7 +2198,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ካ": {
-    "name": "kä",
+    "name": "ka",
     "phonetic": "/kä/",
     "unicode": "U+12AB",
     "row": "kè-house",
@@ -2216,7 +2216,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ኬ": {
-    "name": "kê",
+    "name": "kie",
     "phonetic": "/kê/",
     "unicode": "U+12AC",
     "row": "kè-house",
@@ -2234,7 +2234,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ክ": {
-    "name": "kə",
+    "name": "k",
     "phonetic": "/kə/",
     "unicode": "U+12AD",
     "row": "kè-house",
@@ -2270,7 +2270,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ኸ": {
-    "name": "hè",
+    "name": "huh",
     "phonetic": "/hè/",
     "unicode": "U+12B8",
     "row": "hè-house",
@@ -2324,7 +2324,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ኻ": {
-    "name": "hä",
+    "name": "ha",
     "phonetic": "/hä/",
     "unicode": "U+12BB",
     "row": "hè-house",
@@ -2342,7 +2342,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ኼ": {
-    "name": "hê",
+    "name": "hie",
     "phonetic": "/hê/",
     "unicode": "U+12BC",
     "row": "hè-house",
@@ -2360,7 +2360,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ኽ": {
-    "name": "hə",
+    "name": "h",
     "phonetic": "/hə/",
     "unicode": "U+12BD",
     "row": "hè-house",
@@ -2396,7 +2396,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ወ": {
-    "name": "wè",
+    "name": "we",
     "phonetic": "/wè/",
     "unicode": "U+12C8",
     "row": "wè-house",
@@ -2459,7 +2459,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ዋ": {
-    "name": "wä",
+    "name": "wa",
     "phonetic": "/wä/",
     "unicode": "U+12CB",
     "row": "wè-house",
@@ -2482,7 +2482,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ዌ": {
-    "name": "wê",
+    "name": "wie",
     "phonetic": "/wê/",
     "unicode": "U+12CC",
     "row": "wè-house",
@@ -2500,7 +2500,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ው": {
-    "name": "wə",
+    "name": "w",
     "phonetic": "/wə/",
     "unicode": "U+12CD",
     "row": "wè-house",
@@ -2536,7 +2536,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ዐ": {
-    "name": "ä",
+    "name": "aa",
     "phonetic": "/ä/",
     "unicode": "U+12D0",
     "row": "ä-house",
@@ -2572,7 +2572,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ዒ": {
-    "name": "i",
+    "name": "ii",
     "phonetic": "/i/",
     "unicode": "U+12D2",
     "row": "ä-house",
@@ -2590,7 +2590,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ዓ": {
-    "name": "ä",
+    "name": "aa",
     "phonetic": "/ä/",
     "unicode": "U+12D3",
     "row": "ä-house",
@@ -2608,7 +2608,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ዔ": {
-    "name": "ê",
+    "name": "ie",
     "phonetic": "/ê/",
     "unicode": "U+12D4",
     "row": "ä-house",
@@ -2626,7 +2626,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ዕ": {
-    "name": "ə",
+    "name": "i",
     "phonetic": "/ə/",
     "unicode": "U+12D5",
     "row": "ä-house",
@@ -2662,7 +2662,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ዘ": {
-    "name": "zè",
+    "name": "ze",
     "phonetic": "/zè/",
     "unicode": "U+12D8",
     "row": "zè-house",
@@ -2719,7 +2719,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ዛ": {
-    "name": "zä",
+    "name": "za",
     "phonetic": "/zä/",
     "unicode": "U+12DB",
     "row": "zè-house",
@@ -2737,7 +2737,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ዜ": {
-    "name": "zê",
+    "name": "zie",
     "phonetic": "/zê/",
     "unicode": "U+12DC",
     "row": "zè-house",
@@ -2755,7 +2755,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ዝ": {
-    "name": "zə",
+    "name": "z",
     "phonetic": "/zə/",
     "unicode": "U+12DD",
     "row": "zè-house",
@@ -2791,7 +2791,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ዠ": {
-    "name": "žè",
+    "name": "zhe",
     "phonetic": "/žè/",
     "unicode": "U+12E0",
     "row": "žè-house",
@@ -2809,7 +2809,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ዡ": {
-    "name": "žu",
+    "name": "zhu",
     "phonetic": "/žu/",
     "unicode": "U+12E1",
     "row": "žè-house",
@@ -2827,7 +2827,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ዢ": {
-    "name": "ži",
+    "name": "zhi",
     "phonetic": "/ži/",
     "unicode": "U+12E2",
     "row": "žè-house",
@@ -2845,7 +2845,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ዣ": {
-    "name": "žä",
+    "name": "zha",
     "phonetic": "/žä/",
     "unicode": "U+12E3",
     "row": "žè-house",
@@ -2863,7 +2863,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ዤ": {
-    "name": "žê",
+    "name": "zhie",
     "phonetic": "/žê/",
     "unicode": "U+12E4",
     "row": "žè-house",
@@ -2881,7 +2881,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ዥ": {
-    "name": "žə",
+    "name": "zh",
     "phonetic": "/žə/",
     "unicode": "U+12E5",
     "row": "žè-house",
@@ -2899,7 +2899,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ዦ": {
-    "name": "žo",
+    "name": "zho",
     "phonetic": "/žo/",
     "unicode": "U+12E6",
     "row": "žè-house",
@@ -2917,7 +2917,7 @@ const letterDetails =
     "usageNotes": []
   },
   "የ": {
-    "name": "yè",
+    "name": "ye",
     "phonetic": "/yè/",
     "unicode": "U+12E8",
     "row": "yè-house",
@@ -2971,7 +2971,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ያ": {
-    "name": "yä",
+    "name": "ya",
     "phonetic": "/yä/",
     "unicode": "U+12EB",
     "row": "yè-house",
@@ -2989,7 +2989,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ዬ": {
-    "name": "yê",
+    "name": "yie",
     "phonetic": "/yê/",
     "unicode": "U+12EC",
     "row": "yè-house",
@@ -3007,7 +3007,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ይ": {
-    "name": "yə",
+    "name": "y",
     "phonetic": "/yə/",
     "unicode": "U+12ED",
     "row": "yè-house",
@@ -3050,7 +3050,7 @@ const letterDetails =
     ]
   },
   "ደ": {
-    "name": "dè",
+    "name": "de",
     "phonetic": "/dè/",
     "unicode": "U+12F0",
     "row": "dè-house",
@@ -3108,7 +3108,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ዳ": {
-    "name": "dä",
+    "name": "da",
     "phonetic": "/dä/",
     "unicode": "U+12F3",
     "row": "dè-house",
@@ -3133,7 +3133,7 @@ const letterDetails =
     ]
   },
   "ዴ": {
-    "name": "dê",
+    "name": "die",
     "phonetic": "/dê/",
     "unicode": "U+12F4",
     "row": "dè-house",
@@ -3151,7 +3151,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ድ": {
-    "name": "də",
+    "name": "d",
     "phonetic": "/də/",
     "unicode": "U+12F5",
     "row": "dè-house",
@@ -3193,7 +3193,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጀ": {
-    "name": "jè",
+    "name": "je",
     "phonetic": "/jè/",
     "unicode": "U+1300",
     "row": "jè-house",
@@ -3247,7 +3247,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጃ": {
-    "name": "jä",
+    "name": "ja",
     "phonetic": "/jä/",
     "unicode": "U+1303",
     "row": "jè-house",
@@ -3265,7 +3265,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጄ": {
-    "name": "jê",
+    "name": "jie",
     "phonetic": "/jê/",
     "unicode": "U+1304",
     "row": "jè-house",
@@ -3283,7 +3283,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጅ": {
-    "name": "jə",
+    "name": "j",
     "phonetic": "/jə/",
     "unicode": "U+1305",
     "row": "jè-house",
@@ -3327,7 +3327,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ገ": {
-    "name": "gè",
+    "name": "ge",
     "phonetic": "/gè/",
     "unicode": "U+1308",
     "row": "gè-house",
@@ -3390,7 +3390,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጋ": {
-    "name": "gä",
+    "name": "ga",
     "phonetic": "/gä/",
     "unicode": "U+130B",
     "row": "gè-house",
@@ -3411,7 +3411,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጌ": {
-    "name": "gê",
+    "name": "gie",
     "phonetic": "/gê/",
     "unicode": "U+130C",
     "row": "gè-house",
@@ -3432,7 +3432,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ግ": {
-    "name": "gə",
+    "name": "g",
     "phonetic": "/gə/",
     "unicode": "U+130D",
     "row": "gè-house",
@@ -3475,7 +3475,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጠ": {
-    "name": "ṭè",
+    "name": "tte",
     "phonetic": "/ṭè/",
     "unicode": "U+1320",
     "row": "ṭè-house",
@@ -3498,7 +3498,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጡ": {
-    "name": "ṭu",
+    "name": "ttu",
     "phonetic": "/ṭu/",
     "unicode": "U+1321",
     "row": "ṭè-house",
@@ -3516,7 +3516,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጢ": {
-    "name": "ṭi",
+    "name": "tti",
     "phonetic": "/ṭi/",
     "unicode": "U+1322",
     "row": "ṭè-house",
@@ -3534,7 +3534,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጣ": {
-    "name": "ṭä",
+    "name": "tta",
     "phonetic": "/ṭä/",
     "unicode": "U+1323",
     "row": "ṭè-house",
@@ -3552,7 +3552,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጤ": {
-    "name": "ṭê",
+    "name": "ttie",
     "phonetic": "/ṭê/",
     "unicode": "U+1324",
     "row": "ṭè-house",
@@ -3570,7 +3570,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጥ": {
-    "name": "ṭə",
+    "name": "tt",
     "phonetic": "/ṭə/",
     "unicode": "U+1325",
     "row": "ṭè-house",
@@ -3592,7 +3592,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጦ": {
-    "name": "ṭo",
+    "name": "tto",
     "phonetic": "/ṭo/",
     "unicode": "U+1326",
     "row": "ṭè-house",
@@ -3613,7 +3613,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጨ": {
-    "name": "č̣è",
+    "name": "Ce",
     "phonetic": "/č̣è/",
     "unicode": "U+1328",
     "row": "č̣è-house",
@@ -3631,7 +3631,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጩ": {
-    "name": "č̣u",
+    "name": "Cu",
     "phonetic": "/č̣u/",
     "unicode": "U+1329",
     "row": "č̣è-house",
@@ -3652,7 +3652,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጪ": {
-    "name": "č̣i",
+    "name": "Ci",
     "phonetic": "/č̣i/",
     "unicode": "U+132A",
     "row": "č̣è-house",
@@ -3670,7 +3670,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጫ": {
-    "name": "č̣ä",
+    "name": "Ca",
     "phonetic": "/č̣ä/",
     "unicode": "U+132B",
     "row": "č̣è-house",
@@ -3691,7 +3691,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጬ": {
-    "name": "č̣ê",
+    "name": "Cie",
     "phonetic": "/č̣ê/",
     "unicode": "U+132C",
     "row": "č̣è-house",
@@ -3709,7 +3709,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጭ": {
-    "name": "č̣ə",
+    "name": "C",
     "phonetic": "/č̣ə/",
     "unicode": "U+132D",
     "row": "č̣è-house",
@@ -3727,7 +3727,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጮ": {
-    "name": "č̣o",
+    "name": "Co",
     "phonetic": "/č̣o/",
     "unicode": "U+132E",
     "row": "č̣è-house",
@@ -3745,7 +3745,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጰ": {
-    "name": "p̣è",
+    "name": "ppe",
     "phonetic": "/p̣è/",
     "unicode": "U+1330",
     "row": "p̣è-house",
@@ -3763,7 +3763,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጱ": {
-    "name": "p̣u",
+    "name": "ppu",
     "phonetic": "/p̣u/",
     "unicode": "U+1331",
     "row": "p̣è-house",
@@ -3781,7 +3781,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጲ": {
-    "name": "p̣i",
+    "name": "ppi",
     "phonetic": "/p̣i/",
     "unicode": "U+1332",
     "row": "p̣è-house",
@@ -3804,7 +3804,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጳ": {
-    "name": "p̣ä",
+    "name": "ppa",
     "phonetic": "/p̣ä/",
     "unicode": "U+1333",
     "row": "p̣è-house",
@@ -3826,7 +3826,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጴ": {
-    "name": "p̣ê",
+    "name": "ppie",
     "phonetic": "/p̣ê/",
     "unicode": "U+1334",
     "row": "p̣è-house",
@@ -3851,7 +3851,7 @@ const letterDetails =
     ]
   },
   "ጵ": {
-    "name": "p̣ə",
+    "name": "pp",
     "phonetic": "/p̣ə/",
     "unicode": "U+1335",
     "row": "p̣è-house",
@@ -3869,7 +3869,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጶ": {
-    "name": "p̣o",
+    "name": "ppo",
     "phonetic": "/p̣o/",
     "unicode": "U+1336",
     "row": "p̣è-house",
@@ -3887,7 +3887,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጸ": {
-    "name": "ṣè",
+    "name": "tse",
     "phonetic": "/ṣè/",
     "unicode": "U+1338",
     "row": "ṣè-house",
@@ -3905,7 +3905,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጹ": {
-    "name": "ṣu",
+    "name": "tsu",
     "phonetic": "/ṣu/",
     "unicode": "U+1339",
     "row": "ṣè-house",
@@ -3923,7 +3923,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጺ": {
-    "name": "ṣi",
+    "name": "tsi",
     "phonetic": "/ṣi/",
     "unicode": "U+133A",
     "row": "ṣè-house",
@@ -3941,7 +3941,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጻ": {
-    "name": "ṣä",
+    "name": "tsa",
     "phonetic": "/ṣä/",
     "unicode": "U+133B",
     "row": "ṣè-house",
@@ -3959,7 +3959,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጼ": {
-    "name": "ṣê",
+    "name": "tsie",
     "phonetic": "/ṣê/",
     "unicode": "U+133C",
     "row": "ṣè-house",
@@ -3977,7 +3977,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጽ": {
-    "name": "ṣə",
+    "name": "ts",
     "phonetic": "/ṣə/",
     "unicode": "U+133D",
     "row": "ṣè-house",
@@ -3995,7 +3995,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ጾ": {
-    "name": "ṣo",
+    "name": "tso",
     "phonetic": "/ṣo/",
     "unicode": "U+133E",
     "row": "ṣè-house",
@@ -4016,7 +4016,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ፀ": {
-    "name": "ṣè",
+    "name": "tse",
     "phonetic": "/ṣè/",
     "unicode": "U+1340",
     "row": "ṣè-house",
@@ -4034,7 +4034,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ፁ": {
-    "name": "ṣu",
+    "name": "tsu",
     "phonetic": "/ṣu/",
     "unicode": "U+1341",
     "row": "ṣè-house",
@@ -4052,7 +4052,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ፂ": {
-    "name": "ṣi",
+    "name": "tsi",
     "phonetic": "/ṣi/",
     "unicode": "U+1342",
     "row": "ṣè-house",
@@ -4070,7 +4070,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ፃ": {
-    "name": "ṣä",
+    "name": "tsa",
     "phonetic": "/ṣä/",
     "unicode": "U+1343",
     "row": "ṣè-house",
@@ -4088,7 +4088,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ፄ": {
-    "name": "ṣê",
+    "name": "tsie",
     "phonetic": "/ṣê/",
     "unicode": "U+1344",
     "row": "ṣè-house",
@@ -4106,7 +4106,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ፅ": {
-    "name": "ṣə",
+    "name": "ts",
     "phonetic": "/ṣə/",
     "unicode": "U+1345",
     "row": "ṣè-house",
@@ -4124,7 +4124,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ፆ": {
-    "name": "ṣo",
+    "name": "tso",
     "phonetic": "/ṣo/",
     "unicode": "U+1346",
     "row": "ṣè-house",
@@ -4145,7 +4145,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ፈ": {
-    "name": "fè",
+    "name": "fe",
     "phonetic": "/fè/",
     "unicode": "U+1348",
     "row": "fè-house",
@@ -4203,7 +4203,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ፋ": {
-    "name": "fä",
+    "name": "fa",
     "phonetic": "/fä/",
     "unicode": "U+134B",
     "row": "fè-house",
@@ -4221,7 +4221,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ፌ": {
-    "name": "fê",
+    "name": "fie",
     "phonetic": "/fê/",
     "unicode": "U+134C",
     "row": "fè-house",
@@ -4239,7 +4239,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ፍ": {
-    "name": "fə",
+    "name": "f",
     "phonetic": "/fə/",
     "unicode": "U+134D",
     "row": "fè-house",
@@ -4275,7 +4275,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ፐ": {
-    "name": "pè",
+    "name": "pe",
     "phonetic": "/pè/",
     "unicode": "U+1350",
     "row": "pè-house",
@@ -4329,7 +4329,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ፓ": {
-    "name": "pä",
+    "name": "pa",
     "phonetic": "/pä/",
     "unicode": "U+1353",
     "row": "pè-house",
@@ -4347,7 +4347,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ፔ": {
-    "name": "pê",
+    "name": "pie",
     "phonetic": "/pê/",
     "unicode": "U+1354",
     "row": "pè-house",
@@ -4370,7 +4370,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ፕ": {
-    "name": "pə",
+    "name": "p",
     "phonetic": "/pə/",
     "unicode": "U+1355",
     "row": "pè-house",
@@ -4412,7 +4412,7 @@ const letterDetails =
     ]
   },
   "ቨ": {
-    "name": "vè",
+    "name": "ve",
     "phonetic": "/vè/",
     "unicode": "U+1355",
     "row": "vè-house",
@@ -4502,7 +4502,7 @@ const letterDetails =
     "usageNotes": []
   },
   "ቭ": {
-    "name": "vä",
+    "name": "v",
     "phonetic": "/vä/",
     "unicode": "U+135B",
     "row": "vè-house",
@@ -4539,4 +4539,14 @@ const letterDetails =
   }
 };
 
+// Transliteration (audio ID) → Amharic character for typeAndRead. First occurrence wins when multiple chars share one audio ID.
+const nameToAmharicChar = {};
+for (const [amharicChar, info] of Object.entries(letterDetails)) {
+  const name = info.name;
+  if (name != null && nameToAmharicChar[name] === undefined) {
+    nameToAmharicChar[name] = amharicChar;
+  }
+}
+
+export { nameToAmharicChar };
 export default letterDetails;

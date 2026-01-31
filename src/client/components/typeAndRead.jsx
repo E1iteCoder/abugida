@@ -1,8 +1,14 @@
 // src/components/typeAndRead.jsx
 import React, { useState, useRef, useCallback, useEffect } from "react";
 import "../styles/dashboard/typeAndRead.css";
-import letterDetails from "../data/letterDetails.js";
+import letterDetails, { nameToAmharicChar } from "../data/letterDetails.js";
 import { useGetAudio } from "../utils/getAudio";
+
+// Transliteration tokens (letter names) sorted by length descending for longest-match tokenization.
+// Enables run-together input like "hahuhi" → ha + hu + hi without spaces.
+const transliterationTokens = Object.keys(nameToAmharicChar).sort(
+  (a, b) => b.length - a.length
+);
 
 export default function TypeAndRead() {
   const [inputText, setInputText] = useState("");
@@ -18,14 +24,15 @@ export default function TypeAndRead() {
     return code >= 0x1200 && code <= 0x137f;
   };
 
-  // Parse input text into letters with their positions and audio info
+  // Parse input text into letters with their positions and audio info.
+  // Supports Amharic characters and English transliteration (with or without spaces).
+  // Transliteration uses longest-match: "hahuhi" → ha + hu + hi by matching letter names.
   const parseText = useCallback((text) => {
     const letters = [];
-    let position = 0;
 
     for (let i = 0; i < text.length; i++) {
       const char = text[i];
-      
+
       if (isAmharicChar(char)) {
         const detail = letterDetails[char];
         if (detail && detail.audio) {
@@ -38,7 +45,6 @@ export default function TypeAndRead() {
               hasAudio: true,
             });
           } else {
-            // Character exists in letterDetails but no audio URL found
             letters.push({
               char,
               position: i,
@@ -47,7 +53,6 @@ export default function TypeAndRead() {
             });
           }
         } else {
-          // Character is Amharic but not in letterDetails
           letters.push({
             char,
             position: i,
@@ -56,7 +61,6 @@ export default function TypeAndRead() {
           });
         }
       } else if (char === " " || char === "\n" || char === "\t") {
-        // Space or whitespace - add pause marker
         letters.push({
           char: " ",
           position: i,
@@ -64,8 +68,35 @@ export default function TypeAndRead() {
           hasAudio: false,
           isSpace: true,
         });
+      } else {
+        // Transliteration: longest-match against known letter names (no spaces required)
+        let matched = false;
+        for (const token of transliterationTokens) {
+          const slice = text.slice(i, i + token.length);
+          if (slice.length === token.length && slice.toLowerCase() === token.toLowerCase()) {
+            const amharicChar = nameToAmharicChar[token];
+            const detail = letterDetails[amharicChar];
+            const audioUrl = detail && detail.audio ? getAudio(detail.audio) : null;
+            letters.push({
+              char: amharicChar,
+              position: i,
+              audioUrl,
+              hasAudio: !!audioUrl,
+            });
+            i += token.length - 1; // advance; for-loop will i++
+            matched = true;
+            break;
+          }
+        }
+        if (!matched) {
+          letters.push({
+            char: text[i],
+            position: i,
+            audioUrl: null,
+            hasAudio: false,
+          });
+        }
       }
-      // Skip other non-Amharic characters (punctuation, numbers, etc.)
     }
 
     return letters;
@@ -208,14 +239,14 @@ export default function TypeAndRead() {
     <div className="type-and-read-container">
       <div className="type-and-read-input-section">
         <label htmlFor="amharic-input" className="type-and-read-label">
-          Type Amharic Letters:
+          Type Amharic or English transliteration:
         </label>
         <textarea
           id="amharic-input"
           className="type-and-read-input"
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
-          placeholder="Type Amharic letters here (e.g., አቡጊዳ)"
+          placeholder="Amharic (e.g., አቡጊዳ) or transliteration with or without spaces (e.g., ha hu hi or hahuhi)"
           rows={4}
           disabled={isPlaying}
         />
@@ -238,7 +269,7 @@ export default function TypeAndRead() {
         </div>
         {!hasValidLetters && inputText.trim() && (
           <p className="type-and-read-warning">
-            No valid Amharic letters with audio found. Please type Amharic characters.
+            No valid letters with audio found. Type Amharic or transliteration (e.g., hahuhi or ha hu hi).
           </p>
         )}
       </div>
