@@ -10,13 +10,41 @@ const transliterationTokens = Object.keys(nameToAmharicChar).sort(
   (a, b) => b.length - a.length
 );
 
+const PLAYBACK_SPEED_KEY = "typeAndReadPlaybackSpeed";
+const MIN_SPEED = 0.1;
+const MAX_SPEED = 2;
+const DEFAULT_SPEED = 1;
+
+function getStoredPlaybackSpeed() {
+  try {
+    const stored = localStorage.getItem(PLAYBACK_SPEED_KEY);
+    if (stored == null) return DEFAULT_SPEED;
+    const n = parseFloat(stored, 10);
+    if (Number.isNaN(n)) return DEFAULT_SPEED;
+    return Math.max(MIN_SPEED, Math.min(MAX_SPEED, n));
+  } catch {
+    return DEFAULT_SPEED;
+  }
+}
+
 export default function TypeAndRead() {
   const [inputText, setInputText] = useState("");
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentLetterIndex, setCurrentLetterIndex] = useState(-1);
   const [parsedLetters, setParsedLetters] = useState([]);
+  const [playbackSpeed, setPlaybackSpeed] = useState(getStoredPlaybackSpeed);
+  const [showSpeedSlider, setShowSpeedSlider] = useState(false);
   const stopSequenceRef = useRef(null);
   const getAudio = useGetAudio();
+
+  const handleSpeedChange = useCallback((e) => {
+    const value = parseFloat(e.target.value, 10);
+    const clamped = Math.max(MIN_SPEED, Math.min(MAX_SPEED, value));
+    setPlaybackSpeed(clamped);
+    try {
+      localStorage.setItem(PLAYBACK_SPEED_KEY, String(clamped));
+    } catch (_) {}
+  }, []);
 
   // Check if a character is an Amharic letter (Unicode range U+1200 to U+137F)
   const isAmharicChar = (char) => {
@@ -188,6 +216,7 @@ export default function TypeAndRead() {
       setCurrentLetterIndex(letterIdx);
 
       currentAudio = new Audio(url);
+      currentAudio.playbackRate = playbackSpeed;
       currentAudio.play().catch((error) => {
         console.error(`Audio playback failed for letter ${currentIdx}:`, error);
         // Continue to next letter
@@ -213,7 +242,7 @@ export default function TypeAndRead() {
     };
 
     playNext();
-  }, [inputText, parseText]);
+  }, [inputText, parseText, playbackSpeed]);
 
   // Handle stop button click
   const handleStop = useCallback(() => {
@@ -266,6 +295,34 @@ export default function TypeAndRead() {
               ⏹️ Stop
             </button>
           )}
+          <div className="type-and-read-speed-wrap">
+            <button
+              type="button"
+              className="type-and-read-speed-btn button"
+              onClick={() => setShowSpeedSlider((s) => !s)}
+              aria-label="Playback speed"
+              title="Playback speed"
+            >
+              ⏱ {playbackSpeed}x
+            </button>
+            {showSpeedSlider && (
+              <div className="type-and-read-speed-slider-wrap">
+                <span className="type-and-read-speed-label">0.1x</span>
+                <input
+                  type="range"
+                  className="type-and-read-speed-slider"
+                  min={MIN_SPEED}
+                  max={MAX_SPEED}
+                  step={0.1}
+                  value={playbackSpeed}
+                  onChange={handleSpeedChange}
+                  aria-label="Playback speed 0.1x to 2x"
+                />
+                <span className="type-and-read-speed-label">2x</span>
+                <span className="type-and-read-speed-value">{playbackSpeed}x</span>
+              </div>
+            )}
+          </div>
         </div>
         {!hasValidLetters && inputText.trim() && (
           <p className="type-and-read-warning">

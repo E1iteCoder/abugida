@@ -91,6 +91,59 @@
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
+.type-and-read-speed-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.type-and-read-speed-btn {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: var(--btn-bg);
+  border: 1px solid var(--fg);
+  color: var(--fg);
+  box-sizing: border-box;
+}
+
+.type-and-read-speed-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.type-and-read-speed-slider-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: var(--card);
+  border-radius: 0.5rem;
+  border: 1px solid var(--text-secondary);
+  min-width: 200px;
+}
+
+.type-and-read-speed-slider {
+  flex: 1;
+  min-width: 100px;
+  accent-color: var(--accent);
+}
+
+.type-and-read-speed-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.type-and-read-speed-value {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--fg);
+  min-width: 2.5rem;
+}
+
 .type-and-read-warning {
   color: #ff6b6b;
   font-size: 0.9rem;
@@ -194,10 +247,16 @@
   }
 
   .type-and-read-play-btn,
-  .type-and-read-stop-btn {
+  .type-and-read-stop-btn,
+  .type-and-read-speed-btn {
     width: 100%;
     min-width: unset;
     padding: 0.875rem 1.25rem;
+  }
+
+  .type-and-read-speed-slider-wrap {
+    width: 100%;
+    min-width: unset;
   }
 
   .type-and-read-label {
@@ -247,7 +306,8 @@
   }
 
   .type-and-read-play-btn,
-  .type-and-read-stop-btn {
+  .type-and-read-stop-btn,
+  .type-and-read-speed-btn {
     padding: 0.75rem 1rem;
     font-size: 0.9rem;
   }
