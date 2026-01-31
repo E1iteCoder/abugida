@@ -161,12 +161,12 @@ export default function TypeAndRead() {
         console.error(`Audio playback failed for letter ${currentIdx}:`, error);
         // Continue to next letter
         currentIdx++;
-        setTimeout(playNext, 600);
+        setTimeout(playNext, 200);
       });
 
       currentAudio.onended = () => {
         currentIdx++;
-        setTimeout(playNext, 600); // 600ms gap between letters
+        setTimeout(playNext, 200); // 600ms gap between letters
       };
     };
 

@@ -2,38 +2,40 @@
 // Each audio file can have multiple versions (different voices, accents, etc.)
 // The "default" version uses the current audio links
 
-import audioMap from './audio.js';
+
 import audioMapVersion2 from './audio1.js';
 import audioMapVersion3 from './audio2.js';
 import audioMapVersion4 from './audio3.js';
 import audioMapVersion5 from './audio4.js';
 import audioMapVersion6 from './audio5.js';
+import audioMap from './audio.js';
 
 // Define available audio versions (6 total versions)
 export const AUDIO_VERSIONS = {
-  default: {
-    name: 'Default',
-    description: 'Combined version of all audio versions (current)',
-  },
-  version2: {
+  
+  version1: {
     name: 'Yoni',
     description: 'Male voice version 1',
   },
-  version3: {
+  version2: {
     name: 'Yam',
     description: 'Female voice version 1',
   },
-  version4: {
+  version3: {
     name: 'Nati',
     description: 'Male voice version 2',
   },
-  version5: {
+  version4: {
     name: 'Ruth',
     description: 'Female voice version 2',
   },
-  version6: {
+  version5: {
     name: 'Talake',
     description: 'Female voice version 3',
+  },
+  version6: {
+    name: 'Abba',
+    description: 'Male voice version 3',
   },
 };
 
@@ -55,7 +57,7 @@ const createAudioVersions = () => {
   // For each audio file, create version entries from separate files
   allFilenames.forEach((filename) => {
     versions[filename] = {
-      default: audioMap[filename] || null,
+      version1: audioMap[filename] || null,
       version2: audioMapVersion2[filename] || audioMap[filename] || null, // Fallback to default if missing
       version3: audioMapVersion3[filename] || audioMap[filename] || null,
       version4: audioMapVersion4[filename] || audioMap[filename] || null,
@@ -70,7 +72,7 @@ const createAudioVersions = () => {
 export const audioVersions = createAudioVersions();
 
 // Helper function to get audio URL for a specific version
-export const getAudioUrl = (filename, version = 'default') => {
+export const getAudioUrl = (filename, version = 'version1') => {
   if (!filename) return null;
   
   const fileVersions = audioVersions[filename];
@@ -79,7 +81,7 @@ export const getAudioUrl = (filename, version = 'default') => {
     return audioMap[filename] || null;
   }
   
-  return fileVersions[version] || fileVersions.default || null;
+  return fileVersions[version] || fileVersions.version1 || null;
 };
 
 // Export the default audioMap for backward compatibility
